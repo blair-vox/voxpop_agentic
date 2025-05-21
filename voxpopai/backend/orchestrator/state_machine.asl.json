@@ -1,0 +1,10 @@
+{
+  "Comment": "Placeholder AWS Step Functions state machine for VoxPopAI run orchestration",
+  "StartAt": "Todo",
+  "States": {
+    "Todo": {
+      "Type": "Pass",
+      "End": true
+    }
+  }
+} 
