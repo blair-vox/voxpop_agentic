@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: voxpopai
+Version: 0.1
+Requires-Dist: fastapi
+Requires-Dist: uvicorn
+Requires-Dist: pydantic
+Requires-Dist: python-dotenv
+Requires-Dist: openai
+Requires-Dist: pandas
+Requires-Dist: numpy
+Dynamic: requires-dist
