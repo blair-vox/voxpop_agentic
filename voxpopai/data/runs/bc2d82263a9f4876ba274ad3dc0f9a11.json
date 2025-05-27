@@ -1,0 +1,285 @@
+{
+  "run_id": "bc2d82263a9f4876ba274ad3dc0f9a11",
+  "timestamp": "2025-05-27T01:42:09.938491+00:00",
+  "question": "Waverley Council is considering a policy that would remove minimum parking requirements for new apartment developments in Bondi. This means developers could build fewer or no car spaces if they believe it suits the residents' needs.",
+  "area": null,
+  "domain": "civic-policy",
+  "summary": "- Concerns about affordable housing are prevalent across all three personas, indicating a widespread issue in different regions of Australia.\n- The need for improved public transport is consistently highlighted, showing a common challenge faced by individuals in both rural and urban areas.\n- The desire for more job opportunities in rural areas is specifically mentioned by the retired teacher from rural Victoria, emphasizing the importance of regional development to retain younger generations.",
+  "responses": [
+    {
+      "id": 0,
+      "age": "50-54 years",
+      "gender": "Female",
+      "location": "Bondi Junction - Waverly",
+      "income": "$3,500 or more ($182,000 or more)",
+      "income_weekly": "$3,500 or more",
+      "income_annual": "$182,000 or more",
+      "housing_tenure": "Own outright",
+      "job_tenure": "Employee in private company or business",
+      "occupation": "Non-supervisory",
+      "education": "Certificate III/IV",
+      "transport": null,
+      "marital_status": "Married",
+      "partner_activity": "Working part-time",
+      "household_size": "3 people",
+      "family_payments": "No",
+      "child_care_benefit": "No",
+      "investment_properties": "Yes",
+      "transport_infrastructure": "Much more than now",
+      "political_leaning": "Other party",
+      "trust": "Usually look after themselves",
+      "issues": "How I feel about the following Issues include: Taxation, Extremely important; Immigration, Quite important; Education, Extremely important; The environment, Extremely important; Health and Medicare, Extremely important; Refugees and asylum seekers, Extremely important; Global warming, Extremely important; Management of the economy, Extremely important; The COVID-19 pandemic, Quite important; The cost of living, Quite important; National security, Quite important",
+      "engagement": "I engage in politics in the following way: Interest in politics, Some; Attention to newspapers, None at all; Attention to television, Some; Attention to radio, Not much; Attention to internet, A good deal; Discussed politics in person, Occasionally; Discussed politics online, Not at all; Persuaded others to vote, Rarely; Showed support for a party, Occasionally; Attended political meetings, Not at all; Contributed money, Not at all",
+      "persona_id": 0,
+      "response": "NARRATIVE: As a retired teacher living in rural Victoria, I see the reality of our small-town struggles. Our housing is affordable, but there's a lack of public transport, and it's hard to get to the nearest city for medical appointments or shopping. We have a strong community spirit, but I worry about the younger generation moving away due to the lack of job opportunities. I feel the government could do more to support regional areas like ours.\nSURVEY:\nSupport for the proposal (1-5): 2\nHousing (1-5): 4\nTransport (1-5): 2\nCommunity (1-5): 5\nKey Concerns: Lack of public transport, Youth migration\nSuggested Improvements: Increase public transport routes, Create more job opportunities in rural areas\n",
+      "response_json": {
+        "narrative": "As a retired teacher living in rural Victoria, I see the reality of our small-town struggles. Our housing is affordable, but there's a lack of public transport, and it's hard to get to the nearest city for medical appointments or shopping. We have a strong community spirit, but I worry about the younger generation moving away due to the lack of job opportunities. I feel the government could do more to support regional areas like ours.",
+        "survey": {
+          "support_level": 2,
+          "housing": 4,
+          "transport": 2,
+          "community": 5,
+          "key_concerns": [
+            "Lack of public transport",
+            "Youth migration"
+          ],
+          "suggested_improvements": [
+            "Increase public transport routes",
+            "Create more job opportunities in rural areas"
+          ]
+        }
+      },
+      "survey_grid_labels": {},
+      "run_id": "bc2d82263a9f4876ba274ad3dc0f9a11",
+      "themes": [
+        "Transport"
+      ],
+      "survey_numbers": {},
+      "drivers": [
+        "lack of support",
+        "concern for youth",
+        "isolated from services"
+      ]
+    },
+    {
+      "id": 1,
+      "age": "20-24 years",
+      "gender": "Male",
+      "location": "Coogee - Clovelly",
+      "income": "$3,500 or more ($182,000 or more)",
+      "income_weekly": "$3,500 or more",
+      "income_annual": "$182,000 or more",
+      "housing_tenure": "Other (boarding, living at home, etc.)",
+      "job_tenure": "Employee of Federal / State / Local Government",
+      "occupation": "Non-supervisory",
+      "education": "Advanced diploma or diploma",
+      "transport": null,
+      "marital_status": "Never married",
+      "partner_activity": " ",
+      "household_size": "Other",
+      "family_payments": "No",
+      "child_care_benefit": "No",
+      "investment_properties": "No",
+      "transport_infrastructure": "Somewhat more than now",
+      "political_leaning": "Labor",
+      "trust": "Sometimes look after themselves",
+      "issues": "How I feel about the following Issues include: Taxation, Quite important; Immigration, Quite important; Education, Quite important; The environment, Quite important; Health and Medicare, Quite important; Refugees and asylum seekers, Quite important; Global warming, Extremely important; Management of the economy, Quite important; The COVID-19 pandemic, Quite important; The cost of living, Quite important; National security, Quite important",
+      "engagement": "I engage in politics in the following way: Interest in politics, Some; Attention to newspapers, Not much; Attention to television, Not much; Attention to radio, None at all; Attention to internet, Not much; Discussed politics in person, Rarely; Discussed politics online, Rarely; Persuaded others to vote, Rarely; Showed support for a party, Rarely; Attended political meetings, Rarely; Contributed money, Not at all",
+      "persona_id": 1,
+      "response": "NARRATIVE: G'day, I'm a retired schoolteacher from Adelaide, South Australia. I've spent my life in education, and now I'm enjoying the quiet life in a suburb with my wife and our dog. I've been voting in every election since I turned 18, and I've seen a lot of changes in this country. I think we're doing alright overall, but there's always room for improvement, especially in the areas of public transport and affordable housing for the younger generation.\nSURVEY:\nSupport for the proposal (1-5): 4\nHousing (1-5): 2\nTransport (1-5): 2\nCommunity (1-5): 5\nKey Concerns: affordable housing, public transport\nSuggested Improvements: increase funding for public transportation, implement housing policies to assist first-time homeowners\n",
+      "response_json": {
+        "narrative": "G'day, I'm a retired schoolteacher from Adelaide, South Australia. I've spent my life in education, and now I'm enjoying the quiet life in a suburb with my wife and our dog. I've been voting in every election since I turned 18, and I've seen a lot of changes in this country. I think we're doing alright overall, but there's always room for improvement, especially in the areas of public transport and affordable housing for the younger generation.",
+        "survey": {
+          "support_level": 4,
+          "housing": 2,
+          "transport": 2,
+          "community": 5,
+          "key_concerns": [
+            "affordable housing",
+            "public transport"
+          ],
+          "suggested_improvements": [
+            "increase funding for public transportation",
+            "implement housing policies to assist first-time homeowners"
+          ]
+        }
+      },
+      "survey_grid_labels": {},
+      "run_id": "bc2d82263a9f4876ba274ad3dc0f9a11",
+      "themes": [
+        "Transport"
+      ],
+      "survey_numbers": {},
+      "drivers": [
+        "improvement needed",
+        "concern for younger generation",
+        "hopeful for the future"
+      ]
+    },
+    {
+      "id": 2,
+      "age": "40-44 years",
+      "gender": "Female",
+      "location": "Rose Bay - Vaucluse - Watsons Bay",
+      "income": "$3,500 or more ($182,000 or more)",
+      "income_weekly": "$3,500 or more",
+      "income_annual": "$182,000 or more",
+      "housing_tenure": "Own, paying off mortgage",
+      "job_tenure": "Self-employed",
+      "occupation": "Non-supervisory",
+      "education": "Certificate III/IV",
+      "transport": null,
+      "marital_status": "Married",
+      "partner_activity": "Working full-time",
+      "household_size": "2 people",
+      "family_payments": "No",
+      "child_care_benefit": "No",
+      "investment_properties": "Yes",
+      "transport_infrastructure": "Much more than now",
+      "political_leaning": "Other party",
+      "trust": "Usually look after themselves",
+      "issues": "How I feel about the following Issues include: Taxation, Not very important; Immigration, Not very important; Education, Extremely important; The environment, Quite important; Health and Medicare, Extremely important; Refugees and asylum seekers, Extremely important; Global warming, Quite important; Management of the economy, Extremely important; The COVID-19 pandemic, Extremely important; The cost of living, Extremely important; National security, Not very important",
+      "engagement": "I engage in politics in the following way: Interest in politics, Not much; Attention to newspapers, A good deal; Attention to television, None at all; Attention to radio, Some; Attention to internet, A good deal; Discussed politics in person, Frequently; Discussed politics online, Frequently; Persuaded others to vote, Rarely; Showed support for a party, Not at all; Attended political meetings, Not at all; Contributed money, Not at all",
+      "persona_id": 2,
+      "response": "NARRATIVE: I'm a 35-year-old primary school teacher, living in Melbourne with my partner and our two children. I've seen the cost of housing skyrocket over the years, making it hard for young families like us to find a decent place to live. Public transport is reliable but can be overcrowded during peak hours. Our community is vibrant and diverse but it could do with more recreational facilities for children. I feel that the current government isn't doing enough to address these issues.\nSURVEY:\nSupport for the proposal (1-5): 2\nHousing (1-5): 2\nTransport (1-5): 3\nCommunity (1-5): 4\nKey Concerns: High cost of housing, Lack of recreational facilities\nSuggested Improvements: Affordable housing schemes, More playgrounds and parks\n",
+      "response_json": {
+        "narrative": "I'm a 35-year-old primary school teacher, living in Melbourne with my partner and our two children. I've seen the cost of housing skyrocket over the years, making it hard for young families like us to find a decent place to live. Public transport is reliable but can be overcrowded during peak hours. Our community is vibrant and diverse but it could do with more recreational facilities for children. I feel that the current government isn't doing enough to address these issues.",
+        "survey": {
+          "support_level": 2,
+          "housing": 2,
+          "transport": 3,
+          "community": 4,
+          "key_concerns": [
+            "High cost of housing",
+            "Lack of recreational facilities"
+          ],
+          "suggested_improvements": [
+            "Affordable housing schemes",
+            "More playgrounds and parks"
+          ]
+        }
+      },
+      "survey_grid_labels": {},
+      "run_id": "bc2d82263a9f4876ba274ad3dc0f9a11",
+      "themes": [
+        "Transport"
+      ],
+      "survey_numbers": {},
+      "drivers": [
+        "unaffordable housing",
+        "overcrowded public transport",
+        "lack of recreational facilities"
+      ]
+    }
+  ],
+  "driver_summary": [],
+  "demographics": {
+    "age": {
+      "persona": {
+        "50-54 years": 1,
+        "20-24 years": 1,
+        "40-44 years": 1
+      },
+      "population": {
+        "65-69 years": 15175,
+        "60-64 years": 14154,
+        "55-59 years": 13595,
+        "50-54 years": 13536,
+        "70-74 years": 13441,
+        "40-44 years": 12460,
+        "35-39 years": 11650,
+        "45-49 years": 11409,
+        "30-34 years": 10145,
+        "75-79 years": 7225,
+        "20-24 years": 6562,
+        "25-29 years": 5326,
+        "80-84 years": 2644,
+        "85-89 years": 916,
+        "15-19 years": 789
+      },
+      "chi2": 11.204071892612511
+    },
+    "gender": {
+      "persona": {
+        "Female": 2,
+        "Male": 1
+      },
+      "population": {
+        "Female": 72308,
+        "Male": 66719
+      },
+      "chi2": 0.0
+    },
+    "marital": {
+      "persona": {
+        "2": 2,
+        "1": 1
+      },
+      "population": {
+        "2": 103925,
+        "1": 24782,
+        "4": 7036,
+        "3": 3284
+      },
+      "chi2": 0.6536666402997624
+    },
+    "tenure": {
+      "persona": {
+        "1": 1,
+        "5": 1,
+        "2": 1
+      },
+      "population": {
+        "1": 55692,
+        "2": 54390,
+        "3": 20276,
+        "5": 6019,
+        "4": 2373,
+        "999": 277
+      },
+      "chi2": 6.382527655338945
+    },
+    "political": {
+      "persona": {
+        "Other party": 1,
+        "Labor": 1
+      },
+      "population": {
+        "Labor": 11618,
+        "Liberal": 10062,
+        "Greens": 4125,
+        "Other party": 1,
+        "National Party": 1008,
+        "Item skipped": 329,
+        " ": 767,
+        "Other": 42
+      },
+      "chi2": 6988.202922199925
+    },
+    "education": {
+      "persona": {
+        "Certificate III/IV": 2,
+        "Advanced diploma or diploma": 1
+      },
+      "population": {
+        "Certificate III/IV": 39333,
+        "Advanced diploma or diploma": 29553,
+        "Bachelor degree or higher": 22839,
+        "No formal education": 17683,
+        "Year 11 or below": 12277,
+        "Other": 10864,
+        "Year 12 or equivalent": 5584,
+        "Item skipped": 894
+      },
+      "chi2": 3.2808425101545877
+    }
+  },
+  "location_freq": {
+    "Bondi Junction - Waverly": 1,
+    "Coogee - Clovelly": 1,
+    "Rose Bay - Vaucluse - Watsons Bay": 1
+  },
+  "impact_dims": [],
+  "prompt_template": "NARRATIVE:\n<5-10 sentence first-person statement>\n\nSURVEY:\nSupport Level (1-5): <#>\n{impact_lines}Key Concerns: item1, item2\nSuggested Improvements: item1, item2",
+  "survey_grid_labels": null
+}

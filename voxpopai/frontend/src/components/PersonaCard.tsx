@@ -1,11 +1,13 @@
 import React from "react";
 import { Persona } from "../types";
+import { PersonaTimeline } from "./PersonaTimeline";
 
 interface PersonaCardProps {
   persona: Persona;
+  runId?: string | null;
 }
 
-export const PersonaCard: React.FC<PersonaCardProps> = ({ persona }) => {
+export const PersonaCard: React.FC<PersonaCardProps> = ({ persona, runId }) => {
   return (
     <div style={{ border: "1px solid #ccc", padding: "1rem", marginBottom: "1rem" }}>
       <h3>Persona {persona.id}</h3>
@@ -47,6 +49,7 @@ export const PersonaCard: React.FC<PersonaCardProps> = ({ persona }) => {
       {persona.error && (
         <p style={{ color: "red" }}><strong>Error:</strong> {persona.error}</p>
       )}
+      {runId && <PersonaTimeline runId={runId} personaId={persona.id} />}
     </div>
   );
 }; 

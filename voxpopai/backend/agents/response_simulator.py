@@ -149,7 +149,9 @@ async def simulate_responses(personas: List[Dict[str, Any]], survey: Dict[str, A
             "}}\n"
         )
         base_tpl = survey.get("prompt_template") or PERSONA_TEMPLATE_BASE
-        prompt = (strict_block + "\n" + base_tpl).replace("{impact_lines}", "")  # impact_lines not needed in JSON
+        # Place persona template first so the critic timeline shows full context
+        # Always use full persona template for context, ignore custom templates for now
+        prompt = (PERSONA_TEMPLATE_BASE + "\n" + strict_block).replace("{impact_lines}", "")
         prompt = prompt.format(
             persona_name=f"Persona_{persona['id']}",
             question=question_text,
@@ -161,7 +163,9 @@ async def simulate_responses(personas: List[Dict[str, Any]], survey: Dict[str, A
             answer_text = await loop.run_in_executor(None, _call_openai_with_system, prompt)
             # Log the raw call for timeline reconstruction
             from voxpopai.backend.utils.run_logger import write_log as _wlog
-            _wlog("openai_initial", {"run_id": run_id, "persona_id": persona["id"]}, prompt, answer_text)
+            # Capture both system and user prompts for complete context
+            full_prompt = f"SYSTEM: {SYSTEM_PROMPT}\n\nUSER: {prompt}"
+            _wlog("openai_initial", {"run_id": run_id, "persona_id": persona["id"]}, full_prompt, answer_text)
             try:
                 answer_json = json.loads(answer_text)
             except Exception as e:

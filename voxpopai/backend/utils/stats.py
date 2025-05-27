@@ -55,7 +55,29 @@ _grid_re = re.compile(r"(Support Level|Impact – Housing|Impact – Transport|I
 
 
 def parse_survey_numbers(resp: str) -> Dict[str, int]:
+    """Parse survey numbers from either JSON response_json or formatted text response."""
     numbers: Dict[str, int] = {}
+    
+    # Try to parse as JSON first (new format)
+    try:
+        import json
+        data = json.loads(resp)
+        if isinstance(data, dict) and "survey" in data:
+            survey = data["survey"]
+            # Map JSON keys to expected format
+            if "support_level" in survey:
+                numbers["support"] = int(survey["support_level"])
+            if "housing" in survey:
+                numbers["housing"] = int(survey["housing"])
+            if "transport" in survey:
+                numbers["transport"] = int(survey["transport"])
+            if "community" in survey:
+                numbers["community"] = int(survey["community"])
+            return numbers
+    except (json.JSONDecodeError, KeyError, ValueError, TypeError):
+        pass
+    
+    # Fall back to regex parsing for old text format
     for label, num in _grid_re.findall(resp):
         lbl = label.split("–")[-1].strip().lower().replace(" ", "_") if "Impact" in label else "support"
         numbers[lbl] = int(num)

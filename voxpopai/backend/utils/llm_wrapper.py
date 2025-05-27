@@ -1,5 +1,5 @@
-import os, json
-from typing import List, Dict, Any, Optional
+import os
+from typing import List, Optional, Dict
 from functools import lru_cache
 from openai import OpenAI
 from voxpopai.backend.utils.run_logger import write_log
@@ -25,8 +25,15 @@ def call_llm(step: str, messages: List[Dict[str, str]], *, run_id: Optional[str]
     model, temperature, max_tokens
         Passed directly to the OpenAI client.
     """
-    # Serialise the *user* parts of the prompt for compact logging
-    prompt_serial = " | ".join([m.get("content", "") for m in messages if m.get("role") == "user"])
+    # Capture both system and user messages for complete context
+    system_parts = [m.get("content", "") for m in messages if m.get("role") == "system"]
+    user_parts = [m.get("content", "") for m in messages if m.get("role") == "user"]
+    
+    prompt_serial = ""
+    if system_parts:
+        prompt_serial += "SYSTEM: " + " | ".join(system_parts) + "\n\n"
+    if user_parts:
+        prompt_serial += "USER: " + " | ".join(user_parts)
 
     res = _client().chat.completions.create(
         model=model,

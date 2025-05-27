@@ -59,7 +59,7 @@ export default function QuestionCriticModal({
             <p>
               <strong>Original:</strong> {draft}
             </p>
-            {!crit?.ok && (
+            {crit?.rewritten && crit.rewritten !== draft && (
               <p>
                 <strong>Suggested:</strong> {crit?.rewritten}
               </p>

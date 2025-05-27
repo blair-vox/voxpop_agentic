@@ -44,6 +44,7 @@ export default function Home() {
   const [showPromptEdit, setShowPromptEdit] = useState(false);
   const defaultTemplate = `NARRATIVE:\n<5-10 sentence first-person statement>\n\nSURVEY:\nSupport Level (1-5): <#>\n{impact_lines}Key Concerns: item1, item2\nSuggested Improvements: item1, item2`;
   const [promptTemplate, setPromptTemplate] = useState(defaultTemplate);
+  const [questionUpdated, setQuestionUpdated] = useState(false);
 
   const [isPending, startTransition] = useTransition();
 
@@ -294,6 +295,7 @@ export default function Home() {
           </label>
           <label style={{ display: "flex", flexDirection: "column" }}>
             Proposal / Question to personas
+            {questionUpdated && <span style={{ color: "green", fontSize: "0.8rem" }}>✓ Updated by question critic</span>}
             <textarea
               value={question}
               onChange={(e) => setQuestion(e.target.value)}
@@ -515,7 +517,7 @@ export default function Home() {
         <div style={{ marginTop: "2rem" }}>
           <h2>Responses</h2>
           {responses.map((p) => (
-            <PersonaCard key={p.id} persona={p} />
+            <PersonaCard key={p.id} persona={p} runId={runId} />
           ))}
         </div>
       )}
@@ -525,11 +527,17 @@ export default function Home() {
           initialQuestion={question}
           initialPromptTemplate={promptTemplate}
           onAccept={(q, dims, tpl, gridLabels) => {
+            const wasUpdated = q !== question;
             setQuestion(q);
             setImpactDims(dims);
             setPromptTemplate(tpl);
             setSurveyGridLabels(gridLabels);
             setShowCritic(false);
+            setQuestionUpdated(wasUpdated);
+            // Clear the indicator after 3 seconds
+            if (wasUpdated) {
+              setTimeout(() => setQuestionUpdated(false), 3000);
+            }
           }}
           onClose={() => setShowCritic(false)}
         />
@@ -707,7 +715,7 @@ export default function Home() {
                       </>
                     )}
                     {selectedRun.responses && selectedRun.responses.map((p: Persona) => (
-                      <PersonaCard key={p.id} persona={p} />
+                      <PersonaCard key={p.id} persona={p} runId={selectedRun.run_id || selectedRun.id} />
                     ))}
                   </div>
                 ) : (
