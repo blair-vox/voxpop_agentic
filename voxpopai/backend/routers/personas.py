@@ -37,6 +37,8 @@ class SimulationRequest(BaseModel):
     number_of_personas: int
     questions: list[str]
     domain: Optional[str] = "civic-policy"
+    impact_dims: Optional[list[str]] = None
+    prompt_template: Optional[str] = None
 
 
 @router.post("/run")
@@ -55,6 +57,9 @@ async def run_personas(payload: SimulationRequest) -> StreamingResponse:
                 df_to_sample = df
         else:
             df_to_sample = df
+
+        # Filter out 'Total' locations
+        df_to_sample = df_to_sample[df_to_sample["SA2 (UR)"].astype(str) != "Total"]
 
         sampled_df = df_to_sample.sample(n=payload.number_of_personas, weights="weight_final", replace=True).reset_index(drop=True)
         # If the dataset has an 'ID' or 'id' column already, preserve it under a different name
@@ -111,7 +116,7 @@ async def run_personas(payload: SimulationRequest) -> StreamingResponse:
             run_id_local = uuid.uuid4().hex
             # Simulate responses using limited data (to reduce token usage)
             responses = []
-            async for progress in simulate_responses(limited_personas, {"questions": payload.questions, "domain": payload.domain or "civic-policy", "question": payload.questions[0] if payload.questions else "", "run_id": run_id_local}):
+            async for progress in simulate_responses(limited_personas, {"questions": payload.questions, "domain": payload.domain or "civic-policy", "impact_dims": payload.impact_dims, "prompt_template": payload.prompt_template, "survey_grid_labels": getattr(payload, 'survey_grid_labels', None), "question": payload.questions[0] if payload.questions else "", "run_id": run_id_local}):
                 if "progress" in progress:
                     yield f"data: {json.dumps({'type': 'progress', 'progress': progress['progress']})}\n\n"
                 else:
@@ -122,7 +127,7 @@ async def run_personas(payload: SimulationRequest) -> StreamingResponse:
             combined = []
             for p in limited_personas:
                 resp_info = persona_by_id.get(p["id"], {})
-                combined.append({**p, **resp_info})
+                combined.append({**p, **resp_info, "run_id": run_id_local})
 
             # Build summary of key themes
             narrative_texts = [p.get("response", "") for p in combined if p.get("response")]
@@ -208,6 +213,9 @@ async def run_personas(payload: SimulationRequest) -> StreamingResponse:
                 "driver_summary": driver_summary,
                 "demographics": demo,
                 "location_freq": loc_freq,
+                "impact_dims": payload.impact_dims,
+                "prompt_template": payload.prompt_template,
+                "survey_grid_labels": getattr(payload, 'survey_grid_labels', None),
             }
             from voxpopai.backend.utils.run_storage import save_run
             save_run(run_payload)
@@ -229,7 +237,7 @@ def construct_engagement_string(row) -> str:
     for key, description in mp.engagement_dict.items():
         answer_value = row.get(key, 999)
         answer_text = mp.get_mapping_dict(key).get(answer_value, "Unknown")
-        if answer_text not in ["Item skipped", "Unknown"]:
+        if isinstance(answer_text, str) and answer_text not in ["Item skipped", "Unknown"]:
             parts.append(f"{description}, {answer_text}")
     if parts:
         return "I engage in politics in the following way: " + "; ".join(parts)
@@ -242,7 +250,7 @@ def construct_issues_string(row) -> str:
     for key, description in mp.issues_dict.items():
         answer_value = row.get(key, 999)
         answer_text = mp.get_mapping_dict(key).get(answer_value, "Unknown")
-        if answer_text not in ["Item skipped", "Unknown"]:
+        if isinstance(answer_text, str) and answer_text not in ["Item skipped", "Unknown"]:
             parts.append(f"{description}, {answer_text}")
     if parts:
         return "How I feel about the following Issues include: " + "; ".join(parts)

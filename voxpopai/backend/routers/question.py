@@ -10,4 +10,6 @@ def run(payload: dict):
     q = payload.get("question", "")
     if not q:
         raise HTTPException(status_code=400, detail="question required")
-    return critic(q) 
+    ctx = payload.get("context", "")
+    full_q = f"{q}\n\nCONTEXT:\n{ctx}" if ctx else q
+    return critic(full_q) 

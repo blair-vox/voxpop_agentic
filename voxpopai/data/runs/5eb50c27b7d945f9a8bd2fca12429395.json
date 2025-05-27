@@ -1,0 +1,402 @@
+{
+  "run_id": "5eb50c27b7d945f9a8bd2fca12429395",
+  "timestamp": "2025-05-26T23:30:07.630142+00:00",
+  "question": "Waverley Council is considering a policy that would remove minimum parking requirements for new apartment developments in Bondi. This means developers could build fewer or no car spaces if they believe it suits the residents' needs.",
+  "area": null,
+  "domain": "civic-policy",
+  "summary": "- Concern over the environmental impact of industries like mining and climate change is a common theme among the participants.\n- Access to quality healthcare and mental health services in rural areas emerges as a significant concern across the narratives.\n- The lack of government support and understanding for rural communities is a recurring point of contention among the participants.",
+  "responses": [
+    {
+      "id": 0,
+      "age": "50-54 years",
+      "gender": "Female",
+      "location": "Randwick - North",
+      "income": "$650-$799 ($33,800-$41,599)",
+      "income_weekly": "$650-$799",
+      "income_annual": "$33,800-$41,599",
+      "housing_tenure": "Other (boarding, living at home, etc.)",
+      "job_tenure": "Employee in private company or business",
+      "occupation": "Middle managerial",
+      "education": "Bachelor degree or higher",
+      "transport": null,
+      "marital_status": "Never married",
+      "partner_activity": " ",
+      "household_size": "2 people",
+      "family_payments": "No",
+      "child_care_benefit": "No",
+      "investment_properties": "No",
+      "transport_infrastructure": "Much more than now",
+      "political_leaning": "Greens",
+      "trust": "Usually look after themselves",
+      "issues": "How I feel about the following Issues include: Taxation, Extremely important; Immigration, Extremely important; Education, Extremely important; The environment, Extremely important; Health and Medicare, Extremely important; Refugees and asylum seekers, Extremely important; Global warming, Extremely important; Management of the economy, Extremely important; The COVID-19 pandemic, Extremely important; The cost of living, Extremely important; National security, Extremely important",
+      "engagement": "I engage in politics in the following way: Interest in politics, A good deal; Attention to newspapers, A good deal; Attention to television, A good deal; Attention to radio, A good deal; Attention to internet, A good deal; Discussed politics in person, Not at all; Discussed politics online, Not at all; Persuaded others to vote, Occasionally; Showed support for a party, Rarely; Attended political meetings, Occasionally; Contributed money, Not at all",
+      "persona_id": 0,
+      "response": "NARRATIVE: G'day, I'm an Aussie bloke in my late 40s, from the Outback, and I've been working in the mining industry in Western Australia for over 20 years. My work's given me a good income, but I've seen the devastating impact of mining on our environment. I'm also worried about the lack of medical facilities in rural areas, especially mental health services. We've got a great community spirit here, but I reckon the government doesn't really understand our challenges.\nSURVEY:\nSupport for the proposal (1-5): 2\nHousing (1-5): 4\nTransport (1-5): 3\nCommunity (1-5): 4\nKey Concerns: environmental_impact_of_mining, lack_of_rural_healthcare\nSuggested Improvements: increased_funding_for_environment, improved_healthcare_in_rural_areas\n",
+      "response_json": {
+        "narrative": "G'day, I'm an Aussie bloke in my late 40s, from the Outback, and I've been working in the mining industry in Western Australia for over 20 years. My work's given me a good income, but I've seen the devastating impact of mining on our environment. I'm also worried about the lack of medical facilities in rural areas, especially mental health services. We've got a great community spirit here, but I reckon the government doesn't really understand our challenges.",
+        "survey": {
+          "support_level": 2,
+          "housing": 4,
+          "transport": 3,
+          "community": 4,
+          "key_concerns": [
+            "environmental_impact_of_mining",
+            "lack_of_rural_healthcare"
+          ],
+          "suggested_improvements": [
+            "increased_funding_for_environment",
+            "improved_healthcare_in_rural_areas"
+          ]
+        }
+      },
+      "survey_grid_labels": {},
+      "themes": [
+        "Transport"
+      ],
+      "survey_numbers": {},
+      "drivers": [
+        "environmental impact",
+        "lack of medical services",
+        "government disconnect"
+      ]
+    },
+    {
+      "id": 1,
+      "age": "60-64 years",
+      "gender": "Female",
+      "location": "Kingsford",
+      "income": "$500-$649 ($26,000-$33,799)",
+      "income_weekly": "$500-$649",
+      "income_annual": "$26,000-$33,799",
+      "housing_tenure": "Own outright",
+      "job_tenure": "Employee of Federal / State / Local Government",
+      "occupation": "Non-supervisory",
+      "education": "Year 11 or below",
+      "transport": null,
+      "marital_status": "Married",
+      "partner_activity": "Student",
+      "household_size": "2 people",
+      "family_payments": "No",
+      "child_care_benefit": "No",
+      "investment_properties": "No",
+      "transport_infrastructure": "Much more than now",
+      "political_leaning": "Liberal",
+      "trust": "Usually can be trusted to do the right thing",
+      "issues": "How I feel about the following Issues include: Taxation, Extremely important; Immigration, Extremely important; Education, Extremely important; The environment, Quite important; Health and Medicare, Extremely important; Refugees and asylum seekers, Quite important; Global warming, Not very important; Management of the economy, Extremely important; The COVID-19 pandemic, Extremely important; The cost of living, Extremely important; National security, Extremely important",
+      "engagement": "I engage in politics in the following way: Interest in politics, A good deal; Attention to newspapers, Not much; Attention to television, A good deal; Attention to radio, Some; Attention to internet, Some; Discussed politics in person, Frequently; Discussed politics online, Not at all; Persuaded others to vote, Rarely; Showed support for a party, Occasionally; Attended political meetings, Not at all; Contributed money, Not at all",
+      "persona_id": 1,
+      "response": "NARRATIVE: I'm a third-generation farmer from the rural community of Dubbo, New South Wales. Struggling with the impacts of climate change on our crops has been tough, and I'm concerned about the lack of support from the government. Access to quality healthcare is another major concern, since the nearest hospital is quite a distance away. I'm also worried about how the younger generation in our community will get quality education with the limited resources available in our region.\nSURVEY:\nSupport for the proposal (1-5): 2\nHousing (1-5): 3\nTransport (1-5): 3\nCommunity (1-5): 3\nKey Concerns: climate change, access to healthcare\nSuggested Improvements: more funding for rural healthcare, support for sustainable farming practices\n",
+      "response_json": {
+        "narrative": "I'm a third-generation farmer from the rural community of Dubbo, New South Wales. Struggling with the impacts of climate change on our crops has been tough, and I'm concerned about the lack of support from the government. Access to quality healthcare is another major concern, since the nearest hospital is quite a distance away. I'm also worried about how the younger generation in our community will get quality education with the limited resources available in our region.",
+        "survey": {
+          "support_level": 2,
+          "housing": 3,
+          "transport": 3,
+          "community": 3,
+          "key_concerns": [
+            "climate change",
+            "access to healthcare"
+          ],
+          "suggested_improvements": [
+            "more funding for rural healthcare",
+            "support for sustainable farming practices"
+          ]
+        }
+      },
+      "survey_grid_labels": {},
+      "themes": [
+        "Transport"
+      ],
+      "survey_numbers": {},
+      "drivers": [
+        "lack of government support",
+        "limited access to healthcare",
+        "concerns about education resources"
+      ]
+    },
+    {
+      "id": 2,
+      "age": "55-59 years",
+      "gender": "Female",
+      "location": "Total",
+      "income": "$3,500 or more ($182,000 or more)",
+      "income_weekly": "$3,500 or more",
+      "income_annual": "$182,000 or more",
+      "housing_tenure": "Own outright",
+      "job_tenure": "Employee in private company or business",
+      "occupation": "Middle managerial",
+      "education": "Certificate III/IV",
+      "transport": null,
+      "marital_status": "Married",
+      "partner_activity": "Working full-time",
+      "household_size": "2 people",
+      "family_payments": "No",
+      "child_care_benefit": "No",
+      "investment_properties": "Yes",
+      "transport_infrastructure": "Somewhat more than now",
+      "political_leaning": "National Party",
+      "trust": "Sometimes look after themselves",
+      "issues": "How I feel about the following Issues include: Taxation, Not very important; Immigration, Quite important; Education, Quite important; The environment, Quite important; Health and Medicare, Extremely important; Refugees and asylum seekers, Quite important; Global warming, Quite important; Management of the economy, Extremely important; The COVID-19 pandemic, Quite important; The cost of living, Extremely important; National security, Extremely important",
+      "engagement": "I engage in politics in the following way: Interest in politics, Some; Attention to newspapers, Some; Attention to television, A good deal; Attention to radio, Some; Attention to internet, Some; Discussed politics in person, Occasionally; Discussed politics online, Rarely; Persuaded others to vote, Occasionally; Showed support for a party, Not at all; Attended political meetings, Not at all; Contributed money, Not at all",
+      "persona_id": 2,
+      "response": "NARRATIVE: G'day, I'm Bruce, a 45-year-old tradesman from rural Queensland. Over the years, I've seen the cost of housing skyrocket, and I'm concerned about the future for my kids. I reckon the government could do more to help average Aussies. Public transport is a joke in the bush - it’s practically non-existent. And while I love my community, I believe more could be done to support local businesses and maintain our rural way of life.\nSURVEY:\nSupport for the proposal (1-5): 2\nHousing (1-5): 4\nTransport (1-5): 1\nCommunity (1-5): 4\nKey Concerns: Housing affordability, Public transport\nSuggested Improvements: Increase public transport in rural areas, More support for local businesses\n",
+      "response_json": {
+        "narrative": "G'day, I'm Bruce, a 45-year-old tradesman from rural Queensland. Over the years, I've seen the cost of housing skyrocket, and I'm concerned about the future for my kids. I reckon the government could do more to help average Aussies. Public transport is a joke in the bush - it’s practically non-existent. And while I love my community, I believe more could be done to support local businesses and maintain our rural way of life.",
+        "survey": {
+          "support_level": 2,
+          "housing": 4,
+          "transport": 1,
+          "community": 4,
+          "key_concerns": [
+            "Housing affordability",
+            "Public transport"
+          ],
+          "suggested_improvements": [
+            "Increase public transport in rural areas",
+            "More support for local businesses"
+          ]
+        }
+      },
+      "survey_grid_labels": {},
+      "themes": [
+        "Transport"
+      ],
+      "survey_numbers": {},
+      "drivers": [
+        "concerned about the future",
+        "frustrated with lack of public transport",
+        "support for local businesses"
+      ]
+    },
+    {
+      "id": 3,
+      "age": "35-39 years",
+      "gender": "Female",
+      "location": "Kensington (NSW)",
+      "income": "$800-$999 ($41,600-$51,999)",
+      "income_weekly": "$800-$999",
+      "income_annual": "$41,600-$51,999",
+      "housing_tenure": "Rent from private landlord or real estate agent",
+      "job_tenure": "Employee in private company or business",
+      "occupation": "Lower managerial",
+      "education": "No formal education",
+      "transport": null,
+      "marital_status": "Married",
+      "partner_activity": "Working full-time",
+      "household_size": "2 people",
+      "family_payments": "Yes",
+      "child_care_benefit": "Yes",
+      "investment_properties": "No",
+      "transport_infrastructure": "The same as now",
+      "political_leaning": "Liberal",
+      "trust": "Sometimes can be trusted to do the right thing",
+      "issues": "How I feel about the following Issues include: Taxation, Extremely important; Immigration, Quite important; Education, Extremely important; The environment, Quite important; Health and Medicare, Extremely important; Refugees and asylum seekers, Quite important; Global warming, Quite important; Management of the economy, Extremely important; The COVID-19 pandemic, Quite important; The cost of living, Extremely important; National security, Extremely important",
+      "engagement": "I engage in politics in the following way: Interest in politics, Not much; Attention to newspapers, None at all; Attention to television, None at all; Attention to radio, None at all; Attention to internet, Not much; Discussed politics in person, Rarely; Discussed politics online, Not at all; Persuaded others to vote, Not at all; Showed support for a party, Not at all; Attended political meetings, Not at all; Contributed money, Not at all",
+      "persona_id": 3,
+      "response": "NARRATIVE: As a third-generation farmer from rural Queensland, I reckon there's a lot of talk in Canberra that doesn't translate to action out here. We need stronger support for drought relief and bushfire management. I'm concerned about the future of my kids – whether they'll have opportunities here or need to move to the city. I'm also worried about the loss of community spirit and the mental health impacts of isolation. We need better Internet to stay connected and see what's going on in the world.\nSURVEY:\nSupport for the proposal (1-5): 2\nHousing (1-5): 4\nTransport (1-5): 3\nCommunity (1-5): 2\nKey Concerns: Climate change impacts, Rural infrastructure\nSuggested Improvements: Improve internet connectivity, Increase funding for mental health services\n",
+      "response_json": {
+        "narrative": "As a third-generation farmer from rural Queensland, I reckon there's a lot of talk in Canberra that doesn't translate to action out here. We need stronger support for drought relief and bushfire management. I'm concerned about the future of my kids – whether they'll have opportunities here or need to move to the city. I'm also worried about the loss of community spirit and the mental health impacts of isolation. We need better Internet to stay connected and see what's going on in the world.",
+        "survey": {
+          "support_level": 2,
+          "housing": 4,
+          "transport": 3,
+          "community": 2,
+          "key_concerns": [
+            "Climate change impacts",
+            "Rural infrastructure"
+          ],
+          "suggested_improvements": [
+            "Improve internet connectivity",
+            "Increase funding for mental health services"
+          ],
+          "Support for the proposal (1-5)": 2,
+          "Housing (1-5)": 4,
+          "Transport (1-5)": 3,
+          "Community (1-5)": 2,
+          "Key Concerns": "Climate change impacts, Rural infrastructure",
+          "Suggested Improvements": "Improve internet connectivity, Increase funding for mental health services"
+        }
+      },
+      "survey_grid_labels": {},
+      "themes": [
+        "Transport"
+      ],
+      "survey_numbers": {},
+      "drivers": [
+        "lack of action",
+        "concern for future generations",
+        "need for community support"
+      ]
+    },
+    {
+      "id": 4,
+      "age": "60-64 years",
+      "gender": "Male",
+      "location": "Bondi - Tamarama - Bronte",
+      "income": "$1,250-$1,499 ($65,000-$77,999)",
+      "income_weekly": "$1,250-$1,499",
+      "income_annual": "$65,000-$77,999",
+      "housing_tenure": "Rent from private landlord or real estate agent",
+      "job_tenure": "Employee in private company or business",
+      "occupation": "Middle managerial",
+      "education": "Bachelor degree or higher",
+      "transport": null,
+      "marital_status": "Never married",
+      "partner_activity": " ",
+      "household_size": "1 person",
+      "family_payments": "No",
+      "child_care_benefit": "No",
+      "investment_properties": "No",
+      "transport_infrastructure": "The same as now",
+      "political_leaning": "Liberal",
+      "trust": "Usually look after themselves",
+      "issues": "How I feel about the following Issues include: Taxation, Quite important; Immigration, Not very important; Education, Quite important; The environment, Quite important; Health and Medicare, Quite important; Refugees and asylum seekers, Not very important; Global warming, Not very important; Management of the economy, Quite important; The COVID-19 pandemic, Quite important; The cost of living, Quite important; National security, Quite important",
+      "engagement": "I engage in politics in the following way: Interest in politics, Some; Attention to newspapers, Some; Attention to television, Some; Attention to radio, Not much; Attention to internet, Some; Discussed politics in person, Rarely; Discussed politics online, Rarely; Persuaded others to vote, Rarely; Showed support for a party, Rarely; Attended political meetings, Not at all; Contributed money, Not at all",
+      "persona_id": 4,
+      "response": "NARRATIVE: Hello, I'm Dave, a 55-year-old farmer from rural Queensland. I've been on the land all my life, and it's been tough seeing the effects of climate change on my crops. However, I also worry about government regulations that might limit my ability to make a living. I'm not too fussed about public transport, as I rely on my ute. Still, I believe in looking after the local community and keeping the rural way of life alive.\nSURVEY:\nSupport for the proposal (1-5): 3\nHousing (1-5): 4\nTransport (1-5): 2\nCommunity (1-5): 5\nKey Concerns: climate_change, government_regulation\nSuggested Improvements: support_for_farmers, rural_development\n",
+      "response_json": {
+        "narrative": "Hello, I'm Dave, a 55-year-old farmer from rural Queensland. I've been on the land all my life, and it's been tough seeing the effects of climate change on my crops. However, I also worry about government regulations that might limit my ability to make a living. I'm not too fussed about public transport, as I rely on my ute. Still, I believe in looking after the local community and keeping the rural way of life alive.",
+        "survey": {
+          "support_level": 3,
+          "housing": 4,
+          "transport": 2,
+          "community": 5,
+          "key_concerns": [
+            "climate_change",
+            "government_regulation"
+          ],
+          "suggested_improvements": [
+            "support_for_farmers",
+            "rural_development"
+          ]
+        }
+      },
+      "survey_grid_labels": {},
+      "themes": [
+        "Transport"
+      ],
+      "survey_numbers": {},
+      "drivers": [
+        "concerned about climate change impact",
+        "worried about government regulations",
+        "supportive of local community and rural way of life"
+      ]
+    }
+  ],
+  "driver_summary": [],
+  "demographics": {
+    "age": {
+      "persona": {
+        "60-64 years": 2,
+        "50-54 years": 1,
+        "55-59 years": 1,
+        "35-39 years": 1
+      },
+      "population": {
+        "65-69 years": 15175,
+        "60-64 years": 14154,
+        "55-59 years": 13595,
+        "50-54 years": 13536,
+        "70-74 years": 13441,
+        "40-44 years": 12460,
+        "35-39 years": 11650,
+        "45-49 years": 11409,
+        "30-34 years": 10145,
+        "75-79 years": 7225,
+        "20-24 years": 6562,
+        "25-29 years": 5326,
+        "80-84 years": 2644,
+        "85-89 years": 916,
+        "15-19 years": 789
+      },
+      "chi2": 9.343374720156023
+    },
+    "gender": {
+      "persona": {
+        "Female": 4,
+        "Male": 1
+      },
+      "population": {
+        "Female": 72308,
+        "Male": 66719
+      },
+      "chi2": 0.6482768113769025
+    },
+    "marital": {
+      "persona": {
+        "2": 3,
+        "1": 2
+      },
+      "population": {
+        "2": 103925,
+        "1": 24782,
+        "4": 7036,
+        "3": 3284
+      },
+      "chi2": 1.8958569073490998
+    },
+    "tenure": {
+      "persona": {
+        "1": 2,
+        "3": 2,
+        "5": 1
+      },
+      "population": {
+        "1": 55692,
+        "2": 54390,
+        "3": 20276,
+        "5": 6019,
+        "4": 2373,
+        "999": 277
+      },
+      "chi2": 7.101380747508612
+    },
+    "political": {
+      "persona": {
+        "Liberal": 1,
+        "Greens": 1,
+        "National Party": 1
+      },
+      "population": {
+        "Labor": 11618,
+        "Liberal": 10062,
+        "Greens": 4125,
+        "Other party": 1,
+        "National Party": 1008,
+        "Item skipped": 329,
+        " ": 767,
+        "Other": 42
+      },
+      "chi2": 9.420669302136147
+    },
+    "education": {
+      "persona": {
+        "Bachelor degree or higher": 2,
+        "Year 11 or below": 1,
+        "Certificate III/IV": 1,
+        "No formal education": 1
+      },
+      "population": {
+        "Certificate III/IV": 39333,
+        "Advanced diploma or diploma": 29553,
+        "Bachelor degree or higher": 22839,
+        "No formal education": 17683,
+        "Year 11 or below": 12277,
+        "Other": 10864,
+        "Year 12 or equivalent": 5584,
+        "Item skipped": 894
+      },
+      "chi2": 4.41378635325858
+    }
+  },
+  "location_freq": {
+    "Randwick - North": 1,
+    "Kingsford": 1,
+    "Total": 1,
+    "Kensington (NSW)": 1,
+    "Bondi - Tamarama - Bronte": 1
+  },
+  "impact_dims": [],
+  "prompt_template": "NARRATIVE:\n<5-10 sentence first-person statement>\n\nSURVEY:\nSupport Level (1-5): <#>\n{impact_lines}Key Concerns: item1, item2\nSuggested Improvements: item1, item2",
+  "survey_grid_labels": null
+}

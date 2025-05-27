@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useTransition } from "react";
 import {
   BarChart,
   Bar,
@@ -13,6 +13,7 @@ import {
 } from "recharts";
 import { Run, Persona, DriverSummaryRow } from "../types";
 import { PersonaCard } from "../components/PersonaCard";
+import QuestionCriticModal from "../components/QuestionCriticModal";
 
 export default function Home() {
   const [area, setArea] = useState("");
@@ -36,8 +37,20 @@ export default function Home() {
   // Add state for location frequency
   const [locationFreq, setLocationFreq] = useState<Record<string, number> | null>(null);
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+  const [domain, setDomain] = useState<string>("civic-policy");
+  const [impactDims, setImpactDims] = useState<string[]>([]);
+
+  const [showCritic, setShowCritic] = useState(false);
+  const [showPromptEdit, setShowPromptEdit] = useState(false);
+  const defaultTemplate = `NARRATIVE:\n<5-10 sentence first-person statement>\n\nSURVEY:\nSupport Level (1-5): <#>\n{impact_lines}Key Concerns: item1, item2\nSuggested Improvements: item1, item2`;
+  const [promptTemplate, setPromptTemplate] = useState(defaultTemplate);
+
+  const [isPending, startTransition] = useTransition();
+
+  const [surveyGridLabels, setSurveyGridLabels] = useState<any>(null);
+
+  const runSimulation = async (q: string, d?: string) => {
+    // helper to run sim when critic modal accepted or normal form submit
     setLoadingSim(true);
     setErrorSim(null);
     setProgress(0);
@@ -47,26 +60,25 @@ export default function Home() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ ...(area.trim() ? { area } : {}), number_of_personas: numberOfPersonas, questions: [question] }),
+        body: JSON.stringify({
+          ...(area.trim() ? { area } : {}),
+          number_of_personas: numberOfPersonas,
+          questions: [q],
+          domain: d || domain,
+          impact_dims: impactDims,
+          prompt_template: promptTemplate,
+          survey_grid_labels: surveyGridLabels,
+        }),
       });
-      
-      if (!res.ok) {
-        throw new Error(`Server error (${res.status})`);
-      }
-
+      if (!res.ok) throw new Error(`Server error (${res.status})`);
       const reader = res.body?.getReader();
-      if (!reader) {
-        throw new Error("No response body");
-      }
-
+      if (!reader) throw new Error("No response body");
       const decoder = new TextDecoder();
       while (true) {
         const { done, value } = await reader.read();
         if (done) break;
-
         const chunk = decoder.decode(value);
         const lines = chunk.split("\n");
-        
         for (const line of lines) {
           if (line.startsWith("data: ")) {
             const data = JSON.parse(line.slice(6));
@@ -79,7 +91,7 @@ export default function Home() {
               setRunId(responseData.run_id);
               setRunDemo(responseData.demographics);
               setDriverSummary(responseData.driver_summary);
-              setRecentQuestions(prev => prev.includes(question) ? prev : [question, ...prev.slice(0, 4)]);
+              setRecentQuestions(prev => prev.includes(q) ? prev : [q, ...prev.slice(0, 4)]);
               setLocationFreq(responseData.location_freq);
             }
           }
@@ -90,6 +102,11 @@ export default function Home() {
     } finally {
       setLoadingSim(false);
     }
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    await runSimulation(question);
   };
 
   // ---- History helpers ----
@@ -240,6 +257,23 @@ export default function Home() {
     return entries.slice(0,10).map(([name,value])=>({ name, value }));
   };
 
+  // Fetch last 5 unique questions on mount
+  useEffect(() => {
+    fetch("http://localhost:8000/runs")
+      .then((r) => r.json())
+      .then((data) => {
+        const uniqueQs: string[] = [];
+        for (const run of data) {
+          if (run.question && !uniqueQs.includes(run.question)) {
+            uniqueQs.push(run.question);
+          }
+          if (uniqueQs.length >= 5) break;
+        }
+        setRecentQuestions(uniqueQs);
+      })
+      .catch(() => {/* ignore */});
+  }, []);
+
   return (
     <main style={{ padding: "2rem", fontFamily: "sans-serif" }}>
       <h1>VoxPopAI (PoC)</h1>
@@ -269,14 +303,29 @@ export default function Home() {
           </label>
           <label style={{ display: "flex", flexDirection: "column" }}>
             Recent Questions
-            <select onChange={(e) => setQuestion(e.target.value)} value={question}>
+            <select onChange={(e) => startTransition(() => setQuestion(e.target.value))} value={question}>
               <option value="">Select a recent question</option>
               {recentQuestions.map((q, idx) => (
                 <option key={idx} value={q}>{q}</option>
               ))}
             </select>
           </label>
-          <button type="submit" disabled={loadingSim}>Run Simulation</button>
+          <div style={{ display: "flex", gap: "0.5rem" }}>
+            <button type="button" onClick={() => setShowCritic(true)} disabled={!question.trim() || isPending}>
+              Review Question
+            </button>
+            <button type="button" onClick={() => runSimulation(question)} disabled={loadingSim || !question.trim()}>
+              Run Simulation
+            </button>
+            <button type="button" onClick={() => setShowPromptEdit(v=>!v)}>
+              {showPromptEdit ? "Hide Prompt" : "Show Prompt"}
+            </button>
+          </div>
+          {showPromptEdit && (
+            <div style={{ marginTop: "0.5rem" }}>
+              <textarea value={promptTemplate} onChange={e=>setPromptTemplate(e.target.value)} rows={8} style={{width:"100%"}} />
+            </div>
+          )}
         </form>
       )}
 
@@ -314,6 +363,14 @@ export default function Home() {
         <div style={{ marginTop: "2rem", background: "#eef", padding: "1rem" }}>
           <h2>Key Themes</h2>
           <pre style={{ whiteSpace: "pre-wrap" }}>{summary}</pre>
+        </div>
+      )}
+
+      {activeTab === "new" && surveyGridLabels && (
+        <div style={{ marginTop: "0.5rem" }}>
+          <strong>Survey Grid:</strong>
+          <div>Support: {surveyGridLabels.support_label}</div>
+          <div>Impacts: {surveyGridLabels.impact_labels?.join(", ")}</div>
         </div>
       )}
 
@@ -461,6 +518,21 @@ export default function Home() {
             <PersonaCard key={p.id} persona={p} />
           ))}
         </div>
+      )}
+
+      {activeTab === "new" && showCritic && (
+        <QuestionCriticModal
+          initialQuestion={question}
+          initialPromptTemplate={promptTemplate}
+          onAccept={(q, dims, tpl, gridLabels) => {
+            setQuestion(q);
+            setImpactDims(dims);
+            setPromptTemplate(tpl);
+            setSurveyGridLabels(gridLabels);
+            setShowCritic(false);
+          }}
+          onClose={() => setShowCritic(false)}
+        />
       )}
 
       {activeTab === "history" && (

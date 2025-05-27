@@ -1,0 +1,419 @@
+{
+  "run_id": "d15d3ba62abc4b178448c0abf7ad3cd7",
+  "timestamp": "2025-05-26T23:39:32.419704+00:00",
+  "question": "Waverley Council is considering a policy that would remove minimum parking requirements for new apartment developments in Bondi. This means developers could build fewer or no car spaces if they believe it suits the residents' needs.",
+  "area": null,
+  "domain": "civic-policy",
+  "summary": "- Concerns about housing affordability and rising costs are consistent across multiple personas, reflecting a common issue faced by retirees and young families in different locations.\n- The lack of public transport infrastructure is a recurring theme, impacting both regional and urban areas and highlighting the need for improved transportation services.\n- The desire for more investment in community services like healthcare, education, and local businesses emerges as a shared priority among the personas, indicating a broader call for government support in these areas.",
+  "responses": [
+    {
+      "id": 0,
+      "age": "30-34 years",
+      "gender": "Female",
+      "location": "Bellevue Hill",
+      "income": "$1,500-$1,749 ($78,000-$90,999)",
+      "income_weekly": "$1,500-$1,749",
+      "income_annual": "$78,000-$90,999",
+      "housing_tenure": "Own, paying off mortgage",
+      "job_tenure": "Employee in private company or business",
+      "occupation": "Non-supervisory",
+      "education": "Year 12 or equivalent",
+      "transport": null,
+      "marital_status": "Never married",
+      "partner_activity": " ",
+      "household_size": "1 person",
+      "family_payments": "No",
+      "child_care_benefit": "No",
+      "investment_properties": "No",
+      "transport_infrastructure": "The same as now",
+      "political_leaning": "Labor",
+      "trust": "Usually look after themselves",
+      "issues": "How I feel about the following Issues include: Taxation, Quite important; Immigration, Quite important; Education, Not very important; The environment, Quite important; Health and Medicare, Extremely important; Refugees and asylum seekers, Quite important; Global warming, Quite important; Management of the economy, Extremely important; The COVID-19 pandemic, Not very important; The cost of living, Extremely important; National security, Quite important",
+      "engagement": "I engage in politics in the following way: Interest in politics, A good deal; Attention to newspapers, None at all; Attention to television, Some; Attention to radio, Some; Attention to internet, A good deal; Discussed politics in person, Frequently; Discussed politics online, Occasionally; Persuaded others to vote, Not at all; Showed support for a party, Not at all; Attended political meetings, Not at all; Contributed money, Not at all",
+      "persona_id": 0,
+      "response": "NARRATIVE: As a retired schoolteacher living in Bellevue Hill, I've seen the city grow and change over the years. I've always been an active member of my community, and I appreciate the local council's efforts in maintaining our parks and public spaces. However, I'm concerned about the increasing cost of housing and the lack of affordable options for young families. I also worry about the traffic congestion that seems to be getting worse each year. Public transport services are decent, but could certainly be improved.\nSURVEY:\nSupport for the proposal (1-5): 3\nHousing (1-5): 2\nTransport (1-5): 3\nCommunity (1-5): 4\nKey Concerns: housing affordability, traffic congestion\nSuggested Improvements: increase affordable housing options, improve public transport services\n",
+      "response_json": {
+        "narrative": "As a retired schoolteacher living in Bellevue Hill, I've seen the city grow and change over the years. I've always been an active member of my community, and I appreciate the local council's efforts in maintaining our parks and public spaces. However, I'm concerned about the increasing cost of housing and the lack of affordable options for young families. I also worry about the traffic congestion that seems to be getting worse each year. Public transport services are decent, but could certainly be improved.",
+        "survey": {
+          "support_level": 3,
+          "housing": 2,
+          "transport": 3,
+          "community": 4,
+          "key_concerns": [
+            "housing affordability",
+            "traffic congestion"
+          ],
+          "suggested_improvements": [
+            "increase affordable housing options",
+            "improve public transport services"
+          ],
+          "Support for the proposal (1-5)": 3,
+          "Housing (1-5)": 2,
+          "Transport (1-5)": 3,
+          "Community (1-5)": 4
+        },
+        "key_concerns": [
+          "housing affordability",
+          "traffic congestion"
+        ],
+        "suggested_improvements": [
+          "increase affordable housing options",
+          "improve public transport services"
+        ]
+      },
+      "survey_grid_labels": {},
+      "themes": [
+        "Transport"
+      ],
+      "survey_numbers": {},
+      "drivers": [
+        "concerned about housing affordability",
+        "worried about traffic congestion",
+        "want better public transport"
+      ]
+    },
+    {
+      "id": 1,
+      "age": "40-44 years",
+      "gender": "Female",
+      "location": "Kingsford",
+      "income": "$3,500 or more ($182,000 or more)",
+      "income_weekly": "$3,500 or more",
+      "income_annual": "$182,000 or more",
+      "housing_tenure": "Own, paying off mortgage",
+      "job_tenure": "Employee of Federal / State / Local Government",
+      "occupation": "Supervisory",
+      "education": "Advanced diploma or diploma",
+      "transport": null,
+      "marital_status": "Married",
+      "partner_activity": "Working full-time",
+      "household_size": "4 people",
+      "family_payments": "No",
+      "child_care_benefit": "Yes",
+      "investment_properties": "Yes",
+      "transport_infrastructure": "Much more than now",
+      "political_leaning": "Liberal",
+      "trust": "Sometimes can be trusted to do the right thing",
+      "issues": "How I feel about the following Issues include: Taxation, Quite important; Immigration, Quite important; Education, Extremely important; The environment, Extremely important; Health and Medicare, Quite important; Refugees and asylum seekers, Quite important; Global warming, Extremely important; Management of the economy, Extremely important; The COVID-19 pandemic, Not very important; The cost of living, Extremely important; National security, Extremely important",
+      "engagement": "I engage in politics in the following way: Interest in politics, Some; Attention to newspapers, Not much; Attention to television, Some; Attention to radio, Some; Attention to internet, Some; Discussed politics in person, Occasionally; Discussed politics online, Not at all; Persuaded others to vote, Not at all; Showed support for a party, Not at all; Attended political meetings, Not at all; Contributed money, Not at all",
+      "persona_id": 1,
+      "response": "NARRATIVE: As a retiree living in a regional area of Queensland, I feel that the government could do more for us older folks. Public transportation is practically non-existent and I am concerned about the rising costs of housing for my grandkids. I've always supported the ruling party, but I feel they could do better in addressing the needs of rural communities. We need better infrastructure and healthcare facilities, and I believe these should be the government's priorities.\nSURVEY:\nSupport for the proposal (1-5): 3\nHousing (1-5): 4\nTransport (1-5): 2\nCommunity (1-5): 3\nKey Concerns: lack of public transport, rising housing costs\nSuggested Improvements: improve rural infrastructure, establish better healthcare facilities\n",
+      "response_json": {
+        "narrative": "As a retiree living in a regional area of Queensland, I feel that the government could do more for us older folks. Public transportation is practically non-existent and I am concerned about the rising costs of housing for my grandkids. I've always supported the ruling party, but I feel they could do better in addressing the needs of rural communities. We need better infrastructure and healthcare facilities, and I believe these should be the government's priorities.",
+        "survey": {
+          "support_level": 3,
+          "housing": 4,
+          "transport": 2,
+          "community": 3,
+          "key_concerns": [
+            "lack of public transport",
+            "rising housing costs"
+          ],
+          "suggested_improvements": [
+            "improve rural infrastructure",
+            "establish better healthcare facilities"
+          ],
+          "Support for the proposal (1-5)": 3,
+          "Housing (1-5)": 4,
+          "Transport (1-5)": 2,
+          "Community (1-5)": 3,
+          "Key Concerns": "lack of public transport, rising housing costs",
+          "Suggested Improvements": "improve rural infrastructure, establish better healthcare facilities"
+        }
+      },
+      "survey_grid_labels": {},
+      "themes": [
+        "Transport"
+      ],
+      "survey_numbers": {},
+      "drivers": [
+        "neglected by government",
+        "concerned about rising costs",
+        "need better infrastructure and healthcare"
+      ]
+    },
+    {
+      "id": 2,
+      "age": "70-74 years",
+      "gender": "Male",
+      "location": "Bondi Junction - Waverly",
+      "income": "$300-$399 ($15,600-$20,799)",
+      "income_weekly": "$300-$399",
+      "income_annual": "$15,600-$20,799",
+      "housing_tenure": "Own outright",
+      "job_tenure": "Employee in private company or business",
+      "occupation": "Supervisory",
+      "education": "No formal education",
+      "transport": null,
+      "marital_status": "Married",
+      "partner_activity": "Working part-time",
+      "household_size": "2 people",
+      "family_payments": "No",
+      "child_care_benefit": "No",
+      "investment_properties": "No",
+      "transport_infrastructure": "Somewhat more than now",
+      "political_leaning": "Labor",
+      "trust": "Sometimes look after themselves",
+      "issues": "How I feel about the following Issues include: Taxation, Quite important; Immigration, Quite important; Education, Extremely important; The environment, Extremely important; Health and Medicare, Extremely important; Refugees and asylum seekers, Quite important; Global warming, Extremely important; Management of the economy, Extremely important; The COVID-19 pandemic, Not very important; The cost of living, Extremely important; National security, Extremely important",
+      "engagement": "I engage in politics in the following way: Interest in politics, Some; Attention to newspapers, Some; Attention to television, Some; Attention to radio, None at all; Attention to internet, Some; Discussed politics in person, Occasionally; Discussed politics online, Not at all; Persuaded others to vote, Not at all; Showed support for a party, Not at all; Attended political meetings, Not at all; Contributed money, Not at all",
+      "persona_id": 2,
+      "response": "NARRATIVE: I'm a 70-year-old married man living in Bondi Junction - Waverly, working as a supervisory employee in a private company. I have generally positive feelings about our local council as they have been responsive to community concerns. However, the increasing cost of rent and public transport is putting a lot of strain on our budget. Our community could do with more affordable housing options and a better public transport system.\nSURVEY:\nSupport for the proposal (1-5): 3\nHousing (1-5): 1\nTransport (1-5): 2\nCommunity (1-5): 4\nKey Concerns: High cost of housing, Expensive public transport\nSuggested Improvements: Increase affordable housing, Subsidize public transport\n",
+      "response_json": {
+        "narrative": "I'm a 70-year-old married man living in Bondi Junction - Waverly, working as a supervisory employee in a private company. I have generally positive feelings about our local council as they have been responsive to community concerns. However, the increasing cost of rent and public transport is putting a lot of strain on our budget. Our community could do with more affordable housing options and a better public transport system.",
+        "survey": {
+          "support_level": 3,
+          "housing": 1,
+          "transport": 2,
+          "community": 4,
+          "key_concerns": [
+            "High cost of housing",
+            "Expensive public transport"
+          ],
+          "suggested_improvements": [
+            "Increase affordable housing",
+            "Subsidize public transport"
+          ],
+          "Support for the proposal (1-5)": 3,
+          "Housing (1-5)": 1,
+          "Transport (1-5)": 2,
+          "Community (1-5)": 4,
+          "Key Concerns": "High cost of housing, Expensive public transport",
+          "Suggested Improvements": "Increase affordable housing, Subsidize public transport"
+        }
+      },
+      "survey_grid_labels": {},
+      "themes": [
+        "Transport"
+      ],
+      "survey_numbers": {},
+      "drivers": [
+        "financial strain",
+        "affordable housing",
+        "improved public transport"
+      ]
+    },
+    {
+      "id": 3,
+      "age": "25-29 years",
+      "gender": "Female",
+      "location": "Bondi - Tamarama - Bronte",
+      "income": "$1,250-$1,499 ($65,000-$77,999)",
+      "income_weekly": "$1,250-$1,499",
+      "income_annual": "$65,000-$77,999",
+      "housing_tenure": "Own, paying off mortgage",
+      "job_tenure": "Employee of Federal / State / Local Government",
+      "occupation": "Non-supervisory",
+      "education": "Certificate III/IV",
+      "transport": null,
+      "marital_status": "Never married",
+      "partner_activity": " ",
+      "household_size": "1 person",
+      "family_payments": "No",
+      "child_care_benefit": "No",
+      "investment_properties": "No",
+      "transport_infrastructure": "Somewhat more than now",
+      "political_leaning": "Labor",
+      "trust": "Sometimes can be trusted to do the right thing",
+      "issues": "How I feel about the following Issues include: Taxation, Not very important; Immigration, Quite important; Education, Quite important; The environment, Extremely important; Health and Medicare, Quite important; Refugees and asylum seekers, Extremely important; Global warming, Extremely important; Management of the economy, Extremely important; The COVID-19 pandemic, Extremely important; The cost of living, Extremely important; National security, Quite important",
+      "engagement": "I engage in politics in the following way: Interest in politics, A good deal; Attention to newspapers, Some; Attention to television, A good deal; Attention to radio, A good deal; Attention to internet, A good deal; Discussed politics in person, Occasionally; Discussed politics online, Occasionally; Persuaded others to vote, Occasionally; Showed support for a party, Rarely; Attended political meetings, Rarely; Contributed money, Occasionally",
+      "persona_id": 3,
+      "response": "NARRATIVE: G'day, I'm a retired school teacher living in the rural town of Alice Springs. I've lived here for most of my life and love the community spirit. But I'm worried. Our town's infrastructure is lagging behind, especially public transport, and our young ones are moving to cities for better opportunities. I reckon we need more investment in local businesses to create jobs and improve our housing situation as well.\nSURVEY:\nSupport for the proposal (1-5): 3\nHousing (1-5): 2\nTransport (1-5): 2\nCommunity (1-5): 5\nKey Concerns: lack of public transport, youth migration\nSuggested Improvements: invest in local businesses, improve public transport\n",
+      "response_json": {
+        "narrative": "G'day, I'm a retired school teacher living in the rural town of Alice Springs. I've lived here for most of my life and love the community spirit. But I'm worried. Our town's infrastructure is lagging behind, especially public transport, and our young ones are moving to cities for better opportunities. I reckon we need more investment in local businesses to create jobs and improve our housing situation as well.",
+        "survey": {
+          "support_level": 3,
+          "housing": 2,
+          "transport": 2,
+          "community": 5,
+          "key_concerns": [
+            "lack of public transport",
+            "youth migration"
+          ],
+          "suggested_improvements": [
+            "invest in local businesses",
+            "improve public transport"
+          ]
+        }
+      },
+      "survey_grid_labels": {},
+      "themes": [
+        "Transport"
+      ],
+      "survey_numbers": {},
+      "drivers": [
+        "concerned about infrastructure",
+        "fear of losing young people",
+        "need for investment in local businesses"
+      ]
+    },
+    {
+      "id": 4,
+      "age": "30-34 years",
+      "gender": "Male",
+      "location": "Maroubra - North",
+      "income": "$3,000-$3,499 ($156,000-$181,999)",
+      "income_weekly": "$3,000-$3,499",
+      "income_annual": "$156,000-$181,999",
+      "housing_tenure": "Own, paying off mortgage",
+      "job_tenure": "Employee of Federal / State / Local Government",
+      "occupation": "Supervisory",
+      "education": "Certificate III/IV",
+      "transport": null,
+      "marital_status": "Married",
+      "partner_activity": "Working part-time",
+      "household_size": "2 people",
+      "family_payments": "No",
+      "child_care_benefit": "Yes",
+      "investment_properties": "No",
+      "transport_infrastructure": "Much more than now",
+      "political_leaning": "Greens",
+      "trust": "Sometimes can be trusted to do the right thing",
+      "issues": "How I feel about the following Issues include: Taxation, Quite important; Immigration, Quite important; Education, Quite important; The environment, Extremely important; Health and Medicare, Quite important; Refugees and asylum seekers, Quite important; Global warming, Extremely important; Management of the economy, Quite important; The COVID-19 pandemic, Quite important; The cost of living, Quite important; National security, Quite important",
+      "engagement": "I engage in politics in the following way: Interest in politics, A good deal; Attention to newspapers, Not much; Attention to television, None at all; Attention to radio, Not much; Attention to internet, A good deal; Discussed politics in person, Frequently; Discussed politics online, Rarely; Persuaded others to vote, Occasionally; Showed support for a party, Not at all; Attended political meetings, Not at all; Contributed money, Not at all",
+      "persona_id": 4,
+      "response": "NARRATIVE: G'day, I'm a retired school teacher living in a rural area of Queensland. I've dedicated my life to education and believe it's a critical factor for our nation's progress. I'm concerned about the lack of educational resources and opportunities for young people in rural areas. It's also been tough to access healthcare services without driving for hours. Public transport is practically non-existent here, making it difficult for us older folks. I believe the government should invest more in rural areas, especially in education, healthcare, and transport systems.\nSURVEY:\nSupport for the proposal (1-5): 3\nHousing (1-5): 3\nTransport (1-5): 1\nCommunity (1-5): 4\nKey Concerns: Education, Transportation\nSuggested Improvements: Increase funding for rural education, Improve healthcare services in rural areas\n",
+      "response_json": {
+        "narrative": "G'day, I'm a retired school teacher living in a rural area of Queensland. I've dedicated my life to education and believe it's a critical factor for our nation's progress. I'm concerned about the lack of educational resources and opportunities for young people in rural areas. It's also been tough to access healthcare services without driving for hours. Public transport is practically non-existent here, making it difficult for us older folks. I believe the government should invest more in rural areas, especially in education, healthcare, and transport systems.",
+        "survey": {
+          "support_level": 3,
+          "housing": 3,
+          "transport": 1,
+          "community": 4,
+          "key_concerns": [
+            "Education",
+            "Transportation"
+          ],
+          "suggested_improvements": [
+            "Increase funding for rural education",
+            "Improve healthcare services in rural areas"
+          ]
+        }
+      },
+      "survey_grid_labels": {},
+      "themes": [
+        "Transport"
+      ],
+      "survey_numbers": {},
+      "drivers": [
+        "underfunded education",
+        "limited healthcare access",
+        "lack of public transport"
+      ]
+    }
+  ],
+  "driver_summary": [],
+  "demographics": {
+    "age": {
+      "persona": {
+        "30-34 years": 2,
+        "40-44 years": 1,
+        "70-74 years": 1,
+        "25-29 years": 1
+      },
+      "population": {
+        "65-69 years": 15175,
+        "60-64 years": 14154,
+        "55-59 years": 13595,
+        "50-54 years": 13536,
+        "70-74 years": 13441,
+        "40-44 years": 12460,
+        "35-39 years": 11650,
+        "45-49 years": 11409,
+        "30-34 years": 10145,
+        "75-79 years": 7225,
+        "20-24 years": 6562,
+        "25-29 years": 5326,
+        "80-84 years": 2644,
+        "85-89 years": 916,
+        "15-19 years": 789
+      },
+      "chi2": 15.481977370333453
+    },
+    "gender": {
+      "persona": {
+        "Female": 3,
+        "Male": 2
+      },
+      "population": {
+        "Female": 72308,
+        "Male": 66719
+      },
+      "chi2": 0.0
+    },
+    "marital": {
+      "persona": {
+        "2": 3,
+        "1": 2
+      },
+      "population": {
+        "2": 103925,
+        "1": 24782,
+        "4": 7036,
+        "3": 3284
+      },
+      "chi2": 1.8958569073490998
+    },
+    "tenure": {
+      "persona": {
+        "2": 4,
+        "1": 1
+      },
+      "population": {
+        "1": 55692,
+        "2": 54390,
+        "3": 20276,
+        "5": 6019,
+        "4": 2373,
+        "999": 277
+      },
+      "chi2": 3.678667341929876
+    },
+    "political": {
+      "persona": {
+        "Labor": 1,
+        "Liberal": 1,
+        "Greens": 1
+      },
+      "population": {
+        "Labor": 11618,
+        "Liberal": 10062,
+        "Greens": 4125,
+        "Other party": 1,
+        "National Party": 1008,
+        "Item skipped": 329,
+        " ": 767,
+        "Other": 42
+      },
+      "chi2": 0.9865387965585806
+    },
+    "education": {
+      "persona": {
+        "Certificate III/IV": 2,
+        "Year 12 or equivalent": 1,
+        "Advanced diploma or diploma": 1,
+        "No formal education": 1
+      },
+      "population": {
+        "Certificate III/IV": 39333,
+        "Advanced diploma or diploma": 29553,
+        "Bachelor degree or higher": 22839,
+        "No formal education": 17683,
+        "Year 11 or below": 12277,
+        "Other": 10864,
+        "Year 12 or equivalent": 5584,
+        "Item skipped": 894
+      },
+      "chi2": 5.319877540058639
+    }
+  },
+  "location_freq": {
+    "Bellevue Hill": 1,
+    "Kingsford": 1,
+    "Bondi Junction - Waverly": 1,
+    "Bondi - Tamarama - Bronte": 1,
+    "Maroubra - North": 1
+  },
+  "impact_dims": [],
+  "prompt_template": "NARRATIVE:\n<5-10 sentence first-person statement>\n\nSURVEY:\nSupport Level (1-5): <#>\n{impact_lines}Key Concerns: item1, item2\nSuggested Improvements: item1, item2",
+  "survey_grid_labels": null
+}
