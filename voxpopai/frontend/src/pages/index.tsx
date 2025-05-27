@@ -15,71 +15,1187 @@ import { Run, Persona, DriverSummaryRow } from "../types";
 import { PersonaCard } from "../components/PersonaCard";
 import QuestionCriticModal from "../components/QuestionCriticModal";
 
+// Modern pastel color scheme
+const colors = {
+  primary: "#6366f1",      // Indigo
+  secondary: "#8b5cf6",    // Purple
+  accent: "#06b6d4",       // Cyan
+  success: "#10b981",      // Emerald
+  warning: "#f59e0b",      // Amber
+  background: "#fefefe",   // Almost white
+  surface: "#f8fafc",      // Light gray
+  muted: "#64748b",        // Slate
+  text: "#1e293b",         // Dark slate
+  border: "#e2e8f0",       // Light border
+  pastel: {
+    blue: "#dbeafe",
+    purple: "#e9d5ff", 
+    green: "#d1fae5",
+    yellow: "#fef3c7",
+    pink: "#fce7f3",
+    orange: "#fed7aa"
+  }
+};
+
+type Step = "welcome" | "question-review" | "persona-setup" | "simulation" | "results";
+
+// Step components defined outside to prevent re-rendering
+const StepIndicator = ({ currentStep, completedSteps, colors }: {
+  currentStep: Step;
+  completedSteps: Set<Step>;
+  colors: any;
+}) => (
+  <div style={{ 
+    display: "flex", 
+    justifyContent: "center", 
+    marginBottom: "3rem",
+    padding: "0 2rem"
+  }}>
+    {[
+      { key: "welcome", label: "Welcome" },
+      { key: "question-review", label: "Question Review" },
+      { key: "persona-setup", label: "Setup" },
+      { key: "simulation", label: "Simulation" },
+      { key: "results", label: "Results" }
+    ].map((step, index) => (
+      <div key={step.key} style={{ display: "flex", alignItems: "center" }}>
+        <div style={{
+          width: "40px",
+          height: "40px",
+          borderRadius: "50%",
+          backgroundColor: currentStep === step.key ? colors.primary : 
+                         completedSteps.has(step.key as Step) ? colors.success : colors.border,
+          color: currentStep === step.key || completedSteps.has(step.key as Step) ? "white" : colors.muted,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          fontWeight: "600",
+          fontSize: "14px",
+          transition: "all 0.3s ease"
+        }}>
+          {completedSteps.has(step.key as Step) ? "✓" : index + 1}
+        </div>
+        <span style={{
+          marginLeft: "8px",
+          marginRight: "24px",
+          fontSize: "14px",
+          color: currentStep === step.key ? colors.primary : colors.muted,
+          fontWeight: currentStep === step.key ? "600" : "400"
+        }}>
+          {step.label}
+        </span>
+        {index < 4 && (
+          <div style={{
+            width: "40px",
+            height: "2px",
+            backgroundColor: colors.border,
+            marginRight: "24px"
+          }} />
+        )}
+      </div>
+    ))}
+  </div>
+);
+
+const WelcomeStep = ({ 
+  question, 
+  setQuestion, 
+  context, 
+  setContext, 
+  onContinue,
+  pastRuns,
+  loadingPastRuns,
+  onLoadPastRun,
+  colors 
+}: {
+  question: string;
+  setQuestion: (q: string) => void;
+  context: string;
+  setContext: (c: string) => void;
+  onContinue: () => void;
+  pastRuns: any[];
+  loadingPastRuns: boolean;
+  onLoadPastRun: (runId: string) => void;
+  colors: any;
+}) => (
+  <div style={{
+    maxWidth: "800px",
+    margin: "0 auto",
+    textAlign: "center",
+    padding: "4rem 2rem"
+  }}>
+    <h1 style={{
+      fontSize: "3.5rem",
+      fontWeight: "700",
+      color: colors.text,
+      marginBottom: "1rem",
+      background: `linear-gradient(135deg, ${colors.primary}, ${colors.secondary})`,
+      WebkitBackgroundClip: "text",
+      WebkitTextFillColor: "transparent"
+    }}>
+      Welcome to VoxPop AI
+    </h1>
+    <h2 style={{
+      fontSize: "1.5rem",
+      color: colors.muted,
+      marginBottom: "3rem",
+      fontWeight: "400"
+    }}>
+      Your AI-powered sounding board for community insights
+    </h2>
+    
+    <div style={{
+      backgroundColor: colors.surface,
+      borderRadius: "16px",
+      padding: "3rem",
+      border: `1px solid ${colors.border}`,
+      textAlign: "left"
+    }}>
+      <div style={{
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "center",
+        marginBottom: "1.5rem"
+      }}>
+        <h3 style={{
+          fontSize: "1.25rem",
+          fontWeight: "600",
+          color: colors.text,
+          margin: 0
+        }}>
+          What question do you need answered?
+        </h3>
+        
+        {pastRuns.length > 0 && (
+          <div style={{ position: "relative" }}>
+            <select
+              onChange={(e) => {
+                if (e.target.value) {
+                  const selectedRun = pastRuns.find(run => run.id === e.target.value);
+                  if (selectedRun) {
+                    setQuestion(selectedRun.question || "");
+                  }
+                  e.target.value = ""; // Reset dropdown
+                }
+              }}
+              style={{
+                padding: "0.5rem",
+                border: `1px solid ${colors.border}`,
+                borderRadius: "8px",
+                fontSize: "14px",
+                backgroundColor: colors.surface,
+                color: colors.text,
+                cursor: "pointer"
+              }}
+            >
+              <option value="">Recent questions...</option>
+              {pastRuns.slice(0, 5).map((run) => (
+                <option key={run.id} value={run.id}>
+                  {run.question?.length > 50 ? `${run.question.substring(0, 50)}...` : run.question}
+                </option>
+              ))}
+            </select>
+          </div>
+        )}
+      </div>
+      
+      <textarea
+        value={question}
+        onChange={(e) => setQuestion(e.target.value)}
+        placeholder="e.g., Should we remove minimum parking requirements for new apartments in our area?"
+        style={{
+          width: "100%",
+          minHeight: "120px",
+          padding: "1rem",
+          border: `2px solid ${colors.border}`,
+          borderRadius: "12px",
+          fontSize: "16px",
+          fontFamily: "inherit",
+          resize: "vertical",
+          transition: "border-color 0.2s ease",
+          marginBottom: "1.5rem"
+        }}
+        onFocus={(e) => e.target.style.borderColor = colors.primary}
+        onBlur={(e) => e.target.style.borderColor = colors.border}
+      />
+      
+      <h4 style={{
+        fontSize: "1rem",
+        fontWeight: "600",
+        color: colors.text,
+        marginBottom: "0.5rem"
+      }}>
+        Additional context (optional)
+      </h4>
+      <p style={{
+        fontSize: "14px",
+        color: colors.muted,
+        marginBottom: "1rem"
+      }}>
+        Help us understand the background, stakeholders, or specific concerns
+      </p>
+      
+      <textarea
+        value={context}
+        onChange={(e) => setContext(e.target.value)}
+        placeholder="e.g., This is for a dense urban area with limited public transport..."
+        style={{
+          width: "100%",
+          minHeight: "80px",
+          padding: "1rem",
+          border: `2px solid ${colors.border}`,
+          borderRadius: "12px",
+          fontSize: "16px",
+          fontFamily: "inherit",
+          resize: "vertical",
+          transition: "border-color 0.2s ease",
+          marginBottom: "2rem"
+        }}
+        onFocus={(e) => e.target.style.borderColor = colors.primary}
+        onBlur={(e) => e.target.style.borderColor = colors.border}
+      />
+      
+      <button
+        onClick={onContinue}
+        disabled={!question.trim()}
+        style={{
+          backgroundColor: question.trim() ? colors.primary : colors.border,
+          color: "white",
+          border: "none",
+          borderRadius: "12px",
+          padding: "1rem 2rem",
+          fontSize: "16px",
+          fontWeight: "600",
+          cursor: question.trim() ? "pointer" : "not-allowed",
+          transition: "all 0.2s ease",
+          width: "100%"
+        }}
+      >
+        Continue to Question Review
+      </button>
+    </div>
+    
+    {/* Past Questions Section */}
+    {pastRuns.length > 0 && (
+      <div style={{
+        maxWidth: "800px",
+        margin: "3rem auto 0 auto",
+        padding: "0 2rem"
+      }}>
+        <h3 style={{
+          fontSize: "1.5rem",
+          fontWeight: "600",
+          color: colors.text,
+          marginBottom: "1.5rem",
+          textAlign: "center"
+        }}>
+          Or load a previous question
+        </h3>
+        
+        <div style={{
+          backgroundColor: colors.surface,
+          borderRadius: "16px",
+          padding: "2rem",
+          border: `1px solid ${colors.border}`
+        }}>
+          {loadingPastRuns ? (
+            <div style={{ textAlign: "center", color: colors.muted }}>
+              Loading past questions...
+            </div>
+          ) : (
+            <div style={{ display: "grid", gap: "1rem" }}>
+              {pastRuns.map((run) => (
+                <div
+                  key={run.id}
+                  onClick={() => onLoadPastRun(run.id)}
+                  style={{
+                    padding: "1rem",
+                    backgroundColor: colors.background,
+                    borderRadius: "8px",
+                    border: `1px solid ${colors.border}`,
+                    cursor: "pointer",
+                    transition: "all 0.2s ease"
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.backgroundColor = colors.pastel.blue;
+                    e.currentTarget.style.borderColor = colors.primary;
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.backgroundColor = colors.background;
+                    e.currentTarget.style.borderColor = colors.border;
+                  }}
+                >
+                  <div style={{
+                    fontSize: "14px",
+                    color: colors.muted,
+                    marginBottom: "0.5rem"
+                  }}>
+                    {new Date(run.timestamp).toLocaleDateString()} • {run.persona_count} personas
+                  </div>
+                  <div style={{
+                    fontSize: "16px",
+                    color: colors.text,
+                    fontWeight: "500",
+                    lineHeight: "1.4"
+                  }}>
+                    {run.question?.length > 120 ? `${run.question.substring(0, 120)}...` : run.question}
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
+      </div>
+    )}
+  </div>
+);
+
+const QuestionReviewStep = ({ 
+  question, 
+  questionCritic, 
+  onAccept, 
+  onReject, 
+  colors 
+}: { 
+  question: string; 
+  questionCritic: any;
+  onAccept: () => void;
+  onReject: () => void;
+  colors: any; 
+}) => (
+  <div style={{
+    maxWidth: "800px",
+    margin: "0 auto",
+    padding: "2rem"
+  }}>
+    <h2 style={{
+      fontSize: "2rem",
+      fontWeight: "600",
+      color: colors.text,
+      marginBottom: "2rem",
+      textAlign: "center"
+    }}>
+      Question Review
+    </h2>
+    
+    <div style={{
+      backgroundColor: colors.surface,
+      borderRadius: "16px",
+      padding: "2rem",
+      border: `1px solid ${colors.border}`,
+      marginBottom: "2rem"
+    }}>
+      <div style={{
+        backgroundColor: colors.pastel.blue,
+        borderRadius: "12px",
+        padding: "1.5rem",
+        marginBottom: "2rem"
+      }}>
+        <strong style={{ color: colors.text }}>Your Original Question:</strong>
+        <p style={{ margin: "0.5rem 0 0 0", color: colors.text }}>{question}</p>
+      </div>
+      
+      {questionCritic?.rewritten && questionCritic.rewritten !== question && (
+        <div style={{
+          backgroundColor: colors.pastel.green,
+          borderRadius: "12px",
+          padding: "1.5rem",
+          marginBottom: "2rem"
+        }}>
+          <strong style={{ color: colors.text }}>Suggested Improvement:</strong>
+          <p style={{ margin: "0.5rem 0 0 0", color: colors.text }}>{questionCritic.rewritten}</p>
+        </div>
+      )}
+      
+      <div style={{
+        display: "flex",
+        gap: "1rem",
+        justifyContent: "center"
+      }}>
+        <button
+          onClick={onAccept}
+          style={{
+            backgroundColor: colors.success,
+            color: "white",
+            border: "none",
+            borderRadius: "8px",
+            padding: "0.75rem 1.5rem",
+            fontSize: "16px",
+            fontWeight: "600",
+            cursor: "pointer",
+            transition: "all 0.2s ease"
+          }}
+        >
+          {questionCritic?.rewritten && questionCritic.rewritten !== question ? "Use Suggested Question" : "Continue with Original"}
+        </button>
+        
+        {questionCritic?.rewritten && questionCritic.rewritten !== question && (
+          <button
+            onClick={onReject}
+            style={{
+              backgroundColor: colors.surface,
+              color: colors.text,
+              border: `1px solid ${colors.border}`,
+              borderRadius: "8px",
+              padding: "0.75rem 1.5rem",
+              fontSize: "16px",
+              fontWeight: "600",
+              cursor: "pointer",
+              transition: "all 0.2s ease"
+            }}
+          >
+            Keep Original Question
+          </button>
+        )}
+      </div>
+    </div>
+  </div>
+);
+
+const PersonaSetupStep = ({ 
+  numberOfPersonas, 
+  setNumberOfPersonas, 
+  area, 
+  setArea, 
+  onStartSimulation, 
+  colors 
+}: {
+  numberOfPersonas: number;
+  setNumberOfPersonas: (n: number) => void;
+  area: string;
+  setArea: (a: string) => void;
+  onStartSimulation: () => void;
+  colors: any;
+}) => (
+  <div style={{
+    maxWidth: "800px",
+    margin: "0 auto",
+    padding: "2rem"
+  }}>
+    <h2 style={{
+      fontSize: "2rem",
+      fontWeight: "600",
+      color: colors.text,
+      marginBottom: "2rem",
+      textAlign: "center"
+    }}>
+      Persona Generation Setup
+    </h2>
+    
+    <div style={{
+      backgroundColor: colors.surface,
+      borderRadius: "16px",
+      padding: "3rem",
+      border: `1px solid ${colors.border}`
+    }}>
+      <div style={{ marginBottom: "2rem" }}>
+        <label style={{
+          display: "block",
+          fontSize: "1.1rem",
+          fontWeight: "600",
+          color: colors.text,
+          marginBottom: "0.5rem"
+        }}>
+          How many personas should consider this question?
+        </label>
+        <p style={{
+          fontSize: "14px",
+          color: colors.muted,
+          marginBottom: "1rem"
+        }}>
+          More personas provide broader perspectives but take longer to generate
+        </p>
+        <input
+          type="number"
+          value={numberOfPersonas}
+          onChange={(e) => setNumberOfPersonas(Number(e.target.value))}
+          min="1"
+          max="50"
+          style={{
+            width: "120px",
+            padding: "0.75rem",
+            border: `2px solid ${colors.border}`,
+            borderRadius: "8px",
+            fontSize: "16px",
+            textAlign: "center"
+          }}
+        />
+      </div>
+      
+      <div style={{ marginBottom: "2rem" }}>
+        <label style={{
+          display: "block",
+          fontSize: "1.1rem",
+          fontWeight: "600",
+          color: colors.text,
+          marginBottom: "0.5rem"
+        }}>
+          Geographic Area (optional)
+        </label>
+        <p style={{
+          fontSize: "14px",
+          color: colors.muted,
+          marginBottom: "1rem"
+        }}>
+          Focus on a specific area or leave blank for general population
+        </p>
+        <input
+          type="text"
+          value={area}
+          onChange={(e) => setArea(e.target.value)}
+          placeholder="e.g., Bondi, Sydney, Melbourne CBD"
+          style={{
+            width: "100%",
+            padding: "0.75rem",
+            border: `2px solid ${colors.border}`,
+            borderRadius: "8px",
+            fontSize: "16px"
+          }}
+        />
+      </div>
+      
+      <button
+        onClick={onStartSimulation}
+        style={{
+          backgroundColor: colors.primary,
+          color: "white",
+          border: "none",
+          borderRadius: "12px",
+          padding: "1rem 2rem",
+          fontSize: "16px",
+          fontWeight: "600",
+          cursor: "pointer",
+          transition: "all 0.2s ease",
+          width: "100%"
+        }}
+      >
+        Start Simulation
+      </button>
+    </div>
+  </div>
+);
+
+const SimulationStep = ({ numberOfPersonas, progress, colors }: {
+  numberOfPersonas: number;
+  progress: number;
+  colors: any;
+}) => (
+  <div style={{
+    maxWidth: "600px",
+    margin: "0 auto",
+    padding: "4rem 2rem",
+    textAlign: "center"
+  }}>
+    <h2 style={{
+      fontSize: "2rem",
+      fontWeight: "600",
+      color: colors.text,
+      marginBottom: "2rem"
+    }}>
+      Generating Insights
+    </h2>
+    
+    <div style={{
+      backgroundColor: colors.surface,
+      borderRadius: "16px",
+      padding: "3rem",
+      border: `1px solid ${colors.border}`
+    }}>
+      <div style={{
+        width: "80px",
+        height: "80px",
+        borderRadius: "50%",
+        border: `4px solid ${colors.pastel.blue}`,
+        borderTop: `4px solid ${colors.primary}`,
+        margin: "0 auto 2rem auto",
+        animation: "spin 1s linear infinite"
+      }} />
+      
+      <h3 style={{
+        fontSize: "1.25rem",
+        fontWeight: "600",
+        color: colors.text,
+        marginBottom: "1rem"
+      }}>
+        Creating {numberOfPersonas} AI personas...
+      </h3>
+      
+      <div style={{
+        backgroundColor: colors.pastel.green,
+        borderRadius: "12px",
+        padding: "1rem",
+        marginBottom: "2rem"
+      }}>
+        <div style={{
+          width: "100%",
+          height: "8px",
+          backgroundColor: "white",
+          borderRadius: "4px",
+          overflow: "hidden"
+        }}>
+          <div style={{
+            width: `${progress}%`,
+            height: "100%",
+            backgroundColor: colors.success,
+            transition: "width 0.3s ease"
+          }} />
+        </div>
+        <p style={{
+          margin: "0.5rem 0 0 0",
+          fontSize: "14px",
+          color: colors.text
+        }}>
+          {Math.round(progress)}% complete
+        </p>
+      </div>
+      
+      <p style={{
+        color: colors.muted,
+        fontSize: "14px"
+      }}>
+        Each persona is considering your question from their unique perspective...
+      </p>
+    </div>
+  </div>
+);
+
+const ResultsStep = ({ 
+  responses, 
+  summary, 
+  runId, 
+  question,
+  buildSupportData,
+  buildImpactData,
+  buildDemographicData,
+  onNewQuestion,
+  colors 
+}: {
+  responses: Persona[] | null;
+  summary: string | null;
+  runId: string | null;
+  question: string;
+  buildSupportData: (respArray: any[]) => any[];
+  buildImpactData: (respArray: any[]) => any[];
+  buildDemographicData: (respArray: any[]) => any;
+  onNewQuestion: () => void;
+  colors: any;
+}) => (
+  <div>
+    {/* Question Banner */}
+    <div style={{
+      backgroundColor: colors.primary,
+      background: `linear-gradient(135deg, ${colors.primary}, ${colors.secondary})`,
+      color: "white",
+      padding: "3rem 2rem",
+      marginBottom: "3rem"
+    }}>
+      <div style={{
+        maxWidth: "1200px",
+        margin: "0 auto",
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "center"
+      }}>
+        <div style={{ flex: 1 }}>
+          <h1 style={{
+            fontSize: "2rem",
+            fontWeight: "600",
+            margin: 0,
+            marginBottom: "1rem",
+            color: "white"
+          }}>
+            Community Insights
+          </h1>
+          <div style={{
+            fontSize: "1.5rem",
+            fontWeight: "400",
+            lineHeight: "1.4",
+            color: "rgba(255, 255, 255, 0.9)"
+          }}>
+            {question}
+          </div>
+        </div>
+        <button
+          onClick={onNewQuestion}
+          style={{
+            backgroundColor: "rgba(255, 255, 255, 0.2)",
+            color: "white",
+            border: "2px solid rgba(255, 255, 255, 0.3)",
+            borderRadius: "12px",
+            padding: "1rem 2rem",
+            fontSize: "16px",
+            fontWeight: "600",
+            cursor: "pointer",
+            transition: "all 0.2s ease",
+            marginLeft: "2rem",
+            flexShrink: 0
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.backgroundColor = "rgba(255, 255, 255, 0.3)";
+            e.currentTarget.style.borderColor = "rgba(255, 255, 255, 0.5)";
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.backgroundColor = "rgba(255, 255, 255, 0.2)";
+            e.currentTarget.style.borderColor = "rgba(255, 255, 255, 0.3)";
+          }}
+        >
+          New Question
+        </button>
+      </div>
+    </div>
+    
+    <div style={{ padding: "0 2rem 2rem 2rem" }}>
+    
+    {/* Three main insight panels */}
+    <div style={{
+      display: "grid",
+      gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+      gap: "2rem",
+      marginBottom: "4rem"
+    }}>
+      {/* Support Distribution */}
+      <div style={{
+        backgroundColor: colors.pastel.blue,
+        borderRadius: "16px",
+        padding: "2rem",
+        textAlign: "center"
+      }}>
+        <h3 style={{
+          fontSize: "1.25rem",
+          fontWeight: "600",
+          color: colors.text,
+          marginBottom: "1rem"
+        }}>
+          Overall Support
+        </h3>
+        {responses && (
+          <div style={{ fontSize: "3rem", fontWeight: "700", color: colors.primary }}>
+            {Math.round(buildSupportData(responses).reduce((acc, item) => 
+              acc + (item.level >= "3" ? item.percent : 0), 0))}%
+          </div>
+        )}
+        <p style={{ color: colors.muted, marginTop: "0.5rem" }}>
+          Support or neutral
+        </p>
+      </div>
+      
+      {/* Key Themes */}
+      <div style={{
+        backgroundColor: colors.pastel.green,
+        borderRadius: "16px",
+        padding: "2rem"
+      }}>
+        <h3 style={{
+          fontSize: "1.25rem",
+          fontWeight: "600",
+          color: colors.text,
+          marginBottom: "1rem"
+        }}>
+          Key Themes
+        </h3>
+        {summary && (
+          <div style={{
+            fontSize: "14px",
+            color: colors.text,
+            lineHeight: "1.5",
+            textAlign: "left"
+          }}>
+            {summary.split('\n').slice(0, 3).map((line, i) => (
+              <p key={i} style={{ margin: "0.5rem 0" }}>{line}</p>
+            ))}
+          </div>
+        )}
+      </div>
+      
+      {/* Demographics */}
+      <div style={{
+        backgroundColor: colors.pastel.purple,
+        borderRadius: "16px",
+        padding: "2rem",
+        textAlign: "center"
+      }}>
+        <h3 style={{
+          fontSize: "1.25rem",
+          fontWeight: "600",
+          color: colors.text,
+          marginBottom: "1rem"
+        }}>
+          Perspectives
+        </h3>
+        <div style={{ fontSize: "3rem", fontWeight: "700", color: colors.secondary }}>
+          {responses?.length || 0}
+        </div>
+        <p style={{ color: colors.muted, marginTop: "0.5rem" }}>
+          Unique personas considered
+        </p>
+      </div>
+    </div>
+    
+    {/* Charts */}
+    {responses && (
+      <>
+        <div style={{
+          backgroundColor: colors.surface,
+          borderRadius: "16px",
+          padding: "2rem",
+          border: `1px solid ${colors.border}`,
+          marginBottom: "2rem"
+        }}>
+          <h3 style={{
+            fontSize: "1.5rem",
+            fontWeight: "600",
+            color: colors.text,
+            marginBottom: "2rem"
+          }}>
+            Support Level Distribution
+          </h3>
+          <ResponsiveContainer width="100%" height={300}>
+            <BarChart data={buildSupportData(responses)}>
+              <CartesianGrid strokeDasharray="3 3" stroke={colors.border} />
+              <XAxis dataKey="level" />
+              <YAxis />
+              <Tooltip />
+              <Bar dataKey="percent" fill={colors.primary} radius={[4, 4, 0, 0]} />
+            </BarChart>
+          </ResponsiveContainer>
+        </div>
+
+        {/* Impact Areas Chart */}
+        <div style={{
+          backgroundColor: colors.surface,
+          borderRadius: "16px",
+          padding: "2rem",
+          border: `1px solid ${colors.border}`,
+          marginBottom: "2rem"
+        }}>
+          <h3 style={{
+            fontSize: "1.5rem",
+            fontWeight: "600",
+            color: colors.text,
+            marginBottom: "2rem"
+          }}>
+            Impact Assessment by Area
+          </h3>
+          <ResponsiveContainer width="100%" height={300}>
+            <BarChart data={buildImpactData(responses)}>
+              <CartesianGrid strokeDasharray="3 3" stroke={colors.border} />
+              <XAxis dataKey="impact" />
+              <YAxis domain={[1, 5]} />
+              <Tooltip />
+              <Bar dataKey="average" fill={colors.secondary} radius={[4, 4, 0, 0]} />
+            </BarChart>
+          </ResponsiveContainer>
+        </div>
+
+        {/* Demographics Charts */}
+        <div style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+          gap: "2rem",
+          marginBottom: "2rem"
+        }}>
+          {/* Age Distribution */}
+          <div style={{
+            backgroundColor: colors.surface,
+            borderRadius: "16px",
+            padding: "2rem",
+            border: `1px solid ${colors.border}`
+          }}>
+            <h3 style={{
+              fontSize: "1.25rem",
+              fontWeight: "600",
+              color: colors.text,
+              marginBottom: "1rem"
+            }}>
+              Age Distribution
+            </h3>
+            <ResponsiveContainer width="100%" height={250}>
+              <PieChart>
+                <Pie
+                  data={buildDemographicData(responses).age}
+                  dataKey="count"
+                  nameKey="group"
+                  cx="50%"
+                  cy="50%"
+                  outerRadius={80}
+                  fill={colors.accent}
+                >
+                  {buildDemographicData(responses).age.map((entry: any, index: number) => (
+                    <Cell key={`age-${index}`} fill={[colors.primary, colors.secondary, colors.accent, colors.success][index % 4]} />
+                  ))}
+                  <LabelList dataKey="group" position="outside" />
+                </Pie>
+                <Tooltip />
+              </PieChart>
+            </ResponsiveContainer>
+          </div>
+
+          {/* Gender Distribution */}
+          <div style={{
+            backgroundColor: colors.surface,
+            borderRadius: "16px",
+            padding: "2rem",
+            border: `1px solid ${colors.border}`
+          }}>
+            <h3 style={{
+              fontSize: "1.25rem",
+              fontWeight: "600",
+              color: colors.text,
+              marginBottom: "1rem"
+            }}>
+              Gender Distribution
+            </h3>
+            <ResponsiveContainer width="100%" height={250}>
+              <PieChart>
+                <Pie
+                  data={buildDemographicData(responses).gender}
+                  dataKey="count"
+                  nameKey="group"
+                  cx="50%"
+                  cy="50%"
+                  outerRadius={80}
+                  fill={colors.secondary}
+                >
+                  {buildDemographicData(responses).gender.map((entry: any, index: number) => (
+                    <Cell key={`gender-${index}`} fill={[colors.primary, colors.secondary, colors.accent][index % 3]} />
+                  ))}
+                  <LabelList dataKey="group" position="outside" />
+                </Pie>
+                <Tooltip />
+              </PieChart>
+            </ResponsiveContainer>
+          </div>
+
+          {/* Income Distribution */}
+          <div style={{
+            backgroundColor: colors.surface,
+            borderRadius: "16px",
+            padding: "2rem",
+            border: `1px solid ${colors.border}`
+          }}>
+            <h3 style={{
+              fontSize: "1.25rem",
+              fontWeight: "600",
+              color: colors.text,
+              marginBottom: "1rem"
+            }}>
+              Income Distribution
+            </h3>
+            <ResponsiveContainer width="100%" height={250}>
+              <PieChart>
+                <Pie
+                  data={buildDemographicData(responses).income}
+                  dataKey="count"
+                  nameKey="group"
+                  cx="50%"
+                  cy="50%"
+                  outerRadius={80}
+                  fill={colors.success}
+                >
+                  {buildDemographicData(responses).income.map((entry: any, index: number) => (
+                    <Cell key={`income-${index}`} fill={[colors.success, colors.warning, colors.accent][index % 3]} />
+                  ))}
+                  <LabelList dataKey="group" position="outside" />
+                </Pie>
+                <Tooltip />
+              </PieChart>
+            </ResponsiveContainer>
+          </div>
+        </div>
+      </>
+    )}
+    
+    {/* Individual Responses */}
+    {responses && (
+      <div>
+        <h3 style={{
+          fontSize: "1.5rem",
+          fontWeight: "600",
+          color: colors.text,
+          marginBottom: "2rem"
+        }}>
+          Individual Responses
+        </h3>
+        <div style={{
+          display: "grid",
+          gap: "1rem"
+        }}>
+          {responses.map((persona) => (
+            <PersonaCard key={persona.id} persona={persona} runId={runId} />
+          ))}
+        </div>
+      </div>
+    )}
+    </div>
+  </div>
+);
+
 export default function Home() {
+  // Journey state
+  const [currentStep, setCurrentStep] = useState<Step>("welcome");
+  const [completedSteps, setCompletedSteps] = useState<Set<Step>>(new Set());
+  
+  // Form data
+  const [question, setQuestion] = useState("");
+  const [context, setContext] = useState("");
+  const [numberOfPersonas, setNumberOfPersonas] = useState(10);
   const [area, setArea] = useState("");
-  const [numberOfPersonas, setNumberOfPersonas] = useState(1);
-  const [question, setQuestion] = useState(
-    "Waverley Council is considering a policy that would remove minimum parking requirements for new apartment developments in Bondi. This means developers could build fewer or no car spaces if they believe it suits the residents' needs."
-  );
+  
+  // Question critic state
+  const [questionCritic, setQuestionCritic] = useState<any>(null);
+  const [showCriticModal, setShowCriticModal] = useState(false);
+  
+  // Simulation state
+  const [loadingSim, setLoadingSim] = useState(false);
+  const [progress, setProgress] = useState(0);
   const [responses, setResponses] = useState<Persona[] | null>(null);
   const [summary, setSummary] = useState<string | null>(null);
   const [runId, setRunId] = useState<string | null>(null);
   const [runDemo, setRunDemo] = useState<any | null>(null);
-  const [activeTab, setActiveTab] = useState<"new" | "history">("new");
   const [driverSummary, setDriverSummary] = useState<DriverSummaryRow[] | null>(null);
-  const [recentQuestions, setRecentQuestions] = useState<string[]>([]);
-
-  // Add loading and error states for new simulation
-  const [loadingSim, setLoadingSim] = useState(false);
-  const [errorSim, setErrorSim] = useState<string | null>(null);
-  const [progress, setProgress] = useState(0);
-
-  // Add state for location frequency
   const [locationFreq, setLocationFreq] = useState<Record<string, number> | null>(null);
-
+  
+  // Past runs state
+  const [pastRuns, setPastRuns] = useState<any[]>([]);
+  const [loadingPastRuns, setLoadingPastRuns] = useState(false);
+  
+  // Other state
   const [domain, setDomain] = useState<string>("civic-policy");
   const [impactDims, setImpactDims] = useState<string[]>([]);
-
-  const [showCritic, setShowCritic] = useState(false);
-  const [showPromptEdit, setShowPromptEdit] = useState(false);
-  const defaultTemplate = `NARRATIVE:\n<5-10 sentence first-person statement>\n\nSURVEY:\nSupport Level (1-5): <#>\n{impact_lines}Key Concerns: item1, item2\nSuggested Improvements: item1, item2`;
-  const [promptTemplate, setPromptTemplate] = useState(defaultTemplate);
-  const [questionUpdated, setQuestionUpdated] = useState(false);
-
+  const [promptTemplate, setPromptTemplate] = useState("");
+  const [surveyGridLabels, setSurveyGridLabels] = useState<any>(null);
   const [isPending, startTransition] = useTransition();
 
-  const [surveyGridLabels, setSurveyGridLabels] = useState<any>(null);
+  const markStepComplete = (step: Step) => {
+    setCompletedSteps(prev => new Set([...prev, step]));
+  };
 
-  const runSimulation = async (q: string, d?: string) => {
-    // helper to run sim when critic modal accepted or normal form submit
-    setLoadingSim(true);
-    setErrorSim(null);
+  const goToStep = (step: Step) => {
+    setCurrentStep(step);
+  };
+
+  const restartProcess = () => {
+    setCurrentStep("welcome");
+    setCompletedSteps(new Set());
+    setQuestion("");
+    setContext("");
+    setNumberOfPersonas(10);
+    setArea("");
+    setQuestionCritic(null);
+    setShowCriticModal(false);
+    setLoadingSim(false);
     setProgress(0);
+    setResponses(null);
+    setSummary(null);
+    setRunId(null);
+    setRunDemo(null);
+    setDriverSummary(null);
+    setLocationFreq(null);
+    setDomain("civic-policy");
+    setImpactDims([]);
+    setPromptTemplate("");
+    setSurveyGridLabels(null);
+  };
+
+  const loadPastRuns = async () => {
+    setLoadingPastRuns(true);
+    try {
+      const res = await fetch("http://localhost:8000/runs/");
+      const data = await res.json();
+      setPastRuns(data.slice(0, 5)); // Show only the 5 most recent
+    } catch (e) {
+      console.error("Failed to load past runs:", e);
+    } finally {
+      setLoadingPastRuns(false);
+    }
+  };
+
+  const loadPastRun = async (runId: string) => {
+    try {
+      const res = await fetch(`http://localhost:8000/runs/${runId}`);
+      const data = await res.json();
+      
+      // Load the run data into current state
+      setQuestion(data.question || "");
+      setArea(data.area || "");
+      setDomain(data.domain || "civic-policy");
+      setResponses(data.responses || []);
+      setSummary(data.summary || "");
+      setRunId(data.run_id);
+      setRunDemo(data.demographics);
+      setDriverSummary(data.driver_summary);
+      setLocationFreq(data.location_freq);
+      setImpactDims(data.impact_dims || []);
+      setPromptTemplate(data.prompt_template || "");
+      setSurveyGridLabels(data.survey_grid_labels);
+      setNumberOfPersonas(data.responses?.length || 10);
+      
+      // Mark all steps as complete and go to results
+      setCompletedSteps(new Set(["welcome", "question-review", "persona-setup", "simulation"]));
+      setCurrentStep("results");
+    } catch (e) {
+      console.error("Failed to load past run:", e);
+      alert("Failed to load past run");
+    }
+  };
+
+  // Load past runs when component mounts
+  useEffect(() => {
+    loadPastRuns();
+  }, []);
+
+  const runQuestionCritic = async () => {
+    try {
+      const res = await fetch("http://localhost:8000/question/critic", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ question, context }),
+      });
+      const data = await res.json();
+      setQuestionCritic(data);
+      
+      // Always show the question review step, regardless of critic result
+      // The step will handle showing the original vs suggested question
+    } catch (e) {
+      console.error("Question critic failed:", e);
+      // Set a default critic response to continue
+      setQuestionCritic({ ok: true, rewritten: null });
+    }
+  };
+
+  const runSimulation = async () => {
+    setLoadingSim(true);
+    setProgress(0);
+    goToStep("simulation");
+    
     try {
       const res = await fetch("http://localhost:8000/personas/run", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           ...(area.trim() ? { area } : {}),
           number_of_personas: numberOfPersonas,
-          questions: [q],
-          domain: d || domain,
+          questions: [question],
+          domain,
           impact_dims: impactDims,
           prompt_template: promptTemplate,
           survey_grid_labels: surveyGridLabels,
         }),
       });
+      
       if (!res.ok) throw new Error(`Server error (${res.status})`);
+      
       const reader = res.body?.getReader();
       if (!reader) throw new Error("No response body");
+      
       const decoder = new TextDecoder();
       while (true) {
         const { done, value } = await reader.read();
         if (done) break;
+        
         const chunk = decoder.decode(value);
         const lines = chunk.split("\n");
+        
         for (const line of lines) {
           if (line.startsWith("data: ")) {
             const data = JSON.parse(line.slice(6));
@@ -92,640 +1208,251 @@ export default function Home() {
               setRunId(responseData.run_id);
               setRunDemo(responseData.demographics);
               setDriverSummary(responseData.driver_summary);
-              setRecentQuestions(prev => prev.includes(q) ? prev : [q, ...prev.slice(0, 4)]);
               setLocationFreq(responseData.location_freq);
+              
+              markStepComplete("simulation");
+              goToStep("results");
             }
           }
         }
       }
     } catch (err: any) {
-      setErrorSim(err.message || "Unknown error");
+      console.error("Simulation failed:", err);
     } finally {
       setLoadingSim(false);
     }
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    await runSimulation(question);
-  };
-
-  // ---- History helpers ----
-  const [runs, setRuns] = useState<Run[] | null>(null);
-  const [selectedRun, setSelectedRun] = useState<Run | null>(null);
-
-  useEffect(() => {
-    if (activeTab === "history" && runs === null) {
-      fetch("http://localhost:8000/runs")
-        .then((r) => r.json())
-        .then((data) => setRuns(data));
-    }
-  }, [activeTab, runs]);
-
-  const loadRun = async (id: string) => {
-    const res = await fetch(`http://localhost:8000/runs/${id}`);
-    const data = await res.json();
-    setSelectedRun(data);
-  };
-
-  // Build support data and a short summary of main narrative reason for each support level
-  const buildSupportDataWithSummaries = (respArray: any[], driverSummary?: any[]) => {
+  // Helper functions for charts
+  const buildSupportData = (respArray: any[]) => {
     const counts: Record<number, number> = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 };
     respArray.forEach((p) => {
       const v = p.survey_numbers?.support;
       if (v) counts[v] = (counts[v] || 0) + 1;
     });
     const total = Object.values(counts).reduce((a, b) => a + b, 0) || 1;
-    let mainSummaries: Record<number, string> = {};
-    if (driverSummary && Array.isArray(driverSummary)) {
-      driverSummary.forEach(({ level, drivers }) => {
-        mainSummaries[level] = drivers.slice(0, 2).map(([d]) => d).join(', ');
-      });
-    } else {
-      // fallback to old logic...
-      const narratives: Record<number, string[]> = { 1: [], 2: [], 3: [], 4: [], 5: [] };
-      respArray.forEach((p) => {
-        const v = p.survey_numbers?.support;
-        if (v && p.drivers && p.drivers.length > 0) {
-          narratives[v].push(...p.drivers);
-        }
-      });
-      const driverCounts: Record<number, Record<string, number>> = {};
-      Object.entries(narratives).forEach(([level, drivers]) => {
-        if (!drivers.length) return;
-        driverCounts[Number(level)] = {};
-        drivers.forEach(driver => {
-          driverCounts[Number(level)][driver] = (driverCounts[Number(level)][driver] || 0) + 1;
-        });
-      });
-      Object.entries(driverCounts).forEach(([level, counts]) => {
-        const sorted = Object.entries(counts).sort((a, b) => b[1] - a[1]);
-        mainSummaries[Number(level)] = sorted.slice(0, 2).map(([driver]) => driver).join(", ");
-      });
-    }
-    // Always return all 5 levels, even if count is 0
-    const supportData = [1, 2, 3, 4, 5].map((k) => {
-      let percent = (Number(counts[k]) / total) * 100;
-      // Ensure a minimum visible bar for nonzero counts
-      if (counts[k] > 0 && percent < 0.01) percent = 0.01;
-      return {
-        level: String(k),
-        count: counts[k],
-        percent: Number(percent),
-        summary: counts[k] > 0 ? mainSummaries[k] : "",
-      };
-    });
-    console.log('Support data:', supportData);
-    return supportData;
-  };
-
-  const buildAgeOverlay = (demo: any) => {
-    if (!demo) return [];
-    const persona = demo.age.persona || {};
-    const pop = demo.age.population || {};
-    const keys = Array.from(new Set([...Object.keys(persona), ...Object.keys(pop)]));
-    // sort by numeric lower bound if pattern like "20-24 years"
-    keys.sort((a,b)=>{
-      const numA=parseInt(a as string);
-      const numB=parseInt(b as string);
-      return numA-numB;
-    });
-    const totalPersona = Object.values(persona).reduce((s:any,v:any)=>s+v,0);
-    const totalPop = Object.values(pop).reduce((s:any,v:any)=>s+v,0);
-    return keys.map((k) => ({
-      name: k,
-      persona: totalPersona ? (Number(persona[k] ?? 0) / Number(totalPersona) * 100) : 0,
-      population: totalPop ? (Number(pop[k] ?? 0) / Number(totalPop) * 100) : 0,
+    
+    return [1, 2, 3, 4, 5].map((k) => ({
+      level: String(k),
+      count: counts[k],
+      percent: (counts[k] / total) * 100,
     }));
   };
 
-  const PARTY_COLOR: Record<string, string> = {
-    Liberal: "#1e6091",
-    Labor: "#d62828",
-    Greens: "#2a9d8f",
-    "National Party": "#f9c74f",
-    National: "#f9c74f",
-    "Other party": "#8d99ae",
+  const buildImpactData = (respArray: any[]) => {
+    const impacts = ['housing', 'transport', 'community'];
+    return impacts.map(impact => {
+      const counts: Record<number, number> = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0 };
+      respArray.forEach((p) => {
+        const v = p.survey_numbers?.[impact];
+        if (v) counts[v] = (counts[v] || 0) + 1;
+      });
+      const total = Object.values(counts).reduce((a, b) => a + b, 0) || 1;
+      const average = Object.entries(counts).reduce((acc, [level, count]) => 
+        acc + (parseInt(level) * count), 0) / total;
+      
+      return {
+        impact: impact.charAt(0).toUpperCase() + impact.slice(1),
+        average: average.toFixed(1),
+        distribution: Object.entries(counts).map(([level, count]) => ({
+          level,
+          count,
+          percent: (count / total) * 100
+        }))
+      };
+    });
   };
 
-  const GENDER_COLOR: Record<string, string> = {
-    Male: "#1e6091",
-    Female: "#f9844a",
+  const buildDemographicData = (respArray: any[]) => {
+    // Age groups
+    const ageGroups: Record<string, number> = {};
+    const genderCounts: Record<string, number> = {};
+    const incomeCounts: Record<string, number> = {};
+    
+    respArray.forEach((p) => {
+      // Age grouping
+      const age = parseInt(p.age);
+      let ageGroup = "Unknown";
+      if (age < 30) ageGroup = "18-29";
+      else if (age < 45) ageGroup = "30-44";
+      else if (age < 60) ageGroup = "45-59";
+      else ageGroup = "60+";
+      ageGroups[ageGroup] = (ageGroups[ageGroup] || 0) + 1;
+      
+      // Gender
+      const gender = p.gender || "Unknown";
+      genderCounts[gender] = (genderCounts[gender] || 0) + 1;
+      
+      // Income brackets
+      const income = p.income_annual || "Unknown";
+      let incomeGroup = "Unknown";
+      if (typeof income === 'string' && income.includes('$')) {
+        const amount = parseInt(income.replace(/[^0-9]/g, ''));
+        if (amount < 50000) incomeGroup = "Under $50k";
+        else if (amount < 100000) incomeGroup = "$50k-$100k";
+        else incomeGroup = "Over $100k";
+      }
+      incomeCounts[incomeGroup] = (incomeCounts[incomeGroup] || 0) + 1;
+    });
+    
+    return {
+      age: Object.entries(ageGroups).map(([group, count]) => ({ group, count })),
+      gender: Object.entries(genderCounts).map(([group, count]) => ({ group, count })),
+      income: Object.entries(incomeCounts).map(([group, count]) => ({ group, count }))
+    };
   };
-
-  const EDU_ORDER = [
-    "No formal education",
-    "Year 11 or below",
-    "Year 12 or equivalent",
-    "Certificate III/IV",
-    "Advanced diploma or diploma",
-    "Bachelor degree or higher",
-    "Other",
-  ];
-
-  const EDU_COLOR: Record<string, string> = {
-    "No formal education": "#8d99ae",
-    "Year 11 or below": "#adb5bd",
-    "Year 12 or equivalent": "#6c757d",
-    "Certificate III/IV": "#4dabf7",
-    "Advanced diploma or diploma": "#228be6",
-    "Bachelor degree or higher": "#1864ab",
-    Other: "#adb5bd",
-  };
-
-  const buildPieData = (demo: any, field: string) => {
-    if (!demo || !demo[field]) return [];
-    const obj = demo[field].persona || {};
-    const entries = Object.entries(obj).map(([k, v]) => ({ name: k, value: v as number }));
-    if (field === "education") {
-      entries.sort((a, b) => EDU_ORDER.indexOf(a.name) - EDU_ORDER.indexOf(b.name));
-    }
-    return entries;
-  };
-
-  const colorForSlice = (field: string, name: string, idx: number) => {
-    if (field === "political") return PARTY_COLOR[name] || PARTY_COLOR["Other party"];
-    if (field === "gender") return GENDER_COLOR[name] || "#adb5bd";
-    if (field === "education") return EDU_COLOR[name] || "#adb5bd";
-    const defaultColors = ["#0077b6", "#90be6d", "#f9c74f", "#f9844a", "#f94144", "#577590"];
-    return defaultColors[idx % defaultColors.length];
-  };
-
-  // Helper to turn locationFreq into chart data
-  const locationData = (locObj?: Record<string, number> | null) => {
-    if (!locObj) return [];
-    const entries = Object.entries(locObj).filter(([k])=>k!="Total").sort((a,b)=>b[1]-a[1]);
-    return entries.slice(0,10).map(([name,value])=>({ name, value }));
-  };
-
-  // Fetch last 5 unique questions on mount
-  useEffect(() => {
-    fetch("http://localhost:8000/runs")
-      .then((r) => r.json())
-      .then((data) => {
-        const uniqueQs: string[] = [];
-        for (const run of data) {
-          if (run.question && !uniqueQs.includes(run.question)) {
-            uniqueQs.push(run.question);
-          }
-          if (uniqueQs.length >= 5) break;
-        }
-        setRecentQuestions(uniqueQs);
-      })
-      .catch(() => {/* ignore */});
-  }, []);
 
   return (
-    <main style={{ padding: "2rem", fontFamily: "sans-serif" }}>
-      <h1>VoxPopAI (PoC)</h1>
-      <div style={{ marginBottom: "1rem" }}>
-        <button onClick={() => setActiveTab("new")} disabled={activeTab === "new"}>New Simulation</button>
-        <button onClick={() => setActiveTab("history")} disabled={activeTab === "history"} style={{ marginLeft: "0.5rem" }}>Past Runs</button>
+    <div style={{
+      minHeight: "100vh",
+      backgroundColor: colors.background,
+      fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
+    }}>
+      <style>{`
+        @keyframes spin {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+        }
+        
+        .modal-overlay {
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: rgba(0, 0, 0, 0.5);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          z-index: 1000;
+        }
+        
+        .modal-content {
+          background: white;
+          border-radius: 16px;
+          padding: 2rem;
+          max-width: 600px;
+          width: 90%;
+          max-height: 80vh;
+          overflow-y: auto;
+        }
+        
+        .btn {
+          background: ${colors.primary};
+          color: white;
+          border: none;
+          border-radius: 8px;
+          padding: 0.75rem 1.5rem;
+          font-weight: 600;
+          cursor: pointer;
+          transition: all 0.2s ease;
+        }
+        
+        .btn:hover {
+          background: ${colors.secondary};
+        }
+        
+        .btn-secondary {
+          background: ${colors.surface};
+          color: ${colors.text};
+          border: 1px solid ${colors.border};
+          border-radius: 8px;
+          padding: 0.75rem 1.5rem;
+          font-weight: 600;
+          cursor: pointer;
+          transition: all 0.2s ease;
+        }
+        
+        .btn-secondary:hover {
+          background: ${colors.border};
+        }
+      `}</style>
+      
+      <div style={{ padding: "2rem 0" }}>
+        <StepIndicator currentStep={currentStep} completedSteps={completedSteps} colors={colors} />
+        
+        {currentStep === "welcome" && <WelcomeStep
+          question={question}
+          setQuestion={setQuestion}
+          context={context}
+          setContext={setContext}
+          onContinue={() => {
+            if (question.trim()) {
+              markStepComplete("welcome");
+              goToStep("question-review");
+              runQuestionCritic();
+            }
+          }}
+          pastRuns={pastRuns}
+          loadingPastRuns={loadingPastRuns}
+          onLoadPastRun={loadPastRun}
+          colors={colors}
+        />}
+        {currentStep === "question-review" && <QuestionReviewStep 
+          question={question} 
+          questionCritic={questionCritic}
+          onAccept={() => {
+            if (questionCritic?.rewritten && questionCritic.rewritten !== question) {
+              setQuestion(questionCritic.rewritten);
+            }
+            markStepComplete("question-review");
+            goToStep("persona-setup");
+          }}
+          onReject={() => {
+            markStepComplete("question-review");
+            goToStep("persona-setup");
+          }}
+          colors={colors} 
+        />}
+        {currentStep === "persona-setup" && <PersonaSetupStep
+          numberOfPersonas={numberOfPersonas}
+          setNumberOfPersonas={setNumberOfPersonas}
+          area={area}
+          setArea={setArea}
+          onStartSimulation={() => {
+            markStepComplete("persona-setup");
+            runSimulation();
+          }}
+          colors={colors}
+        />}
+        {currentStep === "simulation" && <SimulationStep
+          numberOfPersonas={numberOfPersonas}
+          progress={progress}
+          colors={colors}
+        />}
+        {currentStep === "results" && <ResultsStep
+          responses={responses}
+          summary={summary}
+          runId={runId}
+          question={question}
+          buildSupportData={buildSupportData}
+          buildImpactData={buildImpactData}
+          buildDemographicData={buildDemographicData}
+          onNewQuestion={restartProcess}
+          colors={colors}
+        />}
       </div>
-
-      {activeTab === "new" && (
-        <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "1rem", maxWidth: "400px" }}>
-          <label>
-            Area
-            <input type="text" value={area} onChange={(e) => setArea(e.target.value)} />
-          </label>
-          <label>
-            Number of Personas
-            <input type="number" value={numberOfPersonas} onChange={(e) => setNumberOfPersonas(Number(e.target.value))} min="1" />
-          </label>
-          <label style={{ display: "flex", flexDirection: "column" }}>
-            Proposal / Question to personas
-            {questionUpdated && <span style={{ color: "green", fontSize: "0.8rem" }}>✓ Updated by question critic</span>}
-            <textarea
-              value={question}
-              onChange={(e) => setQuestion(e.target.value)}
-              rows={4}
-              style={{ width: "100%" }}
-            />
-          </label>
-          <label style={{ display: "flex", flexDirection: "column" }}>
-            Recent Questions
-            <select onChange={(e) => startTransition(() => setQuestion(e.target.value))} value={question}>
-              <option value="">Select a recent question</option>
-              {recentQuestions.map((q, idx) => (
-                <option key={idx} value={q}>{q}</option>
-              ))}
-            </select>
-          </label>
-          <div style={{ display: "flex", gap: "0.5rem" }}>
-            <button type="button" onClick={() => setShowCritic(true)} disabled={!question.trim() || isPending}>
-              Review Question
-            </button>
-            <button type="button" onClick={() => runSimulation(question)} disabled={loadingSim || !question.trim()}>
-              Run Simulation
-            </button>
-            <button type="button" onClick={() => setShowPromptEdit(v=>!v)}>
-              {showPromptEdit ? "Hide Prompt" : "Show Prompt"}
-            </button>
-          </div>
-          {showPromptEdit && (
-            <div style={{ marginTop: "0.5rem" }}>
-              <textarea value={promptTemplate} onChange={e=>setPromptTemplate(e.target.value)} rows={8} style={{width:"100%"}} />
-            </div>
-          )}
-        </form>
-      )}
-
-      {activeTab === "new" && loadingSim && (
-        <div style={{ marginTop: "1rem" }}>
-          <div style={{ 
-            width: "100%", 
-            height: "20px", 
-            backgroundColor: "#f0f0f0", 
-            borderRadius: "10px",
-            overflow: "hidden"
-          }}>
-            <div style={{
-              width: `${progress}%`,
-              height: "100%",
-              backgroundColor: "#0077b6",
-              transition: "width 0.3s ease-in-out"
-            }} />
-          </div>
-          <p style={{ marginTop: "0.5rem", textAlign: "center" }}>
-            Generating personas... {Math.round(progress)}%
-          </p>
-        </div>
-      )}
-
-      {activeTab === "new" && errorSim && (
-        <p style={{ marginTop: "1rem", color: "red" }}>{errorSim}</p>
-      )}
-
-      {activeTab === "new" && runId && (
-        <p style={{ fontStyle: "italic" }}>Run ID: {runId}</p>
-      )}
-
-      {activeTab === "new" && summary && (
-        <div style={{ marginTop: "2rem", background: "#eef", padding: "1rem" }}>
-          <h2>Key Themes</h2>
-          <pre style={{ whiteSpace: "pre-wrap" }}>{summary}</pre>
-        </div>
-      )}
-
-      {activeTab === "new" && surveyGridLabels && (
-        <div style={{ marginTop: "0.5rem" }}>
-          <strong>Survey Grid:</strong>
-          <div>Support: {surveyGridLabels.support_label}</div>
-          <div>Impacts: {surveyGridLabels.impact_labels?.join(", ")}</div>
-        </div>
-      )}
-
-      {activeTab === "new" && responses && (
-        <div style={{ marginTop: "2rem" }}>
-          <h3>Support Level Distribution</h3>
-          <ResponsiveContainer width="100%" height={270}>
-            {(() => {
-              const chartData = buildSupportDataWithSummaries(responses, driverSummary).sort((a, b) => Number(a.level) - Number(b.level)).reverse();
-              console.log('BarChart data:', chartData);
-              return (
-                <BarChart
-                  data={chartData}
-                  layout="vertical"
-                  margin={{ top: 30, right: 20, left: 40, bottom: 0 }}
-                  barCategoryGap="20%"
-                  barGap={2}
-                >
-                  <XAxis type="number" domain={[0, 100]} hide />
-                  <YAxis type="category" dataKey="level" label={{ value: "Support Level", angle: -90, position: "insideLeft" }} interval={0} />
-                  <Tooltip
-                    formatter={(value, name, props) => {
-                      const data = props.payload;
-                      return [
-                        <div key="summary">
-                          <strong>Level {data.level}</strong>
-                          <br />
-                          {data.summary}
-                          <br />
-                          {`Percent: ${data.percent.toFixed(1)}%`}
-                        </div>
-                      ];
-                    }}
-                  />
-                  <Bar dataKey="percent" fill="#0077b6" isAnimationActive={false}>
-                    <LabelList
-                      dataKey="summary"
-                      position="right"
-                      content={(props) => {
-                        const { x, y, width, height, value, payload } = props as any;
-                        console.log('LabelList props:', { x, y, width, height, value, payload });
-                        const minOffset = 40;
-                        const barEnd = Math.max(Number(x) + Number(width), Number(x) + minOffset);
-                        return (
-                          <text
-                            x={barEnd + 12}
-                            y={Number(y) + Number(height) / 2}
-                            textAnchor="start"
-                            fontSize={13}
-                            fill="#333"
-                            style={{ pointerEvents: "none", fontWeight: 500 }}
-                            alignmentBaseline="middle"
-                          >
-                            {value || "NO VALUE"}
-                          </text>
-                        );
-                      }}
-                    />
-                  </Bar>
-                </BarChart>
-              );
-            })()}
-          </ResponsiveContainer>
-        </div>
-      )}
-
-      {activeTab === "new" && responses && (
-        <div style={{ marginTop: "2rem" }}>
-          <h3>Age Distribution (Personas vs Population)</h3>
-          <ResponsiveContainer width="100%" height={250}>
-            <BarChart data={buildAgeOverlay(runDemo)}>
-              <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="name" tickFormatter={(v)=>v.length>10?v.slice(0,9)+"…":v} />
-              <YAxis tickFormatter={(v)=>`${Number(v).toFixed(0)}%`} />
-              <Tooltip formatter={(v)=>`${Number(v).toFixed(1)}%`} />
-              <Legend />
-              <Bar dataKey="persona" fill="#0077b6" />
-              <Bar dataKey="population" fill="#cccccc" />
-            </BarChart>
-          </ResponsiveContainer>
-        </div>
-      )}
-
-      {activeTab === "new" && responses && (
-        <div style={{ marginTop: "2rem", display: "flex", gap: "2rem", flexWrap:"wrap" }}>
-          <div>
-            <h3>Gender Distribution</h3>
-            <ResponsiveContainer width={320} height={340}>
-              <PieChart>
-                <Pie data={buildPieData(runDemo, "gender")} dataKey="value" nameKey="name" outerRadius={100} label>
-                  {buildPieData(runDemo, "gender").map((entry, index) => (
-                    <Cell key={`c-${index}`} fill={colorForSlice("gender", entry.name, index)} />
-                  ))}
-                </Pie>
-                <Legend verticalAlign="bottom" height={36} />
-              </PieChart>
-            </ResponsiveContainer>
-          </div>
-          <div>
-            <h3>Political Leaning</h3>
-            <ResponsiveContainer width={320} height={340}>
-              <PieChart>
-                <Pie data={buildPieData(runDemo, "political")} dataKey="value" nameKey="name" outerRadius={100} label>
-                  {buildPieData(runDemo, "political").map((entry, index) => (
-                    <Cell key={`c2-${index}`} fill={colorForSlice("political", entry.name, index)} />
-                  ))}
-                </Pie>
-                <Legend verticalAlign="bottom" height={36} />
-              </PieChart>
-            </ResponsiveContainer>
-          </div>
-          <div>
-            <h3>Education Level</h3>
-            <ResponsiveContainer width={320} height={340}>
-              <PieChart>
-                <Pie data={buildPieData(runDemo, "education")} dataKey="value" nameKey="name" outerRadius={100} label>
-                  {buildPieData(runDemo, "education").map((e,index)=>(<Cell key={`e-${index}`} fill={colorForSlice("education", e.name, index)} />))}
-                </Pie>
-                <Legend verticalAlign="bottom" height={36} />
-              </PieChart>
-            </ResponsiveContainer>
-          </div>
-        </div>
-      )}
-
-      {activeTab === "new" && locationFreq && (
-        <div style={{ marginTop: "2rem" }}>
-          <h3>Top Locations (Personas)</h3>
-          <ResponsiveContainer width="100%" height={300}>
-            <BarChart data={locationData(locationFreq)} layout="vertical" margin={{ left: 60 }}>
-              <CartesianGrid strokeDasharray="3 3" />
-              <XAxis type="number" allowDecimals={false} />
-              <YAxis type="category" dataKey="name" width={150} />
-              <Tooltip />
-              <Bar dataKey="value" fill="#90be6d" />
-            </BarChart>
-          </ResponsiveContainer>
-        </div>
-      )}
-
-      {activeTab === "new" && responses && (
-        <div style={{ marginTop: "2rem" }}>
-          <h2>Responses</h2>
-          {responses.map((p) => (
-            <PersonaCard key={p.id} persona={p} runId={runId} />
-          ))}
-        </div>
-      )}
-
-      {activeTab === "new" && showCritic && (
+      
+      {showCriticModal && (
         <QuestionCriticModal
           initialQuestion={question}
           initialPromptTemplate={promptTemplate}
           onAccept={(q, dims, tpl, gridLabels) => {
-            const wasUpdated = q !== question;
             setQuestion(q);
             setImpactDims(dims);
             setPromptTemplate(tpl);
             setSurveyGridLabels(gridLabels);
-            setShowCritic(false);
-            setQuestionUpdated(wasUpdated);
-            // Clear the indicator after 3 seconds
-            if (wasUpdated) {
-              setTimeout(() => setQuestionUpdated(false), 3000);
-            }
+            setShowCriticModal(false);
+            markStepComplete("question-review");
+            goToStep("persona-setup");
           }}
-          onClose={() => setShowCritic(false)}
+          onClose={() => {
+            setShowCriticModal(false);
+            markStepComplete("question-review");
+            goToStep("persona-setup");
+          }}
         />
       )}
-
-      {activeTab === "history" && (
-        <div>
-          {!runs && <p>Loading runs…</p>}
-          {runs && (
-            <div style={{ display: "flex" }}>
-              <div style={{ width: "250px", borderRight: "1px solid #ccc", paddingRight: "1rem" }}>
-                <h3>Runs</h3>
-                <ul style={{ listStyle: "none", paddingLeft: 0 }}>
-                  {runs.map((r) => (
-                    <li key={r.id} style={{ marginBottom: "0.75rem" }}>
-                      <button
-                        onClick={() => loadRun(r.id!)}
-                        style={{
-                          background: "none",
-                          border: "none",
-                          cursor: "pointer",
-                          textAlign: "left",
-                        }}
-                      >
-                        <div style={{ fontWeight: 600 }}>{new Date(r.timestamp || r.id!).toLocaleString()}</div>
-                        <div style={{ fontSize: "0.85rem", color: "#555" }}>
-                          {r.question ? `${r.question.slice(0, 40)}${r.question.length > 40 ? "…" : ""}` : "(no question)"}
-                        </div>
-                        {r.persona_count !== undefined && (
-                          <div style={{ fontSize: "0.75rem", color: "#777" }}>
-                            {r.persona_count} personas
-                          </div>
-                        )}
-                      </button>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div style={{ flex: 1, paddingLeft: "1rem" }}>
-                {selectedRun ? (
-                  <div>
-                    <h2>Run {selectedRun.run_id || selectedRun.id}</h2>
-                    <p><strong>Question:</strong> {selectedRun.question}</p>
-                    <p><strong>Area:</strong> {selectedRun.area || "All"}</p>
-                    <pre style={{ background: "#eef", padding: "0.5rem" }}>{selectedRun.summary}</pre>
-                    {selectedRun.responses && (
-                      <>
-                        <div style={{ marginTop: "1rem" }}>
-                          <h3>Support Level Distribution</h3>
-                          <ResponsiveContainer width="100%" height={270}>
-                            {(() => {
-                              const chartData = buildSupportDataWithSummaries(selectedRun.responses, selectedRun.driver_summary).sort((a, b) => Number(a.level) - Number(b.level)).reverse();
-                              console.log('BarChart data (history):', chartData);
-                              return (
-                                <BarChart
-                                  data={chartData}
-                                  layout="vertical"
-                                  margin={{ top: 30, right: 20, left: 40, bottom: 0 }}
-                                  barCategoryGap="20%"
-                                  barGap={2}
-                                >
-                                  <XAxis type="number" domain={[0, 100]} hide />
-                                  <YAxis type="category" dataKey="level" label={{ value: "Support Level", angle: -90, position: "insideLeft" }} interval={0} />
-                                  <Tooltip
-                                    formatter={(value, name, props) => {
-                                      const data = props.payload;
-                                      return [
-                                        <div key="summary">
-                                          <strong>Level {data.level}</strong>
-                                          <br />
-                                          {data.summary}
-                                          <br />
-                                          {`Percent: ${data.percent.toFixed(1)}%`}
-                                        </div>
-                                      ];
-                                    }}
-                                  />
-                                  <Bar dataKey="percent" fill="#0077b6" isAnimationActive={false}>
-                                    <LabelList
-                                      dataKey="summary"
-                                      position="right"
-                                      content={(props) => {
-                                        const { x, y, width, height, value, payload } = props as any;
-                                        console.log('LabelList props (history):', { x, y, width, height, value, payload });
-                                        const minOffset = 60;
-                                        const barEnd = Math.max(Number(x) + Number(width), Number(x) + minOffset);
-                                        return (
-                                          <text
-                                            x={barEnd + 12}
-                                            y={Number(y) + Number(height) / 2}
-                                            textAnchor="start"
-                                            fontSize={13}
-                                            fill="#333"
-                                            style={{ pointerEvents: "none", fontWeight: 500 }}
-                                            alignmentBaseline="middle"
-                                          >
-                                            {value || "NO VALUE"}
-                                          </text>
-                                        );
-                                      }}
-                                    />
-                                  </Bar>
-                                </BarChart>
-                              );
-                            })()}
-                          </ResponsiveContainer>
-                        </div>
-                        <div style={{ marginTop: "1rem" }}>
-                          <h3>Age Distribution (Personas vs Population)</h3>
-                          <ResponsiveContainer width="100%" height={250}>
-                            <BarChart data={buildAgeOverlay(selectedRun.demographics)}>
-                              <CartesianGrid strokeDasharray="3 3" />
-                              <XAxis dataKey="name" tickFormatter={(v)=>v.length>10?v.slice(0,9)+"…":v} />
-                              <YAxis allowDecimals={false} />
-                              <Tooltip />
-                              <Legend />
-                              <Bar dataKey="persona" fill="#0077b6" />
-                              <Bar dataKey="population" fill="#cccccc" />
-                            </BarChart>
-                          </ResponsiveContainer>
-                        </div>
-                        <div style={{ display: "flex", gap: "2rem", marginTop:"1rem", flexWrap:"wrap" }}>
-                          <div>
-                            <h3>Gender Distribution</h3>
-                            <ResponsiveContainer width={320} height={340}>
-                              <PieChart>
-                                <Pie data={buildPieData(selectedRun.demographics, "gender")} dataKey="value" nameKey="name" outerRadius={100} label>
-                                  {buildPieData(selectedRun.demographics, "gender").map((e: any, i:number)=>(
-                                    <Cell key={`g-${i}`} fill={colorForSlice("gender", e.name, i)} />
-                                  ))}
-                                </Pie>
-                                <Legend verticalAlign="bottom" height={36} />
-                              </PieChart>
-                            </ResponsiveContainer>
-                          </div>
-                          <div>
-                            <h3>Political Leaning</h3>
-                            <ResponsiveContainer width={320} height={340}>
-                              <PieChart>
-                                <Pie data={buildPieData(selectedRun.demographics, "political")} dataKey="value" nameKey="name" outerRadius={100} label>
-                                  {buildPieData(selectedRun.demographics, "political").map((e:any,i:number)=>(
-                                    <Cell key={`p-${i}`} fill={colorForSlice("political", e.name, i)} />
-                                  ))}
-                                </Pie>
-                                <Legend verticalAlign="bottom" height={36} />
-                              </PieChart>
-                            </ResponsiveContainer>
-                          </div>
-                          <div>
-                            <h3>Education Level</h3>
-                            <ResponsiveContainer width={320} height={340}>
-                              <PieChart>
-                                <Pie data={buildPieData(selectedRun.demographics, "education")} dataKey="value" nameKey="name" outerRadius={100} label>
-                                  {buildPieData(selectedRun.demographics, "education").map((e:any,i:number)=>(<Cell key={`ed-${i}`} fill={colorForSlice("education", e.name, i)} />))}
-                                </Pie>
-                                <Legend verticalAlign="bottom" height={36} />
-                              </PieChart>
-                            </ResponsiveContainer>
-                          </div>
-                        </div>
-                        {selectedRun.location_freq && (
-                          <div style={{ marginTop: "1rem" }}>
-                            <h3>Top Locations (Personas)</h3>
-                            <ResponsiveContainer width="100%" height={300}>
-                              <BarChart data={locationData(selectedRun.location_freq)} layout="vertical" margin={{ left: 60 }}>
-                                <CartesianGrid strokeDasharray="3 3" />
-                                <XAxis type="number" allowDecimals={false} />
-                                <YAxis type="category" dataKey="name" width={150} />
-                                <Tooltip />
-                                <Bar dataKey="value" fill="#90be6d" />
-                              </BarChart>
-                            </ResponsiveContainer>
-                          </div>
-                        )}
-                      </>
-                    )}
-                    {selectedRun.responses && selectedRun.responses.map((p: Persona) => (
-                      <PersonaCard key={p.id} persona={p} runId={selectedRun.run_id || selectedRun.id} />
-                    ))}
-                  </div>
-                ) : (
-                  <p>Select a run to view details.</p>
-                )}
-              </div>
-            </div>
-          )}
-        </div>
-      )}
-    </main>
+    </div>
   );
 } 

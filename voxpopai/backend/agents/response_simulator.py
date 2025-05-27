@@ -14,8 +14,35 @@ from voxpopai.backend.agents.persona_chat import persona_chat
 from voxpopai.backend.agents.relevance_critic import critique as relevance_critic
 import logging
 from copy import deepcopy
+import time
 
 load_dotenv()
+
+# Rate limiting configuration
+MAX_CONCURRENT_REQUESTS = int(os.getenv("MAX_CONCURRENT_REQUESTS", "5"))  # Concurrent requests
+REQUESTS_PER_MINUTE = int(os.getenv("REQUESTS_PER_MINUTE", "50"))  # OpenAI rate limit
+REQUEST_DELAY = 60.0 / REQUESTS_PER_MINUTE  # Delay between requests
+
+# Global semaphore and rate limiter
+_request_semaphore = asyncio.Semaphore(MAX_CONCURRENT_REQUESTS)
+_last_request_time = 0
+_request_lock = asyncio.Lock()
+
+async def rate_limited_llm_call(func, *args, **kwargs):
+    """Rate-limited wrapper for LLM calls."""
+    global _last_request_time
+    
+    async with _request_semaphore:
+        async with _request_lock:
+            current_time = time.time()
+            time_since_last = current_time - _last_request_time
+            if time_since_last < REQUEST_DELAY:
+                await asyncio.sleep(REQUEST_DELAY - time_since_last)
+            _last_request_time = time.time()
+        
+        # Run the actual LLM call in executor
+        loop = asyncio.get_event_loop()
+        return await loop.run_in_executor(None, func, *args, **kwargs)
 
 # We try to import the new style client first; fall back to the legacy if needed.
 try:
@@ -129,126 +156,41 @@ async def simulate_responses(personas: List[Dict[str, Any]], survey: Dict[str, A
             f"Suggested Improvements: {', '.join(survey.get('suggested_improvements', []))}\n"
         )
 
+    # Create tasks for parallel processing
+    tasks = []
     for i, persona in enumerate(personas):
-        grid_labels = survey.get("survey_grid_labels") or {}
-        support_label = grid_labels.get("support_label", "Support for the proposal")
-        impact_labels = grid_labels.get("impact_labels", ["Housing", "Transport", "Community"])
-        # JSON format instructions
-        strict_block = (
-            "You MUST respond in the following JSON format (no extra text):\n"
-            "{{\n"
-            '  "narrative": "<5-10 sentence first-person statement>",\n'
-            '  "survey": {{\n'
-            '    "support_level": <1-5>,\n'
-            '    "housing": <1-5>,\n'
-            '    "transport": <1-5>,\n'
-            '    "community": <1-5>,\n'
-            '    "key_concerns": ["item1", "item2"],\n'
-            '    "suggested_improvements": ["item1", "item2"]\n'
-            "  }}\n"
-            "}}\n"
-        )
-        base_tpl = survey.get("prompt_template") or PERSONA_TEMPLATE_BASE
-        # Place persona template first so the critic timeline shows full context
-        # Always use full persona template for context, ignore custom templates for now
-        prompt = (PERSONA_TEMPLATE_BASE + "\n" + strict_block).replace("{impact_lines}", "")
-        prompt = prompt.format(
-            persona_name=f"Persona_{persona['id']}",
-            question=question_text,
-            support_label=support_label,
-            **persona,
-        )
+        task = asyncio.create_task(process_single_persona(persona, survey, i))
+        tasks.append(task)
+    
+    # Process personas in parallel with progress updates
+    completed_count = 0
+    completed_responses = {}
+    
+    # Use asyncio.as_completed to get results as they finish
+    for completed_task in asyncio.as_completed(tasks):
         try:
-            # Initial answer
-            answer_text = await loop.run_in_executor(None, _call_openai_with_system, prompt)
-            # Log the raw call for timeline reconstruction
-            from voxpopai.backend.utils.run_logger import write_log as _wlog
-            # Capture both system and user prompts for complete context
-            full_prompt = f"SYSTEM: {SYSTEM_PROMPT}\n\nUSER: {prompt}"
-            _wlog("openai_initial", {"run_id": run_id, "persona_id": persona["id"]}, full_prompt, answer_text)
-            try:
-                answer_json = json.loads(answer_text)
-            except Exception as e:
-                logger.error(f"JSON parse error for persona {persona['id']}: {e}\nRaw answer: {answer_text}")
-                responses.append({"persona_id": persona["id"], "error": f"JSON parse error: {e}"})
-                yield {"progress": (i + 1) / total_personas * 100}
-                continue
-
-            # ---- Consistency Critic ----
-            report = await loop.run_in_executor(None, consistency_critic, json.dumps(persona), format_response(answer_json), run_id)
-            if report.get("status") == "FIX_NEEDED":
-                fix = report.get("corrected_answer", {})
-                if isinstance(fix, str):
-                    try:
-                        fix = json.loads(fix)
-                    except Exception:
-                        fix = {}
-                answer_json = deep_merge(answer_json, fix)
-
-            # ---- Topic Coverage Critic (up to 2 follow-ups) ----
-            attempts = 0
-            missing = await loop.run_in_executor(None, find_gaps, format_response(answer_json), domain, run_id)
-            while missing and attempts < 2:
-                follow_up = (
-                    f"PERSONA PROFILE (JSON):\n{json.dumps(persona, indent=2)}\n\n"
-                    f"Your previous answer JSON:\n{json.dumps(answer_json)}\n\n"
-                    f"Please also discuss {', '.join(missing)} in 2 sentences. Respond with JSON containing only the new or updated fields."
-                )
-                follow_reply = await loop.run_in_executor(None, persona_chat, persona, follow_up, run_id)
-                try:
-                    follow_json = json.loads(follow_reply)
-                    answer_json = deep_merge(answer_json, follow_json)
-                except Exception:
-                    pass
-                attempts += 1
-                missing = await loop.run_in_executor(None, find_gaps, format_response(answer_json), domain, run_id)
-
-            # ---- Relevance Critic multi-turn loop ----
-            rel_attempts = 0
-            while rel_attempts < 5:
-                rel = await loop.run_in_executor(None, relevance_critic, question_text, format_response(answer_json), run_id, grid_labels)
-                if rel.get("status") != "FIX_NEEDED":
-                    break
-                issues = ", ".join(rel.get("issues", []))
-                follow_up = (
-                    f"The proposal was: '{question_text}'. Here is your previous answer as JSON:\n{json.dumps(answer_json)}\n\n"
-                    f"PERSONA PROFILE (JSON):\n{json.dumps(persona, indent=2)}\n\n"
-                    f"The relevance critic says it didn't fully address the proposal because: {issues}. "
-                    "Please REPLACE only the relevant fields in the JSON object to directly answer the proposal while staying fully consistent with the persona profile above. Respond with JSON only."
-                )
-                follow_reply = await loop.run_in_executor(None, persona_chat, persona, follow_up, run_id)
-                try:
-                    follow_json = json.loads(follow_reply)
-                    answer_json = deep_merge(answer_json, follow_json)
-                except Exception:
-                    pass
-                rel_attempts += 1
-
-            # Final consistency check after all revisions --------------------------------
-            final_report = await loop.run_in_executor(None, consistency_critic, json.dumps(persona), format_response(answer_json), run_id)
-            if final_report.get("status") == "FIX_NEEDED":
-                fix = final_report.get("corrected_answer", {})
-                if isinstance(fix, str):
-                    try:
-                        fix = json.loads(fix)
-                    except Exception:
-                        fix = {}
-                answer_json = deep_merge(answer_json, fix)
-
-            logger.info(f"Raw LLM output for persona {persona['id']} (JSON):\n{json.dumps(answer_json, indent=2)}")
-
-            write_log("final_answer", {"run_id": run_id, "persona_id": persona["id"]})
-
-            responses.append({
-                "persona_id": persona["id"],
-                "response": format_response(answer_json),
-                "response_json": answer_json,
-                "survey_grid_labels": grid_labels
-            })
+            result = await completed_task
+            completed_count += 1
+            
+            # Store result by index to maintain order
+            persona_index = result.get("index", 0)
+            completed_responses[persona_index] = result
+            
+            # Yield progress update
+            yield {"progress": (completed_count / total_personas) * 100}
+            
         except Exception as e:
-            responses.append({"persona_id": persona["id"], "error": str(e)})
-
-        yield {"progress": (i + 1) / total_personas * 100}
+            logger.error(f"Task failed: {e}")
+            completed_count += 1
+            yield {"progress": (completed_count / total_personas) * 100}
+    
+    # Reconstruct responses in original order
+    for i in range(total_personas):
+        if i in completed_responses:
+            result = completed_responses[i]
+            # Remove the index field before adding to responses
+            result.pop("index", None)
+            responses.append(result)
 
     for r in responses:
         yield r
@@ -390,3 +332,152 @@ STRICT_FORMAT_INSTRUCTIONS = (
     "Format (copy exactly):\n"
     "NARRATIVE:\n<5-10 sentence first-person statement>\n\nSURVEY:\nSupport Level (1-5): <#>\n{impact_lines}Key Concerns: item1, item2\nSuggested Improvements: item1, item2"
 ) 
+
+async def process_single_persona(persona: Dict[str, Any], survey: Dict[str, Any], persona_index: int) -> Dict[str, Any]:
+    """Process a single persona through the full pipeline with rate limiting."""
+    run_id = survey.get("run_id")
+    question_text = survey.get("question") or (survey.get("questions") or [""])[0]
+    domain = survey.get("domain", "civic-policy")
+    
+    logger = logging.getLogger("voxpopai.response_simulator")
+    
+    # Helper functions (same as before)
+    def deep_merge(dct, merge_dct):
+        for k, v in merge_dct.items():
+            if (k in dct and isinstance(dct[k], dict) and isinstance(v, dict)):
+                deep_merge(dct[k], v)
+            else:
+                dct[k] = v
+        return dct
+
+    def format_response(response_json):
+        survey = response_json.get("survey", {})
+        return (
+            f"NARRATIVE: {response_json.get('narrative', '')}\n"
+            "SURVEY:\n"
+            f"Support for the proposal (1-5): {survey.get('support_level', '')}\n"
+            f"Housing (1-5): {survey.get('housing', '')}\n"
+            f"Transport (1-5): {survey.get('transport', '')}\n"
+            f"Community (1-5): {survey.get('community', '')}\n"
+            f"Key Concerns: {', '.join(survey.get('key_concerns', []))}\n"
+            f"Suggested Improvements: {', '.join(survey.get('suggested_improvements', []))}\n"
+        )
+
+    try:
+        grid_labels = survey.get("survey_grid_labels") or {}
+        support_label = grid_labels.get("support_label", "Support for the proposal")
+        impact_labels = grid_labels.get("impact_labels", ["Housing", "Transport", "Community"])
+        
+        # JSON format instructions
+        strict_block = (
+            "You MUST respond in the following JSON format (no extra text):\n"
+            "{{\n"
+            '  "narrative": "<5-10 sentence first-person statement>",\n'
+            '  "survey": {{\n'
+            '    "support_level": <1-5>,\n'
+            '    "housing": <1-5>,\n'
+            '    "transport": <1-5>,\n'
+            '    "community": <1-5>,\n'
+            '    "key_concerns": ["item1", "item2"],\n'
+            '    "suggested_improvements": ["item1", "item2"]\n'
+            "  }}\n"
+            "}}\n"
+        )
+        
+        prompt = (PERSONA_TEMPLATE_BASE + "\n" + strict_block).replace("{impact_lines}", "")
+        prompt = prompt.format(
+            persona_name=f"Persona_{persona['id']}",
+            question=question_text,
+            support_label=support_label,
+            **persona,
+        )
+        
+        # Initial answer with rate limiting
+        answer_text = await rate_limited_llm_call(_call_openai_with_system, prompt)
+        
+        # Log the raw call for timeline reconstruction
+        from voxpopai.backend.utils.run_logger import write_log as _wlog
+        full_prompt = f"SYSTEM: {SYSTEM_PROMPT}\n\nUSER: {prompt}"
+        _wlog("openai_initial", {"run_id": run_id, "persona_id": persona["id"]}, full_prompt, answer_text)
+        
+        try:
+            answer_json = json.loads(answer_text)
+        except Exception as e:
+            logger.error(f"JSON parse error for persona {persona['id']}: {e}\nRaw answer: {answer_text}")
+            return {"persona_id": persona["id"], "error": f"JSON parse error: {e}"}
+
+        # ---- Consistency Critic ----
+        report = await rate_limited_llm_call(consistency_critic, json.dumps(persona), format_response(answer_json), run_id)
+        if report.get("status") == "FIX_NEEDED":
+            fix = report.get("corrected_answer", {})
+            if isinstance(fix, str):
+                try:
+                    fix = json.loads(fix)
+                except Exception:
+                    fix = {}
+            answer_json = deep_merge(answer_json, fix)
+
+        # ---- Topic Coverage Critic (up to 2 follow-ups) ----
+        attempts = 0
+        missing = await rate_limited_llm_call(find_gaps, format_response(answer_json), domain, run_id)
+        while missing and attempts < 2:
+            follow_up = (
+                f"PERSONA PROFILE (JSON):\n{json.dumps(persona, indent=2)}\n\n"
+                f"Your previous answer JSON:\n{json.dumps(answer_json)}\n\n"
+                f"Please also discuss {', '.join(missing)} in 2 sentences. Respond with JSON containing only the new or updated fields."
+            )
+            follow_reply = await rate_limited_llm_call(persona_chat, persona, follow_up, run_id)
+            try:
+                follow_json = json.loads(follow_reply)
+                answer_json = deep_merge(answer_json, follow_json)
+            except Exception:
+                pass
+            attempts += 1
+            missing = await rate_limited_llm_call(find_gaps, format_response(answer_json), domain, run_id)
+
+        # ---- Relevance Critic multi-turn loop ----
+        rel_attempts = 0
+        while rel_attempts < 5:
+            rel = await rate_limited_llm_call(relevance_critic, question_text, format_response(answer_json), run_id, grid_labels)
+            if rel.get("status") != "FIX_NEEDED":
+                break
+            issues = ", ".join(rel.get("issues", []))
+            follow_up = (
+                f"The proposal was: '{question_text}'. Here is your previous answer as JSON:\n{json.dumps(answer_json)}\n\n"
+                f"PERSONA PROFILE (JSON):\n{json.dumps(persona, indent=2)}\n\n"
+                f"The relevance critic says it didn't fully address the proposal because: {issues}. "
+                "Please REPLACE only the relevant fields in the JSON object to directly answer the proposal while staying fully consistent with the persona profile above. Respond with JSON only."
+            )
+            follow_reply = await rate_limited_llm_call(persona_chat, persona, follow_up, run_id)
+            try:
+                follow_json = json.loads(follow_reply)
+                answer_json = deep_merge(answer_json, follow_json)
+            except Exception:
+                pass
+            rel_attempts += 1
+
+        # Final consistency check after all revisions
+        final_report = await rate_limited_llm_call(consistency_critic, json.dumps(persona), format_response(answer_json), run_id)
+        if final_report.get("status") == "FIX_NEEDED":
+            fix = final_report.get("corrected_answer", {})
+            if isinstance(fix, str):
+                try:
+                    fix = json.loads(fix)
+                except Exception:
+                    fix = {}
+            answer_json = deep_merge(answer_json, fix)
+
+        logger.info(f"Raw LLM output for persona {persona['id']} (JSON):\n{json.dumps(answer_json, indent=2)}")
+        write_log("final_answer", {"run_id": run_id, "persona_id": persona["id"]})
+
+        return {
+            "persona_id": persona["id"],
+            "response": format_response(answer_json),
+            "response_json": answer_json,
+            "survey_grid_labels": grid_labels,
+            "index": persona_index  # For progress tracking
+        }
+        
+    except Exception as e:
+        logger.error(f"Error processing persona {persona['id']}: {e}")
+        return {"persona_id": persona["id"], "error": str(e), "index": persona_index} 
