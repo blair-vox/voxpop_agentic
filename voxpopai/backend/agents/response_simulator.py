@@ -76,7 +76,9 @@ except AttributeError:
     openai.api_key = os.getenv("OPENAI_API_KEY")
 
     def _call_openai(prompt: str) -> str:  # type: ignore
-        completion = openai.ChatCompletion.create(  # type: ignore[attr-defined]  # noqa: E1101
+        # Use the new client interface even for older versions
+        client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+        chat_response = client.chat.completions.create(
             model="gpt-3.5-turbo",
             messages=[
                 {"role": "system", "content": "You are a survey respondent."},
@@ -85,7 +87,7 @@ except AttributeError:
             temperature=0.7,
             max_tokens=150,
         )
-        return completion.choices[0].message.content.strip()
+        return chat_response.choices[0].message.content.strip()
 
 
 async def simulate_responses(personas: List[Dict[str, Any]], survey: Dict[str, Any]) -> AsyncGenerator[Dict[str, Any], None]:
@@ -144,16 +146,25 @@ async def simulate_responses(personas: List[Dict[str, Any]], survey: Dict[str, A
         compact text version.  This helper converts the JSON schema into the
         canonical *NARRATIVE / SURVEY* block expected by the critics.
         """
-        survey = response_json.get("survey", {})
+        survey_data = response_json.get("survey", {})
+        
+        # Get impact dimensions from the outer survey context
+        impact_dims = survey.get("impact_dims", ["Housing", "Transport", "Community"])
+        
+        # Build impact lines dynamically
+        impact_lines = []
+        for dim in impact_dims:
+            field_name = dim.lower().replace(" ", "_").replace("&", "and")
+            value = survey_data.get(field_name, "")
+            impact_lines.append(f"{dim} (1-5): {value}")
+        
         return (
             f"NARRATIVE: {response_json.get('narrative', '')}\n"
             "SURVEY:\n"
-            f"Support for the proposal (1-5): {survey.get('support_level', '')}\n"
-            f"Housing (1-5): {survey.get('housing', '')}\n"
-            f"Transport (1-5): {survey.get('transport', '')}\n"
-            f"Community (1-5): {survey.get('community', '')}\n"
-            f"Key Concerns: {', '.join(survey.get('key_concerns', []))}\n"
-            f"Suggested Improvements: {', '.join(survey.get('suggested_improvements', []))}\n"
+            f"Support for the proposal (1-5): {survey_data.get('support_level', '')}\n"
+            + '\n'.join(impact_lines) + '\n'
+            f"Key Concerns: {', '.join(survey_data.get('key_concerns', []))}\n"
+            f"Suggested Improvements: {', '.join(survey_data.get('suggested_improvements', []))}\n"
         )
 
     # Create tasks for parallel processing
@@ -176,13 +187,23 @@ async def simulate_responses(personas: List[Dict[str, Any]], survey: Dict[str, A
             persona_index = result.get("index", 0)
             completed_responses[persona_index] = result
             
-            # Yield progress update
-            yield {"progress": (completed_count / total_personas) * 100}
+            # Yield progress update with small delay for visibility
+            progress_percent = (completed_count / total_personas) * 100
+            yield {"progress": progress_percent}
+            
+            # Small delay to make progress updates visible
+            if completed_count < total_personas:
+                await asyncio.sleep(0.1)
             
         except Exception as e:
             logger.error(f"Task failed: {e}")
             completed_count += 1
-            yield {"progress": (completed_count / total_personas) * 100}
+            progress_percent = (completed_count / total_personas) * 100
+            yield {"progress": progress_percent}
+            
+            # Small delay to make progress updates visible
+            if completed_count < total_personas:
+                await asyncio.sleep(0.1)
     
     # Reconstruct responses in original order
     for i in range(total_personas):
@@ -341,6 +362,10 @@ async def process_single_persona(persona: Dict[str, Any], survey: Dict[str, Any]
     
     logger = logging.getLogger("voxpopai.response_simulator")
     
+    # Log initial survey configuration
+    logger.info(f"Processing persona {persona['id']} with domain: {domain}")
+    logger.info(f"Impact dimensions from survey: {json.dumps(survey.get('impact_dims', []), indent=2)}")
+    
     # Helper functions (same as before)
     def deep_merge(dct, merge_dct):
         for k, v in merge_dct.items():
@@ -351,16 +376,25 @@ async def process_single_persona(persona: Dict[str, Any], survey: Dict[str, Any]
         return dct
 
     def format_response(response_json):
-        survey = response_json.get("survey", {})
+        survey_data = response_json.get("survey", {})
+        
+        # Get impact dimensions from the outer survey context
+        impact_dims = survey.get("impact_dims", ["Housing", "Transport", "Community"])
+        
+        # Build impact lines dynamically
+        impact_lines = []
+        for dim in impact_dims:
+            field_name = dim.lower().replace(" ", "_").replace("&", "and")
+            value = survey_data.get(field_name, "")
+            impact_lines.append(f"{dim} (1-5): {value}")
+        
         return (
             f"NARRATIVE: {response_json.get('narrative', '')}\n"
             "SURVEY:\n"
-            f"Support for the proposal (1-5): {survey.get('support_level', '')}\n"
-            f"Housing (1-5): {survey.get('housing', '')}\n"
-            f"Transport (1-5): {survey.get('transport', '')}\n"
-            f"Community (1-5): {survey.get('community', '')}\n"
-            f"Key Concerns: {', '.join(survey.get('key_concerns', []))}\n"
-            f"Suggested Improvements: {', '.join(survey.get('suggested_improvements', []))}\n"
+            f"Support for the proposal (1-5): {survey_data.get('support_level', '')}\n"
+            + '\n'.join(impact_lines) + '\n'
+            f"Key Concerns: {', '.join(survey_data.get('key_concerns', []))}\n"
+            f"Suggested Improvements: {', '.join(survey_data.get('suggested_improvements', []))}\n"
         )
 
     try:
@@ -368,23 +402,35 @@ async def process_single_persona(persona: Dict[str, Any], survey: Dict[str, Any]
         support_label = grid_labels.get("support_label", "Support for the proposal")
         impact_labels = grid_labels.get("impact_labels", ["Housing", "Transport", "Community"])
         
-        # JSON format instructions
+        # Get impact dimensions from survey, fallback to default
+        impact_dims = survey.get("impact_dims", ["Housing", "Transport", "Community"])
+        logger.info(f"Using impact dimensions: {json.dumps(impact_dims, indent=2)}")
+        
+        # Create dynamic JSON format based on impact dimensions
+        impact_json_fields = []
+        for dim in impact_dims:
+            field_name = dim.lower().replace(" ", "_").replace("&", "and")
+            impact_json_fields.append(f'    "{field_name}": <1-5>,')
+        
+        # JSON format instructions with dynamic impact fields
         strict_block = (
             "You MUST respond in the following JSON format (no extra text):\n"
             "{{\n"
             '  "narrative": "<5-10 sentence first-person statement>",\n'
             '  "survey": {{\n'
             '    "support_level": <1-5>,\n'
-            '    "housing": <1-5>,\n'
-            '    "transport": <1-5>,\n'
-            '    "community": <1-5>,\n'
+            + '\n'.join(impact_json_fields) + '\n'
             '    "key_concerns": ["item1", "item2"],\n'
             '    "suggested_improvements": ["item1", "item2"]\n'
             "  }}\n"
             "}}\n"
         )
         
-        prompt = (PERSONA_TEMPLATE_BASE + "\n" + strict_block).replace("{impact_lines}", "")
+        # Build impact lines for the template
+        impact_lines = _impact_lines(impact_dims)
+        
+        prompt = PERSONA_TEMPLATE_BASE.replace("{impact_lines}", impact_lines)
+        prompt = (prompt + "\n" + strict_block)
         prompt = prompt.format(
             persona_name=f"Persona_{persona['id']}",
             question=question_text,
@@ -402,6 +448,7 @@ async def process_single_persona(persona: Dict[str, Any], survey: Dict[str, Any]
         
         try:
             answer_json = json.loads(answer_text)
+            logger.info(f"Parsed JSON response for persona {persona['id']}: {json.dumps(answer_json, indent=2)}")
         except Exception as e:
             logger.error(f"JSON parse error for persona {persona['id']}: {e}\nRaw answer: {answer_text}")
             return {"persona_id": persona["id"], "error": f"JSON parse error: {e}"}
@@ -416,11 +463,13 @@ async def process_single_persona(persona: Dict[str, Any], survey: Dict[str, Any]
                 except Exception:
                     fix = {}
             answer_json = deep_merge(answer_json, fix)
+            logger.info(f"Applied consistency fix for persona {persona['id']}: {json.dumps(fix, indent=2)}")
 
         # ---- Topic Coverage Critic (up to 2 follow-ups) ----
         attempts = 0
         missing = await rate_limited_llm_call(find_gaps, format_response(answer_json), domain, run_id)
         while missing and attempts < 2:
+            logger.info(f"Topic coverage missing for persona {persona['id']}: {missing}")
             follow_up = (
                 f"PERSONA PROFILE (JSON):\n{json.dumps(persona, indent=2)}\n\n"
                 f"Your previous answer JSON:\n{json.dumps(answer_json)}\n\n"
@@ -430,6 +479,7 @@ async def process_single_persona(persona: Dict[str, Any], survey: Dict[str, Any]
             try:
                 follow_json = json.loads(follow_reply)
                 answer_json = deep_merge(answer_json, follow_json)
+                logger.info(f"Applied topic coverage fix for persona {persona['id']}: {json.dumps(follow_json, indent=2)}")
             except Exception:
                 pass
             attempts += 1
@@ -442,6 +492,7 @@ async def process_single_persona(persona: Dict[str, Any], survey: Dict[str, Any]
             if rel.get("status") != "FIX_NEEDED":
                 break
             issues = ", ".join(rel.get("issues", []))
+            logger.info(f"Relevance issues for persona {persona['id']}: {issues}")
             follow_up = (
                 f"The proposal was: '{question_text}'. Here is your previous answer as JSON:\n{json.dumps(answer_json)}\n\n"
                 f"PERSONA PROFILE (JSON):\n{json.dumps(persona, indent=2)}\n\n"
@@ -452,6 +503,7 @@ async def process_single_persona(persona: Dict[str, Any], survey: Dict[str, Any]
             try:
                 follow_json = json.loads(follow_reply)
                 answer_json = deep_merge(answer_json, follow_json)
+                logger.info(f"Applied relevance fix for persona {persona['id']}: {json.dumps(follow_json, indent=2)}")
             except Exception:
                 pass
             rel_attempts += 1
@@ -466,16 +518,66 @@ async def process_single_persona(persona: Dict[str, Any], survey: Dict[str, Any]
                 except Exception:
                     fix = {}
             answer_json = deep_merge(answer_json, fix)
+            logger.info(f"Applied final consistency fix for persona {persona['id']}: {json.dumps(fix, indent=2)}")
 
+        # Create survey_numbers object with dynamic fields
+        survey_data = answer_json.get("survey", {})
+        survey_numbers = {
+            "support": survey_data.get("support_level", 0)
+        }
+        
+        # Add all impact dimensions to survey_numbers
+        for dim in impact_dims:
+            field_name = dim.lower().replace(" ", "_").replace("&", "and")
+            # Try several possible keys
+            possible_keys = [
+                field_name,
+                dim,
+                f"{dim} (1-5)",
+                field_name + " (1-5)"
+            ]
+            value = None
+            used_key = None
+            for key in possible_keys:
+                if key in survey_data:
+                    value = survey_data[key]
+                    used_key = key
+                    break
+            if value is None:
+                value = 0
+            print(f"[DEBUG] Impact dim: '{dim}' | Field name: '{field_name}' | Tried keys: {possible_keys} | Used key: {used_key} | Value in survey_data: {value}")
+            # Ensure the value is a number between 1 and 5
+            if isinstance(value, (int, float)):
+                value = max(1, min(5, int(value)))
+            else:
+                value = 0
+            survey_numbers[field_name] = value
+        print(f"[DEBUG] Final survey_numbers for persona {persona['id']}: {survey_numbers}")
+
+        # Log the final survey numbers
+        logger.info(f"Final survey numbers for persona {persona['id']}: {json.dumps(survey_numbers, indent=2)}")
         logger.info(f"Raw LLM output for persona {persona['id']} (JSON):\n{json.dumps(answer_json, indent=2)}")
-        write_log("final_answer", {"run_id": run_id, "persona_id": persona["id"]})
+        
+        # Log the complete interaction for the summary
+        interaction_summary = {
+            "persona_id": persona["id"],
+            "impact_dimensions": impact_dims,
+            "survey_numbers": survey_numbers,
+            "narrative": answer_json.get("narrative", ""),
+            "key_concerns": answer_json.get("survey", {}).get("key_concerns", []),
+            "suggested_improvements": answer_json.get("survey", {}).get("suggested_improvements", [])
+        }
+        write_log("interaction_summary", {"run_id": run_id, "persona_id": persona["id"]}, json.dumps(interaction_summary, indent=2))
 
+        # Always return the full survey_numbers (with all impact dimensions) at the top level
         return {
             "persona_id": persona["id"],
             "response": format_response(answer_json),
             "response_json": answer_json,
+            "survey_numbers": survey_numbers,  # <-- This is now always the full one
             "survey_grid_labels": grid_labels,
-            "index": persona_index  # For progress tracking
+            "index": persona_index,
+            "interaction_summary": interaction_summary
         }
         
     except Exception as e:

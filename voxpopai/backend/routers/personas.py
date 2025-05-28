@@ -157,11 +157,8 @@ async def run_personas(payload: SimulationRequest) -> StreamingResponse:
 
             # survey numbers and demographics stats
             for p in combined:
-                # Use JSON response if available, otherwise fall back to text
-                if p.get("response_json"):
-                    p["survey_numbers"] = parse_survey_numbers(json.dumps(p["response_json"]))
-                else:
-                    p["survey_numbers"] = parse_survey_numbers(p.get("response", ""))
+                # Use the survey_numbers as returned by the response_simulator, do not overwrite
+                pass  # Do not overwrite p['survey_numbers'] here
 
             demo = demo_stats(sampled_df, df)
             loc_freq = location_freq(combined)
