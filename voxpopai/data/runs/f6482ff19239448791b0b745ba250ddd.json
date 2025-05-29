@@ -1,0 +1,465 @@
+{
+  "run_id": "f6482ff19239448791b0b745ba250ddd",
+  "timestamp": "2025-05-28T23:16:41.457475+00:00",
+  "question": "Should Waverley Council implement a policy to eliminate minimum parking requirements for new apartment developments in Bondi, allowing developers to build fewer or no car spaces based on residents' needs?",
+  "area": null,
+  "domain": "civic-policy",
+  "summary": "- Strong opposition to eliminating minimum parking requirements for new developments due to concerns about increased street parking issues and accessibility for older residents.\n- Consistent emphasis on the potential negative impact on the housing market and property values if parking requirements are removed.\n- Recognition of the importance of balancing environmental considerations with maintaining a well-functioning and accommodating community.\n- The tension between encouraging the use of public transport for environmental benefits and the practical need for adequate parking options for residents and visitors.",
+  "responses": [
+    {
+      "id": 0,
+      "age": "65-69 years",
+      "gender": "Female",
+      "location": "Randwick - North",
+      "income": "$1,250-$1,499 ($65,000-$77,999)",
+      "income_weekly": "$1,250-$1,499",
+      "income_annual": "$65,000-$77,999",
+      "housing_tenure": "Own outright",
+      "job_tenure": "Employee in private company or business",
+      "occupation": "Non-supervisory",
+      "education": "No formal education",
+      "transport": null,
+      "marital_status": "Married",
+      "partner_activity": "Student",
+      "household_size": "2 people",
+      "family_payments": "No",
+      "child_care_benefit": "No",
+      "investment_properties": "No",
+      "transport_infrastructure": "Somewhat more than now",
+      "political_leaning": "Other party",
+      "trust": "Usually look after themselves",
+      "issues": "How I feel about the following Issues include: Taxation, Quite important; Immigration, Quite important; Education, Extremely important; The environment, Extremely important; Health and Medicare, Extremely important; Refugees and asylum seekers, Quite important; Global warming, Extremely important; Management of the economy, Extremely important; The COVID-19 pandemic, Quite important; The cost of living, Extremely important; National security, Extremely important",
+      "engagement": "I engage in politics in the following way: Interest in politics, Some; Attention to newspapers, Some; Attention to television, Some; Attention to radio, Not much; Attention to internet, Some; Discussed politics in person, Occasionally; Discussed politics online, Rarely; Persuaded others to vote, Occasionally; Showed support for a party, Rarely; Attended political meetings, Not at all; Contributed money, Not at all",
+      "persona_id": 0,
+      "response": "NARRATIVE: I can't support this proposal. I reckon developers will just use it as an excuse to cram more units in, without providing enough parking. That'll put more cars on the street, making it harder for locals like me to find a spot. Plus, not everyone can rely on public transport or walking, especially not us older residents. And what happens when folks visit? Where are they going to park? I'm all for sensible development, but this just doesn't seem well thought out.\nSURVEY:\nSupport for the proposal (1-5): 2\nHousing (1-5): 3\nTransport (1-5): 1\nCommunity (1-5): 2\nEnvironment (1-5): 3\nEconomy (1-5): 2\nKey Concerns: Increased street parking, Accessibility for older residents\nSuggested Improvements: Mandatory parking spaces for new developments, Improved public transport options\n",
+      "response_json": {
+        "narrative": "I can't support this proposal. I reckon developers will just use it as an excuse to cram more units in, without providing enough parking. That'll put more cars on the street, making it harder for locals like me to find a spot. Plus, not everyone can rely on public transport or walking, especially not us older residents. And what happens when folks visit? Where are they going to park? I'm all for sensible development, but this just doesn't seem well thought out.",
+        "survey": {
+          "support_level": 2,
+          "housing": 3,
+          "transport": 1,
+          "community": 2,
+          "environment": 3,
+          "economy": 2,
+          "key_concerns": [
+            "Increased street parking",
+            "Accessibility for older residents"
+          ],
+          "suggested_improvements": [
+            "Mandatory parking spaces for new developments",
+            "Improved public transport options"
+          ]
+        },
+        "NARRATIVE": "I can't support this proposal. I reckon developers will just use it as an excuse to cram more units in, without providing enough parking. That'll put more cars on the street, making it harder for locals like me to find a spot. Plus, not everyone can rely on public transport or walking, especially not us older residents. And what happens when folks visit? Where are they going to park? I'm all for sensible development, but this just doesn't seem well thought out.",
+        "SURVEY": {
+          "Support for the proposal (1-5)": 2,
+          "Housing (1-5)": 3,
+          "Transport (1-5)": 1,
+          "Community (1-5)": 2,
+          "Environment (1-5)": 3,
+          "Economy (1-5)": 2,
+          "Key Concerns": "Increased street parking, Accessibility for older residents",
+          "Suggested Improvements": "Mandatory parking spaces for new developments, Improved public transport options"
+        }
+      },
+      "survey_numbers": {
+        "support": 2,
+        "housing": 3,
+        "transport": 1,
+        "community": 2,
+        "environment": 3,
+        "economy": 2
+      },
+      "survey_grid_labels": {},
+      "interaction_summary": {
+        "persona_id": 0,
+        "impact_dimensions": [
+          "Housing",
+          "Transport",
+          "Community",
+          "Environment",
+          "Economy"
+        ],
+        "survey_numbers": {
+          "support": 2,
+          "housing": 3,
+          "transport": 1,
+          "community": 2,
+          "environment": 3,
+          "economy": 2
+        },
+        "narrative": "I can't support this proposal. I reckon developers will just use it as an excuse to cram more units in, without providing enough parking. That'll put more cars on the street, making it harder for locals like me to find a spot. Plus, not everyone can rely on public transport or walking, especially not us older residents. And what happens when folks visit? Where are they going to park? I'm all for sensible development, but this just doesn't seem well thought out.",
+        "key_concerns": [
+          "Increased street parking",
+          "Accessibility for older residents"
+        ],
+        "suggested_improvements": [
+          "Mandatory parking spaces for new developments",
+          "Improved public transport options"
+        ]
+      },
+      "run_id": "f6482ff19239448791b0b745ba250ddd",
+      "themes": [
+        "Transport"
+      ],
+      "drivers": [
+        "overdevelopment concerns",
+        "parking availability",
+        "impact on older residents"
+      ]
+    },
+    {
+      "id": 1,
+      "age": "40-44 years",
+      "gender": "Female",
+      "location": "South Coogee",
+      "income": "$3,500 or more ($182,000 or more)",
+      "income_weekly": "$3,500 or more",
+      "income_annual": "$182,000 or more",
+      "housing_tenure": "Own, paying off mortgage",
+      "job_tenure": "Employee of Federal / State / Local Government",
+      "occupation": "Supervisory",
+      "education": "Advanced diploma or diploma",
+      "transport": null,
+      "marital_status": "Married",
+      "partner_activity": "Working full-time",
+      "household_size": "4 people",
+      "family_payments": "No",
+      "child_care_benefit": "Yes",
+      "investment_properties": "Yes",
+      "transport_infrastructure": "Much more than now",
+      "political_leaning": "Liberal",
+      "trust": "Sometimes can be trusted to do the right thing",
+      "issues": "How I feel about the following Issues include: Taxation, Quite important; Immigration, Quite important; Education, Extremely important; The environment, Extremely important; Health and Medicare, Quite important; Refugees and asylum seekers, Quite important; Global warming, Extremely important; Management of the economy, Extremely important; The COVID-19 pandemic, Not very important; The cost of living, Extremely important; National security, Extremely important",
+      "engagement": "I engage in politics in the following way: Interest in politics, Some; Attention to newspapers, Not much; Attention to television, Some; Attention to radio, Some; Attention to internet, Some; Discussed politics in person, Occasionally; Discussed politics online, Not at all; Persuaded others to vote, Not at all; Showed support for a party, Not at all; Attended political meetings, Not at all; Contributed money, Not at all",
+      "persona_id": 1,
+      "response": "NARRATIVE: I firmly oppose the proposal to eliminate minimum parking requirements for new apartment developments in Bondi. As someone who cares deeply about the community, I believe this policy would exacerbate parking issues, putting undue strain on residents trying to find a spot. Additionally, it could discourage potential buyers, negatively impacting the housing market. It's also important to consider the economic implications: less parking could mean less interest from potential renters or buyers, which would affect developers negatively. I see potential environmental benefits in encouraging the use of public transportation, but we can't underestimate the importance of maintaining a balanced, accommodating community.\nSURVEY:\nSupport for the proposal (1-5): 1\nHousing (1-5): 2\nTransport (1-5): 1\nCommunity (1-5): 1\nEnvironment (1-5): 4\nEconomy (1-5): 2\nKey Concerns: Increased parking difficulties, Potential negative impact on housing market\nSuggested Improvements: Maintain minimum parking requirements, Improve public transportation options\n",
+      "response_json": {
+        "narrative": "I firmly oppose the proposal to eliminate minimum parking requirements for new apartment developments in Bondi. As someone who cares deeply about the community, I believe this policy would exacerbate parking issues, putting undue strain on residents trying to find a spot. Additionally, it could discourage potential buyers, negatively impacting the housing market. It's also important to consider the economic implications: less parking could mean less interest from potential renters or buyers, which would affect developers negatively. I see potential environmental benefits in encouraging the use of public transportation, but we can't underestimate the importance of maintaining a balanced, accommodating community.",
+        "survey": {
+          "support_level": 1,
+          "housing": 2,
+          "transport": 1,
+          "community": 1,
+          "environment": 4,
+          "economy": 2,
+          "key_concerns": [
+            "Increased parking difficulties",
+            "Potential negative impact on housing market"
+          ],
+          "suggested_improvements": [
+            "Maintain minimum parking requirements",
+            "Improve public transportation options"
+          ],
+          "Support for the proposal (1-5)": 1,
+          "Housing (1-5)": 2,
+          "Transport (1-5)": 1,
+          "Community (1-5)": 1,
+          "Environment (1-5)": 4,
+          "Economy (1-5)": 2,
+          "Key Concerns": "Increased parking difficulties, Potential negative impact on housing market",
+          "Suggested Improvements": "Maintain minimum parking requirements, Improve public transportation options"
+        }
+      },
+      "survey_numbers": {
+        "support": 1,
+        "housing": 2,
+        "transport": 1,
+        "community": 1,
+        "environment": 4,
+        "economy": 2
+      },
+      "survey_grid_labels": {},
+      "interaction_summary": {
+        "persona_id": 1,
+        "impact_dimensions": [
+          "Housing",
+          "Transport",
+          "Community",
+          "Environment",
+          "Economy"
+        ],
+        "survey_numbers": {
+          "support": 1,
+          "housing": 2,
+          "transport": 1,
+          "community": 1,
+          "environment": 4,
+          "economy": 2
+        },
+        "narrative": "I firmly oppose the proposal to eliminate minimum parking requirements for new apartment developments in Bondi. As someone who cares deeply about the community, I believe this policy would exacerbate parking issues, putting undue strain on residents trying to find a spot. Additionally, it could discourage potential buyers, negatively impacting the housing market. It's also important to consider the economic implications: less parking could mean less interest from potential renters or buyers, which would affect developers negatively. I see potential environmental benefits in encouraging the use of public transportation, but we can't underestimate the importance of maintaining a balanced, accommodating community.",
+        "key_concerns": [
+          "Increased parking difficulties",
+          "Potential negative impact on housing market"
+        ],
+        "suggested_improvements": [
+          "Maintain minimum parking requirements",
+          "Improve public transportation options"
+        ]
+      },
+      "run_id": "f6482ff19239448791b0b745ba250ddd",
+      "themes": [
+        "Transport"
+      ],
+      "drivers": [
+        "parking issues",
+        "housing market impact",
+        "community balance"
+      ]
+    },
+    {
+      "id": 2,
+      "age": "30-34 years",
+      "gender": "Female",
+      "location": "Paddington - Moore Park",
+      "income": "$1,250-$1,499 ($65,000-$77,999)",
+      "income_weekly": "$1,250-$1,499",
+      "income_annual": "$65,000-$77,999",
+      "housing_tenure": "Own, paying off mortgage",
+      "job_tenure": "Employee of Federal / State / Local Government",
+      "occupation": "Non-supervisory",
+      "education": "Year 12 or equivalent",
+      "transport": null,
+      "marital_status": "Never married",
+      "partner_activity": " ",
+      "household_size": "1 person",
+      "family_payments": "Yes",
+      "child_care_benefit": "No",
+      "investment_properties": "No",
+      "transport_infrastructure": "The same as now",
+      "political_leaning": "Liberal",
+      "trust": "Usually look after themselves",
+      "issues": "How I feel about the following Issues include: Taxation, Extremely important; Immigration, Quite important; Education, Extremely important; The environment, Quite important; Health and Medicare, Extremely important; Refugees and asylum seekers, Quite important; Global warming, Quite important; Management of the economy, Quite important; The COVID-19 pandemic, Quite important; The cost of living, Extremely important; National security, Quite important",
+      "engagement": "I engage in politics in the following way: Interest in politics, Some; Attention to newspapers, Not much; Attention to television, Some; Attention to radio, Some; Attention to internet, Not much; Discussed politics in person, Rarely; Discussed politics online, Not at all; Persuaded others to vote, Not at all; Showed support for a party, Not at all; Attended political meetings, Not at all; Contributed money, Not at all",
+      "persona_id": 2,
+      "response": "NARRATIVE: As someone who doesn't rely on transport, I'm opposed to eliminating minimum parking requirements for new developments. I believe this will only exacerbate the already congested streets of Paddington - Moore Park. Yes, there are residents like me who don't own a car, but many still do. Inadequate parking facilities would also deter potential buyers, affecting property values. Moreover, without proper planning, this policy might encourage more people to use cars, causing traffic congestion and environmental concerns. And while the idea is to make more space for housing, I don't believe we should compromise on essential amenities like parking.\nSURVEY:\nSupport for the proposal (1-5): 2\nHousing (1-5): 3\nTransport (1-5): 1\nCommunity (1-5): 2\nEnvironment (1-5): 2\nEconomy (1-5): 2\nKey Concerns: transport congestion, property value\nSuggested Improvements: better public transport, more sustainable transport options\n",
+      "response_json": {
+        "narrative": "As someone who doesn't rely on transport, I'm opposed to eliminating minimum parking requirements for new developments. I believe this will only exacerbate the already congested streets of Paddington - Moore Park. Yes, there are residents like me who don't own a car, but many still do. Inadequate parking facilities would also deter potential buyers, affecting property values. Moreover, without proper planning, this policy might encourage more people to use cars, causing traffic congestion and environmental concerns. And while the idea is to make more space for housing, I don't believe we should compromise on essential amenities like parking.",
+        "survey": {
+          "support_level": 2,
+          "housing": 3,
+          "transport": 1,
+          "community": 2,
+          "environment": 2,
+          "economy": 2,
+          "key_concerns": [
+            "transport congestion",
+            "property value"
+          ],
+          "suggested_improvements": [
+            "better public transport",
+            "more sustainable transport options"
+          ],
+          "support_proposal": 2
+        }
+      },
+      "survey_numbers": {
+        "support": 2,
+        "housing": 3,
+        "transport": 1,
+        "community": 2,
+        "environment": 2,
+        "economy": 2
+      },
+      "survey_grid_labels": {},
+      "interaction_summary": {
+        "persona_id": 2,
+        "impact_dimensions": [
+          "Housing",
+          "Transport",
+          "Community",
+          "Environment",
+          "Economy"
+        ],
+        "survey_numbers": {
+          "support": 2,
+          "housing": 3,
+          "transport": 1,
+          "community": 2,
+          "environment": 2,
+          "economy": 2
+        },
+        "narrative": "As someone who doesn't rely on transport, I'm opposed to eliminating minimum parking requirements for new developments. I believe this will only exacerbate the already congested streets of Paddington - Moore Park. Yes, there are residents like me who don't own a car, but many still do. Inadequate parking facilities would also deter potential buyers, affecting property values. Moreover, without proper planning, this policy might encourage more people to use cars, causing traffic congestion and environmental concerns. And while the idea is to make more space for housing, I don't believe we should compromise on essential amenities like parking.",
+        "key_concerns": [
+          "transport congestion",
+          "property value"
+        ],
+        "suggested_improvements": [
+          "better public transport",
+          "more sustainable transport options"
+        ]
+      },
+      "run_id": "f6482ff19239448791b0b745ba250ddd",
+      "themes": [
+        "Transport"
+      ],
+      "drivers": [
+        "congested streets",
+        "affecting property values",
+        "traffic congestion and environmental concerns"
+      ]
+    }
+  ],
+  "driver_summary": [
+    {
+      "level": 1,
+      "drivers": [
+        [
+          "parking issues",
+          1
+        ],
+        [
+          "housing market impact",
+          1
+        ],
+        [
+          "community balance",
+          1
+        ]
+      ]
+    },
+    {
+      "level": 2,
+      "drivers": [
+        [
+          "overdevelopment concerns",
+          1
+        ],
+        [
+          "parking availability",
+          1
+        ],
+        [
+          "impact on older residents",
+          1
+        ],
+        [
+          "congested streets",
+          1
+        ],
+        [
+          "affecting property values",
+          1
+        ],
+        [
+          "traffic congestion and environmental concerns",
+          1
+        ]
+      ]
+    }
+  ],
+  "demographics": {
+    "age": {
+      "persona": {
+        "65-69 years": 1,
+        "40-44 years": 1,
+        "30-34 years": 1
+      },
+      "population": {
+        "65-69 years": 15175,
+        "60-64 years": 14154,
+        "55-59 years": 13595,
+        "50-54 years": 13536,
+        "70-74 years": 13441,
+        "40-44 years": 12460,
+        "35-39 years": 11650,
+        "45-49 years": 11409,
+        "30-34 years": 10145,
+        "75-79 years": 7225,
+        "20-24 years": 6562,
+        "25-29 years": 5326,
+        "80-84 years": 2644,
+        "85-89 years": 916,
+        "15-19 years": 789
+      },
+      "chi2": 8.34062102627761
+    },
+    "gender": {
+      "persona": {
+        "Female": 3
+      },
+      "population": {
+        "Female": 72308,
+        "Male": 66719
+      },
+      "chi2": 1.1792336447143577
+    },
+    "marital": {
+      "persona": {
+        "2": 2,
+        "1": 1
+      },
+      "population": {
+        "2": 103925,
+        "1": 24782,
+        "4": 7036,
+        "3": 3284
+      },
+      "chi2": 0.6536666402997624
+    },
+    "tenure": {
+      "persona": {
+        "2": 2,
+        "1": 1
+      },
+      "population": {
+        "1": 55692,
+        "2": 54390,
+        "3": 20276,
+        "5": 6019,
+        "4": 2373,
+        "999": 277
+      },
+      "chi2": 1.2402473242558847
+    },
+    "political": {
+      "persona": {
+        "Other party": 1,
+        "Liberal": 1
+      },
+      "population": {
+        "Labor": 11618,
+        "Liberal": 10062,
+        "Greens": 4125,
+        "Other party": 1,
+        "National Party": 1008,
+        "Item skipped": 329,
+        " ": 767,
+        "Other": 42
+      },
+      "chi2": 6988.388941671618
+    },
+    "education": {
+      "persona": {
+        "No formal education": 1,
+        "Advanced diploma or diploma": 1,
+        "Year 12 or equivalent": 1
+      },
+      "population": {
+        "Certificate III/IV": 39333,
+        "Advanced diploma or diploma": 29553,
+        "Bachelor degree or higher": 22839,
+        "No formal education": 17683,
+        "Year 11 or below": 12277,
+        "Other": 10864,
+        "Year 12 or equivalent": 5584,
+        "Item skipped": 894
+      },
+      "chi2": 9.486752658317744
+    }
+  },
+  "location_freq": {
+    "Randwick - North": 1,
+    "South Coogee": 1,
+    "Paddington - Moore Park": 1
+  },
+  "impact_dims": [
+    "Housing",
+    "Transport",
+    "Community",
+    "Environment",
+    "Economy"
+  ],
+  "prompt_template": "",
+  "survey_grid_labels": null
+}

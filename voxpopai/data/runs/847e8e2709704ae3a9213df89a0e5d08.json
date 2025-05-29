@@ -1,0 +1,460 @@
+{
+  "run_id": "847e8e2709704ae3a9213df89a0e5d08",
+  "timestamp": "2025-05-29T00:06:44.257214+00:00",
+  "question": "Should Waverley Council implement a policy to eliminate minimum parking requirements for new apartment developments in Bondi, allowing developers to build fewer or no car spaces based on residents' needs?",
+  "area": null,
+  "domain": "civic-policy",
+  "summary": "- Strong division between supporters and opponents of the proposal, with differing views on the impact on congestion and parking availability.\n- Concerns about the ability of public transport and cycling infrastructure to adequately support a car-free lifestyle for all residents, particularly older individuals.\n- Emphasis on the need to balance environmental goals with practical considerations of daily life and community impacts.",
+  "responses": [
+    {
+      "id": 0,
+      "age": "20-24 years",
+      "gender": "Female",
+      "location": "Bellevue Hill",
+      "income": "$500-$649 ($26,000-$33,799)",
+      "income_weekly": "$500-$649",
+      "income_annual": "$26,000-$33,799",
+      "housing_tenure": "Other (boarding, living at home, etc.)",
+      "job_tenure": "Employee in private company or business",
+      "occupation": "Supervisory",
+      "education": "Bachelor degree or higher",
+      "transport": null,
+      "marital_status": "Never married",
+      "partner_activity": " ",
+      "household_size": "3 people",
+      "family_payments": "No",
+      "child_care_benefit": "No",
+      "investment_properties": "No",
+      "transport_infrastructure": "Somewhat less than now",
+      "political_leaning": "Greens",
+      "trust": "Usually look after themselves",
+      "issues": "How I feel about the following Issues include: Taxation, Quite important; Immigration, Extremely important; Education, Extremely important; The environment, Extremely important; Health and Medicare, Extremely important; Refugees and asylum seekers, Extremely important; Global warming, Extremely important; Management of the economy, Quite important; The COVID-19 pandemic, Quite important; The cost of living, Extremely important; National security, Quite important",
+      "engagement": "I engage in politics in the following way: Interest in politics, A good deal; Attention to newspapers, Some; Attention to television, A good deal; Attention to radio, Some; Attention to internet, A good deal; Discussed politics in person, Occasionally; Discussed politics online, Occasionally; Persuaded others to vote, Occasionally; Showed support for a party, Occasionally; Attended political meetings, Occasionally; Contributed money, Not at all",
+      "persona_id": 0,
+      "response": "NARRATIVE: As a young professional living in the Bellevue Hill area, I fully support Waverley Council's proposal to eliminate minimum parking requirements for new apartment developments in Bondi. For one, this measure could potentially make housing more affordable by reducing construction costs, which is crucial given the high cost of living. Moreover, by encouraging fewer cars, this policy could reduce traffic congestion and carbon emissions, which aligns with my environmental concerns. However, it's important to ensure that this doesn't lead to parking problems in the surrounding neighbourhoods. We need to couple this policy with improved public transport and cycling infrastructure to make it feasible for residents to live car-free.\nSURVEY:\nSupport for the proposal (1-5): 4\nHousing (1-5): 4\nTransport (1-5): 3\nCommunity (1-5): 3\nEnvironment (1-5): 5\nEconomy (1-5): 3\nKey Concerns: Potential parking issues in surrounding neighbourhoods, Need for improved public transport and cycling infrastructure\nSuggested Improvements: Invest in public transport options, Develop better cycling infrastructure\n",
+      "response_json": {
+        "narrative": "As a young professional living in the Bellevue Hill area, I fully support Waverley Council's proposal to eliminate minimum parking requirements for new apartment developments in Bondi. For one, this measure could potentially make housing more affordable by reducing construction costs, which is crucial given the high cost of living. Moreover, by encouraging fewer cars, this policy could reduce traffic congestion and carbon emissions, which aligns with my environmental concerns. However, it's important to ensure that this doesn't lead to parking problems in the surrounding neighbourhoods. We need to couple this policy with improved public transport and cycling infrastructure to make it feasible for residents to live car-free.",
+        "survey": {
+          "support_level": 4,
+          "housing": 4,
+          "transport": 3,
+          "community": 3,
+          "environment": 5,
+          "economy": 3,
+          "key_concerns": [
+            "Potential parking issues in surrounding neighbourhoods",
+            "Need for improved public transport and cycling infrastructure"
+          ],
+          "suggested_improvements": [
+            "Invest in public transport options",
+            "Develop better cycling infrastructure"
+          ]
+        }
+      },
+      "survey_numbers": {
+        "support": 4,
+        "housing": 4,
+        "transport": 3,
+        "community": 3,
+        "environment": 5,
+        "economy": 3
+      },
+      "survey_grid_labels": {},
+      "interaction_summary": {
+        "persona_id": 0,
+        "impact_dimensions": [
+          "Housing",
+          "Transport",
+          "Community",
+          "Environment",
+          "Economy"
+        ],
+        "survey_numbers": {
+          "support": 4,
+          "housing": 4,
+          "transport": 3,
+          "community": 3,
+          "environment": 5,
+          "economy": 3
+        },
+        "narrative": "As a young professional living in the Bellevue Hill area, I fully support Waverley Council's proposal to eliminate minimum parking requirements for new apartment developments in Bondi. For one, this measure could potentially make housing more affordable by reducing construction costs, which is crucial given the high cost of living. Moreover, by encouraging fewer cars, this policy could reduce traffic congestion and carbon emissions, which aligns with my environmental concerns. However, it's important to ensure that this doesn't lead to parking problems in the surrounding neighbourhoods. We need to couple this policy with improved public transport and cycling infrastructure to make it feasible for residents to live car-free.",
+        "key_concerns": [
+          "Potential parking issues in surrounding neighbourhoods",
+          "Need for improved public transport and cycling infrastructure"
+        ],
+        "suggested_improvements": [
+          "Invest in public transport options",
+          "Develop better cycling infrastructure"
+        ]
+      },
+      "run_id": "847e8e2709704ae3a9213df89a0e5d08",
+      "themes": [
+        "Transport"
+      ],
+      "drivers": [
+        "affordable housing",
+        "environmental sustainability",
+        "public transport infrastructure"
+      ]
+    },
+    {
+      "id": 1,
+      "age": "50-54 years",
+      "gender": "Female",
+      "location": "Randwick - North",
+      "income": "$1,250-$1,499 ($65,000-$77,999)",
+      "income_weekly": "$1,250-$1,499",
+      "income_annual": "$65,000-$77,999",
+      "housing_tenure": "Own, paying off mortgage",
+      "job_tenure": "Self-employed",
+      "occupation": "Upper managerial",
+      "education": "Year 11 or below",
+      "transport": null,
+      "marital_status": "Married",
+      "partner_activity": "Working full-time",
+      "household_size": "2 people",
+      "family_payments": "No",
+      "child_care_benefit": "No",
+      "investment_properties": "No",
+      "transport_infrastructure": "Somewhat more than now",
+      "political_leaning": "Greens",
+      "trust": "Usually look after themselves",
+      "issues": "How I feel about the following Issues include: Taxation, Quite important; Immigration, Quite important; Education, Extremely important; The environment, Quite important; Health and Medicare, Extremely important; Refugees and asylum seekers, Quite important; Global warming, Quite important; Management of the economy, Quite important; The COVID-19 pandemic, Quite important; The cost of living, Quite important; National security, Quite important",
+      "engagement": "I engage in politics in the following way: Interest in politics, Not much; Attention to newspapers, None at all; Attention to television, Some; Attention to radio, Not much; Attention to internet, Not much; Discussed politics in person, Rarely; Discussed politics online, Not at all; Persuaded others to vote, Not at all; Showed support for a party, Rarely; Attended political meetings, Not at all; Contributed money, Not at all",
+      "persona_id": 1,
+      "response": "NARRATIVE: I'm not in favour of the proposal to eliminate minimum parking requirements for new apartment developments in Bondi. I believe it could lead to more congestion in the neighbourhood as residents scramble for limited street parking. Moreover, not everyone, especially older folks like me, are ready or able to give up their cars. Public transport isn't always reliable or convenient. Furthermore, I feel it could affect the value of our properties in the long run. I believe we should consider the needs of all residents, not just those who prefer to live without cars. I also worry about the impact on local businesses, which rely on customers being able to park nearby.\nSURVEY:\nSupport for the proposal (1-5): 2\nHousing (1-5): 3\nTransport (1-5): 1\nCommunity (1-5): 2\nEnvironment (1-5): 3\nEconomy (1-5): 2\nKey Concerns: Increased congestion, Impact on property values\nSuggested Improvements: Improve public transport, Ensure adequate parking for local businesses\n",
+      "response_json": {
+        "narrative": "I'm not in favour of the proposal to eliminate minimum parking requirements for new apartment developments in Bondi. I believe it could lead to more congestion in the neighbourhood as residents scramble for limited street parking. Moreover, not everyone, especially older folks like me, are ready or able to give up their cars. Public transport isn't always reliable or convenient. Furthermore, I feel it could affect the value of our properties in the long run. I believe we should consider the needs of all residents, not just those who prefer to live without cars. I also worry about the impact on local businesses, which rely on customers being able to park nearby.",
+        "survey": {
+          "support_level": 2,
+          "housing": 3,
+          "transport": 1,
+          "community": 2,
+          "environment": 3,
+          "economy": 2,
+          "key_concerns": [
+            "Increased congestion",
+            "Impact on property values"
+          ],
+          "suggested_improvements": [
+            "Improve public transport",
+            "Ensure adequate parking for local businesses"
+          ],
+          "Support for the proposal (1-5)": 2,
+          "Housing (1-5)": 3,
+          "Transport (1-5)": 1,
+          "Community (1-5)": 2,
+          "Environment (1-5)": 3,
+          "Economy (1-5)": 2,
+          "Key Concerns": "Increased congestion, Impact on property values",
+          "Suggested Improvements": "Improve public transport, Ensure adequate parking for local businesses"
+        }
+      },
+      "survey_numbers": {
+        "support": 2,
+        "housing": 3,
+        "transport": 1,
+        "community": 2,
+        "environment": 3,
+        "economy": 2
+      },
+      "survey_grid_labels": {},
+      "interaction_summary": {
+        "persona_id": 1,
+        "impact_dimensions": [
+          "Housing",
+          "Transport",
+          "Community",
+          "Environment",
+          "Economy"
+        ],
+        "survey_numbers": {
+          "support": 2,
+          "housing": 3,
+          "transport": 1,
+          "community": 2,
+          "environment": 3,
+          "economy": 2
+        },
+        "narrative": "I'm not in favour of the proposal to eliminate minimum parking requirements for new apartment developments in Bondi. I believe it could lead to more congestion in the neighbourhood as residents scramble for limited street parking. Moreover, not everyone, especially older folks like me, are ready or able to give up their cars. Public transport isn't always reliable or convenient. Furthermore, I feel it could affect the value of our properties in the long run. I believe we should consider the needs of all residents, not just those who prefer to live without cars. I also worry about the impact on local businesses, which rely on customers being able to park nearby.",
+        "key_concerns": [
+          "Increased congestion",
+          "Impact on property values"
+        ],
+        "suggested_improvements": [
+          "Improve public transport",
+          "Ensure adequate parking for local businesses"
+        ]
+      },
+      "run_id": "847e8e2709704ae3a9213df89a0e5d08",
+      "themes": [
+        "Transport"
+      ],
+      "drivers": [
+        "congestion concerns",
+        "impact on property value",
+        "accessibility for all residents"
+      ]
+    },
+    {
+      "id": 2,
+      "age": "25-29 years",
+      "gender": "Female",
+      "location": "Kingsford",
+      "income": "$300-$399 ($15,600-$20,799)",
+      "income_weekly": "$300-$399",
+      "income_annual": "$15,600-$20,799",
+      "housing_tenure": "Rent from private landlord or real estate agent",
+      "job_tenure": "Employee in private company or business",
+      "occupation": "Non-supervisory",
+      "education": "Year 12 or equivalent",
+      "transport": null,
+      "marital_status": "Never married",
+      "partner_activity": " ",
+      "household_size": "3 people",
+      "family_payments": "No",
+      "child_care_benefit": "No",
+      "investment_properties": "No",
+      "transport_infrastructure": "The same as now",
+      "political_leaning": "Liberal",
+      "trust": "Sometimes can be trusted to do the right thing",
+      "issues": "How I feel about the following Issues include: Taxation, Extremely important; Immigration, Quite important; Education, Quite important; The environment, Quite important; Health and Medicare, Quite important; Refugees and asylum seekers, Quite important; Global warming, Quite important; Management of the economy, Extremely important; The COVID-19 pandemic, Quite important; The cost of living, Quite important; National security, Quite important",
+      "engagement": "I engage in politics in the following way: Interest in politics, None; Attention to newspapers, None at all; Attention to television, None at all; Attention to radio, None at all; Attention to internet, Not much; Discussed politics in person, Not at all; Discussed politics online, Not at all; Persuaded others to vote, Not at all; Showed support for a party, Not at all; Attended political meetings, Not at all; Contributed money, Not at all",
+      "persona_id": 2,
+      "response": "NARRATIVE: I'm opposed to this proposal. In Kingsford, where I live, parking is a nightmare. If we allow developers to build fewer or no car spaces, it would just exacerbate this issue. While I understand the intention behind reducing car usage, not everyone can rely solely on public transport or cycling. Many people, like me, need cars for work, shopping, or visiting family. This could also negatively impact the community, with overcrowded streets and people fighting for parking spaces. We should focus on improving public transportation and cycling infrastructure before we consider reducing parking spaces.\nSURVEY:\nSupport for the proposal (1-5): 1\nHousing (1-5): 3\nTransport (1-5): 1\nCommunity (1-5): 1\nEnvironment (1-5): 4\nEconomy (1-5): 2\nKey Concerns: Parking scarcity, Overcrowded streets\nSuggested Improvements: Improve public transportation, Develop cycling infrastructure\n",
+      "response_json": {
+        "narrative": "I'm opposed to this proposal. In Kingsford, where I live, parking is a nightmare. If we allow developers to build fewer or no car spaces, it would just exacerbate this issue. While I understand the intention behind reducing car usage, not everyone can rely solely on public transport or cycling. Many people, like me, need cars for work, shopping, or visiting family. This could also negatively impact the community, with overcrowded streets and people fighting for parking spaces. We should focus on improving public transportation and cycling infrastructure before we consider reducing parking spaces.",
+        "survey": {
+          "support_level": 1,
+          "housing": 3,
+          "transport": 1,
+          "community": 1,
+          "environment": 4,
+          "economy": 2,
+          "key_concerns": [
+            "Parking scarcity",
+            "Overcrowded streets"
+          ],
+          "suggested_improvements": [
+            "Improve public transportation",
+            "Develop cycling infrastructure"
+          ],
+          "support_proposal": 1
+        }
+      },
+      "survey_numbers": {
+        "support": 1,
+        "housing": 3,
+        "transport": 1,
+        "community": 1,
+        "environment": 4,
+        "economy": 2
+      },
+      "survey_grid_labels": {},
+      "interaction_summary": {
+        "persona_id": 2,
+        "impact_dimensions": [
+          "Housing",
+          "Transport",
+          "Community",
+          "Environment",
+          "Economy"
+        ],
+        "survey_numbers": {
+          "support": 1,
+          "housing": 3,
+          "transport": 1,
+          "community": 1,
+          "environment": 4,
+          "economy": 2
+        },
+        "narrative": "I'm opposed to this proposal. In Kingsford, where I live, parking is a nightmare. If we allow developers to build fewer or no car spaces, it would just exacerbate this issue. While I understand the intention behind reducing car usage, not everyone can rely solely on public transport or cycling. Many people, like me, need cars for work, shopping, or visiting family. This could also negatively impact the community, with overcrowded streets and people fighting for parking spaces. We should focus on improving public transportation and cycling infrastructure before we consider reducing parking spaces.",
+        "key_concerns": [
+          "Parking scarcity",
+          "Overcrowded streets"
+        ],
+        "suggested_improvements": [
+          "Improve public transportation",
+          "Develop cycling infrastructure"
+        ]
+      },
+      "run_id": "847e8e2709704ae3a9213df89a0e5d08",
+      "themes": [
+        "Transport"
+      ],
+      "drivers": [
+        "frustrated with parking situation",
+        "concerned about impact on community",
+        "advocate for improving public transportation"
+      ]
+    }
+  ],
+  "driver_summary": [
+    {
+      "level": 1,
+      "drivers": [
+        [
+          "frustrated with parking situation",
+          1
+        ],
+        [
+          "concerned about impact on community",
+          1
+        ],
+        [
+          "advocate for improving public transportation",
+          1
+        ]
+      ]
+    },
+    {
+      "level": 2,
+      "drivers": [
+        [
+          "congestion concerns",
+          1
+        ],
+        [
+          "impact on property value",
+          1
+        ],
+        [
+          "accessibility for all residents",
+          1
+        ]
+      ]
+    },
+    {
+      "level": 4,
+      "drivers": [
+        [
+          "affordable housing",
+          1
+        ],
+        [
+          "environmental sustainability",
+          1
+        ],
+        [
+          "public transport infrastructure",
+          1
+        ]
+      ]
+    }
+  ],
+  "demographics": {
+    "age": {
+      "persona": {
+        "20-24 years": 1,
+        "50-54 years": 1,
+        "25-29 years": 1
+      },
+      "population": {
+        "65-69 years": 15175,
+        "60-64 years": 14154,
+        "55-59 years": 13595,
+        "50-54 years": 13536,
+        "70-74 years": 13441,
+        "40-44 years": 12460,
+        "35-39 years": 11650,
+        "45-49 years": 11409,
+        "30-34 years": 10145,
+        "75-79 years": 7225,
+        "20-24 years": 6562,
+        "25-29 years": 5326,
+        "80-84 years": 2644,
+        "85-89 years": 916,
+        "15-19 years": 789
+      },
+      "chi2": 16.18481510264525
+    },
+    "gender": {
+      "persona": {
+        "Female": 3
+      },
+      "population": {
+        "Female": 72308,
+        "Male": 66719
+      },
+      "chi2": 1.1792336447143577
+    },
+    "marital": {
+      "persona": {
+        "1": 2,
+        "2": 1
+      },
+      "population": {
+        "2": 103925,
+        "1": 24782,
+        "4": 7036,
+        "3": 3284
+      },
+      "chi2": 4.925589256041743
+    },
+    "tenure": {
+      "persona": {
+        "5": 1,
+        "2": 1,
+        "3": 1
+      },
+      "population": {
+        "1": 55692,
+        "2": 54390,
+        "3": 20276,
+        "5": 6019,
+        "4": 2373,
+        "999": 277
+      },
+      "chi2": 7.8359500065933485
+    },
+    "political": {
+      "persona": {
+        "Greens": 2,
+        "Liberal": 1
+      },
+      "population": {
+        "Labor": 11618,
+        "Liberal": 10062,
+        "Greens": 4125,
+        "Other party": 1,
+        "National Party": 1008,
+        "Item skipped": 329,
+        " ": 767,
+        "Other": 42
+      },
+      "chi2": 6.958326919158761
+    },
+    "education": {
+      "persona": {
+        "Bachelor degree or higher": 1,
+        "Year 11 or below": 1,
+        "Year 12 or equivalent": 1
+      },
+      "population": {
+        "Certificate III/IV": 39333,
+        "Advanced diploma or diploma": 29553,
+        "Bachelor degree or higher": 22839,
+        "No formal education": 17683,
+        "Year 11 or below": 12277,
+        "Other": 10864,
+        "Year 12 or equivalent": 5584,
+        "Item skipped": 894
+      },
+      "chi2": 11.10160553136899
+    }
+  },
+  "location_freq": {
+    "Bellevue Hill": 1,
+    "Randwick - North": 1,
+    "Kingsford": 1
+  },
+  "impact_dims": [
+    "Housing",
+    "Transport",
+    "Community",
+    "Environment",
+    "Economy"
+  ],
+  "prompt_template": "",
+  "survey_grid_labels": null
+}

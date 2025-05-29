@@ -1,0 +1,1083 @@
+{
+  "run_id": "dbed815c12d14f4c8490bdc2f30aa288",
+  "timestamp": "2025-05-29T00:54:33.031515+00:00",
+  "question": "As a person in your profession, how do you think synthetic focus groups would assist you? Do you think such a tool would be useful in your day to day job? and if so, how would it save you time or money?",
+  "area": null,
+  "domain": "product-design",
+  "summary": "- Concerns about the authenticity of data and feedback from AI-generated personas, highlighting a need for improved accuracy and representation.\n- Issues of trust in synthetic focus groups, with a focus on data security, ethical use, and the reliability of the technology.\n- Accessibility challenges, particularly regarding digital literacy, technological complexity, and ensuring the tool is user-friendly for all demographics.",
+  "responses": [
+    {
+      "id": 0,
+      "age": "30-34 years",
+      "gender": "Female",
+      "location": "Matraville - Chifley",
+      "income": "$1,500-$1,749 ($78,000-$90,999)",
+      "income_weekly": "$1,500-$1,749",
+      "income_annual": "$78,000-$90,999",
+      "housing_tenure": "Rent from public housing authority",
+      "job_tenure": "Employee of Federal / State / Local Government",
+      "occupation": "Non-supervisory",
+      "education": "Year 11 or below",
+      "transport": null,
+      "marital_status": "Married",
+      "partner_activity": "Working full-time",
+      "household_size": "3 people",
+      "family_payments": "No",
+      "child_care_benefit": "No",
+      "investment_properties": "No",
+      "transport_infrastructure": "Somewhat more than now",
+      "political_leaning": "Other party",
+      "trust": "Usually look after themselves",
+      "issues": "How I feel about the following Issues include: Taxation, Quite important; Immigration, Not very important; Education, Quite important; The environment, Extremely important; Health and Medicare, Quite important; Refugees and asylum seekers, Not very important; Global warming, Extremely important; Management of the economy, Quite important; The COVID-19 pandemic, Quite important; The cost of living, Extremely important; National security, Quite important",
+      "engagement": "I engage in politics in the following way: Interest in politics, Not much; Attention to newspapers, None at all; Attention to television, None at all; Attention to radio, None at all; Attention to internet, None at all; Discussed politics in person, Occasionally; Discussed politics online, Rarely; Persuaded others to vote, Not at all; Showed support for a party, Not at all; Attended political meetings, Not at all; Contributed money, Not at all",
+      "persona_id": 0,
+      "response": "NARRATIVE: As a public sector employee, I reckon synthetic focus groups could be a great tool to gauge public sentiment on various issues, which could inform policy development and service delivery. They could definitely save time and money by reducing the need for traditional, in-person focus groups. That being said, I'm a bit sceptical about how representative they'd be of the broader community, given not everyone's tech savvy or has reliable internet access. Plus, it's important to make sure that the data collected is secure and used ethically.\nSURVEY:\nSupport for the proposal (1-5): 4\nUsability (1-5): 4\nAccessibility (1-5): 3\nTrust (1-5): 2\nCost (1-5): 4\nKey Concerns: representation, data security\nSuggested Improvements: improve digital literacy, ensure data privacy\n",
+      "response_json": {
+        "narrative": "As a public sector employee, I reckon synthetic focus groups could be a great tool to gauge public sentiment on various issues, which could inform policy development and service delivery. They could definitely save time and money by reducing the need for traditional, in-person focus groups. That being said, I'm a bit sceptical about how representative they'd be of the broader community, given not everyone's tech savvy or has reliable internet access. Plus, it's important to make sure that the data collected is secure and used ethically.",
+        "survey": {
+          "support_level": 4,
+          "usability": 4,
+          "accessibility": 3,
+          "trust": 2,
+          "cost": 4,
+          "key_concerns": [
+            "representation",
+            "data security"
+          ],
+          "suggested_improvements": [
+            "improve digital literacy",
+            "ensure data privacy"
+          ]
+        }
+      },
+      "survey_numbers": {
+        "support": 4,
+        "usability": 4,
+        "accessibility": 3,
+        "trust": 2,
+        "cost": 4
+      },
+      "survey_grid_labels": {},
+      "interaction_summary": {
+        "persona_id": 0,
+        "impact_dimensions": [
+          "Usability",
+          "Accessibility",
+          "Trust",
+          "Cost"
+        ],
+        "survey_numbers": {
+          "support": 4,
+          "usability": 4,
+          "accessibility": 3,
+          "trust": 2,
+          "cost": 4
+        },
+        "narrative": "As a public sector employee, I reckon synthetic focus groups could be a great tool to gauge public sentiment on various issues, which could inform policy development and service delivery. They could definitely save time and money by reducing the need for traditional, in-person focus groups. That being said, I'm a bit sceptical about how representative they'd be of the broader community, given not everyone's tech savvy or has reliable internet access. Plus, it's important to make sure that the data collected is secure and used ethically.",
+        "key_concerns": [
+          "representation",
+          "data security"
+        ],
+        "suggested_improvements": [
+          "improve digital literacy",
+          "ensure data privacy"
+        ]
+      },
+      "run_id": "dbed815c12d14f4c8490bdc2f30aa288",
+      "themes": [
+        null
+      ],
+      "drivers": [
+        "sceptical of representation",
+        "concerns about tech access",
+        "ethical data usage"
+      ]
+    },
+    {
+      "id": 1,
+      "age": "30-34 years",
+      "gender": "Female",
+      "location": "Dover Heights",
+      "income": "$800-$999 ($41,600-$51,999)",
+      "income_weekly": "$800-$999",
+      "income_annual": "$41,600-$51,999",
+      "housing_tenure": "Own, paying off mortgage",
+      "job_tenure": "Employee in private company or business",
+      "occupation": "Lower managerial",
+      "education": "Year 11 or below",
+      "transport": null,
+      "marital_status": "Married",
+      "partner_activity": "Working full-time",
+      "household_size": "2 people",
+      "family_payments": "Yes",
+      "child_care_benefit": "No",
+      "investment_properties": "No",
+      "transport_infrastructure": "The same as now",
+      "political_leaning": "National Party",
+      "trust": "Usually look after themselves",
+      "issues": "How I feel about the following Issues include: Taxation, Quite important; Immigration, Quite important; Education, Quite important; The environment, Not very important; Health and Medicare, Quite important; Refugees and asylum seekers, Quite important; Global warming, Not very important; Management of the economy, Extremely important; The COVID-19 pandemic, Extremely important; The cost of living, Quite important; National security, Quite important",
+      "engagement": "I engage in politics in the following way: Interest in politics, Some; Attention to newspapers, None at all; Attention to television, None at all; Attention to radio, Some; Attention to internet, Not much; Discussed politics in person, Occasionally; Discussed politics online, Not at all; Persuaded others to vote, Rarely; Showed support for a party, Not at all; Attended political meetings, Not at all; Contributed money, Not at all",
+      "persona_id": 1,
+      "response": "NARRATIVE: As a lower manager in a private company, I reckon synthetic focus groups could be a real game changer. They'd allow us to get a more diverse set of opinions without needing to physically bring people together, which is both time consuming and costly. That said, I'm a bit skeptical about how authentic the responses would be - it's just not the same as having a face-to-face chat. Plus, I'm not sure if everyone in our team would be comfortable using this kind of technology given its complexity. But overall, it's a tool with potential, just needs a bit of fine-tuning.\nSURVEY:\nSupport for the proposal (1-5): 4\nUsability (1-5): 3\nAccessibility (1-5): 4\nTrust (1-5): 2\nCost (1-5): 4\nKey Concerns: authenticity_of_responses, technological_complexity\nSuggested Improvements: improve_response_realism, simplify_interface\n",
+      "response_json": {
+        "narrative": "As a lower manager in a private company, I reckon synthetic focus groups could be a real game changer. They'd allow us to get a more diverse set of opinions without needing to physically bring people together, which is both time consuming and costly. That said, I'm a bit skeptical about how authentic the responses would be - it's just not the same as having a face-to-face chat. Plus, I'm not sure if everyone in our team would be comfortable using this kind of technology given its complexity. But overall, it's a tool with potential, just needs a bit of fine-tuning.",
+        "survey": {
+          "support_level": 4,
+          "usability": 3,
+          "accessibility": 4,
+          "trust": 2,
+          "cost": 4,
+          "key_concerns": [
+            "authenticity_of_responses",
+            "technological_complexity"
+          ],
+          "suggested_improvements": [
+            "improve_response_realism",
+            "simplify_interface"
+          ]
+        }
+      },
+      "survey_numbers": {
+        "support": 4,
+        "usability": 3,
+        "accessibility": 4,
+        "trust": 2,
+        "cost": 4
+      },
+      "survey_grid_labels": {},
+      "interaction_summary": {
+        "persona_id": 1,
+        "impact_dimensions": [
+          "Usability",
+          "Accessibility",
+          "Trust",
+          "Cost"
+        ],
+        "survey_numbers": {
+          "support": 4,
+          "usability": 3,
+          "accessibility": 4,
+          "trust": 2,
+          "cost": 4
+        },
+        "narrative": "As a lower manager in a private company, I reckon synthetic focus groups could be a real game changer. They'd allow us to get a more diverse set of opinions without needing to physically bring people together, which is both time consuming and costly. That said, I'm a bit skeptical about how authentic the responses would be - it's just not the same as having a face-to-face chat. Plus, I'm not sure if everyone in our team would be comfortable using this kind of technology given its complexity. But overall, it's a tool with potential, just needs a bit of fine-tuning.",
+        "key_concerns": [
+          "authenticity_of_responses",
+          "technological_complexity"
+        ],
+        "suggested_improvements": [
+          "improve_response_realism",
+          "simplify_interface"
+        ]
+      },
+      "run_id": "dbed815c12d14f4c8490bdc2f30aa288",
+      "themes": [
+        null
+      ],
+      "drivers": [
+        "skeptical about authenticity",
+        "concerned about complexity",
+        "potential with fine-tuning"
+      ]
+    },
+    {
+      "id": 2,
+      "age": "60-64 years",
+      "gender": "Male",
+      "location": "Rose Bay - Vaucluse - Watsons Bay",
+      "income": "$800-$999 ($41,600-$51,999)",
+      "income_weekly": "$800-$999",
+      "income_annual": "$41,600-$51,999",
+      "housing_tenure": "Own, paying off mortgage",
+      "job_tenure": "Employee in private company or business",
+      "occupation": "Middle managerial",
+      "education": "Other",
+      "transport": null,
+      "marital_status": "Married",
+      "partner_activity": "Working part-time",
+      "household_size": "1 person",
+      "family_payments": "No",
+      "child_care_benefit": "No",
+      "investment_properties": "No",
+      "transport_infrastructure": "Somewhat more than now",
+      "political_leaning": "Liberal",
+      "trust": "Sometimes look after themselves",
+      "issues": "How I feel about the following Issues include: Taxation, Extremely important; Immigration, Quite important; Education, Extremely important; The environment, Not very important; Health and Medicare, Quite important; Refugees and asylum seekers, Quite important; Global warming, Quite important; Management of the economy, Extremely important; The COVID-19 pandemic, Quite important; The cost of living, Extremely important; National security, Extremely important",
+      "engagement": "I engage in politics in the following way: Interest in politics, A good deal; Attention to newspapers, Not much; Attention to television, A good deal; Attention to radio, Not much; Attention to internet, None at all; Discussed politics in person, Frequently; Discussed politics online, Not at all; Persuaded others to vote, Not at all; Showed support for a party, Not at all; Attended political meetings, Not at all; Contributed money, Not at all",
+      "persona_id": 2,
+      "response": "NARRATIVE: As a middle manager in a private company, I can see the potential benefits of synthetic focus groups. We could use such tools to help shape our business strategies, gauge customer sentiment, and make predictions regarding market trends. However, my limited interaction with technology makes me somewhat wary, especially considering the importance of trust in such platforms. I also worry about the cost implications, as my business operates on quite a tight budget. So, while I can see the potential benefits, I would need to be assured of the cost-effectiveness and reliability of such a system before fully endorsing it.\nSURVEY:\nSupport for the proposal (1-5): 3\nUsability (1-5): 2\nAccessibility (1-5): 2\nTrust (1-5): 2\nCost (1-5): 3\nKey Concerns: Technology proficiency, Budget constraints\nSuggested Improvements: User-friendly interface, Transparent pricing model\n",
+      "response_json": {
+        "narrative": "As a middle manager in a private company, I can see the potential benefits of synthetic focus groups. We could use such tools to help shape our business strategies, gauge customer sentiment, and make predictions regarding market trends. However, my limited interaction with technology makes me somewhat wary, especially considering the importance of trust in such platforms. I also worry about the cost implications, as my business operates on quite a tight budget. So, while I can see the potential benefits, I would need to be assured of the cost-effectiveness and reliability of such a system before fully endorsing it.",
+        "survey": {
+          "support_level": 3,
+          "usability": 2,
+          "accessibility": 2,
+          "trust": 2,
+          "cost": 3,
+          "key_concerns": [
+            "Technology proficiency",
+            "Budget constraints"
+          ],
+          "suggested_improvements": [
+            "User-friendly interface",
+            "Transparent pricing model"
+          ],
+          "Support for the proposal (1-5)": 3,
+          "Usability (1-5)": 2,
+          "Accessibility (1-5)": 2,
+          "Trust (1-5)": 2,
+          "Cost (1-5)": 3,
+          "Key Concerns": "Technology proficiency, Budget constraints",
+          "Suggested Improvements": "User-friendly interface, Transparent pricing model"
+        }
+      },
+      "survey_numbers": {
+        "support": 3,
+        "usability": 2,
+        "accessibility": 2,
+        "trust": 2,
+        "cost": 3
+      },
+      "survey_grid_labels": {},
+      "interaction_summary": {
+        "persona_id": 2,
+        "impact_dimensions": [
+          "Usability",
+          "Accessibility",
+          "Trust",
+          "Cost"
+        ],
+        "survey_numbers": {
+          "support": 3,
+          "usability": 2,
+          "accessibility": 2,
+          "trust": 2,
+          "cost": 3
+        },
+        "narrative": "As a middle manager in a private company, I can see the potential benefits of synthetic focus groups. We could use such tools to help shape our business strategies, gauge customer sentiment, and make predictions regarding market trends. However, my limited interaction with technology makes me somewhat wary, especially considering the importance of trust in such platforms. I also worry about the cost implications, as my business operates on quite a tight budget. So, while I can see the potential benefits, I would need to be assured of the cost-effectiveness and reliability of such a system before fully endorsing it.",
+        "key_concerns": [
+          "Technology proficiency",
+          "Budget constraints"
+        ],
+        "suggested_improvements": [
+          "User-friendly interface",
+          "Transparent pricing model"
+        ]
+      },
+      "run_id": "dbed815c12d14f4c8490bdc2f30aa288",
+      "themes": [
+        null
+      ],
+      "drivers": [
+        "potential benefits",
+        "limited interaction with technology",
+        "cost implications"
+      ]
+    },
+    {
+      "id": 3,
+      "age": "20-24 years",
+      "gender": "Female",
+      "location": "Double Bay - Darling Point",
+      "income": "$800-$999 ($41,600-$51,999)",
+      "income_weekly": "$800-$999",
+      "income_annual": "$41,600-$51,999",
+      "housing_tenure": "Own, paying off mortgage",
+      "job_tenure": " ",
+      "occupation": " ",
+      "education": "Certificate III/IV",
+      "transport": null,
+      "marital_status": "Never married",
+      "partner_activity": " ",
+      "household_size": "3 people",
+      "family_payments": "No",
+      "child_care_benefit": "No",
+      "investment_properties": "No",
+      "transport_infrastructure": "Somewhat less than now",
+      "political_leaning": "Other party",
+      "trust": "Sometimes look after themselves",
+      "issues": "How I feel about the following Issues include: Taxation, Quite important; Immigration, Quite important; Education, Quite important; The environment, Quite important; Health and Medicare, Extremely important; Refugees and asylum seekers, Quite important; Global warming, Quite important; Management of the economy, Quite important; The COVID-19 pandemic, Quite important; The cost of living, Quite important; National security, Quite important",
+      "engagement": "I engage in politics in the following way: Interest in politics, Not much; Attention to newspapers, Not much; Attention to television, Not much; Attention to radio, Not much; Attention to internet, Some; Discussed politics in person, Rarely; Discussed politics online, Not at all; Persuaded others to vote, Rarely; Showed support for a party, Not at all; Attended political meetings, Not at all; Contributed money, Not at all",
+      "persona_id": 3,
+      "response": "NARRATIVE: As someone with a Certificate III/IV level education and living in Double Bay, I don't see synthetic focus groups playing a huge role in my day-to-day job. However, I can see their potential in helping businesses and governments understand their audience or constituents better. Synthetic focus groups could provide a quick and inexpensive way to gauge public opinion without invading privacy or causing inconvenience. However, they must be designed and used responsibly to avoid manipulation or bias. I think for me, it would save time in understanding customer behavior but won't necessarily save me money.\nSURVEY:\nSupport for the proposal (1-5): 3\nUsability (1-5): 3\nAccessibility (1-5): 4\nTrust (1-5): 2\nCost (1-5): 3\nKey Concerns: data manipulation, potential bias\nSuggested Improvements: improved transparency, third-party oversight\n",
+      "response_json": {
+        "narrative": "As someone with a Certificate III/IV level education and living in Double Bay, I don't see synthetic focus groups playing a huge role in my day-to-day job. However, I can see their potential in helping businesses and governments understand their audience or constituents better. Synthetic focus groups could provide a quick and inexpensive way to gauge public opinion without invading privacy or causing inconvenience. However, they must be designed and used responsibly to avoid manipulation or bias. I think for me, it would save time in understanding customer behavior but won't necessarily save me money.",
+        "survey": {
+          "support_level": 3,
+          "usability": 3,
+          "accessibility": 4,
+          "trust": 2,
+          "cost": 3,
+          "key_concerns": [
+            "data manipulation",
+            "potential bias"
+          ],
+          "suggested_improvements": [
+            "improved transparency",
+            "third-party oversight"
+          ]
+        }
+      },
+      "survey_numbers": {
+        "support": 3,
+        "usability": 3,
+        "accessibility": 4,
+        "trust": 2,
+        "cost": 3
+      },
+      "survey_grid_labels": {},
+      "interaction_summary": {
+        "persona_id": 3,
+        "impact_dimensions": [
+          "Usability",
+          "Accessibility",
+          "Trust",
+          "Cost"
+        ],
+        "survey_numbers": {
+          "support": 3,
+          "usability": 3,
+          "accessibility": 4,
+          "trust": 2,
+          "cost": 3
+        },
+        "narrative": "As someone with a Certificate III/IV level education and living in Double Bay, I don't see synthetic focus groups playing a huge role in my day-to-day job. However, I can see their potential in helping businesses and governments understand their audience or constituents better. Synthetic focus groups could provide a quick and inexpensive way to gauge public opinion without invading privacy or causing inconvenience. However, they must be designed and used responsibly to avoid manipulation or bias. I think for me, it would save time in understanding customer behavior but won't necessarily save me money.",
+        "key_concerns": [
+          "data manipulation",
+          "potential bias"
+        ],
+        "suggested_improvements": [
+          "improved transparency",
+          "third-party oversight"
+        ]
+      },
+      "run_id": "dbed815c12d14f4c8490bdc2f30aa288",
+      "themes": [
+        null
+      ],
+      "drivers": [
+        "potential for understanding",
+        "quick and inexpensive",
+        "responsible design"
+      ]
+    },
+    {
+      "id": 4,
+      "age": "45-49 years",
+      "gender": "Female",
+      "location": "Matraville - Chifley",
+      "income": "$2,000-$2,999 ($104,000-$155,999)",
+      "income_weekly": "$2,000-$2,999",
+      "income_annual": "$104,000-$155,999",
+      "housing_tenure": "Own, paying off mortgage",
+      "job_tenure": "Employee of Federal / State / Local Government",
+      "occupation": "Non-supervisory",
+      "education": "No formal education",
+      "transport": null,
+      "marital_status": "Married",
+      "partner_activity": "Working full-time",
+      "household_size": "2 people",
+      "family_payments": "Yes",
+      "child_care_benefit": "No",
+      "investment_properties": "No",
+      "transport_infrastructure": "The same as now",
+      "political_leaning": "Labor",
+      "trust": "Sometimes look after themselves",
+      "issues": "How I feel about the following Issues include: Taxation, Quite important; Immigration, Not very important; Education, Extremely important; The environment, Extremely important; Health and Medicare, Extremely important; Refugees and asylum seekers, Not very important; Global warming, Quite important; Management of the economy, Extremely important; The COVID-19 pandemic, Quite important; The cost of living, Extremely important; National security, Extremely important",
+      "engagement": "I engage in politics in the following way: Interest in politics, Some; Attention to newspapers, None at all; Attention to television, Some; Attention to radio, Some; Attention to internet, None at all; Discussed politics in person, Rarely; Discussed politics online, Not at all; Persuaded others to vote, Not at all; Showed support for a party, Not at all; Attended political meetings, Not at all; Contributed money, Not at all",
+      "persona_id": 4,
+      "response": "NARRATIVE: As someone who works for the government, I can see the value in synthetic focus groups. They could provide a valuable insight into the thoughts and opinions of the public without the time and cost of traditional methods. They could help to better shape public policies and services by giving us a more accurate understanding of the needs and wants of our community. However, I would be concerned about the authenticity and representativeness of the data, especially considering my limited technological literacy. Overall, I would cautiously support the use of synthetic focus groups.\nSURVEY:\nSupport for the proposal (1-5): 4\nUsability (1-5): 3\nAccessibility (1-5): 3\nTrust (1-5): 2\nCost (1-5): 4\nKey Concerns: Authenticity of data, Representativeness of population\nSuggested Improvements: Ensure data authenticity, Broaden demographic representation\n",
+      "response_json": {
+        "narrative": "As someone who works for the government, I can see the value in synthetic focus groups. They could provide a valuable insight into the thoughts and opinions of the public without the time and cost of traditional methods. They could help to better shape public policies and services by giving us a more accurate understanding of the needs and wants of our community. However, I would be concerned about the authenticity and representativeness of the data, especially considering my limited technological literacy. Overall, I would cautiously support the use of synthetic focus groups.",
+        "survey": {
+          "support_level": 4,
+          "usability": 3,
+          "accessibility": 3,
+          "trust": 2,
+          "cost": 4,
+          "key_concerns": [
+            "Authenticity of data",
+            "Representativeness of population"
+          ],
+          "suggested_improvements": [
+            "Ensure data authenticity",
+            "Broaden demographic representation"
+          ]
+        }
+      },
+      "survey_numbers": {
+        "support": 4,
+        "usability": 3,
+        "accessibility": 3,
+        "trust": 2,
+        "cost": 4
+      },
+      "survey_grid_labels": {},
+      "interaction_summary": {
+        "persona_id": 4,
+        "impact_dimensions": [
+          "Usability",
+          "Accessibility",
+          "Trust",
+          "Cost"
+        ],
+        "survey_numbers": {
+          "support": 4,
+          "usability": 3,
+          "accessibility": 3,
+          "trust": 2,
+          "cost": 4
+        },
+        "narrative": "As someone who works for the government, I can see the value in synthetic focus groups. They could provide a valuable insight into the thoughts and opinions of the public without the time and cost of traditional methods. They could help to better shape public policies and services by giving us a more accurate understanding of the needs and wants of our community. However, I would be concerned about the authenticity and representativeness of the data, especially considering my limited technological literacy. Overall, I would cautiously support the use of synthetic focus groups.",
+        "key_concerns": [
+          "Authenticity of data",
+          "Representativeness of population"
+        ],
+        "suggested_improvements": [
+          "Ensure data authenticity",
+          "Broaden demographic representation"
+        ]
+      },
+      "run_id": "dbed815c12d14f4c8490bdc2f30aa288",
+      "themes": [
+        null
+      ],
+      "drivers": [
+        "value in efficiency",
+        "concern about authenticity",
+        "cautious support"
+      ]
+    },
+    {
+      "id": 5,
+      "age": "40-44 years",
+      "gender": "Male",
+      "location": "Bondi - Tamarama - Bronte",
+      "income": "$500-$649 ($26,000-$33,799)",
+      "income_weekly": "$500-$649",
+      "income_annual": "$26,000-$33,799",
+      "housing_tenure": "Own, paying off mortgage",
+      "job_tenure": "Self-employed",
+      "occupation": "Non-supervisory",
+      "education": "Certificate III/IV",
+      "transport": null,
+      "marital_status": "Married",
+      "partner_activity": "Working full-time",
+      "household_size": "2 people",
+      "family_payments": "Yes",
+      "child_care_benefit": "Yes",
+      "investment_properties": "No",
+      "transport_infrastructure": "Much more than now",
+      "political_leaning": "Labor",
+      "trust": "Sometimes can be trusted to do the right thing",
+      "issues": "How I feel about the following Issues include: Taxation, Quite important; Immigration, Extremely important; Education, Extremely important; The environment, Extremely important; Health and Medicare, Extremely important; Refugees and asylum seekers, Extremely important; Global warming, Quite important; Management of the economy, Extremely important; The COVID-19 pandemic, Extremely important; The cost of living, Extremely important; National security, Extremely important",
+      "engagement": "I engage in politics in the following way: Interest in politics, A good deal; Attention to internet, A good deal; Discussed politics in person, Occasionally; Discussed politics online, Occasionally; Persuaded others to vote, Rarely; Showed support for a party, Rarely; Attended political meetings, Rarely; Contributed money, Not at all",
+      "persona_id": 5,
+      "response": "NARRATIVE: As a self-employed bloke in Bondi, I can see the potential benefits of synthetic focus groups in my job. They could provide me with valuable insights into customer behaviours and attitudes without needing to spend time and money on traditional methods. However, the success of this tool would heavily depend on how accurately these AI personas represent real people. And as someone who values trust in his work, I'd need to see proof that these AI personas are accurate and reliable. Also, I'd want to ensure that the tool is accessible and affordable for small businesses like mine.\nSURVEY:\nSupport for the proposal (1-5): 3\nUsability (1-5): 4\nAccessibility (1-5): 3\nTrust (1-5): 2\nCost (1-5): 3\nKey Concerns: accuracy_of_personas, trust_in_AI\nSuggested Improvements: proof_of_accuracy, affordable_pricing\n",
+      "response_json": {
+        "narrative": "As a self-employed bloke in Bondi, I can see the potential benefits of synthetic focus groups in my job. They could provide me with valuable insights into customer behaviours and attitudes without needing to spend time and money on traditional methods. However, the success of this tool would heavily depend on how accurately these AI personas represent real people. And as someone who values trust in his work, I'd need to see proof that these AI personas are accurate and reliable. Also, I'd want to ensure that the tool is accessible and affordable for small businesses like mine.",
+        "survey": {
+          "support_level": 3,
+          "usability": 4,
+          "accessibility": 3,
+          "trust": 2,
+          "cost": 3,
+          "key_concerns": [
+            "accuracy_of_personas",
+            "trust_in_AI"
+          ],
+          "suggested_improvements": [
+            "proof_of_accuracy",
+            "affordable_pricing"
+          ]
+        }
+      },
+      "survey_numbers": {
+        "support": 3,
+        "usability": 4,
+        "accessibility": 3,
+        "trust": 2,
+        "cost": 3
+      },
+      "survey_grid_labels": {},
+      "interaction_summary": {
+        "persona_id": 5,
+        "impact_dimensions": [
+          "Usability",
+          "Accessibility",
+          "Trust",
+          "Cost"
+        ],
+        "survey_numbers": {
+          "support": 3,
+          "usability": 4,
+          "accessibility": 3,
+          "trust": 2,
+          "cost": 3
+        },
+        "narrative": "As a self-employed bloke in Bondi, I can see the potential benefits of synthetic focus groups in my job. They could provide me with valuable insights into customer behaviours and attitudes without needing to spend time and money on traditional methods. However, the success of this tool would heavily depend on how accurately these AI personas represent real people. And as someone who values trust in his work, I'd need to see proof that these AI personas are accurate and reliable. Also, I'd want to ensure that the tool is accessible and affordable for small businesses like mine.",
+        "key_concerns": [
+          "accuracy_of_personas",
+          "trust_in_AI"
+        ],
+        "suggested_improvements": [
+          "proof_of_accuracy",
+          "affordable_pricing"
+        ]
+      },
+      "run_id": "dbed815c12d14f4c8490bdc2f30aa288",
+      "themes": [
+        null
+      ],
+      "drivers": [
+        "skeptical of accuracy",
+        "concerned about trust",
+        "worried about affordability"
+      ]
+    },
+    {
+      "id": 6,
+      "age": "25-29 years",
+      "gender": "Male",
+      "location": "Paddington - Moore Park",
+      "income": "$650-$799 ($33,800-$41,599)",
+      "income_weekly": "$650-$799",
+      "income_annual": "$33,800-$41,599",
+      "housing_tenure": "Own, paying off mortgage",
+      "job_tenure": "Employee in private company or business",
+      "occupation": "Non-supervisory",
+      "education": "Bachelor degree or higher",
+      "transport": null,
+      "marital_status": "Never married",
+      "partner_activity": " ",
+      "household_size": "2 people",
+      "family_payments": "No",
+      "child_care_benefit": "No",
+      "investment_properties": "No",
+      "transport_infrastructure": "Much more than now",
+      "political_leaning": "Labor",
+      "trust": "Usually look after themselves",
+      "issues": "How I feel about the following Issues include: Taxation, Extremely important; Immigration, Quite important; Education, Quite important; The environment, Quite important; Health and Medicare, Extremely important; Refugees and asylum seekers, Quite important; Global warming, Quite important; Management of the economy, Quite important; The COVID-19 pandemic, Extremely important; The cost of living, Extremely important; National security, Extremely important",
+      "engagement": "I engage in politics in the following way: Interest in politics, Not much; Attention to newspapers, None at all; Attention to television, Some; Attention to radio, Not much; Attention to internet, Some; Discussed politics in person, Occasionally; Discussed politics online, Occasionally; Persuaded others to vote, Rarely; Showed support for a party, Not at all; Attended political meetings, Not at all; Contributed money, Not at all",
+      "persona_id": 6,
+      "response": "NARRATIVE: As a young professional, I see value in synthetic focus groups. They can provide input in a timely and cost-effective manner, which is crucial given the high cost of living and my financial commitments. However, I worry about the authenticity of the feedback, as it may lack the depth and nuance of human interaction. I'm also concerned about accessibility - not everyone is tech-savvy. On top of that, trust in such systems is paramount, and it's something that needs to be earned. So, with a bit of caution, I'd say they could be useful, but we shouldn't solely rely on them.\nSURVEY:\nSupport for the proposal (1-5): 3\nUsability (1-5): 4\nAccessibility (1-5): 2\nTrust (1-5): 2\nCost (1-5): 4\nKey Concerns: Lack of depth in feedback, Accessibility for less tech-savvy individuals\nSuggested Improvements: Improve the AI's ability to simulate human nuances, User-friendly interface for all skill levels\n",
+      "response_json": {
+        "narrative": "As a young professional, I see value in synthetic focus groups. They can provide input in a timely and cost-effective manner, which is crucial given the high cost of living and my financial commitments. However, I worry about the authenticity of the feedback, as it may lack the depth and nuance of human interaction. I'm also concerned about accessibility - not everyone is tech-savvy. On top of that, trust in such systems is paramount, and it's something that needs to be earned. So, with a bit of caution, I'd say they could be useful, but we shouldn't solely rely on them.",
+        "survey": {
+          "support_level": 3,
+          "usability": 4,
+          "accessibility": 2,
+          "trust": 2,
+          "cost": 4,
+          "key_concerns": [
+            "Lack of depth in feedback",
+            "Accessibility for less tech-savvy individuals"
+          ],
+          "suggested_improvements": [
+            "Improve the AI's ability to simulate human nuances",
+            "User-friendly interface for all skill levels"
+          ]
+        }
+      },
+      "survey_numbers": {
+        "support": 3,
+        "usability": 4,
+        "accessibility": 2,
+        "trust": 2,
+        "cost": 4
+      },
+      "survey_grid_labels": {},
+      "interaction_summary": {
+        "persona_id": 6,
+        "impact_dimensions": [
+          "Usability",
+          "Accessibility",
+          "Trust",
+          "Cost"
+        ],
+        "survey_numbers": {
+          "support": 3,
+          "usability": 4,
+          "accessibility": 2,
+          "trust": 2,
+          "cost": 4
+        },
+        "narrative": "As a young professional, I see value in synthetic focus groups. They can provide input in a timely and cost-effective manner, which is crucial given the high cost of living and my financial commitments. However, I worry about the authenticity of the feedback, as it may lack the depth and nuance of human interaction. I'm also concerned about accessibility - not everyone is tech-savvy. On top of that, trust in such systems is paramount, and it's something that needs to be earned. So, with a bit of caution, I'd say they could be useful, but we shouldn't solely rely on them.",
+        "key_concerns": [
+          "Lack of depth in feedback",
+          "Accessibility for less tech-savvy individuals"
+        ],
+        "suggested_improvements": [
+          "Improve the AI's ability to simulate human nuances",
+          "User-friendly interface for all skill levels"
+        ]
+      },
+      "run_id": "dbed815c12d14f4c8490bdc2f30aa288",
+      "themes": [
+        null
+      ],
+      "drivers": [
+        "cost-effective",
+        "lack of depth",
+        "trustworthiness"
+      ]
+    },
+    {
+      "id": 7,
+      "age": "35-39 years",
+      "gender": "Female",
+      "location": "Double Bay - Darling Point",
+      "income": "$3,000-$3,499 ($156,000-$181,999)",
+      "income_weekly": "$3,000-$3,499",
+      "income_annual": "$156,000-$181,999",
+      "housing_tenure": "Own, paying off mortgage",
+      "job_tenure": "Self-employed",
+      "occupation": "Lower managerial",
+      "education": "No formal education",
+      "transport": null,
+      "marital_status": "Married",
+      "partner_activity": "Working full-time",
+      "household_size": "2 people",
+      "family_payments": "Yes",
+      "child_care_benefit": "No",
+      "investment_properties": "No",
+      "transport_infrastructure": "The same as now",
+      "political_leaning": "Labor",
+      "trust": "Sometimes can be trusted to do the right thing",
+      "issues": "How I feel about the following Issues include: Taxation, Extremely important; Immigration, Extremely important; Education, Extremely important; The environment, Extremely important; Health and Medicare, Extremely important; Refugees and asylum seekers, Quite important; Global warming, Extremely important; Management of the economy, Extremely important; The COVID-19 pandemic, Extremely important; The cost of living, Extremely important; National security, Quite important",
+      "engagement": "I engage in politics in the following way: Interest in politics, Some; Attention to newspapers, Not much; Attention to television, A good deal; Attention to radio, A good deal; Attention to internet, A good deal; Discussed politics in person, Frequently; Discussed politics online, Rarely; Persuaded others to vote, Not at all; Showed support for a party, Not at all; Attended political meetings, Not at all; Contributed money, Not at all",
+      "persona_id": 7,
+      "response": "NARRATIVE: As a lower managerial professional living in Double Bay - Darling Point, I believe synthetic focus groups could be a valuable tool. They would provide me with a cost-effective and efficient way to gauge public opinion on various matters which could inform my decision-making process. I am self-employed, so anything that helps save time and money is appreciated. I do, however, have some reservations about trusting automated systems to provide nuanced, authentic feedback. I also worry about accessibility since not everyone might be comfortable interacting with AI. Despite this, I see the potential benefits outweighing these concerns.\nSURVEY:\nSupport for the proposal (1-5): 4\nUsability (1-5): 4\nAccessibility (1-5): 3\nTrust (1-5): 2\nCost (1-5): 5\nKey Concerns: Trust in AI-generated feedback, Accessibility for all demographics\nSuggested Improvements: Improve AI's ability to simulate human nuance, Provide accessible training or guidance on how to use the system\n",
+      "response_json": {
+        "narrative": "As a lower managerial professional living in Double Bay - Darling Point, I believe synthetic focus groups could be a valuable tool. They would provide me with a cost-effective and efficient way to gauge public opinion on various matters which could inform my decision-making process. I am self-employed, so anything that helps save time and money is appreciated. I do, however, have some reservations about trusting automated systems to provide nuanced, authentic feedback. I also worry about accessibility since not everyone might be comfortable interacting with AI. Despite this, I see the potential benefits outweighing these concerns.",
+        "survey": {
+          "support_level": 4,
+          "usability": 4,
+          "accessibility": 3,
+          "trust": 2,
+          "cost": 5,
+          "key_concerns": [
+            "Trust in AI-generated feedback",
+            "Accessibility for all demographics"
+          ],
+          "suggested_improvements": [
+            "Improve AI's ability to simulate human nuance",
+            "Provide accessible training or guidance on how to use the system"
+          ],
+          "Support for the proposal (1-5)": 4,
+          "Usability (1-5)": 4,
+          "Accessibility (1-5)": 3,
+          "Trust (1-5)": 2,
+          "Cost (1-5)": 5,
+          "Key Concerns": "Trust in AI-generated feedback, Accessibility for all demographics",
+          "Suggested Improvements": "Improve AI's ability to simulate human nuance, Provide accessible training or guidance on how to use the system"
+        }
+      },
+      "survey_numbers": {
+        "support": 4,
+        "usability": 4,
+        "accessibility": 3,
+        "trust": 2,
+        "cost": 5
+      },
+      "survey_grid_labels": {},
+      "interaction_summary": {
+        "persona_id": 7,
+        "impact_dimensions": [
+          "Usability",
+          "Accessibility",
+          "Trust",
+          "Cost"
+        ],
+        "survey_numbers": {
+          "support": 4,
+          "usability": 4,
+          "accessibility": 3,
+          "trust": 2,
+          "cost": 5
+        },
+        "narrative": "As a lower managerial professional living in Double Bay - Darling Point, I believe synthetic focus groups could be a valuable tool. They would provide me with a cost-effective and efficient way to gauge public opinion on various matters which could inform my decision-making process. I am self-employed, so anything that helps save time and money is appreciated. I do, however, have some reservations about trusting automated systems to provide nuanced, authentic feedback. I also worry about accessibility since not everyone might be comfortable interacting with AI. Despite this, I see the potential benefits outweighing these concerns.",
+        "key_concerns": [
+          "Trust in AI-generated feedback",
+          "Accessibility for all demographics"
+        ],
+        "suggested_improvements": [
+          "Improve AI's ability to simulate human nuance",
+          "Provide accessible training or guidance on how to use the system"
+        ]
+      },
+      "run_id": "dbed815c12d14f4c8490bdc2f30aa288",
+      "themes": [
+        null
+      ],
+      "drivers": [
+        "cost-effective",
+        "efficient",
+        "nuanced feedback"
+      ]
+    },
+    {
+      "id": 8,
+      "age": "40-44 years",
+      "gender": "Female",
+      "location": "Maroubra - South",
+      "income": "$1,500-$1,749 ($78,000-$90,999)",
+      "income_weekly": "$1,500-$1,749",
+      "income_annual": "$78,000-$90,999",
+      "housing_tenure": "Own, paying off mortgage",
+      "job_tenure": "Employee of Federal / State / Local Government",
+      "occupation": "Supervisory",
+      "education": "Certificate III/IV",
+      "transport": null,
+      "marital_status": "Never married",
+      "partner_activity": " ",
+      "household_size": "1 person",
+      "family_payments": "No",
+      "child_care_benefit": "No",
+      "investment_properties": "No",
+      "transport_infrastructure": "Much more than now",
+      "political_leaning": "Labor",
+      "trust": "Sometimes can be trusted to do the right thing",
+      "issues": "How I feel about the following Issues include: Taxation, Quite important; Immigration, Quite important; Education, Quite important; The environment, Quite important; Health and Medicare, Quite important; Refugees and asylum seekers, Quite important; Global warming, Quite important; Management of the economy, Quite important; The COVID-19 pandemic, Quite important; The cost of living, Quite important; National security, Quite important",
+      "engagement": "I engage in politics in the following way: Interest in politics, A good deal; Attention to newspapers, A good deal; Attention to television, Some; Attention to radio, Not much; Attention to internet, A good deal; Discussed politics in person, Occasionally; Discussed politics online, Occasionally; Persuaded others to vote, Occasionally; Showed support for a party, Occasionally; Attended political meetings, Rarely; Contributed money, Not at all",
+      "persona_id": 8,
+      "response": "NARRATIVE: In my supervisory role within the government, I see synthetic focus groups as an invaluable tool. They can provide data-driven insights to inform our policy decisions, especially when it comes down to issues I hold dear like taxation, immigration, and education. Such tools could save us substantial time and resources, reducing the need for manual data collection and analysis. However, my key concern is the trustworthiness of data from these synthetic focus groups. It's important that they accurately represent our diverse population. We'd also need to ensure the technology is easily accessible to all staff members.\nSURVEY:\nSupport for the proposal (1-5): 4\nUsability (1-5): 4\nAccessibility (1-5): 3\nTrust (1-5): 2\nCost (1-5): 4\nKey Concerns: Representation accuracy, Trust in data\nSuggested Improvements: Enhanced data verification, User-friendly interface\n",
+      "response_json": {
+        "narrative": "In my supervisory role within the government, I see synthetic focus groups as an invaluable tool. They can provide data-driven insights to inform our policy decisions, especially when it comes down to issues I hold dear like taxation, immigration, and education. Such tools could save us substantial time and resources, reducing the need for manual data collection and analysis. However, my key concern is the trustworthiness of data from these synthetic focus groups. It's important that they accurately represent our diverse population. We'd also need to ensure the technology is easily accessible to all staff members.",
+        "survey": {
+          "support_level": 4,
+          "usability": 4,
+          "accessibility": 3,
+          "trust": 2,
+          "cost": 4,
+          "key_concerns": [
+            "Representation accuracy",
+            "Trust in data"
+          ],
+          "suggested_improvements": [
+            "Enhanced data verification",
+            "User-friendly interface"
+          ]
+        }
+      },
+      "survey_numbers": {
+        "support": 4,
+        "usability": 4,
+        "accessibility": 3,
+        "trust": 2,
+        "cost": 4
+      },
+      "survey_grid_labels": {},
+      "interaction_summary": {
+        "persona_id": 8,
+        "impact_dimensions": [
+          "Usability",
+          "Accessibility",
+          "Trust",
+          "Cost"
+        ],
+        "survey_numbers": {
+          "support": 4,
+          "usability": 4,
+          "accessibility": 3,
+          "trust": 2,
+          "cost": 4
+        },
+        "narrative": "In my supervisory role within the government, I see synthetic focus groups as an invaluable tool. They can provide data-driven insights to inform our policy decisions, especially when it comes down to issues I hold dear like taxation, immigration, and education. Such tools could save us substantial time and resources, reducing the need for manual data collection and analysis. However, my key concern is the trustworthiness of data from these synthetic focus groups. It's important that they accurately represent our diverse population. We'd also need to ensure the technology is easily accessible to all staff members.",
+        "key_concerns": [
+          "Representation accuracy",
+          "Trust in data"
+        ],
+        "suggested_improvements": [
+          "Enhanced data verification",
+          "User-friendly interface"
+        ]
+      },
+      "run_id": "dbed815c12d14f4c8490bdc2f30aa288",
+      "themes": [
+        null
+      ],
+      "drivers": [
+        "data-driven insights",
+        "trustworthiness of data",
+        "accessible technology"
+      ]
+    },
+    {
+      "id": 9,
+      "age": "30-34 years",
+      "gender": "Female",
+      "location": "Bondi - Tamarama - Bronte",
+      "income": "$2,000-$2,999 ($104,000-$155,999)",
+      "income_weekly": "$2,000-$2,999",
+      "income_annual": "$104,000-$155,999",
+      "housing_tenure": "Other (boarding, living at home, etc.)",
+      "job_tenure": "Employee in private company or business",
+      "occupation": "Middle managerial",
+      "education": "Certificate III/IV",
+      "transport": null,
+      "marital_status": "Never married",
+      "partner_activity": " ",
+      "household_size": "3 people",
+      "family_payments": "No",
+      "child_care_benefit": "No",
+      "investment_properties": "No",
+      "transport_infrastructure": "Somewhat more than now",
+      "political_leaning": "Greens",
+      "trust": "Sometimes look after themselves",
+      "issues": "How I feel about the following Issues include: Taxation, Quite important; Immigration, Quite important; Education, Quite important; The environment, Extremely important; Health and Medicare, Extremely important; Refugees and asylum seekers, Quite important; Global warming, Extremely important; Management of the economy, Extremely important; The COVID-19 pandemic, Extremely important; The cost of living, Extremely important; National security, Quite important",
+      "engagement": "I engage in politics in the following way: Interest in politics, Some; Attention to newspapers, None at all; Attention to television, Not much; Attention to radio, None at all; Attention to internet, A good deal; Discussed politics in person, Occasionally; Discussed politics online, Occasionally; Persuaded others to vote, Occasionally; Showed support for a party, Rarely; Attended political meetings, Not at all; Contributed money, Not at all",
+      "persona_id": 9,
+      "response": "NARRATIVE: As a middle manager, I see the potential value of synthetic focus groups. They could provide quick, cost-effective insights into consumer behavior, which is crucial for our company's decision-making process. However, I'm a bit concerned about the authenticity of data from these AI-generated personas. As much as this tool could save time, we need to ensure that the data it provides accurately represents real-world responses. Also, considering my keen interest in environmental issues, I wonder about the energy consumption of running such sophisticated algorithms.\nSURVEY:\nSupport for the proposal (1-5): 3\nUsability (1-5): 4\nAccessibility (1-5): 4\nTrust (1-5): 2\nCost (1-5): 4\nKey Concerns: Authenticity of data, Energy consumption\nSuggested Improvements: Ensure data accuracy, Optimize energy use\n",
+      "response_json": {
+        "narrative": "As a middle manager, I see the potential value of synthetic focus groups. They could provide quick, cost-effective insights into consumer behavior, which is crucial for our company's decision-making process. However, I'm a bit concerned about the authenticity of data from these AI-generated personas. As much as this tool could save time, we need to ensure that the data it provides accurately represents real-world responses. Also, considering my keen interest in environmental issues, I wonder about the energy consumption of running such sophisticated algorithms.",
+        "survey": {
+          "support_level": 3,
+          "usability": 4,
+          "accessibility": 4,
+          "trust": 2,
+          "cost": 4,
+          "key_concerns": [
+            "Authenticity of data",
+            "Energy consumption"
+          ],
+          "suggested_improvements": [
+            "Ensure data accuracy",
+            "Optimize energy use"
+          ]
+        }
+      },
+      "survey_numbers": {
+        "support": 3,
+        "usability": 4,
+        "accessibility": 4,
+        "trust": 2,
+        "cost": 4
+      },
+      "survey_grid_labels": {},
+      "interaction_summary": {
+        "persona_id": 9,
+        "impact_dimensions": [
+          "Usability",
+          "Accessibility",
+          "Trust",
+          "Cost"
+        ],
+        "survey_numbers": {
+          "support": 3,
+          "usability": 4,
+          "accessibility": 4,
+          "trust": 2,
+          "cost": 4
+        },
+        "narrative": "As a middle manager, I see the potential value of synthetic focus groups. They could provide quick, cost-effective insights into consumer behavior, which is crucial for our company's decision-making process. However, I'm a bit concerned about the authenticity of data from these AI-generated personas. As much as this tool could save time, we need to ensure that the data it provides accurately represents real-world responses. Also, considering my keen interest in environmental issues, I wonder about the energy consumption of running such sophisticated algorithms.",
+        "key_concerns": [
+          "Authenticity of data",
+          "Energy consumption"
+        ],
+        "suggested_improvements": [
+          "Ensure data accuracy",
+          "Optimize energy use"
+        ]
+      },
+      "run_id": "dbed815c12d14f4c8490bdc2f30aa288",
+      "themes": [
+        null
+      ],
+      "drivers": [
+        "authenticity concerns",
+        "data accuracy",
+        "environmental impact"
+      ]
+    }
+  ],
+  "driver_summary": [
+    {
+      "level": 3,
+      "drivers": [
+        [
+          "potential benefits",
+          1
+        ],
+        [
+          "limited interaction with technology",
+          1
+        ],
+        [
+          "cost implications",
+          1
+        ],
+        [
+          "potential for understanding",
+          1
+        ],
+        [
+          "quick and inexpensive",
+          1
+        ],
+        [
+          "responsible design",
+          1
+        ]
+      ]
+    },
+    {
+      "level": 4,
+      "drivers": [
+        [
+          "sceptical of representation",
+          1
+        ],
+        [
+          "concerns about tech access",
+          1
+        ],
+        [
+          "ethical data usage",
+          1
+        ],
+        [
+          "skeptical about authenticity",
+          1
+        ],
+        [
+          "concerned about complexity",
+          1
+        ],
+        [
+          "potential with fine-tuning",
+          1
+        ]
+      ]
+    }
+  ],
+  "demographics": {
+    "age": {
+      "persona": {
+        "30-34 years": 3,
+        "40-44 years": 2,
+        "60-64 years": 1,
+        "20-24 years": 1,
+        "45-49 years": 1,
+        "25-29 years": 1,
+        "35-39 years": 1
+      },
+      "population": {
+        "65-69 years": 15175,
+        "60-64 years": 14154,
+        "55-59 years": 13595,
+        "50-54 years": 13536,
+        "70-74 years": 13441,
+        "40-44 years": 12460,
+        "35-39 years": 11650,
+        "45-49 years": 11409,
+        "30-34 years": 10145,
+        "75-79 years": 7225,
+        "20-24 years": 6562,
+        "25-29 years": 5326,
+        "80-84 years": 2644,
+        "85-89 years": 916,
+        "15-19 years": 789
+      },
+      "chi2": 14.917346810023307
+    },
+    "gender": {
+      "persona": {
+        "Female": 7,
+        "Male": 3
+      },
+      "population": {
+        "Female": 72308,
+        "Male": 66719
+      },
+      "chi2": 0.6759640377651451
+    },
+    "marital": {
+      "persona": {
+        "2": 6,
+        "1": 4
+      },
+      "population": {
+        "2": 103925,
+        "1": 24782,
+        "4": 7036,
+        "3": 3284
+      },
+      "chi2": 3.7914828420789717
+    },
+    "tenure": {
+      "persona": {
+        "2": 8,
+        "4": 1,
+        "5": 1
+      },
+      "population": {
+        "1": 55692,
+        "2": 54390,
+        "3": 20276,
+        "5": 6019,
+        "4": 2373,
+        "999": 277
+      },
+      "chi2": 14.525180361258316
+    },
+    "political": {
+      "persona": {
+        "Labor": 5,
+        "Other party": 1,
+        "National Party": 1,
+        "Liberal": 1,
+        "Greens": 1
+      },
+      "population": {
+        "Labor": 11618,
+        "Liberal": 10062,
+        "Greens": 4125,
+        "Other party": 1,
+        "National Party": 1008,
+        "Item skipped": 329,
+        " ": 767,
+        "Other": 42
+      },
+      "chi2": 1555.7128037482385
+    },
+    "education": {
+      "persona": {
+        "Certificate III/IV": 4,
+        "Year 11 or below": 2,
+        "No formal education": 2,
+        "Other": 1,
+        "Bachelor degree or higher": 1
+      },
+      "population": {
+        "Certificate III/IV": 39333,
+        "Advanced diploma or diploma": 29553,
+        "Bachelor degree or higher": 22839,
+        "No formal education": 17683,
+        "Year 11 or below": 12277,
+        "Other": 10864,
+        "Year 12 or equivalent": 5584,
+        "Item skipped": 894
+      },
+      "chi2": 5.218017260054199
+    }
+  },
+  "location_freq": {
+    "Matraville - Chifley": 2,
+    "Dover Heights": 1,
+    "Rose Bay - Vaucluse - Watsons Bay": 1,
+    "Double Bay - Darling Point": 2,
+    "Bondi - Tamarama - Bronte": 2,
+    "Paddington - Moore Park": 1,
+    "Maroubra - South": 1
+  },
+  "impact_dims": [
+    "Usability",
+    "Accessibility",
+    "Trust",
+    "Cost"
+  ],
+  "prompt_template": "",
+  "survey_grid_labels": null,
+  "user_sub": "997e5438-90e1-709f-0c98-a6d1038d43a8"
+}

@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 
 # Allow running `uvicorn app:app` from backend directory
@@ -21,6 +21,11 @@ app.add_middleware(
     allow_methods=["GET", "POST"],
     allow_headers=["Content-Type", "Authorization"],
 )
+
+@app.middleware("http")
+async def debug_auth(request: Request, call_next):
+    print("AUTH HEADER:", request.headers.get("authorization"))
+    return await call_next(request)
 
 @app.get("/health", tags=["System"])
 async def health() -> dict[str, str]:

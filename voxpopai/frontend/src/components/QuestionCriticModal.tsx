@@ -1,17 +1,5 @@
 import { useState, useEffect } from "react";
-
-// Replace with your API helper or fetch implementation
-const apiPost = async (url: string, body: any) => {
-  const res = await fetch(`http://localhost:8000${url}`, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(body),
-  });
-  if (!res.ok) throw new Error(await res.text());
-  return res.json();
-};
+import { useApi } from "../lib/api";
 
 export default function QuestionCriticModal({
   initialQuestion,
@@ -31,10 +19,15 @@ export default function QuestionCriticModal({
   const [context, setContext] = useState("");
   const [draftPromptTemplate, setDraftPromptTemplate] = useState(initialPromptTemplate);
 
+  const { request } = useApi();
+
   const runCritic = async (q: string) => {
     setLoading(true);
     try {
-      const data = await apiPost("/question/critic", { question: q, context });
+      const data = await request("/question/critic", {
+        method: "POST",
+        body: JSON.stringify({ question: q, context }),
+      });
       setCrit(data);
     } catch (e) {
       console.error(e);

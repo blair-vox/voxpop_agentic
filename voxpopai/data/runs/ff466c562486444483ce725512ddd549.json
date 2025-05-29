@@ -1,0 +1,448 @@
+{
+  "run_id": "ff466c562486444483ce725512ddd549",
+  "timestamp": "2025-05-29T00:27:34.709819+00:00",
+  "question": "Should Waverley Council implement a policy to eliminate minimum parking requirements for new apartment developments in Bondi, allowing developers to build fewer or no car spaces based on residents' needs?",
+  "area": null,
+  "domain": "civic-policy",
+  "summary": "- Strong divide in opinions on the proposal to eliminate minimum parking requirements for new apartment developments, with residents expressing concerns about increased street parking and potential strain on public transport.\n- Potential for abuse by developers and the fear of inadequate parking facilities leading to congestion are common worries among residents.\n- Differing emphasis on the potential environmental benefits versus the practical impacts on local communities and economies of the proposed change.",
+  "responses": [
+    {
+      "id": 0,
+      "age": "55-59 years",
+      "gender": "Male",
+      "location": "Double Bay - Darling Point",
+      "income": "$1,250-$1,499 ($65,000-$77,999)",
+      "income_weekly": "$1,250-$1,499",
+      "income_annual": "$65,000-$77,999",
+      "housing_tenure": "Other (boarding, living at home, etc.)",
+      "job_tenure": "Self-employed",
+      "occupation": "Supervisory",
+      "education": "Other",
+      "transport": null,
+      "marital_status": "Married",
+      "partner_activity": "Other",
+      "household_size": "2 people",
+      "family_payments": "No",
+      "child_care_benefit": "No",
+      "investment_properties": "No",
+      "transport_infrastructure": "Much more than now",
+      "political_leaning": "Other party",
+      "trust": "Sometimes can be trusted to do the right thing",
+      "issues": "No significant issues reported.",
+      "engagement": "I engage in politics in the following way: Interest in politics, Not much; Attention to newspapers, Some; Attention to television, Not much; Attention to radio, None at all; Attention to internet, Not much; Discussed politics in person, Rarely; Discussed politics online, Not at all; Persuaded others to vote, Not at all; Showed support for a party, Not at all; Attended political meetings, Not at all; Contributed money, Not at all",
+      "persona_id": 0,
+      "response": "NARRATIVE: I'm not in favour of the Waverley Council's plan to eliminate minimum parking requirements for new apartment developments in Bondi. As a resident of the nearby Double Bay - Darling Point area, I see firsthand the parking issues we're already grappling with. I reckon if developers are allowed to build fewer or no car spaces, it's only going to exasperate the situation. And what happens when all these apartment dwellers decide they need a car after all? They'll be parking on our streets, crowding out the locals. It's not practical, even though on the surface it might seem like a good idea to encourage people to rely less on cars.\nSURVEY:\nSupport for the proposal (1-5): 1\nHousing (1-5): 2\nTransport (1-5): 1\nCommunity (1-5): 1\nEnvironment (1-5): 3\nEconomy (1-5): 2\nKey Concerns: Increased street parking, Potential overcrowding\nSuggested Improvements: Mandatory minimal parking spaces, Better public transportation\n",
+      "response_json": {
+        "narrative": "I'm not in favour of the Waverley Council's plan to eliminate minimum parking requirements for new apartment developments in Bondi. As a resident of the nearby Double Bay - Darling Point area, I see firsthand the parking issues we're already grappling with. I reckon if developers are allowed to build fewer or no car spaces, it's only going to exasperate the situation. And what happens when all these apartment dwellers decide they need a car after all? They'll be parking on our streets, crowding out the locals. It's not practical, even though on the surface it might seem like a good idea to encourage people to rely less on cars.",
+        "survey": {
+          "support_level": 1,
+          "housing": 2,
+          "transport": 1,
+          "community": 1,
+          "environment": 3,
+          "economy": 2,
+          "key_concerns": [
+            "Increased street parking",
+            "Potential overcrowding"
+          ],
+          "suggested_improvements": [
+            "Mandatory minimal parking spaces",
+            "Better public transportation"
+          ]
+        }
+      },
+      "survey_numbers": {
+        "support": 1,
+        "housing": 2,
+        "transport": 1,
+        "community": 1,
+        "environment": 3,
+        "economy": 2
+      },
+      "survey_grid_labels": {},
+      "interaction_summary": {
+        "persona_id": 0,
+        "impact_dimensions": [
+          "Housing",
+          "Transport",
+          "Community",
+          "Environment",
+          "Economy"
+        ],
+        "survey_numbers": {
+          "support": 1,
+          "housing": 2,
+          "transport": 1,
+          "community": 1,
+          "environment": 3,
+          "economy": 2
+        },
+        "narrative": "I'm not in favour of the Waverley Council's plan to eliminate minimum parking requirements for new apartment developments in Bondi. As a resident of the nearby Double Bay - Darling Point area, I see firsthand the parking issues we're already grappling with. I reckon if developers are allowed to build fewer or no car spaces, it's only going to exasperate the situation. And what happens when all these apartment dwellers decide they need a car after all? They'll be parking on our streets, crowding out the locals. It's not practical, even though on the surface it might seem like a good idea to encourage people to rely less on cars.",
+        "key_concerns": [
+          "Increased street parking",
+          "Potential overcrowding"
+        ],
+        "suggested_improvements": [
+          "Mandatory minimal parking spaces",
+          "Better public transportation"
+        ]
+      },
+      "run_id": "ff466c562486444483ce725512ddd549",
+      "themes": [
+        "Transport"
+      ],
+      "drivers": [
+        "parking concerns",
+        "increased congestion",
+        "lack of foresight"
+      ]
+    },
+    {
+      "id": 1,
+      "age": "30-34 years",
+      "gender": "Female",
+      "location": "Randwick - North",
+      "income": "$2,000-$2,999 ($104,000-$155,999)",
+      "income_weekly": "$2,000-$2,999",
+      "income_annual": "$104,000-$155,999",
+      "housing_tenure": "Own, paying off mortgage",
+      "job_tenure": "Employee in private company or business",
+      "occupation": "Non-supervisory",
+      "education": "Bachelor degree or higher",
+      "transport": null,
+      "marital_status": "Married",
+      "partner_activity": "Working full-time",
+      "household_size": "2 people",
+      "family_payments": "Yes",
+      "child_care_benefit": "Yes",
+      "investment_properties": "No",
+      "transport_infrastructure": "Much more than now",
+      "political_leaning": "Other party",
+      "trust": "Usually look after themselves",
+      "issues": "How I feel about the following Issues include: Taxation, Extremely important; Immigration, Quite important; Education, Extremely important; The environment, Extremely important; Health and Medicare, Extremely important; Refugees and asylum seekers, Extremely important; Global warming, Extremely important; Management of the economy, Quite important; The COVID-19 pandemic, Extremely important; The cost of living, Quite important; National security, Quite important",
+      "engagement": "I engage in politics in the following way: Interest in politics, Some; Attention to newspapers, Not much; Attention to television, Not much; Attention to radio, Not much; Attention to internet, A good deal; Discussed politics in person, Occasionally; Discussed politics online, Occasionally; Persuaded others to vote, Occasionally; Showed support for a party, Not at all; Attended political meetings, Not at all; Contributed money, Not at all",
+      "persona_id": 1,
+      "response": "NARRATIVE: I strongly support Waverley Council's proposal to eliminate minimum parking requirements for new apartment developments in Bondi. I believe this move could prompt a significant shift towards more sustainable transport habits, which is a priority for me. Plus, it could potentially free up space for more housing or community facilities. However, I'd like to see a comprehensive plan for improving public transport and cycling infrastructure to ensure residents aren't left stranded. Also, any savings from reduced parking should be passed onto homebuyers or renters, not just boosting developers' profits.\nSURVEY:\nSupport for the proposal (1-5): 4\nHousing (1-5): 4\nTransport (1-5): 3\nCommunity (1-5): 3\nEnvironment (1-5): 5\nEconomy (1-5): 3\nKey Concerns: Potential strain on public transport, Potential profiteering by developers\nSuggested Improvements: Improved public transport services, Regulation to ensure savings are passed onto consumers\n",
+      "response_json": {
+        "narrative": "I strongly support Waverley Council's proposal to eliminate minimum parking requirements for new apartment developments in Bondi. I believe this move could prompt a significant shift towards more sustainable transport habits, which is a priority for me. Plus, it could potentially free up space for more housing or community facilities. However, I'd like to see a comprehensive plan for improving public transport and cycling infrastructure to ensure residents aren't left stranded. Also, any savings from reduced parking should be passed onto homebuyers or renters, not just boosting developers' profits.",
+        "survey": {
+          "support_level": 4,
+          "housing": 4,
+          "transport": 3,
+          "community": 3,
+          "environment": 5,
+          "economy": 3,
+          "key_concerns": [
+            "Potential strain on public transport",
+            "Potential profiteering by developers"
+          ],
+          "suggested_improvements": [
+            "Improved public transport services",
+            "Regulation to ensure savings are passed onto consumers"
+          ],
+          "Support for the proposal": 4,
+          "Housing": 4,
+          "Transport": 2,
+          "Community": 3,
+          "Environment": 5,
+          "Economy": 3,
+          "Key Concerns": "Potential strain on public transport, Potential profiteering by developers",
+          "Suggested Improvements": "Improved public transport services, Regulation to ensure savings are passed onto consumers"
+        }
+      },
+      "survey_numbers": {
+        "support": 4,
+        "housing": 4,
+        "transport": 3,
+        "community": 3,
+        "environment": 5,
+        "economy": 3
+      },
+      "survey_grid_labels": {},
+      "interaction_summary": {
+        "persona_id": 1,
+        "impact_dimensions": [
+          "Housing",
+          "Transport",
+          "Community",
+          "Environment",
+          "Economy"
+        ],
+        "survey_numbers": {
+          "support": 4,
+          "housing": 4,
+          "transport": 3,
+          "community": 3,
+          "environment": 5,
+          "economy": 3
+        },
+        "narrative": "I strongly support Waverley Council's proposal to eliminate minimum parking requirements for new apartment developments in Bondi. I believe this move could prompt a significant shift towards more sustainable transport habits, which is a priority for me. Plus, it could potentially free up space for more housing or community facilities. However, I'd like to see a comprehensive plan for improving public transport and cycling infrastructure to ensure residents aren't left stranded. Also, any savings from reduced parking should be passed onto homebuyers or renters, not just boosting developers' profits.",
+        "key_concerns": [
+          "Potential strain on public transport",
+          "Potential profiteering by developers"
+        ],
+        "suggested_improvements": [
+          "Improved public transport services",
+          "Regulation to ensure savings are passed onto consumers"
+        ]
+      },
+      "run_id": "ff466c562486444483ce725512ddd549",
+      "themes": [
+        "Transport"
+      ],
+      "drivers": [
+        "sustainable transport",
+        "community benefits",
+        "fair distribution of savings"
+      ]
+    },
+    {
+      "id": 2,
+      "age": "50-54 years",
+      "gender": "Female",
+      "location": "Maroubra - West",
+      "income": "$3,500 or more ($182,000 or more)",
+      "income_weekly": "$3,500 or more",
+      "income_annual": "$182,000 or more",
+      "housing_tenure": "Own outright",
+      "job_tenure": "Employee in private company or business",
+      "occupation": "Upper managerial",
+      "education": "Advanced diploma or diploma",
+      "transport": null,
+      "marital_status": "Married",
+      "partner_activity": "Working full-time",
+      "household_size": "2 people",
+      "family_payments": "No",
+      "child_care_benefit": "No",
+      "investment_properties": "Yes",
+      "transport_infrastructure": "Somewhat more than now",
+      "political_leaning": "Labor",
+      "trust": "Usually look after themselves",
+      "issues": "How I feel about the following Issues include: Taxation, Extremely important; Immigration, Quite important; Education, Not very important; The environment, Quite important; Health and Medicare, Extremely important; Refugees and asylum seekers, Not very important; Global warming, Quite important; Management of the economy, Quite important; The COVID-19 pandemic, Quite important; The cost of living, Extremely important; National security, Quite important",
+      "engagement": "I engage in politics in the following way: Interest in politics, Not much; Attention to newspapers, None at all; Attention to television, Some; Attention to radio, Not much; Attention to internet, Not much; Discussed politics in person, Frequently; Discussed politics online, Not at all; Persuaded others to vote, Not at all; Showed support for a party, Not at all; Attended political meetings, Not at all; Contributed money, Not at all",
+      "persona_id": 2,
+      "response": "NARRATIVE: I'm not too keen on the Waverley Council's proposal to eliminate minimum parking requirements for new apartment developments in Bondi. The idea of developers deciding on car spaces based on residents' needs sounds good in theory, but I'm concerned about the potential for abuse. Developers might cut corners to save costs, leading to inadequate parking facilities. This could lead to more cars parked on the streets, causing congestion and making it harder for residents like myself to find parking. Moreover, I feel that this could impact the local economy negatively if visitors struggle to find parking.\nSURVEY:\nSupport for the proposal (1-5): 2\nHousing (1-5): 3\nTransport (1-5): 1\nCommunity (1-5): 2\nEnvironment (1-5): 3\nEconomy (1-5): 2\nKey Concerns: P, o, t, e, n, t, i, a, l,  , f, o, r,  , d, e, v, e, l, o, p, e, r,  , a, b, u, s, e, ,,  , I, n, c, r, e, a, s, e, d,  , s, t, r, e, e, t,  , c, o, n, g, e, s, t, i, o, n\nSuggested Improvements: M, a, n, d, a, t, o, r, y,  , p, a, r, k, i, n, g,  , s, p, a, c, e,  , r, a, t, i, o,  , p, e, r,  , a, p, a, r, t, m, e, n, t, ,,  , C, o, u, n, c, i, l,  , o, v, e, r, s, i, g, h, t,  , o, n,  , d, e, v, e, l, o, p, e, r,  , p, l, a, n, s\n",
+      "response_json": {
+        "narrative": "I'm not too keen on the Waverley Council's proposal to eliminate minimum parking requirements for new apartment developments in Bondi. The idea of developers deciding on car spaces based on residents' needs sounds good in theory, but I'm concerned about the potential for abuse. Developers might cut corners to save costs, leading to inadequate parking facilities. This could lead to more cars parked on the streets, causing congestion and making it harder for residents like myself to find parking. Moreover, I feel that this could impact the local economy negatively if visitors struggle to find parking.",
+        "survey": {
+          "support_level": 2,
+          "housing": 3,
+          "transport": 1,
+          "community": 2,
+          "environment": 3,
+          "economy": 2,
+          "key_concerns": "Potential for developer abuse, Increased street congestion",
+          "suggested_improvements": "Mandatory parking space ratio per apartment, Council oversight on developer plans",
+          "support_proposal": 2
+        }
+      },
+      "survey_numbers": {
+        "support": 2,
+        "housing": 3,
+        "transport": 1,
+        "community": 2,
+        "environment": 3,
+        "economy": 2
+      },
+      "survey_grid_labels": {},
+      "interaction_summary": {
+        "persona_id": 2,
+        "impact_dimensions": [
+          "Housing",
+          "Transport",
+          "Community",
+          "Environment",
+          "Economy"
+        ],
+        "survey_numbers": {
+          "support": 2,
+          "housing": 3,
+          "transport": 1,
+          "community": 2,
+          "environment": 3,
+          "economy": 2
+        },
+        "narrative": "I'm not too keen on the Waverley Council's proposal to eliminate minimum parking requirements for new apartment developments in Bondi. The idea of developers deciding on car spaces based on residents' needs sounds good in theory, but I'm concerned about the potential for abuse. Developers might cut corners to save costs, leading to inadequate parking facilities. This could lead to more cars parked on the streets, causing congestion and making it harder for residents like myself to find parking. Moreover, I feel that this could impact the local economy negatively if visitors struggle to find parking.",
+        "key_concerns": "Potential for developer abuse, Increased street congestion",
+        "suggested_improvements": "Mandatory parking space ratio per apartment, Council oversight on developer plans"
+      },
+      "run_id": "ff466c562486444483ce725512ddd549",
+      "themes": [
+        "Transport"
+      ],
+      "drivers": [
+        "skepticism about abuse",
+        "congestion concerns",
+        "negative impact on local economy"
+      ]
+    }
+  ],
+  "driver_summary": [
+    {
+      "level": 1,
+      "drivers": [
+        [
+          "parking concerns",
+          1
+        ],
+        [
+          "increased congestion",
+          1
+        ],
+        [
+          "lack of foresight",
+          1
+        ]
+      ]
+    },
+    {
+      "level": 2,
+      "drivers": [
+        [
+          "skepticism about abuse",
+          1
+        ],
+        [
+          "congestion concerns",
+          1
+        ],
+        [
+          "negative impact on local economy",
+          1
+        ]
+      ]
+    },
+    {
+      "level": 4,
+      "drivers": [
+        [
+          "sustainable transport",
+          1
+        ],
+        [
+          "community benefits",
+          1
+        ],
+        [
+          "fair distribution of savings",
+          1
+        ]
+      ]
+    }
+  ],
+  "demographics": {
+    "age": {
+      "persona": {
+        "55-59 years": 1,
+        "30-34 years": 1,
+        "50-54 years": 1
+      },
+      "population": {
+        "65-69 years": 15175,
+        "60-64 years": 14154,
+        "55-59 years": 13595,
+        "50-54 years": 13536,
+        "70-74 years": 13441,
+        "40-44 years": 12460,
+        "35-39 years": 11650,
+        "45-49 years": 11409,
+        "30-34 years": 10145,
+        "75-79 years": 7225,
+        "20-24 years": 6562,
+        "25-29 years": 5326,
+        "80-84 years": 2644,
+        "85-89 years": 916,
+        "15-19 years": 789
+      },
+      "chi2": 8.39988422708995
+    },
+    "gender": {
+      "persona": {
+        "Female": 2,
+        "Male": 1
+      },
+      "population": {
+        "Female": 72308,
+        "Male": 66719
+      },
+      "chi2": 0.0
+    },
+    "marital": {
+      "persona": {
+        "2": 3
+      },
+      "population": {
+        "2": 103925,
+        "1": 24782,
+        "4": 7036,
+        "3": 3284
+      },
+      "chi2": 1.0132810440879765
+    },
+    "tenure": {
+      "persona": {
+        "5": 1,
+        "2": 1,
+        "1": 1
+      },
+      "population": {
+        "1": 55692,
+        "2": 54390,
+        "3": 20276,
+        "5": 6019,
+        "4": 2373,
+        "999": 277
+      },
+      "chi2": 6.382527655338945
+    },
+    "political": {
+      "persona": {
+        "Other party": 1,
+        "Labor": 1
+      },
+      "population": {
+        "Labor": 11618,
+        "Liberal": 10062,
+        "Greens": 4125,
+        "Other party": 1,
+        "National Party": 1008,
+        "Item skipped": 329,
+        " ": 767,
+        "Other": 42
+      },
+      "chi2": 6988.202922199925
+    },
+    "education": {
+      "persona": {
+        "Other": 1,
+        "Bachelor degree or higher": 1,
+        "Advanced diploma or diploma": 1
+      },
+      "population": {
+        "Certificate III/IV": 39333,
+        "Advanced diploma or diploma": 29553,
+        "Bachelor degree or higher": 22839,
+        "No formal education": 17683,
+        "Year 11 or below": 12277,
+        "Other": 10864,
+        "Year 12 or equivalent": 5584,
+        "Item skipped": 894
+      },
+      "chi2": 4.862615716521187
+    }
+  },
+  "location_freq": {
+    "Double Bay - Darling Point": 1,
+    "Randwick - North": 1,
+    "Maroubra - West": 1
+  },
+  "impact_dims": [
+    "Housing",
+    "Transport",
+    "Community",
+    "Environment",
+    "Economy"
+  ],
+  "prompt_template": "",
+  "survey_grid_labels": null
+}
