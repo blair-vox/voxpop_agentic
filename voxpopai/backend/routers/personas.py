@@ -1,6 +1,6 @@
 import pandas as pd
 import random
-from fastapi import APIRouter, HTTPException, Request
+from fastapi import APIRouter, HTTPException, Request, Depends
 from voxpopai.backend.agents.response_simulator import simulate_responses, summarize_responses
 from pydantic import BaseModel
 from pathlib import Path
@@ -12,6 +12,7 @@ from collections import Counter, defaultdict
 from voxpopai.backend.utils.driver_extractor import extract_drivers
 import re
 from fastapi.responses import StreamingResponse
+from voxpopai.backend.utils.auth import get_current_user
 import json
 import asyncio
 import uuid
@@ -41,8 +42,9 @@ class SimulationRequest(BaseModel):
     prompt_template: Optional[str] = None
 
 
+# Requires JWT auth
 @router.post("/run")
-async def run_personas(payload: SimulationRequest) -> StreamingResponse:
+async def run_personas(payload: SimulationRequest, user: dict = Depends(get_current_user)) -> StreamingResponse:
     """Run a simulation for the given area and number of personas."""
     try:
         # Load personas from CSV relative to package root
@@ -219,7 +221,7 @@ async def run_personas(payload: SimulationRequest) -> StreamingResponse:
                 "survey_grid_labels": getattr(payload, 'survey_grid_labels', None),
             }
             from voxpopai.backend.utils.run_storage import save_run
-            save_run(run_payload)
+            save_run(run_payload, user.get("sub"))
 
             final_response = run_payload
             yield f"data: {json.dumps({'type': 'complete', 'data': final_response})}\n\n"
