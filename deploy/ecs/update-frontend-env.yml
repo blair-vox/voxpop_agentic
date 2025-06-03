@@ -1,0 +1,51 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Update frontend environment variables for HTTPS
+
+Resources:
+  TaskDefFrontend:
+    Type: AWS::ECS::TaskDefinition
+    Properties:
+      Cpu: '256'
+      Memory: '512'
+      NetworkMode: awsvpc
+      RequiresCompatibilities: [FARGATE]
+      ExecutionRoleArn: !ImportValue VoxPopAI-Stack-V15-TaskExecutionRoleArn
+      TaskRoleArn: !ImportValue VoxPopAI-Stack-V15-TaskRoleArn
+      ContainerDefinitions:
+        - Name: frontend
+          Image: 442426871378.dkr.ecr.ap-southeast-2.amazonaws.com/voxpop-frontend:latest
+          Essential: true
+          PortMappings: [{ContainerPort: 3000}]
+          Environment:
+            - Name: NEXT_PUBLIC_COGNITO_DOMAIN
+              Value: https://ap-southeast-2ofbo55m16.auth.ap-southeast-2.amazoncognito.com
+            - Name: NEXT_PUBLIC_COGNITO_CLIENT_ID
+              Value: 7idgmap2mv7acc6bame3rommal
+            - Name: NEXT_PUBLIC_COGNITO_POOL_ID
+              Value: ap-southeast-2_OFbO55m16
+            - Name: NEXT_PUBLIC_USE_HTTPS
+              Value: "true"
+          LogConfiguration:
+            LogDriver: awslogs
+            Options:
+              awslogs-group: /ecs/voxpop-frontend-v5
+              awslogs-region: ap-southeast-2
+              awslogs-stream-prefix: ecs
+
+  ServiceFrontend:
+    Type: AWS::ECS::Service
+    Properties:
+      Cluster: !ImportValue VoxPopAI-Stack-V15-ClusterName
+      DesiredCount: 1
+      LaunchType: FARGATE
+      TaskDefinition: !Ref TaskDefFrontend
+      HealthCheckGracePeriodSeconds: 120
+      NetworkConfiguration:
+        AwsvpcConfiguration:
+          AssignPublicIp: ENABLED
+          SecurityGroups: [!ImportValue VoxPopAI-Stack-V15-ServiceSecurityGroupId]
+          Subnets: ["subnet-07bf55c43e9a6fd28", "subnet-0c34fef083e12e3f6"]
+      LoadBalancers:
+        - ContainerName: frontend
+          ContainerPort: 3000
+          TargetGroupArn: !ImportValue VoxPopAI-Stack-V15-TgFrontendArn

@@ -1,0 +1,30 @@
+[
+  {
+    "ParameterKey": "VpcId",
+    "ParameterValue": "vpc-02cd6fc2cbbfd251c"
+  },
+  {
+    "ParameterKey": "PublicSubnets",
+    "ParameterValue": "subnet-07bf55c43e9a6fd28,subnet-0c34fef083e12e3f6"
+  },
+  {
+    "ParameterKey": "EcrBackendImage",
+    "ParameterValue": "442426871378.dkr.ecr.ap-southeast-2.amazonaws.com/voxpop-backend:latest"
+  },
+  {
+    "ParameterKey": "EcrFrontendImage",
+    "ParameterValue": "442426871378.dkr.ecr.ap-southeast-2.amazonaws.com/voxpop-frontend:latest"
+  },
+  {
+    "ParameterKey": "CognitoPoolId",
+    "ParameterValue": "ap-southeast-2_OFbO55m16"
+  },
+  {
+    "ParameterKey": "CognitoAppClientId",
+    "ParameterValue": "7idgmap2mv7acc6bame3rommal"
+  },
+  {
+    "ParameterKey": "BackendUrl",
+    "ParameterValue": "http://LOAD_BALANCER_DNS/api"
+  }
+]

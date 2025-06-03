@@ -2,16 +2,8 @@ AWSTemplateFormatVersion: '2010-09-09'
 Description: VoxPopAI Fargate cluster (ALB, backend + frontend)
 
 Parameters:
-  VpcId:
-    Type: AWS::EC2::VPC::Id
   PublicSubnets:
     Type: List<AWS::EC2::Subnet::Id>
-  EcrBackendImage:
-    Type: String
-    Description: ECR URI for backend image (e.g. 123456789012.dkr.ecr.ap-southeast-2.amazonaws.com/voxpopai-backend:latest)
-  EcrFrontendImage:
-    Type: String
-    Description: ECR URI for frontend image (e.g. 123456789012.dkr.ecr.ap-southeast-2.amazonaws.com/voxpopai-frontend:latest)
   CognitoPoolId:
     Type: String
   CognitoAppClientId:
@@ -57,7 +49,7 @@ Resources:
     Type: AWS::EC2::SecurityGroup
     Properties:
       GroupDescription: Allow HTTP from Internet
-      VpcId: !Ref VpcId
+      VpcId: vpc-02cd6fc2cbbfd251c
       SecurityGroupIngress:
         - IpProtocol: tcp
           FromPort: 80
@@ -68,7 +60,7 @@ Resources:
     Type: AWS::EC2::SecurityGroup
     Properties:
       GroupDescription: Allow ALB to reach tasks
-      VpcId: !Ref VpcId
+      VpcId: vpc-02cd6fc2cbbfd251c
       SecurityGroupIngress:
         - IpProtocol: tcp
           FromPort: 8000
@@ -92,16 +84,30 @@ Resources:
     Properties:
       Port: 8000
       Protocol: HTTP
-      VpcId: !Ref VpcId
+      VpcId: vpc-02cd6fc2cbbfd251c
       TargetType: ip
+      HealthCheckPath: /api/health
+      HealthCheckIntervalSeconds: 30
+      HealthCheckTimeoutSeconds: 5
+      HealthyThresholdCount: 2
+      UnhealthyThresholdCount: 3
+      Matcher:
+        HttpCode: '200-299'
 
   TgFrontend:
     Type: AWS::ElasticLoadBalancingV2::TargetGroup
     Properties:
       Port: 3000
       Protocol: HTTP
-      VpcId: !Ref VpcId
+      VpcId: vpc-02cd6fc2cbbfd251c
       TargetType: ip
+      HealthCheckPath: /
+      HealthCheckIntervalSeconds: 30
+      HealthCheckTimeoutSeconds: 5
+      HealthyThresholdCount: 2
+      UnhealthyThresholdCount: 3
+      Matcher:
+        HttpCode: '200-299'
 
   Listener80:
     Type: AWS::ElasticLoadBalancingV2::Listener
@@ -141,7 +147,8 @@ Resources:
       TaskRoleArn: !GetAtt TaskRole.Arn
       ContainerDefinitions:
         - Name: backend
-          Image: !Ref EcrBackendImage
+          Image: 442426871378.dkr.ecr.ap-southeast-2.amazonaws.com/voxpop-backend:latest
+          Essential: true
           PortMappings: [{ContainerPort: 8000}]
           Environment:
             - {Name: COGNITO_REGION, Value: ap-southeast-2}
@@ -165,7 +172,8 @@ Resources:
       TaskRoleArn: !GetAtt TaskRole.Arn
       ContainerDefinitions:
         - Name: frontend
-          Image: !Ref EcrFrontendImage
+          Image: 442426871378.dkr.ecr.ap-southeast-2.amazonaws.com/voxpop-frontend:latest
+          Essential: true
           PortMappings: [{ContainerPort: 3000}]
           LogConfiguration:
             LogDriver: awslogs
@@ -182,6 +190,7 @@ Resources:
       DesiredCount: 1
       LaunchType: FARGATE
       TaskDefinition: !Ref TaskDefBackend
+      HealthCheckGracePeriodSeconds: 120
       NetworkConfiguration:
         AwsvpcConfiguration:
           AssignPublicIp: ENABLED
@@ -200,6 +209,7 @@ Resources:
       DesiredCount: 1
       LaunchType: FARGATE
       TaskDefinition: !Ref TaskDefFrontend
+      HealthCheckGracePeriodSeconds: 120
       NetworkConfiguration:
         AwsvpcConfiguration:
           AssignPublicIp: ENABLED

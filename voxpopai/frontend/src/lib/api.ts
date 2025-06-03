@@ -1,6 +1,6 @@
 import { useAuth } from "react-oidc-context";
 
-export function useApi(baseUrl = "http://localhost:8000") {
+export function useApi(baseUrl = process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:8000") {
   const auth = useAuth();
 
   async function request<T>(path: string, options: RequestInit = {}): Promise<T> {

@@ -19,8 +19,8 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:3000",  # Local development
-        "http://VoxPop-LoadB-BYDYgZVnlvEA-511159023.ap-southeast-2.elb.amazonaws.com",  # Deployed frontend
-        "https://VoxPop-LoadB-BYDYgZVnlvEA-511159023.ap-southeast-2.elb.amazonaws.com",  # Deployed frontend
+        "http://voxpop-loadb-x8lmu8asjpoh-1593416076.ap-southeast-2.elb.amazonaws.com",  # Deployed frontend
+        "https://voxpop-loadb-x8lmu8asjpoh-1593416076.ap-southeast-2.elb.amazonaws.com",  # Deployed frontend HTTPS
     ],
     allow_credentials=True,
     allow_methods=["*"],

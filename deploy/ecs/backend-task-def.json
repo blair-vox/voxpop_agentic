@@ -1,0 +1,33 @@
+{
+  "family": "VoxPopAI-Stack-V5-TaskDefBackend-lQP5D2XOGU9d",
+  "cpu": "512",
+  "memory": "1024",
+  "networkMode": "awsvpc",
+  "requiresCompatibilities": ["FARGATE"],
+  "executionRoleArn": "arn:aws:iam::442426871378:role/VoxPopAI-Stack-V5-TaskExecutionRole-OViYpmeRItlb",
+  "taskRoleArn": "arn:aws:iam::442426871378:role/VoxPopAI-Stack-V5-TaskRole-zSpQeAVdlR3D",
+  "containerDefinitions": [
+    {
+      "name": "backend",
+      "image": "442426871378.dkr.ecr.ap-southeast-2.amazonaws.com/voxpop-backend:latest",
+      "essential": true,
+      "command": ["python", "-m", "uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"],
+      "portMappings": [
+        { "containerPort": 8000, "hostPort": 8000, "protocol": "tcp" }
+      ],
+      "environment": [
+        {"name": "COGNITO_REGION", "value": "ap-southeast-2"},
+        {"name": "COGNITO_POOL_ID", "value": "ap-southeast-2_OFbO55m16"},
+        {"name": "COGNITO_APP_CLIENT_ID", "value": "7idgmap2mv7acc6bame3rommal"}
+      ],
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/voxpop-backend-v3",
+          "awslogs-region": "ap-southeast-2",
+          "awslogs-stream-prefix": "ecs"
+        }
+      }
+    }
+  ]
+}

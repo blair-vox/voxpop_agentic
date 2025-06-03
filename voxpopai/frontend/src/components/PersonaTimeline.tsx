@@ -15,7 +15,8 @@ export const PersonaTimeline: React.FC<Props> = ({ runId, personaId }) => {
     if (!open) return;
     setLoading(true);
     setError(null);
-    fetch(`http://localhost:8000/logs/${runId}/${personaId}`)
+    const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:8000";
+    fetch(`${backendUrl}/logs/${runId}/${personaId}`)
       .then((r) => {
         if (!r.ok) throw new Error(`HTTP ${r.status}`);
         return r.json();

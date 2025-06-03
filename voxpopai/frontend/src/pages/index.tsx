@@ -1437,7 +1437,8 @@ export default function Home() {
     const selectedImpactDims = domainDefinitions[selectedDomain as keyof typeof domainDefinitions] || ["Housing", "Transport", "Community"];
     
     try {
-      const res = await fetch("http://localhost:8000/personas/run", {
+      const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:8000";
+      const res = await fetch(`${backendUrl}/personas/run`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

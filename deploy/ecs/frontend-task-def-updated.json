@@ -1,0 +1,68 @@
+{
+    "family": "VoxPopAI-Stack-V15-TaskDefFrontend-ZOiTyYJWcP1x",
+    "containerDefinitions": [
+        {
+            "name": "frontend",
+            "image": "442426871378.dkr.ecr.ap-southeast-2.amazonaws.com/voxpop-frontend:latest",
+            "cpu": 0,
+            "links": [],
+            "portMappings": [
+                {
+                    "containerPort": 3000,
+                    "hostPort": 3000,
+                    "protocol": "tcp"
+                }
+            ],
+            "essential": true,
+            "entryPoint": [],
+            "command": [],
+            "environment": [
+                {
+                    "name": "NEXT_PUBLIC_COGNITO_POOL_ID",
+                    "value": "ap-southeast-2_OFbO55m16"
+                },
+                {
+                    "name": "NEXT_PUBLIC_COGNITO_DOMAIN",
+                    "value": "https://ap-southeast-2ofbo55m16.auth.ap-southeast-2.amazoncognito.com"
+                },
+                {
+                    "name": "NEXT_PUBLIC_COGNITO_CLIENT_ID",
+                    "value": "7idgmap2mv7acc6bame3rommal"
+                },
+                {
+                    "name": "NEXT_PUBLIC_USE_HTTPS",
+                    "value": "true"
+                }
+            ],
+            "environmentFiles": [],
+            "mountPoints": [],
+            "volumesFrom": [],
+            "secrets": [],
+            "dnsServers": [],
+            "dnsSearchDomains": [],
+            "extraHosts": [],
+            "dockerSecurityOptions": [],
+            "dockerLabels": {},
+            "ulimits": [],
+            "logConfiguration": {
+                "logDriver": "awslogs",
+                "options": {
+                    "awslogs-group": "/ecs/voxpop-frontend-v5",
+                    "awslogs-region": "ap-southeast-2",
+                    "awslogs-stream-prefix": "ecs"
+                },
+                "secretOptions": []
+            },
+            "systemControls": [],
+            "credentialSpecs": []
+        }
+    ],
+    "executionRoleArn": "arn:aws:iam::442426871378:role/VoxPopAI-Stack-V15-TaskExecutionRole-h95QCQZm7yvZ",
+    "taskRoleArn": "arn:aws:iam::442426871378:role/VoxPopAI-Stack-V15-TaskRole-0BNlOLDT5tai",
+    "networkMode": "awsvpc",
+    "cpu": "256",
+    "memory": "512",
+    "requiresCompatibilities": [
+        "FARGATE"
+    ]
+}
