@@ -1,4 +1,3 @@
-// index.js
 import React from "react";
 import type { AppProps } from "next/app";
 import { ALBAuthProvider } from "../lib/albAuth";
