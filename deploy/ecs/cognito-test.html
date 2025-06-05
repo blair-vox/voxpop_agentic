@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cognito Auth Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        pre { background-color: #f5f5f5; padding: 10px; border-radius: 5px; }
+        button { padding: 10px; margin: 10px 0; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h1>Cognito Authentication Test</h1>
+    
+    <h2>Configuration</h2>
+    <pre id="config"></pre>
+    
+    <h2>Actions</h2>
+    <button id="signInBtn">Sign In</button>
+    
+    <script>
+        // Configuration
+        const config = {
+            domain: "https://ap-southeast-2ofbo55m16.auth.ap-southeast-2.amazoncognito.com",
+            clientId: "7idgmap2mv7acc6bame3rommal",
+            redirectUri: window.location.origin + window.location.pathname,
+            responseType: "code",
+            scope: "openid email phone"
+        };
+        
+        // Display configuration
+        document.getElementById("config").textContent = JSON.stringify(config, null, 2);
+        
+        // Generate a random string for state
+        function generateRandomString(length) {
+            const charset = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+            let result = "";
+            const randomValues = new Uint8Array(length);
+            window.crypto.getRandomValues(randomValues);
+            randomValues.forEach(v => result += charset[v % charset.length]);
+            return result;
+        }
+        
+        // Generate code verifier and challenge for PKCE
+        async function generatePKCE() {
+            const codeVerifier = generateRandomString(64);
+            const encoder = new TextEncoder();
+            const data = encoder.encode(codeVerifier);
+            const digest = await window.crypto.subtle.digest("SHA-256", data);
+            
+            // Base64url encode the digest
+            const base64Digest = btoa(String.fromCharCode(...new Uint8Array(digest)))
+                .replace(/\+/g, "-")
+                .replace(/\//g, "_")
+                .replace(/=+$/, "");
+                
+            return {
+                codeVerifier,
+                codeChallenge: base64Digest
+            };
+        }
+        
+        // Handle sign in
+        document.getElementById("signInBtn").addEventListener("click", async () => {
+            try {
+                const state = generateRandomString(16);
+                const pkce = await generatePKCE();
+                
+                // Store code verifier in session storage to use later
+                sessionStorage.setItem("codeVerifier", pkce.codeVerifier);
+                
+                // Build authorization URL
+                const authUrl = new URL(config.domain + "/oauth2/authorize");
+                authUrl.searchParams.append("client_id", config.clientId);
+                authUrl.searchParams.append("response_type", config.responseType);
+                authUrl.searchParams.append("scope", config.scope);
+                authUrl.searchParams.append("redirect_uri", config.redirectUri);
+                authUrl.searchParams.append("state", state);
+                authUrl.searchParams.append("code_challenge_method", "S256");
+                authUrl.searchParams.append("code_challenge", pkce.codeChallenge);
+                
+                console.log("Redirecting to:", authUrl.toString());
+                window.location.href = authUrl.toString();
+            } catch (error) {
+                console.error("Error during sign in:", error);
+            }
+        });
+        
+        // Handle authorization code from redirect
+        window.addEventListener("load", () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const code = urlParams.get("code");
+            const state = urlParams.get("state");
+            const error = urlParams.get("error");
+            
+            if (code) {
+                console.log("Received authorization code:", code);
+                // Here you would exchange the code for tokens
+                // For this test, we'll just display it
+                const resultDiv = document.createElement("div");
+                resultDiv.innerHTML = `
+                    <h2>Authentication Successful</h2>
+                    <p>Authorization Code: ${code}</p>
+                    <p>State: ${state}</p>
+                `;
+                document.body.appendChild(resultDiv);
+            } else if (error) {
+                console.error("Authentication error:", error);
+                const errorDiv = document.createElement("div");
+                errorDiv.innerHTML = `
+                    <h2>Authentication Error</h2>
+                    <p>Error: ${error}</p>
+                    <p>Description: ${urlParams.get("error_description") || "No description"}</p>
+                `;
+                document.body.appendChild(errorDiv);
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,3 @@
+# Root gitignore additions
+voxpopai/data/personas_merged.csv
+.logs/ 

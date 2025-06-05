@@ -1,0 +1,284 @@
+{
+  "run_id": "dceb539595eb45a9b3e8d07547d93a74",
+  "timestamp": "2025-05-27T01:59:52.906677+00:00",
+  "question": "Waverley Council is considering a policy that would remove minimum parking requirements for new apartment developments in Bondi. This means developers could build fewer or no car spaces if they believe it suits the residents' needs.",
+  "area": null,
+  "domain": "civic-policy",
+  "summary": "- Concerns about the affordability of housing and the need for more affordable housing options are consistently highlighted across the personas from different regions.\n- Public transportation issues, including lack of availability and quality, emerge as a common challenge faced by the personas, impacting their daily lives and access to essential services.\n- The state of community spirit and values is a recurring theme, with a perceived disintegration causing worry and a desire for more community events to foster connections and unity.",
+  "responses": [
+    {
+      "id": 0,
+      "age": "40-44 years",
+      "gender": "Female",
+      "location": "Double Bay - Darling Point",
+      "income": "$3,000-$3,499 ($156,000-$181,999)",
+      "income_weekly": "$3,000-$3,499",
+      "income_annual": "$156,000-$181,999",
+      "housing_tenure": "Own, paying off mortgage",
+      "job_tenure": "Employee in private company or business",
+      "occupation": "Upper managerial",
+      "education": "Advanced diploma or diploma",
+      "transport": null,
+      "marital_status": "Married",
+      "partner_activity": "Working full-time",
+      "household_size": "2 people",
+      "family_payments": "No",
+      "child_care_benefit": "No",
+      "investment_properties": "No",
+      "transport_infrastructure": "Somewhat more than now",
+      "political_leaning": "Liberal",
+      "trust": "Sometimes can be trusted to do the right thing",
+      "issues": "How I feel about the following Issues include: Taxation, Not very important; Immigration, Not very important; Education, Extremely important; The environment, Quite important; Health and Medicare, Quite important; Refugees and asylum seekers, Extremely important; Global warming, Quite important; Management of the economy, Extremely important; The COVID-19 pandemic, Quite important; The cost of living, Extremely important; National security, Not very important",
+      "engagement": "I engage in politics in the following way: Interest in politics, A good deal; Attention to newspapers, None at all; Attention to television, Not much; Attention to radio, Not much; Attention to internet, A good deal; Discussed politics in person, Occasionally; Discussed politics online, Not at all; Persuaded others to vote, Not at all; Showed support for a party, Not at all; Attended political meetings, Not at all; Contributed money, Not at all",
+      "persona_id": 0,
+      "response": "NARRATIVE: G'day, I'm Jack, a 45-year-old tradie living in the regional town of Bendigo, Victoria. I've got a wife and three kids, and my main concern is ensuring they've got a good future ahead. I reckon the cost of living is too high, and the government isn't doing enough to support blue-collar workers like myself. Our town's public transportation system is a joke, and the lack of affordable housing is worrying. I'm also concerned about the disintegration of community spirit and values.\nSURVEY:\nSupport for the proposal (1-5): 2\nHousing (1-5): 2\nTransport (1-5): 2\nCommunity (1-5): 3\nKey Concerns: cost of living, support for blue-collar workers\nSuggested Improvements: improve public transportation, more affordable housing options\n",
+      "response_json": {
+        "narrative": "G'day, I'm Jack, a 45-year-old tradie living in the regional town of Bendigo, Victoria. I've got a wife and three kids, and my main concern is ensuring they've got a good future ahead. I reckon the cost of living is too high, and the government isn't doing enough to support blue-collar workers like myself. Our town's public transportation system is a joke, and the lack of affordable housing is worrying. I'm also concerned about the disintegration of community spirit and values.",
+        "survey": {
+          "support_level": 2,
+          "housing": 2,
+          "transport": 2,
+          "community": 3,
+          "key_concerns": [
+            "cost of living",
+            "support for blue-collar workers"
+          ],
+          "suggested_improvements": [
+            "improve public transportation",
+            "more affordable housing options"
+          ]
+        }
+      },
+      "survey_grid_labels": {},
+      "run_id": "dceb539595eb45a9b3e8d07547d93a74",
+      "themes": [
+        "Transport"
+      ],
+      "survey_numbers": {},
+      "drivers": [
+        "cost of living too high",
+        "lack of government support for blue-collar workers",
+        "deteriorating community spirit and values"
+      ]
+    },
+    {
+      "id": 1,
+      "age": "35-39 years",
+      "gender": "Male",
+      "location": "Dover Heights",
+      "income": "$3,000-$3,499 ($156,000-$181,999)",
+      "income_weekly": "$3,000-$3,499",
+      "income_annual": "$156,000-$181,999",
+      "housing_tenure": "Own, paying off mortgage",
+      "job_tenure": "Employee in private company or business",
+      "occupation": "Non-supervisory",
+      "education": "Certificate III/IV",
+      "transport": null,
+      "marital_status": "Married",
+      "partner_activity": "Other",
+      "household_size": "2 people",
+      "family_payments": "No",
+      "child_care_benefit": "Yes",
+      "investment_properties": "Yes",
+      "transport_infrastructure": "Somewhat more than now",
+      "political_leaning": "Labor",
+      "trust": "Usually look after themselves",
+      "issues": "How I feel about the following Issues include: Taxation, Extremely important; Immigration, Quite important; Education, Extremely important; The environment, Quite important; Health and Medicare, Extremely important; Refugees and asylum seekers, Not very important; Global warming, Quite important; Management of the economy, Extremely important; The COVID-19 pandemic, Not very important; The cost of living, Extremely important; National security, Not very important",
+      "engagement": "I engage in politics in the following way: Interest in politics, Some; Attention to newspapers, None at all; Attention to television, None at all; Attention to radio, Some; Attention to internet, A good deal; Discussed politics in person, Occasionally; Discussed politics online, Not at all; Persuaded others to vote, Not at all; Showed support for a party, Not at all; Attended political meetings, Not at all; Contributed money, Not at all",
+      "persona_id": 1,
+      "response": "NARRATIVE: G'day, I'm a retired schoolteacher from a rural community in the Northern Territory. I've lived here my entire life and watched it grow from a small town to a bustling community. However, I've also seen the struggles we face, particularly in affordable housing and public transport. Housing prices have skyrocketed, and our public transport system is nearly non-existent. I'm also concerned about the lack of community events to bring us together.\nSURVEY:\nSupport for the proposal (1-5): 3\nHousing (1-5): 2\nTransport (1-5): 1\nCommunity (1-5): 3\nKey Concerns: rising housing prices, insufficient public transport\nSuggested Improvements: more affordable housing options, better public transport\n",
+      "response_json": {
+        "narrative": "G'day, I'm a retired schoolteacher from a rural community in the Northern Territory. I've lived here my entire life and watched it grow from a small town to a bustling community. However, I've also seen the struggles we face, particularly in affordable housing and public transport. Housing prices have skyrocketed, and our public transport system is nearly non-existent. I'm also concerned about the lack of community events to bring us together.",
+        "survey": {
+          "support_level": 3,
+          "housing": 2,
+          "transport": 1,
+          "community": 3,
+          "key_concerns": [
+            "rising housing prices",
+            "insufficient public transport"
+          ],
+          "suggested_improvements": [
+            "more affordable housing options",
+            "better public transport"
+          ]
+        }
+      },
+      "survey_grid_labels": {},
+      "run_id": "dceb539595eb45a9b3e8d07547d93a74",
+      "themes": [
+        "Transport"
+      ],
+      "survey_numbers": {},
+      "drivers": [
+        "affordable housing crisis",
+        "lack of public transport",
+        "need for community events"
+      ]
+    },
+    {
+      "id": 2,
+      "age": "55-59 years",
+      "gender": "Male",
+      "location": "Maroubra - West",
+      "income": "$1,500-$1,749 ($78,000-$90,999)",
+      "income_weekly": "$1,500-$1,749",
+      "income_annual": "$78,000-$90,999",
+      "housing_tenure": "Own outright",
+      "job_tenure": "Employee in private company or business",
+      "occupation": "Middle managerial",
+      "education": "Advanced diploma or diploma",
+      "transport": null,
+      "marital_status": "Married",
+      "partner_activity": "Working full-time",
+      "household_size": "2 people",
+      "family_payments": "No",
+      "child_care_benefit": "No",
+      "investment_properties": "Yes",
+      "transport_infrastructure": "The same as now",
+      "political_leaning": "Other party",
+      "trust": "Usually look after themselves",
+      "issues": "How I feel about the following Issues include: Taxation, Not very important; Immigration, Quite important; Education, Not very important; The environment, Quite important; Health and Medicare, Quite important; Refugees and asylum seekers, Not very important; Global warming, Extremely important; Management of the economy, Extremely important; The COVID-19 pandemic, Quite important; The cost of living, Not very important; National security, Not very important",
+      "engagement": "I engage in politics in the following way: Interest in politics, A good deal; Attention to newspapers, Not much; Attention to television, A good deal; Attention to radio, None at all; Attention to internet, Some; Discussed politics in person, Frequently; Discussed politics online, Not at all; Persuaded others to vote, Rarely; Showed support for a party, Not at all; Attended political meetings, Not at all; Contributed money, Not at all",
+      "persona_id": 2,
+      "response": "NARRATIVE: G'day. I'm a 45-year-old single mother living in a regional town in Queensland. I work full-time as a nurse, but honestly, it's tough to make ends meet. My two kids go to the local public school, and while it's not the best, they seem to be doing alright. I drive to work, but the roads could use some improvement. What really worries me is the state of health services in our area - we're seriously underserved.\nSURVEY:\nSupport for the proposal (1-5): 2\nHousing (1-5): 3\nTransport (1-5): 2\nCommunity (1-5): 3\nKey Concerns: health services, road quality\nSuggested Improvements: improve local health services, road maintenance\n",
+      "response_json": {
+        "narrative": "G'day. I'm a 45-year-old single mother living in a regional town in Queensland. I work full-time as a nurse, but honestly, it's tough to make ends meet. My two kids go to the local public school, and while it's not the best, they seem to be doing alright. I drive to work, but the roads could use some improvement. What really worries me is the state of health services in our area - we're seriously underserved.",
+        "survey": {
+          "support_level": 2,
+          "housing": 3,
+          "transport": 2,
+          "community": 3,
+          "key_concerns": [
+            "health services",
+            "road quality"
+          ],
+          "suggested_improvements": [
+            "improve local health services",
+            "road maintenance"
+          ]
+        }
+      },
+      "survey_grid_labels": {},
+      "run_id": "dceb539595eb45a9b3e8d07547d93a74",
+      "themes": [
+        "Transport"
+      ],
+      "survey_numbers": {},
+      "drivers": [
+        "financial struggle",
+        "concern for children's education",
+        "lack of healthcare access"
+      ]
+    }
+  ],
+  "driver_summary": [],
+  "demographics": {
+    "age": {
+      "persona": {
+        "40-44 years": 1,
+        "35-39 years": 1,
+        "55-59 years": 1
+      },
+      "population": {
+        "65-69 years": 15175,
+        "60-64 years": 14154,
+        "55-59 years": 13595,
+        "50-54 years": 13536,
+        "70-74 years": 13441,
+        "40-44 years": 12460,
+        "35-39 years": 11650,
+        "45-49 years": 11409,
+        "30-34 years": 10145,
+        "75-79 years": 7225,
+        "20-24 years": 6562,
+        "25-29 years": 5326,
+        "80-84 years": 2644,
+        "85-89 years": 916,
+        "15-19 years": 789
+      },
+      "chi2": 8.105472734137729
+    },
+    "gender": {
+      "persona": {
+        "Male": 2,
+        "Female": 1
+      },
+      "population": {
+        "Female": 72308,
+        "Male": 66719
+      },
+      "chi2": 0.004854321401900604
+    },
+    "marital": {
+      "persona": {
+        "2": 3
+      },
+      "population": {
+        "2": 103925,
+        "1": 24782,
+        "4": 7036,
+        "3": 3284
+      },
+      "chi2": 1.0132810440879765
+    },
+    "tenure": {
+      "persona": {
+        "2": 2,
+        "1": 1
+      },
+      "population": {
+        "1": 55692,
+        "2": 54390,
+        "3": 20276,
+        "5": 6019,
+        "4": 2373,
+        "999": 277
+      },
+      "chi2": 1.2402473242558847
+    },
+    "political": {
+      "persona": {
+        "Liberal": 1,
+        "Labor": 1,
+        "Other party": 1
+      },
+      "population": {
+        "Labor": 11618,
+        "Liberal": 10062,
+        "Greens": 4125,
+        "Other party": 1,
+        "National Party": 1008,
+        "Item skipped": 329,
+        " ": 767,
+        "Other": 42
+      },
+      "chi2": 4658.394574337345
+    },
+    "education": {
+      "persona": {
+        "Advanced diploma or diploma": 2,
+        "Certificate III/IV": 1
+      },
+      "population": {
+        "Certificate III/IV": 39333,
+        "Advanced diploma or diploma": 29553,
+        "Bachelor degree or higher": 22839,
+        "No formal education": 17683,
+        "Year 11 or below": 12277,
+        "Other": 10864,
+        "Year 12 or equivalent": 5584,
+        "Item skipped": 894
+      },
+      "chi2": 4.4504443742214574
+    }
+  },
+  "location_freq": {
+    "Double Bay - Darling Point": 1,
+    "Dover Heights": 1,
+    "Maroubra - West": 1
+  },
+  "impact_dims": [],
+  "prompt_template": "NARRATIVE:\n<5-10 sentence first-person statement>\n\nSURVEY:\nSupport Level (1-5): <#>\n{impact_lines}Key Concerns: item1, item2\nSuggested Improvements: item1, item2",
+  "survey_grid_labels": null
+}

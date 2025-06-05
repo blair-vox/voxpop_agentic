@@ -1,0 +1,17 @@
+# ---- Frontend Dockerfile ----
+# Build stage
+FROM node:20-alpine AS build
+WORKDIR /app
+COPY voxpopai/frontend/package.json voxpopai/frontend/pnpm-lock.yaml ./
+RUN npm install -g pnpm && pnpm install
+COPY voxpopai/frontend/ ./
+RUN pnpm build
+
+# Runtime stage
+FROM node:20-alpine
+ENV PORT=3000
+WORKDIR /app
+COPY --from=build /app .
+RUN npm install --global pnpm  # ensure pnpm present for any scripts, small cost
+EXPOSE 3000
+CMD ["npm", "start"] 

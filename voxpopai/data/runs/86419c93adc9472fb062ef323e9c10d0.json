@@ -1,0 +1,796 @@
+{
+  "run_id": "86419c93adc9472fb062ef323e9c10d0",
+  "timestamp": "2025-05-27T05:48:11.297522+00:00",
+  "question": "Should Waverley Council allow Land Developers to build apartments without parking spaces? How would your lifestyle be impacted by this change? Would you live in an apartment without parking?",
+  "area": null,
+  "domain": "civic-policy",
+  "summary": "- Strong opposition to building apartments without parking spaces due to concerns about increased congestion and inconvenience.\n- Consistent emphasis on the importance of cars for mobility and property values in the local community.\n- Calls for mandatory inclusion of parking spaces in new developments and improvements in public transport options as suggested solutions.",
+  "responses": [
+    {
+      "id": 0,
+      "age": "35-39 years",
+      "gender": "Male",
+      "location": "Coogee - Clovelly",
+      "income": "$1,500-$1,749 ($78,000-$90,999)",
+      "income_weekly": "$1,500-$1,749",
+      "income_annual": "$78,000-$90,999",
+      "housing_tenure": "Own, paying off mortgage",
+      "job_tenure": "Employee in private company or business",
+      "occupation": "Middle managerial",
+      "education": "No formal education",
+      "transport": null,
+      "marital_status": "Married",
+      "partner_activity": "Other",
+      "household_size": "1 person",
+      "family_payments": "Yes",
+      "child_care_benefit": "Yes",
+      "investment_properties": "Yes",
+      "transport_infrastructure": "Much more than now",
+      "political_leaning": "Liberal",
+      "trust": "Sometimes look after themselves",
+      "issues": "How I feel about the following Issues include: Taxation, Quite important; Immigration, Quite important; Education, Extremely important; The environment, Extremely important; Health and Medicare, Extremely important; Refugees and asylum seekers, Quite important; Global warming, Extremely important; Management of the economy, Extremely important; The COVID-19 pandemic, Not very important; The cost of living, Extremely important; National security, Extremely important",
+      "engagement": "I engage in politics in the following way: Interest in politics, Some; Attention to newspapers, None at all; Attention to television, Not much; Attention to radio, Some; Attention to internet, None at all; Discussed politics in person, Occasionally; Discussed politics online, Not at all; Persuaded others to vote, Not at all; Showed support for a party, Not at all; Attended political meetings, Not at all; Contributed money, Not at all",
+      "persona_id": 0,
+      "response": "NARRATIVE: As a resident of Coogee-Clovelly, I strongly oppose the proposal to build apartments without parking spaces. This move could exacerbate the already tight parking situation in our area. As someone who is paying off a mortgage single-handedly, the cost of living is extremely important to me, and this includes the price of parking my car. Additionally, as a private company employee, I depend on my car to commute. Without dedicated parking spaces in apartment complexes, I would be forced to search for parking in the overcrowded public lots, adding unnecessary stress and time to my daily routine. Therefore, I wouldn't consider living in an apartment without parking.\nSURVEY:\nSupport for the proposal (1-5): 1\nHousing (1-5): 1\nTransport (1-5): 1\nCommunity (1-5): 3\nKey Concerns: cost_of_living, transport_issues\nSuggested Improvements: mandatory_parking_spaces_in_new_developments, increase_public_transport_options\n",
+      "response_json": {
+        "narrative": "As a resident of Coogee-Clovelly, I strongly oppose the proposal to build apartments without parking spaces. This move could exacerbate the already tight parking situation in our area. As someone who is paying off a mortgage single-handedly, the cost of living is extremely important to me, and this includes the price of parking my car. Additionally, as a private company employee, I depend on my car to commute. Without dedicated parking spaces in apartment complexes, I would be forced to search for parking in the overcrowded public lots, adding unnecessary stress and time to my daily routine. Therefore, I wouldn't consider living in an apartment without parking.",
+        "survey": {
+          "support_level": 1,
+          "housing": 1,
+          "transport": 1,
+          "community": 3,
+          "key_concerns": [
+            "cost_of_living",
+            "transport_issues"
+          ],
+          "suggested_improvements": [
+            "mandatory_parking_spaces_in_new_developments",
+            "increase_public_transport_options"
+          ]
+        }
+      },
+      "survey_grid_labels": {},
+      "run_id": "86419c93adc9472fb062ef323e9c10d0",
+      "themes": [
+        "Transport"
+      ],
+      "survey_numbers": {
+        "support": 1,
+        "housing": 1,
+        "transport": 1,
+        "community": 3
+      },
+      "drivers": [
+        "inconvenient parking situation",
+        "increased cost of living",
+        "added stress and time"
+      ]
+    },
+    {
+      "id": 1,
+      "age": "40-44 years",
+      "gender": "Female",
+      "location": "Bondi Junction - Waverly",
+      "income": "$500-$649 ($26,000-$33,799)",
+      "income_weekly": "$500-$649",
+      "income_annual": "$26,000-$33,799",
+      "housing_tenure": "Own outright",
+      "job_tenure": "Employee in private company or business",
+      "occupation": "Non-supervisory",
+      "education": "Bachelor degree or higher",
+      "transport": null,
+      "marital_status": "Married",
+      "partner_activity": "Other",
+      "household_size": "2 people",
+      "family_payments": "Yes",
+      "child_care_benefit": "No",
+      "investment_properties": "No",
+      "transport_infrastructure": "Much more than now",
+      "political_leaning": "Labor",
+      "trust": "Sometimes can be trusted to do the right thing",
+      "issues": "How I feel about the following Issues include: Taxation, Not very important; Immigration, Not very important; Education, Quite important; The environment, Extremely important; Health and Medicare, Extremely important; Refugees and asylum seekers, Not very important; Global warming, Extremely important; Management of the economy, Extremely important; The COVID-19 pandemic, Quite important; The cost of living, Extremely important; National security, Extremely important",
+      "engagement": "I engage in politics in the following way: Interest in politics, Some; Attention to newspapers, None at all; Attention to television, Some; Attention to radio, None at all; Attention to internet, Some; Discussed politics in person, Rarely; Discussed politics online, Not at all; Persuaded others to vote, Not at all; Showed support for a party, Not at all; Attended political meetings, Not at all; Contributed money, Not at all",
+      "persona_id": 1,
+      "response": "NARRATIVE: As a resident of Waverley, I strongly oppose the idea of allowing developers to build apartments without parking spaces. We are already facing congestion issues in our area and the lack of parking spaces would only exacerbate the problem. While I recognise that we need to promote public transport and sustainable practices, I think this move would be a major inconvenience for many residents, including myself. I wouldn't consider living in an apartment without a parking space as I own a car and need somewhere to park it. I believe that we need to find a balance between development and maintaining the quality of life for existing residents.\nSURVEY:\nSupport for the proposal (1-5): 1\nHousing (1-5): 1\nTransport (1-5): 1\nCommunity (1-5): 2\nKey Concerns: congestion, inconvenience\nSuggested Improvements: balance development with quality of life, increase parking spaces\n",
+      "response_json": {
+        "narrative": "As a resident of Waverley, I strongly oppose the idea of allowing developers to build apartments without parking spaces. We are already facing congestion issues in our area and the lack of parking spaces would only exacerbate the problem. While I recognise that we need to promote public transport and sustainable practices, I think this move would be a major inconvenience for many residents, including myself. I wouldn't consider living in an apartment without a parking space as I own a car and need somewhere to park it. I believe that we need to find a balance between development and maintaining the quality of life for existing residents.",
+        "survey": {
+          "support_level": 1,
+          "housing": 1,
+          "transport": 1,
+          "community": 2,
+          "key_concerns": [
+            "congestion",
+            "inconvenience"
+          ],
+          "suggested_improvements": [
+            "balance development with quality of life",
+            "increase parking spaces"
+          ]
+        }
+      },
+      "survey_grid_labels": {},
+      "run_id": "86419c93adc9472fb062ef323e9c10d0",
+      "themes": [
+        "Transport"
+      ],
+      "survey_numbers": {
+        "support": 1,
+        "housing": 1,
+        "transport": 1,
+        "community": 2
+      },
+      "drivers": [
+        "congestion issues",
+        "inconvenience for residents",
+        "maintaining quality of life"
+      ]
+    },
+    {
+      "id": 2,
+      "age": "50-54 years",
+      "gender": "Male",
+      "location": "Kensington (NSW)",
+      "income": "$1,250-$1,499 ($65,000-$77,999)",
+      "income_weekly": "$1,250-$1,499",
+      "income_annual": "$65,000-$77,999",
+      "housing_tenure": "Own, paying off mortgage",
+      "job_tenure": "Employee in private company or business",
+      "occupation": "Non-supervisory",
+      "education": "No formal education",
+      "transport": null,
+      "marital_status": "Married",
+      "partner_activity": "Working full-time",
+      "household_size": "4 people",
+      "family_payments": "No",
+      "child_care_benefit": "No",
+      "investment_properties": "Yes",
+      "transport_infrastructure": "Somewhat more than now",
+      "political_leaning": "Liberal",
+      "trust": "Sometimes look after themselves",
+      "issues": "How I feel about the following Issues include: Taxation, Extremely important; Immigration, Extremely important; Education, Extremely important; The environment, Extremely important; Health and Medicare, Extremely important; Refugees and asylum seekers, Extremely important; Global warming, Extremely important; Management of the economy, Extremely important; The COVID-19 pandemic, Extremely important; The cost of living, Extremely important; National security, Extremely important",
+      "engagement": "I engage in politics in the following way: Interest in politics, A good deal; Attention to newspapers, A good deal; Attention to television, A good deal; Attention to radio, A good deal; Attention to internet, A good deal; Discussed politics in person, Occasionally; Discussed politics online, Rarely; Persuaded others to vote, Occasionally; Showed support for a party, Not at all; Attended political meetings, Not at all; Contributed money, Not at all",
+      "persona_id": 2,
+      "response": "NARRATIVE: I really don't think Waverley Council should allow developers to build apartments without parking spaces. It's a practical necessity for most of us, especially those like myself who don't have any other transport habits. It's not just about convenience, it's about security and value as well. If I were to buy an apartment, the lack of a parking space would significantly devalue the property in my eyes. Not to mention, it could cause congestion on our streets if everyone had to resort to street parking. So no, I wouldn't live in an apartment without parking, and I don't think it's a good move for our community.\nSURVEY:\nSupport for the proposal (1-5): 1\nHousing (1-5): 1\nTransport (1-5): 1\nCommunity (1-5): 1\nKey Concerns: Lack of a practical necessity, Potential property devaluation\nSuggested Improvements: Mandatory inclusion of parking spaces in apartment plans, Consideration of potential street congestion\n",
+      "response_json": {
+        "narrative": "I really don't think Waverley Council should allow developers to build apartments without parking spaces. It's a practical necessity for most of us, especially those like myself who don't have any other transport habits. It's not just about convenience, it's about security and value as well. If I were to buy an apartment, the lack of a parking space would significantly devalue the property in my eyes. Not to mention, it could cause congestion on our streets if everyone had to resort to street parking. So no, I wouldn't live in an apartment without parking, and I don't think it's a good move for our community.",
+        "survey": {
+          "support_level": 1,
+          "housing": 1,
+          "transport": 1,
+          "community": 1,
+          "key_concerns": [
+            "Lack of a practical necessity",
+            "Potential property devaluation"
+          ],
+          "suggested_improvements": [
+            "Mandatory inclusion of parking spaces in apartment plans",
+            "Consideration of potential street congestion"
+          ],
+          "Support for the proposal (1-5)": 1,
+          "Housing (1-5)": 1,
+          "Transport (1-5)": 1,
+          "Community (1-5)": 1,
+          "Key Concerns": "Lack of a practical necessity, Potential property devaluation",
+          "Suggested Improvements": "Mandatory inclusion of parking spaces in apartment plans, Consideration of potential street congestion"
+        }
+      },
+      "survey_grid_labels": {},
+      "run_id": "86419c93adc9472fb062ef323e9c10d0",
+      "themes": [
+        "Transport"
+      ],
+      "survey_numbers": {
+        "support": 1,
+        "housing": 1,
+        "transport": 1,
+        "community": 1
+      },
+      "drivers": [
+        "practical necessity",
+        "security and value",
+        "congestion on our streets"
+      ]
+    },
+    {
+      "id": 3,
+      "age": "25-29 years",
+      "gender": "Male",
+      "location": "Bondi - Tamarama - Bronte",
+      "income": "$3,500 or more ($182,000 or more)",
+      "income_weekly": "$3,500 or more",
+      "income_annual": "$182,000 or more",
+      "housing_tenure": "Rent from private landlord or real estate agent",
+      "job_tenure": "Employee in private company or business",
+      "occupation": "Middle managerial",
+      "education": "Bachelor degree or higher",
+      "transport": null,
+      "marital_status": "Never married",
+      "partner_activity": " ",
+      "household_size": "3 people",
+      "family_payments": "No",
+      "child_care_benefit": "No",
+      "investment_properties": "No",
+      "transport_infrastructure": "Somewhat more than now",
+      "political_leaning": "Other party",
+      "trust": "Sometimes can be trusted to do the right thing",
+      "issues": "How I feel about the following Issues include: Taxation, Extremely important; Immigration, Extremely important; Education, Quite important; The environment, Extremely important; Health and Medicare, Extremely important; Refugees and asylum seekers, Quite important; Global warming, Extremely important; Management of the economy, Quite important; The COVID-19 pandemic, Quite important; The cost of living, Extremely important; National security, Quite important",
+      "engagement": "I engage in politics in the following way: Interest in politics, None; Attention to newspapers, None at all; Attention to television, None at all; Attention to radio, None at all; Attention to internet, Some; Discussed politics in person, Rarely; Discussed politics online, Not at all; Persuaded others to vote, Not at all; Showed support for a party, Not at all; Attended political meetings, Not at all; Contributed money, Not at all",
+      "persona_id": 3,
+      "response": "NARRATIVE: As a resident of the Bondi area, I heavily oppose Waverley Council's proposal to allow land developers to build apartments without parking spaces. Given my income level, I can afford to own a car and it's crucial for my lifestyle. Even though I don't often use public transport, the lack of parking options could create a strain on the already congested local streets, significantly impacting the community ambiance. Additionally, the absence of parking spaces could potentially depreciate the value of these new apartments. I wouldn't consider living in an apartment without parking, regardless of its location or other features.\nSURVEY:\nSupport for the proposal (1-5): 1\nHousing (1-5): 1\nTransport (1-5): 2\nCommunity (1-5): 1\nKey Concerns: Local congestion, Depreciation of apartment value\nSuggested Improvements: Mandate inclusion of parking spaces, Increase public transport options\n",
+      "response_json": {
+        "narrative": "As a resident of the Bondi area, I heavily oppose Waverley Council's proposal to allow land developers to build apartments without parking spaces. Given my income level, I can afford to own a car and it's crucial for my lifestyle. Even though I don't often use public transport, the lack of parking options could create a strain on the already congested local streets, significantly impacting the community ambiance. Additionally, the absence of parking spaces could potentially depreciate the value of these new apartments. I wouldn't consider living in an apartment without parking, regardless of its location or other features.",
+        "survey": {
+          "support_level": 1,
+          "housing": 1,
+          "transport": 2,
+          "community": 1,
+          "key_concerns": [
+            "Local congestion",
+            "Depreciation of apartment value"
+          ],
+          "suggested_improvements": [
+            "Mandate inclusion of parking spaces",
+            "Increase public transport options"
+          ],
+          "Support for the proposal (1-5)": 1,
+          "Housing (1-5)": 1,
+          "Transport (1-5)": 1,
+          "Community (1-5)": 1,
+          "Key Concerns": "Local congestion, Depreciation of apartment value",
+          "Suggested Improvements": "Mandate inclusion of parking spaces, Increase public transport options"
+        }
+      },
+      "survey_grid_labels": {},
+      "run_id": "86419c93adc9472fb062ef323e9c10d0",
+      "themes": [
+        "Transport"
+      ],
+      "survey_numbers": {
+        "support": 1,
+        "housing": 1,
+        "transport": 2,
+        "community": 1
+      },
+      "drivers": [
+        "inconvenient",
+        "community ambiance",
+        "property value"
+      ]
+    },
+    {
+      "id": 4,
+      "age": "35-39 years",
+      "gender": "Female",
+      "location": "Bondi Junction - Waverly",
+      "income": "$2,000-$2,999 ($104,000-$155,999)",
+      "income_weekly": "$2,000-$2,999",
+      "income_annual": "$104,000-$155,999",
+      "housing_tenure": "Own, paying off mortgage",
+      "job_tenure": "Employee in private company or business",
+      "occupation": "Supervisory",
+      "education": "Year 11 or below",
+      "transport": null,
+      "marital_status": "Married",
+      "partner_activity": "Working full-time",
+      "household_size": "2 people",
+      "family_payments": "No",
+      "child_care_benefit": "No",
+      "investment_properties": "No",
+      "transport_infrastructure": "Somewhat more than now",
+      "political_leaning": "National Party",
+      "trust": "Sometimes look after themselves",
+      "issues": "How I feel about the following Issues include: Taxation, Quite important; Immigration, Not very important; Education, Extremely important; The environment, Quite important; Health and Medicare, Extremely important; Refugees and asylum seekers, Not very important; Global warming, Not very important; Management of the economy, Extremely important; The COVID-19 pandemic, Quite important; The cost of living, Extremely important; National security, Extremely important",
+      "engagement": "I engage in politics in the following way: Interest in politics, Some; Attention to newspapers, None at all; Attention to television, Some; Attention to radio, Some; Attention to internet, Some; Discussed politics in person, Occasionally; Discussed politics online, Not at all; Persuaded others to vote, Not at all; Showed support for a party, Not at all; Attended political meetings, Not at all; Contributed money, Not at all",
+      "persona_id": 4,
+      "response": "NARRATIVE: I'm opposed to the idea of building apartments without parking spaces. As a resident of Bondi Junction, one of the challenges we already face is finding a parking spot, and removing parking from new developments would only exacerbate the problem. This is likely to increase congestion and impinge on the quality of life for residents. As someone who owns a car, living in an apartment without parking wouldn't be a practical choice for me. I believe development should be sustainable and considerate of residents' needs. More so, the cost of living and managing the economy are extremely important to me, and I see this proposal as potentially reducing the attractiveness of our suburb and property values.\nSURVEY:\nSupport for the proposal (1-5): 1\nHousing (1-5): 1\nTransport (1-5): 1\nCommunity (1-5): 1\nKey Concerns: Increased congestion, Decreased property values\nSuggested Improvements: Mandatory parking in new developments, Better public transport infrastructure\n",
+      "response_json": {
+        "narrative": "I'm opposed to the idea of building apartments without parking spaces. As a resident of Bondi Junction, one of the challenges we already face is finding a parking spot, and removing parking from new developments would only exacerbate the problem. This is likely to increase congestion and impinge on the quality of life for residents. As someone who owns a car, living in an apartment without parking wouldn't be a practical choice for me. I believe development should be sustainable and considerate of residents' needs. More so, the cost of living and managing the economy are extremely important to me, and I see this proposal as potentially reducing the attractiveness of our suburb and property values.",
+        "survey": {
+          "support_level": 1,
+          "housing": 1,
+          "transport": 1,
+          "community": 1,
+          "key_concerns": [
+            "Increased congestion",
+            "Decreased property values"
+          ],
+          "suggested_improvements": [
+            "Mandatory parking in new developments",
+            "Better public transport infrastructure"
+          ]
+        }
+      },
+      "survey_grid_labels": {},
+      "run_id": "86419c93adc9472fb062ef323e9c10d0",
+      "themes": [
+        "Transport"
+      ],
+      "survey_numbers": {
+        "support": 1,
+        "housing": 1,
+        "transport": 1,
+        "community": 1
+      },
+      "drivers": [
+        "parking availability",
+        "quality of life",
+        "property values"
+      ]
+    },
+    {
+      "id": 5,
+      "age": "50-54 years",
+      "gender": "Male",
+      "location": "Bondi - Tamarama - Bronte",
+      "income": "$1,500-$1,749 ($78,000-$90,999)",
+      "income_weekly": "$1,500-$1,749",
+      "income_annual": "$78,000-$90,999",
+      "housing_tenure": "Rent from public housing authority",
+      "job_tenure": "Employee in private company or business",
+      "occupation": "Non-supervisory",
+      "education": "Bachelor degree or higher",
+      "transport": null,
+      "marital_status": "Married",
+      "partner_activity": "Working part-time",
+      "household_size": "4 people",
+      "family_payments": "No",
+      "child_care_benefit": "No",
+      "investment_properties": "No",
+      "transport_infrastructure": "Somewhat more than now",
+      "political_leaning": "Labor",
+      "trust": "Sometimes look after themselves",
+      "issues": "How I feel about the following Issues include: Taxation, Extremely important; Immigration, Extremely important; Education, Extremely important; The environment, Extremely important; Health and Medicare, Extremely important; Refugees and asylum seekers, Extremely important; Global warming, Extremely important; Management of the economy, Extremely important; The COVID-19 pandemic, Extremely important; The cost of living, Extremely important; National security, Extremely important",
+      "engagement": "I engage in politics in the following way: Interest in politics, Some; Attention to newspapers, Some; Attention to television, Some; Attention to radio, Some; Attention to internet, Some; Discussed politics in person, Occasionally; Discussed politics online, Occasionally; Persuaded others to vote, Rarely; Showed support for a party, Occasionally; Attended political meetings, Rarely; Contributed money, Not at all",
+      "persona_id": 5,
+      "response": "NARRATIVE: I'm absolutely against the proposal of building apartments without parking spaces. This would hugely impact me and my family's lifestyle. We don't have our own transportation, but we sometimes rent a car for weekend trips and shopping. If this proposal goes through, it will make our lives very inconvenient. Besides, it's not just about us. Think about the elderly and those with disabilities. They may rely on their own vehicles for mobility. Without parking, they'd be left high and dry. Plus, removing parking would likely increase street parking, congesting our local streets, which is a public safety concern.\nSURVEY:\nSupport for the proposal (1-5): 1\nHousing (1-5): 1\nTransport (1-5): 1\nCommunity (1-5): 1\nKey Concerns: lack of convenience, public safety\nSuggested Improvements: mandatory parking spaces, adequate street parking\n",
+      "response_json": {
+        "narrative": "I'm absolutely against the proposal of building apartments without parking spaces. This would hugely impact me and my family's lifestyle. We don't have our own transportation, but we sometimes rent a car for weekend trips and shopping. If this proposal goes through, it will make our lives very inconvenient. Besides, it's not just about us. Think about the elderly and those with disabilities. They may rely on their own vehicles for mobility. Without parking, they'd be left high and dry. Plus, removing parking would likely increase street parking, congesting our local streets, which is a public safety concern.",
+        "survey": {
+          "support_level": 1,
+          "housing": 1,
+          "transport": 1,
+          "community": 1,
+          "key_concerns": [
+            "lack of convenience",
+            "public safety"
+          ],
+          "suggested_improvements": [
+            "mandatory parking spaces",
+            "adequate street parking"
+          ],
+          "Support for the proposal (1-5)": 1,
+          "Housing (1-5)": 1,
+          "Transport (1-5)": 4,
+          "Community (1-5)": 1,
+          "Key Concerns": "lack of convenience, public safety",
+          "Suggested Improvements": "mandatory parking spaces, adequate street parking"
+        }
+      },
+      "survey_grid_labels": {},
+      "run_id": "86419c93adc9472fb062ef323e9c10d0",
+      "themes": [
+        "Transport"
+      ],
+      "survey_numbers": {
+        "support": 1,
+        "housing": 1,
+        "transport": 1,
+        "community": 1
+      },
+      "drivers": [
+        "inconvenient for families",
+        "impact on mobility",
+        "public safety concern"
+      ]
+    },
+    {
+      "id": 6,
+      "age": "45-49 years",
+      "gender": "Male",
+      "location": "Dover Heights",
+      "income": "$3,500 or more ($182,000 or more)",
+      "income_weekly": "$3,500 or more",
+      "income_annual": "$182,000 or more",
+      "housing_tenure": "Own, paying off mortgage",
+      "job_tenure": "Self-employed",
+      "occupation": "Upper managerial",
+      "education": "Bachelor degree or higher",
+      "transport": null,
+      "marital_status": "Married",
+      "partner_activity": "Working part-time",
+      "household_size": "2 people",
+      "family_payments": "No",
+      "child_care_benefit": "No",
+      "investment_properties": "Yes",
+      "transport_infrastructure": "The same as now",
+      "political_leaning": "Other party",
+      "trust": "Sometimes can be trusted to do the right thing",
+      "issues": "How I feel about the following Issues include: Taxation, Extremely important; Immigration, Quite important; Education, Quite important; The environment, Quite important; Health and Medicare, Extremely important; Refugees and asylum seekers, Extremely important; Global warming, Not very important; Management of the economy, Extremely important; The COVID-19 pandemic, Not very important; The cost of living, Quite important; National security, Extremely important",
+      "engagement": "I engage in politics in the following way: Interest in politics, A good deal; Attention to newspapers, Some; Attention to television, Some; Attention to radio, Some; Attention to internet, Some; Discussed politics in person, Occasionally; Discussed politics online, Frequently; Persuaded others to vote, Rarely; Showed support for a party, Rarely; Attended political meetings, Rarely; Contributed money, Rarely",
+      "persona_id": 6,
+      "response": "NARRATIVE: I strongly oppose the proposal for building apartments without parking spaces. As a self-employed managerial professional in Dover Heights, access to a car is crucial for my daily commutes and work-related travel. Removing parking spaces from new developments is short-sighted and will likely lead to increased congestion and parking problems in the surrounding streets. Furthermore, the proposal seems to undervalue the importance of cars for families and professionals in the suburb. I believe that the value of my property might also decrease because of the increased congestion and potential overpopulation. I wouldn't consider living in an apartment without a parking space, given the nature of my work and lifestyle.\nSURVEY:\nSupport for the proposal (1-5): 1\nHousing (1-5): 1\nTransport (1-5): 1\nCommunity (1-5): 2\nKey Concerns: Increased congestion, Decrease in property value\nSuggested Improvements: Mandatory parking spaces in new developments, Improved public transport infrastructure\n",
+      "response_json": {
+        "narrative": "I strongly oppose the proposal for building apartments without parking spaces. As a self-employed managerial professional in Dover Heights, access to a car is crucial for my daily commutes and work-related travel. Removing parking spaces from new developments is short-sighted and will likely lead to increased congestion and parking problems in the surrounding streets. Furthermore, the proposal seems to undervalue the importance of cars for families and professionals in the suburb. I believe that the value of my property might also decrease because of the increased congestion and potential overpopulation. I wouldn't consider living in an apartment without a parking space, given the nature of my work and lifestyle.",
+        "survey": {
+          "support_level": 1,
+          "housing": 1,
+          "transport": 1,
+          "community": 2,
+          "key_concerns": [
+            "Increased congestion",
+            "Decrease in property value"
+          ],
+          "suggested_improvements": [
+            "Mandatory parking spaces in new developments",
+            "Improved public transport infrastructure"
+          ]
+        }
+      },
+      "survey_grid_labels": {},
+      "run_id": "86419c93adc9472fb062ef323e9c10d0",
+      "themes": [
+        "Transport"
+      ],
+      "survey_numbers": {
+        "support": 1,
+        "housing": 1,
+        "transport": 1,
+        "community": 2
+      },
+      "drivers": [
+        "inconvenient",
+        "short-sighted",
+        "undervalued"
+      ]
+    },
+    {
+      "id": 7,
+      "age": "70-74 years",
+      "gender": "Male",
+      "location": "Matraville - Chifley",
+      "income": "$500-$649 ($26,000-$33,799)",
+      "income_weekly": "$500-$649",
+      "income_annual": "$26,000-$33,799",
+      "housing_tenure": "Own outright",
+      "job_tenure": "Self-employed",
+      "occupation": "Upper managerial",
+      "education": "No formal education",
+      "transport": null,
+      "marital_status": "Married",
+      "partner_activity": "Student",
+      "household_size": "2 people",
+      "family_payments": "No",
+      "child_care_benefit": "No",
+      "investment_properties": "No",
+      "transport_infrastructure": "The same as now",
+      "political_leaning": "Liberal",
+      "trust": "Item skipped",
+      "issues": "How I feel about the following Issues include: Taxation, Extremely important; Immigration, Extremely important; Education, Extremely important; The environment, Quite important; Health and Medicare, Extremely important; Refugees and asylum seekers, Extremely important; Global warming, Quite important; Management of the economy, Extremely important; The COVID-19 pandemic, Extremely important; The cost of living, Extremely important; National security, Extremely important",
+      "engagement": "I engage in politics in the following way: Interest in politics, A good deal; Attention to newspapers, A good deal; Discussed politics in person, Occasionally",
+      "persona_id": 7,
+      "response": "NARRATIVE: I'm staunchly against the idea of building apartments without parking spaces. At my age range of 70-74 years, comfort and convenience are paramount, and I depend on my car for mobility. Given the lack of robust public transportation in our area, having a car is almost a necessity. Apartments without parking spaces would only add to the problems of street-parking and congestion. It would be a nightmare for folks like me who have lived in this community for years. I believe we need to maintain the character of our neighbourhood while still accommodating growth. I wouldn't consider living in an apartment without parking, so this decision would negatively impact my lifestyle and possibly my property's value.\nSURVEY:\nSupport for the proposal (1-5): 1\nHousing (1-5): 1\nTransport (1-5): 1\nCommunity (1-5): 1\nKey Concerns: increased_congestion, loss_of_property_value\nSuggested Improvements: mandatory_inclusion_of_parking_spaces, better_public_transportation\n",
+      "response_json": {
+        "narrative": "I'm staunchly against the idea of building apartments without parking spaces. At my age range of 70-74 years, comfort and convenience are paramount, and I depend on my car for mobility. Given the lack of robust public transportation in our area, having a car is almost a necessity. Apartments without parking spaces would only add to the problems of street-parking and congestion. It would be a nightmare for folks like me who have lived in this community for years. I believe we need to maintain the character of our neighbourhood while still accommodating growth. I wouldn't consider living in an apartment without parking, so this decision would negatively impact my lifestyle and possibly my property's value.",
+        "survey": {
+          "support_level": 1,
+          "housing": 1,
+          "transport": 1,
+          "community": 1,
+          "key_concerns": [
+            "increased_congestion",
+            "loss_of_property_value"
+          ],
+          "suggested_improvements": [
+            "mandatory_inclusion_of_parking_spaces",
+            "better_public_transportation"
+          ],
+          "Support for the proposal (1-5)": 1,
+          "Housing (1-5)": 1,
+          "Transport (1-5)": 1,
+          "Community (1-5)": 1,
+          "Key Concerns": "increased_congestion, loss_of_property_value",
+          "Suggested Improvements": "mandatory_inclusion_of_parking_spaces, better_public_transportation"
+        }
+      },
+      "survey_grid_labels": {},
+      "run_id": "86419c93adc9472fb062ef323e9c10d0",
+      "themes": [
+        "Transport"
+      ],
+      "survey_numbers": {
+        "support": 1,
+        "housing": 1,
+        "transport": 1,
+        "community": 1
+      },
+      "drivers": [
+        "inconvenient",
+        "disruptive",
+        "threat to lifestyle"
+      ]
+    },
+    {
+      "id": 8,
+      "age": "55-59 years",
+      "gender": "Male",
+      "location": "Bondi Beach - North Bondi",
+      "income": "$2,000-$2,999 ($104,000-$155,999)",
+      "income_weekly": "$2,000-$2,999",
+      "income_annual": "$104,000-$155,999",
+      "housing_tenure": "Own, paying off mortgage",
+      "job_tenure": "Employee in private company or business",
+      "occupation": "Supervisory",
+      "education": "No formal education",
+      "transport": null,
+      "marital_status": "Married",
+      "partner_activity": "Working part-time",
+      "household_size": "1 person",
+      "family_payments": "No",
+      "child_care_benefit": "No",
+      "investment_properties": "No",
+      "transport_infrastructure": "The same as now",
+      "political_leaning": "Liberal",
+      "trust": "Sometimes can be trusted to do the right thing",
+      "issues": "How I feel about the following Issues include: Taxation, Extremely important; Immigration, Not very important; Education, Quite important; The environment, Quite important; Health and Medicare, Extremely important; Refugees and asylum seekers, Not very important; Global warming, Quite important; Management of the economy, Extremely important; The COVID-19 pandemic, Not very important; The cost of living, Extremely important; National security, Quite important",
+      "engagement": "I engage in politics in the following way: Interest in politics, Some; Attention to newspapers, Some; Attention to television, Some; Attention to radio, Some; Discussed politics in person, Occasionally; Discussed politics online, Not at all; Persuaded others to vote, Rarely; Showed support for a party, Not at all; Attended political meetings, Not at all; Contributed money, Not at all",
+      "persona_id": 8,
+      "response": "NARRATIVE: As a resident in Bondi Beach, I can't support the idea of building apartments without parking spaces. It's already a struggle to find parking, and this would just make things worse. It's not practical, especially given that not everyone uses public transport or cycles. It's also important to consider the potential effect on property values. Personally, I wouldn't live in an apartment without a parking space. I need somewhere to park my car, and I'm sure many others feel the same way. This proposal seems to overlook the needs of many residents in favour of developers' profits.\nSURVEY:\nSupport for the proposal (1-5): 1\nHousing (1-5): 1\nTransport (1-5): 2\nCommunity (1-5): 1\nKey Concerns: lack of parking, property value\nSuggested Improvements: mandatory parking spaces in new developments, improved public transport\n",
+      "response_json": {
+        "narrative": "As a resident in Bondi Beach, I can't support the idea of building apartments without parking spaces. It's already a struggle to find parking, and this would just make things worse. It's not practical, especially given that not everyone uses public transport or cycles. It's also important to consider the potential effect on property values. Personally, I wouldn't live in an apartment without a parking space. I need somewhere to park my car, and I'm sure many others feel the same way. This proposal seems to overlook the needs of many residents in favour of developers' profits.",
+        "survey": {
+          "support_level": 1,
+          "housing": 1,
+          "transport": 2,
+          "community": 1,
+          "key_concerns": [
+            "lack of parking",
+            "property value"
+          ],
+          "suggested_improvements": [
+            "mandatory parking spaces in new developments",
+            "improved public transport"
+          ],
+          "Support for the proposal (1-5)": 1,
+          "Housing (1-5)": 1,
+          "Transport (1-5)": 1,
+          "Community (1-5)": 1,
+          "Key Concerns": "lack of parking, property value",
+          "Suggested Improvements": "mandatory parking spaces in new developments, improved public transport"
+        }
+      },
+      "survey_grid_labels": {},
+      "run_id": "86419c93adc9472fb062ef323e9c10d0",
+      "themes": [
+        "Transport"
+      ],
+      "survey_numbers": {
+        "support": 1,
+        "housing": 1,
+        "transport": 2,
+        "community": 1
+      },
+      "drivers": [
+        "impractical",
+        "negatively impacting property values",
+        "ignoring residents' needs"
+      ]
+    },
+    {
+      "id": 9,
+      "age": "50-54 years",
+      "gender": "Male",
+      "location": "Randwick - North",
+      "income": "$2,000-$2,999 ($104,000-$155,999)",
+      "income_weekly": "$2,000-$2,999",
+      "income_annual": "$104,000-$155,999",
+      "housing_tenure": "Own, paying off mortgage",
+      "job_tenure": "Employee in private company or business",
+      "occupation": "Non-supervisory",
+      "education": "No formal education",
+      "transport": null,
+      "marital_status": "Married",
+      "partner_activity": "Working full-time",
+      "household_size": "2 people",
+      "family_payments": "No",
+      "child_care_benefit": "No",
+      "investment_properties": "No",
+      "transport_infrastructure": "Somewhat more than now",
+      "political_leaning": "Liberal",
+      "trust": "Usually can be trusted to do the right thing",
+      "issues": "How I feel about the following Issues include: Taxation, Extremely important; Immigration, Quite important; Education, Not very important; The environment, Extremely important; Health and Medicare, Extremely important; Refugees and asylum seekers, Quite important; Global warming, Extremely important; Management of the economy, Extremely important; The COVID-19 pandemic, Extremely important; The cost of living, Extremely important; National security, Extremely important",
+      "engagement": "I engage in politics in the following way: Interest in politics, Some; Attention to newspapers, A good deal; Attention to television, Some; Attention to radio, Not much; Attention to internet, Some; Discussed politics in person, Occasionally; Discussed politics online, Not at all; Persuaded others to vote, Rarely; Showed support for a party, Not at all; Attended political meetings, Not at all; Contributed money, Not at all",
+      "persona_id": 9,
+      "response": "NARRATIVE: As a resident of Randwick - North, I oppose the idea of building apartments without parking spaces. I believe it's an impractical proposal that doesn't cater to the lifestyle of most Australians, including myself. For those of us who own cars, it's a necessity to have a place to park. Moreover, I fear that this could lead to an oversaturation of cars on the streets, and increase congestion. I also worry about the potential impact on property values in the area. Even though I own my home, it could affect its resale value in the future. While I understand the need for housing development, I believe it should be done in a way that respects the needs and lifestyles of existing residents.\nSURVEY:\nSupport for the proposal (1-5): 1\nHousing (1-5): 1\nTransport (1-5): 1\nCommunity (1-5): 2\nKey Concerns: congestion, property_value\nSuggested Improvements: provide_parking_spaces, consider_impact_on_existing_residents\n",
+      "response_json": {
+        "narrative": "As a resident of Randwick - North, I oppose the idea of building apartments without parking spaces. I believe it's an impractical proposal that doesn't cater to the lifestyle of most Australians, including myself. For those of us who own cars, it's a necessity to have a place to park. Moreover, I fear that this could lead to an oversaturation of cars on the streets, and increase congestion. I also worry about the potential impact on property values in the area. Even though I own my home, it could affect its resale value in the future. While I understand the need for housing development, I believe it should be done in a way that respects the needs and lifestyles of existing residents.",
+        "survey": {
+          "support_level": 1,
+          "housing": 1,
+          "transport": 1,
+          "community": 2,
+          "key_concerns": [
+            "congestion",
+            "property_value"
+          ],
+          "suggested_improvements": [
+            "provide_parking_spaces",
+            "consider_impact_on_existing_residents"
+          ]
+        }
+      },
+      "survey_grid_labels": {},
+      "run_id": "86419c93adc9472fb062ef323e9c10d0",
+      "themes": [
+        "Transport"
+      ],
+      "survey_numbers": {
+        "support": 1,
+        "housing": 1,
+        "transport": 1,
+        "community": 2
+      },
+      "drivers": [
+        "impractical proposal",
+        "increased congestion",
+        "impact on property values"
+      ]
+    }
+  ],
+  "driver_summary": [
+    {
+      "level": 1,
+      "drivers": [
+        [
+          "inconvenient",
+          3
+        ],
+        [
+          "inconvenient parking situation",
+          1
+        ],
+        [
+          "increased cost of living",
+          1
+        ],
+        [
+          "added stress and time",
+          1
+        ],
+        [
+          "congestion issues",
+          1
+        ],
+        [
+          "inconvenience for residents",
+          1
+        ]
+      ]
+    }
+  ],
+  "demographics": {
+    "age": {
+      "persona": {
+        "50-54 years": 3,
+        "35-39 years": 2,
+        "40-44 years": 1,
+        "25-29 years": 1,
+        "45-49 years": 1,
+        "70-74 years": 1,
+        "55-59 years": 1
+      },
+      "population": {
+        "65-69 years": 15175,
+        "60-64 years": 14154,
+        "55-59 years": 13595,
+        "50-54 years": 13536,
+        "70-74 years": 13441,
+        "40-44 years": 12460,
+        "35-39 years": 11650,
+        "45-49 years": 11409,
+        "30-34 years": 10145,
+        "75-79 years": 7225,
+        "20-24 years": 6562,
+        "25-29 years": 5326,
+        "80-84 years": 2644,
+        "85-89 years": 916,
+        "15-19 years": 789
+      },
+      "chi2": 11.017562094701152
+    },
+    "gender": {
+      "persona": {
+        "Male": 8,
+        "Female": 2
+      },
+      "population": {
+        "Female": 72308,
+        "Male": 66719
+      },
+      "chi2": 2.9225941249400753
+    },
+    "marital": {
+      "persona": {
+        "2": 9,
+        "1": 1
+      },
+      "population": {
+        "2": 103925,
+        "1": 24782,
+        "4": 7036,
+        "3": 3284
+      },
+      "chi2": 1.39683788195523
+    },
+    "tenure": {
+      "persona": {
+        "2": 6,
+        "1": 2,
+        "3": 1,
+        "4": 1
+      },
+      "population": {
+        "1": 55692,
+        "2": 54390,
+        "3": 20276,
+        "5": 6019,
+        "4": 2373,
+        "999": 277
+      },
+      "chi2": 6.743061112444836
+    },
+    "political": {
+      "persona": {
+        "Liberal": 2,
+        "Labor": 2,
+        "Other party": 1,
+        "National Party": 1
+      },
+      "population": {
+        "Labor": 11618,
+        "Liberal": 10062,
+        "Greens": 4125,
+        "Other party": 1,
+        "National Party": 1008,
+        "Item skipped": 329,
+        " ": 767,
+        "Other": 42
+      },
+      "chi2": 2332.40801945642
+    },
+    "education": {
+      "persona": {
+        "No formal education": 5,
+        "Bachelor degree or higher": 4,
+        "Year 11 or below": 1
+      },
+      "population": {
+        "Certificate III/IV": 39333,
+        "Advanced diploma or diploma": 29553,
+        "Bachelor degree or higher": 22839,
+        "No formal education": 17683,
+        "Year 11 or below": 12277,
+        "Other": 10864,
+        "Year 12 or equivalent": 5584,
+        "Item skipped": 894
+      },
+      "chi2": 20.523816744640342
+    }
+  },
+  "location_freq": {
+    "Coogee - Clovelly": 1,
+    "Bondi Junction - Waverly": 2,
+    "Kensington (NSW)": 1,
+    "Bondi - Tamarama - Bronte": 2,
+    "Dover Heights": 1,
+    "Matraville - Chifley": 1,
+    "Bondi Beach - North Bondi": 1,
+    "Randwick - North": 1
+  },
+  "impact_dims": [
+    "Transport",
+    "Community"
+  ],
+  "prompt_template": "",
+  "survey_grid_labels": null
+}

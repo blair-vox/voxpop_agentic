@@ -1,0 +1,78 @@
+name: Deploy
+
+on:
+  workflow_run:
+    workflows: [CI/CD]
+    types:
+      - completed
+    branches: [main]
+
+jobs:
+  deploy:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    env:
+      AWS_REGION: ${{ secrets.AWS_REGION }}
+      ECR_BACKEND: ${{ secrets.ECR_BACKEND }}
+      ECR_FRONTEND: ${{ secrets.ECR_FRONTEND }}
+      ECS_CLUSTER: ${{ secrets.ECS_CLUSTER }}
+      ECS_SERVICE_BACKEND: ${{ secrets.ECS_SERVICE_BACKEND }}
+      ECS_SERVICE_FRONTEND: ${{ secrets.ECS_SERVICE_FRONTEND }}
+      TASK_EXEC_ROLE: ${{ secrets.ECS_TASK_EXEC_ROLE }}
+      TASK_ROLE: ${{ secrets.ECS_TASK_ROLE }}
+      COGNITO_POOL_ID: ${{ secrets.COGNITO_POOL_ID }}
+      COGNITO_APP_CLIENT_ID: ${{ secrets.COGNITO_APP_CLIENT_ID }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
+
+      - name: Download artefact images SHA
+        run: echo "IMAGE_TAG=${{ github.event.workflow_run.head_sha }}" >> $GITHUB_ENV
+
+      - name: Render backend task definition
+        id: backend_td
+        uses: aws-actions/amazon-ecs-render-task-definition@v1
+        with:
+          task-definition: deploy/ecs/backend-taskdef.json
+          container-name: backend
+          image: ${{ env.ECR_BACKEND }}:${{ env.IMAGE_TAG }}
+          environment-variables: |
+            COGNITO_POOL_ID=${{ env.COGNITO_POOL_ID }}
+            COGNITO_APP_CLIENT_ID=${{ env.COGNITO_APP_CLIENT_ID }}
+            AWS_REGION=${{ env.AWS_REGION }}
+            EXECUTION_ROLE_ARN=${{ env.TASK_EXEC_ROLE }}
+            TASK_ROLE_ARN=${{ env.TASK_ROLE }}
+
+      - name: Deploy backend
+        uses: aws-actions/amazon-ecs-deploy-task-definition@v1
+        with:
+          task-definition: ${{ steps.backend_td.outputs.task-definition }}
+          service: ${{ env.ECS_SERVICE_BACKEND }}
+          cluster: ${{ env.ECS_CLUSTER }}
+          wait-for-service-stability: true
+
+      - name: Render frontend task definition
+        id: frontend_td
+        uses: aws-actions/amazon-ecs-render-task-definition@v1
+        with:
+          task-definition: deploy/ecs/frontend-taskdef.json
+          container-name: frontend
+          image: ${{ env.ECR_FRONTEND }}:${{ env.IMAGE_TAG }}
+          environment-variables: |
+            AWS_REGION=${{ env.AWS_REGION }}
+            EXECUTION_ROLE_ARN=${{ env.TASK_EXEC_ROLE }}
+            TASK_ROLE_ARN=${{ env.TASK_ROLE }}
+
+      - name: Deploy frontend
+        uses: aws-actions/amazon-ecs-deploy-task-definition@v1
+        with:
+          task-definition: ${{ steps.frontend_td.outputs.task-definition }}
+          service: ${{ env.ECS_SERVICE_FRONTEND }}
+          cluster: ${{ env.ECS_CLUSTER }}
+          wait-for-service-stability: true

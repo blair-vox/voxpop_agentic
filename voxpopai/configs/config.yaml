@@ -1,0 +1,15 @@
+# Canonical civic themes the PoC should report.
+categories:
+  - Housing_Affordability
+  - Transport
+  - Cost_of_Living
+  - Climate
+  - Crime_Safety
+
+# Phrases that should map to the canonical labels above.
+aliases:
+  affordable housing: Housing_Affordability
+  housing affordability: Housing_Affordability
+  cost of living: Cost_of_Living
+  climate change: Climate
+  public transport: Transport 

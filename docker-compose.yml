@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+    ports:
+      - "8000:8000"
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - MAX_CONCURRENT_REQUESTS=5
+      - REQUESTS_PER_MINUTE=50
+    volumes:
+      - ./voxpopai:/app/voxpopai
+    networks:
+      - voxpop-network
+
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+    ports:
+      - "3000:3000"
+    environment:
+      - NEXT_PUBLIC_API_URL=http://localhost:8000
+    volumes:
+      - ./voxpopai/frontend:/app
+    networks:
+      - voxpop-network
+    depends_on:
+      - backend
+
+networks:
+  voxpop-network:
+    driver: bridge 

@@ -1,0 +1,32 @@
+{
+  "family": "voxpopai-backend",
+  "cpu": "512",
+  "memory": "1024",
+  "networkMode": "awsvpc",
+  "requiresCompatibilities": ["FARGATE"],
+  "executionRoleArn": "${EXECUTION_ROLE_ARN}",
+  "taskRoleArn": "${TASK_ROLE_ARN}",
+  "containerDefinitions": [
+    {
+      "name": "backend",
+      "image": "${IMAGE_URI}",
+      "portMappings": [
+        { "containerPort": 8000, "protocol": "tcp" }
+      ],
+      "essential": true,
+      "environment": [
+        {"name": "COGNITO_REGION", "value": "ap-southeast-2"},
+        {"name": "COGNITO_POOL_ID", "value": "${COGNITO_POOL_ID}"},
+        {"name": "COGNITO_APP_CLIENT_ID", "value": "${COGNITO_APP_CLIENT_ID}"}
+      ],
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/voxpopai-backend",
+          "awslogs-region": "${AWS_REGION}",
+          "awslogs-stream-prefix": "ecs"
+        }
+      }
+    }
+  ]
+} 

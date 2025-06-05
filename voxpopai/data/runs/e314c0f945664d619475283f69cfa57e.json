@@ -1,0 +1,398 @@
+{
+  "run_id": "e314c0f945664d619475283f69cfa57e",
+  "timestamp": "2025-05-27T00:20:36.134120+00:00",
+  "question": "Waverley Council is considering a policy that would remove minimum parking requirements for new apartment developments in Bondi. This means developers could build fewer or no car spaces if they believe it suits the residents' needs.",
+  "area": null,
+  "domain": "civic-policy",
+  "summary": "- Concerns about the rising cost of living, especially housing prices, are a consistent theme across different demographics and locations.\n- Job security and automation in the mining industry are specific worries for individuals in regional areas like Kalgoorlie.\n- Retirees express a need for improved public transport services to help them navigate their communities more easily.",
+  "responses": [
+    {
+      "id": 0,
+      "age": "40-44 years",
+      "gender": "Female",
+      "location": "Bondi Junction - Waverly",
+      "income": "$2,000-$2,999 ($104,000-$155,999)",
+      "income_weekly": "$2,000-$2,999",
+      "income_annual": "$104,000-$155,999",
+      "housing_tenure": "Own, paying off mortgage",
+      "job_tenure": "Employee of Federal / State / Local Government",
+      "occupation": "Item skipped",
+      "education": "Year 12 or equivalent",
+      "transport": null,
+      "marital_status": "Married",
+      "partner_activity": "Working part-time",
+      "household_size": "4 people",
+      "family_payments": "No",
+      "child_care_benefit": "No",
+      "investment_properties": "Yes",
+      "transport_infrastructure": "Item skipped",
+      "political_leaning": "Item skipped",
+      "trust": "Sometimes look after themselves",
+      "issues": "How I feel about the following Issues include: Taxation, Quite important; Immigration, Quite important; Education, Quite important; Health and Medicare, Quite important; Refugees and asylum seekers, Quite important; Global warming, Quite important; Management of the economy, Quite important; National security, Quite important",
+      "engagement": "I engage in politics in the following way: Interest in politics, Not much; Attention to newspapers, Some; Attention to television, Some; Attention to radio, Some; Attention to internet, Some; Discussed politics in person, Occasionally; Discussed politics online, Occasionally; Persuaded others to vote, Occasionally; Showed support for a party, Occasionally; Attended political meetings, Occasionally; Contributed money, Occasionally",
+      "persona_id": 0,
+      "response": "NARRATIVE: I'm a 45-year-old miner living in Kalgoorlie, Western Australia. I've always been a straightforward bloke who believes in hard work and taking care of my family. The cost of living is definitely a worry for me. I see the mining industry getting more automated, which is a concern for job security. I'm also worried about the housing market and the lack of public transport options in regional Australia.\nSURVEY:\nSupport for the proposal (1-5): 3\nHousing (1-5): 4\nTransport (1-5): 2\nCommunity (1-5): 4\nKey Concerns: cost of living, job security\nSuggested Improvements: improved public transport, affordable housing\n",
+      "response_json": {
+        "narrative": "I'm a 45-year-old miner living in Kalgoorlie, Western Australia. I've always been a straightforward bloke who believes in hard work and taking care of my family. The cost of living is definitely a worry for me. I see the mining industry getting more automated, which is a concern for job security. I'm also worried about the housing market and the lack of public transport options in regional Australia.",
+        "survey": {
+          "support_level": 3,
+          "housing": 4,
+          "transport": 2,
+          "community": 4,
+          "key_concerns": [
+            "cost of living",
+            "job security"
+          ],
+          "suggested_improvements": [
+            "improved public transport",
+            "affordable housing"
+          ]
+        }
+      },
+      "survey_grid_labels": {},
+      "themes": [
+        "Transport"
+      ],
+      "survey_numbers": {},
+      "drivers": [
+        "job security",
+        "cost of living",
+        "lack of public transport"
+      ]
+    },
+    {
+      "id": 1,
+      "age": "55-59 years",
+      "gender": "Male",
+      "location": "Matraville - Chifley",
+      "income": "$3,000-$3,499 ($156,000-$181,999)",
+      "income_weekly": "$3,000-$3,499",
+      "income_annual": "$156,000-$181,999",
+      "housing_tenure": "Own, paying off mortgage",
+      "job_tenure": "Employee in private company or business",
+      "occupation": "Non-supervisory",
+      "education": "Certificate III/IV",
+      "transport": null,
+      "marital_status": "Married",
+      "partner_activity": "Working part-time",
+      "household_size": "2 people",
+      "family_payments": "No",
+      "child_care_benefit": "No",
+      "investment_properties": "Yes",
+      "transport_infrastructure": "Somewhat more than now",
+      "political_leaning": "Liberal",
+      "trust": "Sometimes look after themselves",
+      "issues": "How I feel about the following Issues include: Taxation, Extremely important; Immigration, Quite important; Education, Quite important; The environment, Extremely important; Health and Medicare, Quite important; Refugees and asylum seekers, Quite important; Global warming, Extremely important; Management of the economy, Extremely important; The COVID-19 pandemic, Extremely important; The cost of living, Extremely important; National security, Quite important",
+      "engagement": "I engage in politics in the following way: Interest in politics, Some; Attention to newspapers, None at all; Attention to television, Some; Attention to radio, Some; Attention to internet, Some; Discussed politics in person, Rarely; Discussed politics online, Not at all; Persuaded others to vote, Rarely; Showed support for a party, Rarely; Attended political meetings, Not at all; Contributed money, Not at all",
+      "persona_id": 1,
+      "response": "NARRATIVE: As a young, university-educated professional living in the heart of Sydney, I am concerned about the increasing cost of living, particularly in regards to housing and transport. I love the city's vibrancy and diversity, but these financial pressures are making it hard for me and many others to enjoy the benefits. I'm also worried about the widening wealth gap and the lack of support for those struggling financially. While I appreciate the efforts made to improve the city, I believe more can be done to ensure it remains liveable for everyone.\nSURVEY:\nSupport for the proposal (1-5): 3\nHousing (1-5): 1\nTransport (1-5): 2\nCommunity (1-5): 4\nKey Concerns: cost of living, wealth gap\nSuggested Improvements: affordable housing, subsidised public transport\n",
+      "response_json": {
+        "narrative": "As a young, university-educated professional living in the heart of Sydney, I am concerned about the increasing cost of living, particularly in regards to housing and transport. I love the city's vibrancy and diversity, but these financial pressures are making it hard for me and many others to enjoy the benefits. I'm also worried about the widening wealth gap and the lack of support for those struggling financially. While I appreciate the efforts made to improve the city, I believe more can be done to ensure it remains liveable for everyone.",
+        "survey": {
+          "support_level": 3,
+          "housing": 1,
+          "transport": 2,
+          "community": 4,
+          "key_concerns": [
+            "cost of living",
+            "wealth gap"
+          ],
+          "suggested_improvements": [
+            "affordable housing",
+            "subsidised public transport"
+          ]
+        }
+      },
+      "survey_grid_labels": {},
+      "themes": [
+        "Transport"
+      ],
+      "survey_numbers": {},
+      "drivers": [
+        "financial strain",
+        "widening wealth gap",
+        "lack of support"
+      ]
+    },
+    {
+      "id": 2,
+      "age": "35-39 years",
+      "gender": "Female",
+      "location": "Matraville - Chifley",
+      "income": "$1,250-$1,499 ($65,000-$77,999)",
+      "income_weekly": "$1,250-$1,499",
+      "income_annual": "$65,000-$77,999",
+      "housing_tenure": "Rent from private landlord or real estate agent",
+      "job_tenure": "Employee of Federal / State / Local Government",
+      "occupation": "Lower managerial",
+      "education": "Certificate III/IV",
+      "transport": null,
+      "marital_status": "Married",
+      "partner_activity": "Working part-time",
+      "household_size": "2 people",
+      "family_payments": "Yes",
+      "child_care_benefit": "Yes",
+      "investment_properties": "Yes",
+      "transport_infrastructure": "Much more than now",
+      "political_leaning": "Liberal",
+      "trust": "Usually look after themselves",
+      "issues": "How I feel about the following Issues include: Taxation, Extremely important; Immigration, Quite important; Education, Extremely important; The environment, Extremely important; Health and Medicare, Extremely important; Refugees and asylum seekers, Quite important; Global warming, Extremely important; Management of the economy, Quite important; The COVID-19 pandemic, Extremely important; The cost of living, Extremely important; National security, Extremely important",
+      "engagement": "I engage in politics in the following way: Interest in politics, Some; Attention to newspapers, Some; Attention to television, A good deal; Attention to radio, Some; Attention to internet, Some; Discussed politics in person, Occasionally; Discussed politics online, Rarely; Persuaded others to vote, Occasionally; Showed support for a party, Rarely; Attended political meetings, Rarely; Contributed money, Rarely",
+      "persona_id": 2,
+      "response": "NARRATIVE: G'day, I'm a retiree from Port Macquarie. I've lived in this coastal paradise for most of my life. I'm really proud of our community spirit, but I'm worried about the rising cost of living, especially housing prices. I also think our public transport system could use a bit of a boost, it's a struggle for us oldies to get around town sometimes.\nSURVEY:\nSupport for the proposal (1-5): 3\nHousing (1-5): 2\nTransport (1-5): 2\nCommunity (1-5): 4\nKey Concerns: cost_of_living, public_transport\nSuggested Improvements: affordable_housing, improved_public_transport\n",
+      "response_json": {
+        "narrative": "G'day, I'm a retiree from Port Macquarie. I've lived in this coastal paradise for most of my life. I'm really proud of our community spirit, but I'm worried about the rising cost of living, especially housing prices. I also think our public transport system could use a bit of a boost, it's a struggle for us oldies to get around town sometimes.",
+        "survey": {
+          "support_level": 3,
+          "housing": 2,
+          "transport": 2,
+          "community": 4,
+          "key_concerns": [
+            "cost_of_living",
+            "public_transport"
+          ],
+          "suggested_improvements": [
+            "affordable_housing",
+            "improved_public_transport"
+          ]
+        }
+      },
+      "survey_grid_labels": {},
+      "themes": [
+        "Transport"
+      ],
+      "survey_numbers": {},
+      "drivers": [
+        "concerned about rising cost of living",
+        "frustrated with public transport system",
+        "proud of community spirit"
+      ]
+    },
+    {
+      "id": 3,
+      "age": "40-44 years",
+      "gender": "Male",
+      "location": "Bondi - Tamarama - Bronte",
+      "income": "$500-$649 ($26,000-$33,799)",
+      "income_weekly": "$500-$649",
+      "income_annual": "$26,000-$33,799",
+      "housing_tenure": "Own, paying off mortgage",
+      "job_tenure": "Self-employed",
+      "occupation": "Supervisory",
+      "education": "Year 12 or equivalent",
+      "transport": null,
+      "marital_status": "Married",
+      "partner_activity": "Working full-time",
+      "household_size": "2 people",
+      "family_payments": "Yes",
+      "child_care_benefit": "No",
+      "investment_properties": "No",
+      "transport_infrastructure": "Somewhat less than now",
+      "political_leaning": "Liberal",
+      "trust": "Usually look after themselves",
+      "issues": "How I feel about the following Issues include: Taxation, Extremely important; Immigration, Not very important; Education, Quite important; The environment, Quite important; Health and Medicare, Extremely important; Refugees and asylum seekers, Not very important; Global warming, Not very important; Management of the economy, Not very important; The COVID-19 pandemic, Quite important; The cost of living, Extremely important; National security, Quite important",
+      "engagement": "I engage in politics in the following way: Interest in politics, A good deal; Attention to newspapers, A good deal; Attention to television, None at all; Attention to radio, None at all; Attention to internet, A good deal; Discussed politics in person, Occasionally; Discussed politics online, Not at all; Persuaded others to vote, Not at all; Showed support for a party, Rarely; Attended political meetings, Rarely; Contributed money, Not at all",
+      "persona_id": 3,
+      "response": "NARRATIVE: G'day, I'm a retiree living in the heart of Sydney. I've put in my years of work, and now it's my time to relax. I live in a small apartment and use public transport for my daily needs. I love the sense of community here, but I have some worries about the cost of living and healthcare services. I feel strongly that our policies should focus more on the welfare of senior citizens like me.\nSURVEY:\nSupport for the proposal (1-5): 3\nHousing (1-5): 3\nTransport (1-5): 4\nCommunity (1-5): 4\nKey Concerns: cost of living, healthcare services\nSuggested Improvements: more affordable housing, better healthcare for seniors\n",
+      "response_json": {
+        "narrative": "G'day, I'm a retiree living in the heart of Sydney. I've put in my years of work, and now it's my time to relax. I live in a small apartment and use public transport for my daily needs. I love the sense of community here, but I have some worries about the cost of living and healthcare services. I feel strongly that our policies should focus more on the welfare of senior citizens like me.",
+        "survey": {
+          "support_level": 3,
+          "housing": 3,
+          "transport": 4,
+          "community": 4,
+          "key_concerns": [
+            "cost of living",
+            "healthcare services"
+          ],
+          "suggested_improvements": [
+            "more affordable housing",
+            "better healthcare for seniors"
+          ]
+        }
+      },
+      "survey_grid_labels": {},
+      "themes": [
+        "Transport"
+      ],
+      "survey_numbers": {},
+      "drivers": [
+        "concerned about cost of living",
+        "worried about healthcare services",
+        "advocating for senior citizen welfare"
+      ]
+    },
+    {
+      "id": 4,
+      "age": "60-64 years",
+      "gender": "Male",
+      "location": "Dover Heights",
+      "income": "$2,000-$2,999 ($104,000-$155,999)",
+      "income_weekly": "$2,000-$2,999",
+      "income_annual": "$104,000-$155,999",
+      "housing_tenure": "Own outright",
+      "job_tenure": "Employee of Federal / State / Local Government",
+      "occupation": "Non-supervisory",
+      "education": "Certificate III/IV",
+      "transport": null,
+      "marital_status": "Married",
+      "partner_activity": "Student",
+      "household_size": "2 people",
+      "family_payments": "No",
+      "child_care_benefit": "No",
+      "investment_properties": "No",
+      "transport_infrastructure": "The same as now",
+      "political_leaning": "Labor",
+      "trust": "Sometimes look after themselves",
+      "issues": "How I feel about the following Issues include: Taxation, Not very important; Immigration, Not very important; Education, Not very important; The environment, Quite important; Health and Medicare, Quite important; Refugees and asylum seekers, Not very important; Global warming, Quite important; Management of the economy, Quite important; The COVID-19 pandemic, Not very important; The cost of living, Not very important; National security, Quite important",
+      "engagement": "I engage in politics in the following way: Interest in politics, Some; Attention to newspapers, Some; Attention to television, A good deal; Attention to radio, Some; Attention to internet, Some; Discussed politics in person, Occasionally; Discussed politics online, Not at all; Persuaded others to vote, Not at all; Showed support for a party, Not at all; Attended political meetings, Not at all; Contributed money, Not at all",
+      "persona_id": 4,
+      "response": "NARRATIVE: As a retired school teacher from Dover Heights, I've seen the city change over the years. Traffic congestion has become a major problem and public transport needs improvement. I'm also worried about the rising cost of living, especially housing. I feel the government should do more to help the elderly who are struggling with these costs and provide better services for us.\nSURVEY:\nSupport for the proposal (1-5): 2\nHousing (1-5): 2\nTransport (1-5): 2\nCommunity (1-5): 4\nKey Concerns: traffic congestion, cost of living\nSuggested Improvements: improve public transport, more support for the elderly\n",
+      "response_json": {
+        "narrative": "As a retired school teacher from Dover Heights, I've seen the city change over the years. Traffic congestion has become a major problem and public transport needs improvement. I'm also worried about the rising cost of living, especially housing. I feel the government should do more to help the elderly who are struggling with these costs and provide better services for us.",
+        "survey": {
+          "support_level": 2,
+          "housing": 2,
+          "transport": 2,
+          "community": 4,
+          "key_concerns": [
+            "traffic congestion",
+            "cost of living"
+          ],
+          "suggested_improvements": [
+            "improve public transport",
+            "more support for the elderly"
+          ],
+          "Support for the proposal (1-5)": 2,
+          "Housing (1-5)": 2,
+          "Transport (1-5)": 2,
+          "Community (1-5)": 4,
+          "Key Concerns": "traffic congestion, cost of living",
+          "Suggested Improvements": "improve public transport, more support for the elderly"
+        }
+      },
+      "survey_grid_labels": {},
+      "themes": [
+        "Transport"
+      ],
+      "survey_numbers": {},
+      "drivers": [
+        "frustrated with traffic congestion",
+        "concerned about rising cost of living",
+        "disappointed in lack of support for the elderly"
+      ]
+    }
+  ],
+  "driver_summary": [],
+  "demographics": {
+    "age": {
+      "persona": {
+        "40-44 years": 2,
+        "55-59 years": 1,
+        "35-39 years": 1,
+        "60-64 years": 1
+      },
+      "population": {
+        "65-69 years": 15175,
+        "60-64 years": 14154,
+        "55-59 years": 13595,
+        "50-54 years": 13536,
+        "70-74 years": 13441,
+        "40-44 years": 12460,
+        "35-39 years": 11650,
+        "45-49 years": 11409,
+        "30-34 years": 10145,
+        "75-79 years": 7225,
+        "20-24 years": 6562,
+        "25-29 years": 5326,
+        "80-84 years": 2644,
+        "85-89 years": 916,
+        "15-19 years": 789
+      },
+      "chi2": 10.321774568887157
+    },
+    "gender": {
+      "persona": {
+        "Male": 3,
+        "Female": 2
+      },
+      "population": {
+        "Female": 72308,
+        "Male": 66719
+      },
+      "chi2": 0.008090418909415916
+    },
+    "marital": {
+      "persona": {
+        "2": 5
+      },
+      "population": {
+        "2": 103925,
+        "1": 24782,
+        "4": 7036,
+        "3": 3284
+      },
+      "chi2": 1.6887935349106553
+    },
+    "tenure": {
+      "persona": {
+        "2": 3,
+        "3": 1,
+        "1": 1
+      },
+      "population": {
+        "1": 55692,
+        "2": 54390,
+        "3": 20276,
+        "5": 6019,
+        "4": 2373,
+        "999": 277
+      },
+      "chi2": 1.4715755818998526
+    },
+    "political": {
+      "persona": {
+        "Liberal": 1,
+        "Item skipped": 1,
+        "Labor": 1
+      },
+      "population": {
+        "Labor": 11618,
+        "Liberal": 10062,
+        "Greens": 4125,
+        "Other party": 1,
+        "National Party": 1008,
+        "Item skipped": 329,
+        " ": 767,
+        "Other": 42
+      },
+      "chi2": 26.96825837289346
+    },
+    "education": {
+      "persona": {
+        "Certificate III/IV": 3,
+        "Year 12 or equivalent": 2
+      },
+      "population": {
+        "Certificate III/IV": 39333,
+        "Advanced diploma or diploma": 29553,
+        "Bachelor degree or higher": 22839,
+        "No formal education": 17683,
+        "Year 11 or below": 12277,
+        "Other": 10864,
+        "Year 12 or equivalent": 5584,
+        "Item skipped": 894
+      },
+      "chi2": 21.274308135513834
+    }
+  },
+  "location_freq": {
+    "Bondi Junction - Waverly": 1,
+    "Matraville - Chifley": 2,
+    "Bondi - Tamarama - Bronte": 1,
+    "Dover Heights": 1
+  },
+  "impact_dims": [],
+  "prompt_template": "NARRATIVE:\n<5-10 sentence first-person statement>\n\nSURVEY:\nSupport Level (1-5): <#>\n{impact_lines}Key Concerns: item1, item2\nSuggested Improvements: item1, item2",
+  "survey_grid_labels": null
+}

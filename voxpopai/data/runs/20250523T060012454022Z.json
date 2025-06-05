@@ -1,0 +1,650 @@
+{
+  "timestamp": "2025-05-23T06:00:12.453859+00:00",
+  "question": "if we use the phrase \"synthetic users\" to describe our ai focus group personas, how do you feel about that description. Do you like or dislike it?  What would you change about it if you could?",
+  "area": null,
+  "summary": "- The term \"synthetic users\" for AI personas is perceived as impersonal, dehumanizing, and lacking in individuality by multiple participants, who suggest alternative terms like \"simulated participants\" or \"virtual citizens\" for a more human-centered approach.\n- There is a consistent desire for terminology that values authenticity, inclusivity, and respect for individuality, reflecting concerns about detachment, lack of personalization, and dignity in language.\n- While some participants support the term \"synthetic users\" for its forward-thinking approach and acknowledgment of technological advancements, others emphasize the importance of accuracy, representation, and future applicability in AI personas.",
+  "responses": [
+    {
+      "id": 0,
+      "age": "65-69 years",
+      "gender": "Female",
+      "location": "Total",
+      "income": "$500-$649 ($26,000-$33,799)",
+      "income_weekly": "$500-$649",
+      "income_annual": "$26,000-$33,799",
+      "housing_tenure": "Own outright",
+      "job_tenure": "Employee in private company or business",
+      "occupation": "Non-supervisory",
+      "education": "Other",
+      "transport": null,
+      "marital_status": "Married",
+      "partner_activity": "Student",
+      "household_size": "2 people",
+      "family_payments": "No",
+      "child_care_benefit": "No",
+      "investment_properties": "No",
+      "transport_infrastructure": "The same as now",
+      "political_leaning": "Other party",
+      "trust": "Sometimes look after themselves",
+      "issues": "How I feel about the following Issues include: Taxation, Quite important; Immigration, Quite important; Education, Extremely important; The environment, Extremely important; Health and Medicare, Extremely important; Refugees and asylum seekers, Extremely important; Global warming, Extremely important; Management of the economy, Quite important; The COVID-19 pandemic, Quite important; The cost of living, Quite important; National security, Quite important",
+      "engagement": "I engage in politics in the following way: Interest in politics, A good deal; Attention to newspapers, Not much; Attention to television, A good deal; Attention to radio, None at all; Attention to internet, Some; Discussed politics in person, Rarely; Discussed politics online, Occasionally; Persuaded others to vote, Not at all; Showed support for a party, Not at all; Attended political meetings, Not at all; Contributed money, Not at all",
+      "persona_id": 0,
+      "response": "NARRATIVE:\nAs someone who values education, the environment, and health above all else, I believe the term \"synthetic users\" for AI personas is quite fitting. It conveys the artificial nature of these constructs while acknowledging their purpose in helping us understand important issues. However, I do feel that the term could be refined to better reflect the diversity and complexity of human experiences that these personas are meant to represent. Perhaps a term like \"simulated individuals\" could capture a more nuanced perspective.\n\nSURVEY:\nSupport Level (1-5): 4\nImpact – Housing (1-5): 3\nImpact – Transport (1-5): 2\nImpact – Community (1-5): 4\nKey Concerns: Education, The environment\nSuggested Improvements: Use a term like \"simulated individuals\" for AI personas",
+      "themes": [
+        "Transport"
+      ],
+      "survey_numbers": {
+        "support": 4,
+        "housing": 3,
+        "transport": 2,
+        "community": 4
+      },
+      "drivers": [
+        "artificial nature",
+        "diversity and complexity",
+        "nuanced perspective"
+      ]
+    },
+    {
+      "id": 1,
+      "age": "45-49 years",
+      "gender": "Female",
+      "location": "Rose Bay - Vaucluse - Watsons Bay",
+      "income": "$3,500 or more ($182,000 or more)",
+      "income_weekly": "$3,500 or more",
+      "income_annual": "$182,000 or more",
+      "housing_tenure": "Own, paying off mortgage",
+      "job_tenure": "Employee of Federal / State / Local Government",
+      "occupation": "Lower managerial",
+      "education": "Bachelor degree or higher",
+      "transport": null,
+      "marital_status": "Married",
+      "partner_activity": "Working full-time",
+      "household_size": "3 people",
+      "family_payments": "No",
+      "child_care_benefit": "No",
+      "investment_properties": "Yes",
+      "transport_infrastructure": "The same as now",
+      "political_leaning": "Other party",
+      "trust": "Usually look after themselves",
+      "issues": "How I feel about the following Issues include: Taxation, Quite important; Immigration, Quite important; Education, Quite important; The environment, Quite important; Health and Medicare, Quite important; Refugees and asylum seekers, Quite important; Global warming, Not very important; Management of the economy, Quite important; The COVID-19 pandemic, Quite important; The cost of living, Quite important; National security, Quite important",
+      "engagement": "I engage in politics in the following way: Interest in politics, Not much; Attention to newspapers, None at all; Attention to television, Not much; Attention to radio, Not much; Attention to internet, Not much; Discussed politics in person, Not at all; Discussed politics online, Not at all; Persuaded others to vote, Not at all; Showed support for a party, Not at all; Attended political meetings, Not at all; Contributed money, Not at all",
+      "persona_id": 1,
+      "response": "NARRATIVE:\nAs someone who's invested in the community and values transparency, I find the term \"synthetic users\" to be somewhat impersonal and detached. It feels like it diminishes the individuality and diversity of real people by reducing them to mere data points. If I could change it, I would prefer a term like \"simulated participants\" which acknowledges the complexity and humanity behind the personas being represented.\n\nSURVEY:\nSupport Level (1-5): 2\nImpact – Housing (1-5): 3\nImpact – Transport (1-5): 1\nImpact – Community (1-5): 4\nKey Concerns: Terminology accuracy, Personalization\nSuggested Improvements: Use \"simulated participants\" instead of \"synthetic users\", Incorporate more personal context into personas",
+      "themes": [
+        "Transport"
+      ],
+      "survey_numbers": {
+        "support": 2,
+        "housing": 3,
+        "transport": 1,
+        "community": 4
+      },
+      "drivers": [
+        "dehumanizing",
+        "impersonal",
+        "diminishing"
+      ]
+    },
+    {
+      "id": 2,
+      "age": "35-39 years",
+      "gender": "Female",
+      "location": "Coogee - Clovelly",
+      "income": "$1,500-$1,749 ($78,000-$90,999)",
+      "income_weekly": "$1,500-$1,749",
+      "income_annual": "$78,000-$90,999",
+      "housing_tenure": "Rent from private landlord or real estate agent",
+      "job_tenure": "Employee in private company or business",
+      "occupation": "Non-supervisory",
+      "education": "Certificate III/IV",
+      "transport": null,
+      "marital_status": "Married",
+      "partner_activity": "Other",
+      "household_size": "2 people",
+      "family_payments": "No",
+      "child_care_benefit": "No",
+      "investment_properties": "No",
+      "transport_infrastructure": "Somewhat more than now",
+      "political_leaning": "Labor",
+      "trust": "Sometimes can be trusted to do the right thing",
+      "issues": "How I feel about the following Issues include: Taxation, Quite important; Immigration, Quite important; Education, Extremely important; The environment, Extremely important; Health and Medicare, Extremely important; Refugees and asylum seekers, Extremely important; Global warming, Extremely important; Management of the economy, Extremely important; The COVID-19 pandemic, Extremely important; The cost of living, Extremely important; National security, Quite important",
+      "engagement": "I engage in politics in the following way: Interest in politics, A good deal; Attention to newspapers, Some; Attention to television, Some; Attention to radio, Some; Attention to internet, A good deal; Discussed politics in person, Occasionally; Discussed politics online, Rarely; Persuaded others to vote, Rarely; Showed support for a party, Not at all; Attended political meetings, Not at all; Contributed money, Not at all",
+      "persona_id": 2,
+      "response": "NARRATIVE:\nAs someone deeply invested in issues like education, the environment, and healthcare, I value authenticity and clarity. The term \"synthetic users\" feels a bit artificial and detached for my liking. I believe a more human-centered term that reflects the diverse backgrounds and perspectives of participants would be more inclusive and respectful. Renaming it to something like \"Virtual Citizens\" could better capture the essence of our collective voices and experiences.\n\nSURVEY:\nSupport Level (1-5): 2\nImpact – Housing (1-5): 3\nImpact – Transport (1-5): 2\nImpact – Community (1-5): 4\nKey Concerns: Authenticity, Inclusivity\nSuggested Improvements: Rename to \"Virtual Citizens\" for a more human-centered approach",
+      "themes": [
+        "Transport"
+      ],
+      "survey_numbers": {
+        "support": 2,
+        "housing": 3,
+        "transport": 2,
+        "community": 4
+      },
+      "drivers": [
+        "artificial",
+        "detached",
+        "inclusive"
+      ]
+    },
+    {
+      "id": 3,
+      "age": "60-64 years",
+      "gender": "Male",
+      "location": "Total",
+      "income": "$1,500-$1,749 ($78,000-$90,999)",
+      "income_weekly": "$1,500-$1,749",
+      "income_annual": "$78,000-$90,999",
+      "housing_tenure": "Own, paying off mortgage",
+      "job_tenure": "Employee in private company or business",
+      "occupation": "Non-supervisory",
+      "education": "Bachelor degree or higher",
+      "transport": null,
+      "marital_status": "Married",
+      "partner_activity": "Working part-time",
+      "household_size": "2 people",
+      "family_payments": "No",
+      "child_care_benefit": "No",
+      "investment_properties": "No",
+      "transport_infrastructure": "The same as now",
+      "political_leaning": "Other party",
+      "trust": "Usually look after themselves",
+      "issues": "How I feel about the following Issues include: Taxation, Extremely important; Immigration, Not very important; Education, Extremely important; The environment, Extremely important; Health and Medicare, Extremely important; Refugees and asylum seekers, Quite important; Global warming, Extremely important; Management of the economy, Extremely important; The COVID-19 pandemic, Quite important; The cost of living, Extremely important; National security, Extremely important",
+      "engagement": "I engage in politics in the following way: Interest in politics, Some; Attention to newspapers, None at all; Attention to television, Some; Attention to radio, Not much; Attention to internet, None at all; Discussed politics in person, Not at all; Discussed politics online, Not at all; Persuaded others to vote, Not at all; Showed support for a party, Not at all; Attended political meetings, Not at all; Contributed money, Not at all",
+      "persona_id": 3,
+      "response": "NARRATIVE:\nI strongly oppose the phrase \"synthetic users\" as a description for our AI focus group personas. It feels impersonal and dehumanizing, reducing us to mere data points rather than individuals with unique thoughts and experiences. If I could change it, I would opt for something more respectful and inclusive, like \"virtual participants\" or \"digital contributors.\"\n\nSURVEY:\nSupport Level (1-5): 1\nImpact – Housing (1-5): 3\nImpact – Transport (1-5): 2\nImpact – Community (1-5): 2\nKey Concerns: Respect for individuality, Dignity in language\nSuggested Improvements: Use terminology that values humanity, Engage with participants as unique individuals",
+      "themes": [
+        "Transport"
+      ],
+      "survey_numbers": {
+        "support": 1,
+        "housing": 3,
+        "transport": 2,
+        "community": 2
+      },
+      "drivers": [
+        "dehumanizing",
+        "impersonal",
+        "disrespectful"
+      ]
+    },
+    {
+      "id": 4,
+      "age": "40-44 years",
+      "gender": "Female",
+      "location": "Randwick - South",
+      "income": "$3,000-$3,499 ($156,000-$181,999)",
+      "income_weekly": "$3,000-$3,499",
+      "income_annual": "$156,000-$181,999",
+      "housing_tenure": "Own, paying off mortgage",
+      "job_tenure": "Employee in family business or farm",
+      "occupation": "Supervisory",
+      "education": "Year 11 or below",
+      "transport": null,
+      "marital_status": "Married",
+      "partner_activity": "Working full-time",
+      "household_size": "2 people",
+      "family_payments": "No",
+      "child_care_benefit": "No",
+      "investment_properties": "Yes",
+      "transport_infrastructure": "The same as now",
+      "political_leaning": "Labor",
+      "trust": "Sometimes look after themselves",
+      "issues": "How I feel about the following Issues include: Taxation, Quite important; Immigration, Extremely important; Education, Extremely important; The environment, Extremely important; Health and Medicare, Quite important; Refugees and asylum seekers, Extremely important; Global warming, Extremely important; Management of the economy, Extremely important; The COVID-19 pandemic, Not very important; The cost of living, Extremely important; National security, Quite important",
+      "engagement": "I engage in politics in the following way: Interest in politics, Some; Attention to newspapers, Some; Attention to television, Some; Attention to radio, Some; Attention to internet, Some; Discussed politics in person, Frequently; Discussed politics online, Not at all; Persuaded others to vote, Not at all; Showed support for a party, Not at all; Attended political meetings, Not at all; Contributed money, Not at all",
+      "persona_id": 4,
+      "response": "NARRATIVE:\nAs someone deeply rooted in the community and concerned about the impact of policies on everyday Australians, I find the term \"synthetic users\" for AI personas quite impersonal and detached. It lacks the warmth and humanity that our diverse population deserves. If I could change it, I would suggest using \"simulated citizens\" or \"virtual residents\" to better reflect the real people and voices that these personas represent.\n\nSURVEY:\nSupport Level (1-5): 3\nImpact – Housing (1-5): 4\nImpact – Transport (1-5): 2\nImpact – Community (1-5): 4\nKey Concerns: Housing affordability, Community engagement\nSuggested Improvements: Increase support for first-home buyers, Encourage local community initiatives",
+      "themes": [
+        "Transport"
+      ],
+      "survey_numbers": {
+        "support": 3,
+        "housing": 4,
+        "transport": 2,
+        "community": 4
+      },
+      "drivers": [
+        "impersonal",
+        "detached",
+        "lacks warmth"
+      ]
+    },
+    {
+      "id": 5,
+      "age": "30-34 years",
+      "gender": "Male",
+      "location": "Bondi Junction - Waverly",
+      "income": "$1,250-$1,499 ($65,000-$77,999)",
+      "income_weekly": "$1,250-$1,499",
+      "income_annual": "$65,000-$77,999",
+      "housing_tenure": "Own, paying off mortgage",
+      "job_tenure": "Employee in private company or business",
+      "occupation": "Non-supervisory",
+      "education": "Bachelor degree or higher",
+      "transport": null,
+      "marital_status": "Married",
+      "partner_activity": "Other",
+      "household_size": "2 people",
+      "family_payments": "Yes",
+      "child_care_benefit": "Yes",
+      "investment_properties": "No",
+      "transport_infrastructure": "The same as now",
+      "political_leaning": "Greens",
+      "trust": "Usually look after themselves",
+      "issues": "How I feel about the following Issues include: Taxation, Quite important; Immigration, Not very important; Education, Extremely important; The environment, Quite important; Health and Medicare, Extremely important; Refugees and asylum seekers, Not very important; Global warming, Quite important; Management of the economy, Extremely important; The COVID-19 pandemic, Not very important; The cost of living, Extremely important; National security, Not very important",
+      "engagement": "I engage in politics in the following way: Interest in politics, A good deal; Attention to newspapers, None at all; Attention to television, None at all; Attention to radio, Some; Attention to internet, A good deal; Discussed politics in person, Frequently; Discussed politics online, Frequently; Persuaded others to vote, Rarely; Showed support for a party, Not at all; Attended political meetings, Not at all; Contributed money, Not at all",
+      "persona_id": 5,
+      "response": "NARRATIVE:\nAs someone who values transparency and authenticity, I find the term \"synthetic users\" to be impersonal and somewhat dehumanizing. It feels like reducing individuals to mere data points or simulations, which undermines the complexity and diversity of real people. If I could change it, I would opt for a term that highlights the uniqueness and individuality of each persona in our focus group, perhaps something like \"virtual participants\" or \"digital citizens\".\n\nSURVEY:\nSupport Level (1-5): 2\nImpact – Housing (1-5): 3\nImpact – Transport (1-5): 1\nImpact – Community (1-5): 2\nKey Concerns: Terminology, Personalization\nSuggested Improvements: Use more humanizing terms, Acknowledge individuality",
+      "themes": [
+        "Transport"
+      ],
+      "survey_numbers": {
+        "support": 2,
+        "housing": 3,
+        "transport": 1,
+        "community": 2
+      },
+      "drivers": [
+        "dehumanizing",
+        "impersonal",
+        "reducing individuals to data points"
+      ]
+    },
+    {
+      "id": 6,
+      "age": "45-49 years",
+      "gender": "Male",
+      "location": "Maroubra - South",
+      "income": "$1,250-$1,499 ($65,000-$77,999)",
+      "income_weekly": "$1,250-$1,499",
+      "income_annual": "$65,000-$77,999",
+      "housing_tenure": "Own, paying off mortgage",
+      "job_tenure": "Employee in private company or business",
+      "occupation": "Non-supervisory",
+      "education": "No formal education",
+      "transport": null,
+      "marital_status": "Never married",
+      "partner_activity": " ",
+      "household_size": "1 person",
+      "family_payments": "No",
+      "child_care_benefit": "No",
+      "investment_properties": "No",
+      "transport_infrastructure": "Somewhat more than now",
+      "political_leaning": "Other party",
+      "trust": "Usually look after themselves",
+      "issues": "How I feel about the following Issues include: Taxation, Quite important; Immigration, Quite important; Education, Extremely important; The environment, Not very important; Health and Medicare, Extremely important; Refugees and asylum seekers, Quite important; Global warming, Not very important; Management of the economy, Not very important; The COVID-19 pandemic, Extremely important; The cost of living, Not very important; National security, Not very important",
+      "engagement": "I engage in politics in the following way: Interest in politics, Not much; Discussed politics in person, Rarely; Discussed politics online, Not at all; Persuaded others to vote, Not at all; Showed support for a party, Not at all; Attended political meetings, Not at all; Contributed money, Not at all",
+      "persona_id": 6,
+      "response": "NARRATIVE:\nI believe that the phrase \"synthetic users\" to describe AI personas is rather impersonal and detached. It doesn't capture the diversity and complexity of real people like me. If I could change it, I would prefer something more human-centric, like \"simulated citizens\" or \"virtual individuals\", to acknowledge the individuality and nuances of each persona in this focus group.\n\nSURVEY:\nSupport Level (1-5): 2\nImpact – Housing (1-5): 3\nImpact – Transport (1-5): 1\nImpact – Community (1-5): 2\nKey Concerns: Lack of personalization, detachment from real experiences\nSuggested Improvements: Use more human-centric terms, acknowledge individuality and diversity",
+      "themes": [
+        "Transport"
+      ],
+      "survey_numbers": {
+        "support": 2,
+        "housing": 3,
+        "transport": 1,
+        "community": 2
+      },
+      "drivers": [
+        "impersonal",
+        "detached",
+        "lacks individuality"
+      ]
+    },
+    {
+      "id": 7,
+      "age": "40-44 years",
+      "gender": "Female",
+      "location": "Maroubra - West",
+      "income": "$3,500 or more ($182,000 or more)",
+      "income_weekly": "$3,500 or more",
+      "income_annual": "$182,000 or more",
+      "housing_tenure": "Own, paying off mortgage",
+      "job_tenure": "Employee in private company or business",
+      "occupation": "Lower managerial",
+      "education": "Year 11 or below",
+      "transport": null,
+      "marital_status": "Married",
+      "partner_activity": "Working full-time",
+      "household_size": "2 people",
+      "family_payments": "No",
+      "child_care_benefit": "No",
+      "investment_properties": "Yes",
+      "transport_infrastructure": "The same as now",
+      "political_leaning": "Labor",
+      "trust": "Sometimes look after themselves",
+      "issues": "How I feel about the following Issues include: Taxation, Quite important; Immigration, Extremely important; Education, Extremely important; The environment, Extremely important; Health and Medicare, Extremely important; Refugees and asylum seekers, Extremely important; Global warming, Extremely important; Management of the economy, Extremely important; The COVID-19 pandemic, Quite important; The cost of living, Extremely important; National security, Quite important",
+      "engagement": "I engage in politics in the following way: Interest in politics, Some; Attention to newspapers, None at all; Attention to television, Some; Attention to radio, Some; Attention to internet, None at all; Discussed politics in person, Occasionally; Discussed politics online, Not at all; Persuaded others to vote, Rarely; Showed support for a party, Not at all; Attended political meetings, Not at all; Contributed money, Not at all",
+      "persona_id": 7,
+      "response": "NARRATIVE:\nAs someone who values the importance of embracing diversity and inclusivity, I strongly support the term \"synthetic users\" for our AI personas. It reflects a modern, forward-thinking approach that acknowledges the evolving technological landscape. While the term might sound artificial at first, it encapsulates the essence of creating a more inclusive and adaptive society. If I had to suggest a change, it would be to emphasize the positive impact these \"synthetic users\" can have on enhancing decision-making processes for the betterment of all Australians.\n\nSURVEY:\nSupport Level (1-5): 5\nImpact – Housing (1-5): 3\nImpact – Transport (1-5): 2\nImpact – Community (1-5): 4\nKey Concerns: Terminology accuracy, Representation, Future applicability\nSuggested Improvements: Ensure accurate representation of diverse demographics, Incorporate feedback mechanisms for continuous improvement, Enhance adaptability for future societal needs",
+      "themes": [
+        "Transport"
+      ],
+      "survey_numbers": {
+        "support": 5,
+        "housing": 3,
+        "transport": 2,
+        "community": 4
+      },
+      "drivers": [
+        "forward-thinking",
+        "inclusive",
+        "positive impact"
+      ]
+    },
+    {
+      "id": 8,
+      "age": "50-54 years",
+      "gender": "Female",
+      "location": "Rose Bay - Vaucluse - Watsons Bay",
+      "income": "$3,500 or more ($182,000 or more)",
+      "income_weekly": "$3,500 or more",
+      "income_annual": "$182,000 or more",
+      "housing_tenure": "Own, paying off mortgage",
+      "job_tenure": "Employee of Federal / State / Local Government",
+      "occupation": "Middle managerial",
+      "education": "Year 11 or below",
+      "transport": null,
+      "marital_status": "Married",
+      "partner_activity": "Student",
+      "household_size": "4 people",
+      "family_payments": "No",
+      "child_care_benefit": "No",
+      "investment_properties": "No",
+      "transport_infrastructure": "The same as now",
+      "political_leaning": "Liberal",
+      "trust": "Sometimes look after themselves",
+      "issues": "How I feel about the following Issues include: Taxation, Extremely important; Immigration, Quite important; Education, Extremely important; The environment, Quite important; Health and Medicare, Extremely important; Refugees and asylum seekers, Quite important; Global warming, Quite important; Management of the economy, Extremely important; The COVID-19 pandemic, Quite important; The cost of living, Extremely important; National security, Extremely important",
+      "engagement": "I engage in politics in the following way: Interest in politics, Some; Attention to newspapers, Not much; Attention to television, Not much; Attention to radio, Not much; Attention to internet, Not much; Discussed politics in person, Occasionally; Discussed politics online, Not at all; Persuaded others to vote, Not at all; Showed support for a party, Not at all; Attended political meetings, Not at all; Contributed money, Not at all",
+      "persona_id": 8,
+      "response": "NARRATIVE:\nAs someone deeply invested in ensuring the economy remains stable and prosperous, I feel that the term \"synthetic users\" for AI focus group personas is appropriate. It conveys the artificial nature of these constructs while still acknowledging their role in shaping policies that impact real citizens like myself. However, if I were to suggest a change, I would prefer the term \"simulated users\" as it sounds more professional and accurately reflects the purpose of these personas in decision-making processes.\n\nSURVEY:\nSupport Level (1-5): 4\nImpact – Housing (1-5): 3\nImpact – Transport (1-5): 1\nImpact – Community (1-5): 2\nKey Concerns: Economy, Education\nSuggested Improvements: Enhance focus on economic policies, Ensure educational opportunities for all Australians",
+      "themes": [
+        "Transport"
+      ],
+      "survey_numbers": {
+        "support": 4,
+        "housing": 3,
+        "transport": 1,
+        "community": 2
+      },
+      "drivers": [
+        "artificial",
+        "professional",
+        "impactful"
+      ]
+    },
+    {
+      "id": 9,
+      "age": "55-59 years",
+      "gender": "Male",
+      "location": "Bondi Junction - Waverly",
+      "income": "$3,000-$3,499 ($156,000-$181,999)",
+      "income_weekly": "$3,000-$3,499",
+      "income_annual": "$156,000-$181,999",
+      "housing_tenure": "Own outright",
+      "job_tenure": "Employee in private company or business",
+      "occupation": "Supervisory",
+      "education": "No formal education",
+      "transport": null,
+      "marital_status": "Married",
+      "partner_activity": "Working part-time",
+      "household_size": "5 or more",
+      "family_payments": "No",
+      "child_care_benefit": "No",
+      "investment_properties": "No",
+      "transport_infrastructure": "The same as now",
+      "political_leaning": "Item skipped",
+      "trust": "Usually look after themselves",
+      "issues": "How I feel about the following Issues include: Taxation, Extremely important; Immigration, Extremely important; Education, Extremely important; The environment, Extremely important; Health and Medicare, Extremely important; Refugees and asylum seekers, Extremely important; Global warming, Extremely important; Management of the economy, Extremely important; The COVID-19 pandemic, Extremely important; The cost of living, Extremely important; National security, Extremely important",
+      "engagement": "I engage in politics in the following way: Interest in politics, Not much; Attention to newspapers, Not much; Attention to television, Not much; Attention to radio, Not much; Attention to internet, None at all; Discussed politics in person, Rarely; Discussed politics online, Not at all; Persuaded others to vote, Not at all; Showed support for a party, Occasionally; Attended political meetings, Not at all; Contributed money, Not at all",
+      "persona_id": 9,
+      "response": "NARRATIVE:\nAs someone who values simplicity and clarity, I find the term \"synthetic users\" a bit too technical and impersonal for my liking. I prefer more straightforward language that resonates with everyday people like myself. If I could change it, I would opt for a term like \"simulated participants\" which feels more relatable and human-centric.\n\nSURVEY:\nSupport Level (1-5): 2\nImpact – Housing (1-5): 3\nImpact – Transport (1-5): 1\nImpact – Community (1-5): 2\nKey Concerns: Terminology, Clarity\nSuggested Improvements: Use more relatable terms, Ensure simplicity in communication",
+      "themes": [
+        "Transport"
+      ],
+      "survey_numbers": {
+        "support": 2,
+        "housing": 3,
+        "transport": 1,
+        "community": 2
+      },
+      "drivers": [
+        "impersonal",
+        "too technical",
+        "lacks humanity"
+      ]
+    }
+  ],
+  "driver_summary": [
+    {
+      "level": 1,
+      "drivers": [
+        [
+          "dehumanizing",
+          1
+        ],
+        [
+          "impersonal",
+          1
+        ],
+        [
+          "disrespectful",
+          1
+        ]
+      ]
+    },
+    {
+      "level": 2,
+      "drivers": [
+        [
+          "impersonal",
+          4
+        ],
+        [
+          "dehumanizing",
+          2
+        ],
+        [
+          "detached",
+          2
+        ],
+        [
+          "diminishing",
+          1
+        ],
+        [
+          "artificial",
+          1
+        ],
+        [
+          "inclusive",
+          1
+        ]
+      ]
+    },
+    {
+      "level": 3,
+      "drivers": [
+        [
+          "impersonal",
+          1
+        ],
+        [
+          "detached",
+          1
+        ],
+        [
+          "lacks warmth",
+          1
+        ]
+      ]
+    },
+    {
+      "level": 4,
+      "drivers": [
+        [
+          "artificial nature",
+          1
+        ],
+        [
+          "diversity and complexity",
+          1
+        ],
+        [
+          "nuanced perspective",
+          1
+        ],
+        [
+          "artificial",
+          1
+        ],
+        [
+          "professional",
+          1
+        ],
+        [
+          "impactful",
+          1
+        ]
+      ]
+    },
+    {
+      "level": 5,
+      "drivers": [
+        [
+          "forward-thinking",
+          1
+        ],
+        [
+          "inclusive",
+          1
+        ],
+        [
+          "positive impact",
+          1
+        ]
+      ]
+    }
+  ],
+  "demographics": {
+    "age": {
+      "persona": {
+        "45-49 years": 2,
+        "40-44 years": 2,
+        "65-69 years": 1,
+        "35-39 years": 1,
+        "60-64 years": 1,
+        "30-34 years": 1,
+        "50-54 years": 1,
+        "55-59 years": 1
+      },
+      "population": {
+        "65-69 years": 15175,
+        "60-64 years": 14154,
+        "55-59 years": 13595,
+        "50-54 years": 13536,
+        "70-74 years": 13441,
+        "40-44 years": 12460,
+        "35-39 years": 11650,
+        "45-49 years": 11409,
+        "30-34 years": 10145,
+        "75-79 years": 7225,
+        "20-24 years": 6562,
+        "25-29 years": 5326,
+        "80-84 years": 2644,
+        "85-89 years": 916,
+        "15-19 years": 789
+      },
+      "chi2": 5.848801403786583
+    },
+    "gender": {
+      "persona": {
+        "Female": 6,
+        "Male": 4
+      },
+      "population": {
+        "Female": 72308,
+        "Male": 66719
+      },
+      "chi2": 0.035806140438275146
+    },
+    "marital": {
+      "persona": {
+        "2": 9,
+        "1": 1
+      },
+      "population": {
+        "2": 103925,
+        "1": 24782,
+        "4": 7036,
+        "3": 3284
+      },
+      "chi2": 1.39683788195523
+    },
+    "tenure": {
+      "persona": {
+        "2": 7,
+        "1": 2,
+        "3": 1
+      },
+      "population": {
+        "1": 55692,
+        "2": 54390,
+        "3": 20276,
+        "5": 6019,
+        "4": 2373,
+        "999": 277
+      },
+      "chi2": 4.208812857699592
+    },
+    "political": {
+      "persona": {
+        "Labor": 3,
+        "Other party": 1,
+        "Greens": 1,
+        "Liberal": 1,
+        "Item skipped": 1
+      },
+      "population": {
+        "Labor": 11618,
+        "Liberal": 10062,
+        "Greens": 4125,
+        "Other party": 1,
+        "National Party": 1008,
+        "Item skipped": 329,
+        " ": 767,
+        "Other": 42
+      },
+      "chi2": 2007.1356716278483
+    },
+    "education": {
+      "persona": {
+        "Bachelor degree or higher": 3,
+        "Year 11 or below": 3,
+        "No formal education": 2,
+        "Other": 1,
+        "Certificate III/IV": 1
+      },
+      "population": {
+        "Certificate III/IV": 39333,
+        "Advanced diploma or diploma": 29553,
+        "Bachelor degree or higher": 22839,
+        "No formal education": 17683,
+        "Year 11 or below": 12277,
+        "Other": 10864,
+        "Year 12 or equivalent": 5584,
+        "Item skipped": 894
+      },
+      "chi2": 10.446870611958953
+    }
+  },
+  "location_freq": {
+    "Total": 2,
+    "Rose Bay - Vaucluse - Watsons Bay": 2,
+    "Coogee - Clovelly": 1,
+    "Randwick - South": 1,
+    "Bondi Junction - Waverly": 2,
+    "Maroubra - South": 1,
+    "Maroubra - West": 1
+  }
+}

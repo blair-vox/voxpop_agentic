@@ -1,0 +1,38 @@
+{
+  "timestamp": "2025-05-22T05:12:49.074788+00:00",
+  "question": "Waverley Council is considering a policy that would remove minimum parking requirements for new apartment developments in Bondi. This means developers could build fewer or no car spaces if they believe it suits the residents' needs.",
+  "area": null,
+  "summary": "- Strong opposition to removing minimum parking requirements in Bondi due to concerns about parking availability and community cohesion.\n- Belief that the proposed change would exacerbate existing parking congestion in the area.\n- Emphasis on the importance of consulting residents for input on parking needs and implementing a comprehensive parking strategy.",
+  "responses": [
+    {
+      "id": 0,
+      "age": "45-49 years",
+      "gender": "Male",
+      "location": "Total",
+      "income": "$2,000-$2,999 ($104,000-$155,999)",
+      "income_weekly": "$2,000-$2,999",
+      "income_annual": "$104,000-$155,999",
+      "housing_tenure": "Own, paying off mortgage",
+      "job_tenure": "Employee of Federal / State / Local Government",
+      "occupation": "3",
+      "education": "Year 11 or below",
+      "transport": null,
+      "marital_status": "Married",
+      "partner_activity": "7",
+      "household_size": "1 person",
+      "family_payments": 0,
+      "child_care_benefit": 0,
+      "investment_properties": "Yes",
+      "transport_infrastructure": "The same as now",
+      "political_leaning": "Item skipped",
+      "trust": "Usually look after themselves",
+      "issues": "How I feel about the following Issues include: Taxation, Quite important; Immigration, Quite important; Education, Extremely important; The environment, Quite important; Health and Medicare, Extremely important; Refugees and asylum seekers, Not very important; Global warming, Quite important; Management of the economy, Quite important; The COVID-19 pandemic, Not very important; The cost of living, Extremely important; National security, Quite important",
+      "engagement": "I engage in politics in the following way: Attention to newspapers, Some; Attention to television, Some; Attention to radio, Some; Attention to internet, Not much; Discussed politics in person, Occasionally; Discussed politics online, Occasionally; Persuaded others to vote, Not at all; Showed support for a party, Rarely; Attended political meetings, Not at all; Contributed money, Not at all",
+      "persona_id": 0,
+      "response": "NARRATIVE:\nI strongly oppose the proposal to remove minimum parking requirements for new apartment developments in Bondi. As a resident who values easy access to parking, I believe this change would worsen the already congested parking situation in the area. Additionally, without designated parking spaces, visitors and residents alike would struggle to find parking, leading to increased frustration and potentially impacting the sense of community in Bondi.\n\nSURVEY:\nSupport Level (1-5): 1\nImpact – Housing (1-5): 2\nImpact – Transport (1-5): 3\nImpact – Community (1-5): 4\nKey Concerns: Parking availability, Community cohesion\nSuggested Improvements: Implement a comprehensive parking strategy, Consult residents for input on parking needs",
+      "themes": [
+        "Transport"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+    "LoadBalancerArn": "arn:aws:elasticloadbalancing:ap-southeast-2:442426871378:loadbalancer/app/VoxPop-LoadB-WLKmHvuqIevY/c0dc781c863745fa",
+    "Protocol": "HTTPS",
+    "Port": 443,
+    "Certificates": [
+        {
+            "CertificateArn": "arn:aws:acm:ap-southeast-2:442426871378:certificate/your-certificate-arn"
+        }
+    ],
+    "DefaultActions": [
+        {
+            "Type": "authenticate-cognito",
+            "AuthenticateCognitoConfig": {
+                "UserPoolArn": "arn:aws:cognito-idp:ap-southeast-2:442426871378:userpool/ap-southeast-2_OFbO55m16",
+                "UserPoolClientId": "7idgmap2mv7acc6bame3rommal",
+                "UserPoolDomain": "ap-southeast-2ofbo55m16",
+                "AuthenticationRequestExtraParams": {
+                    "scope": "openid email phone"
+                },
+                "OnUnauthenticatedRequest": "authenticate",
+                "CallbackURL": "https://VoxPop-LoadB-WLKmHvuqIevY-1681507738.ap-southeast-2.elb.amazonaws.com/oauth2/idpresponse"
+            }
+        },
+        {
+            "Type": "forward",
+            "TargetGroupArn": "arn:aws:elasticloadbalancing:ap-southeast-2:442426871378:targetgroup/VoxPop-TgFro-STT2LXGXVTPG/34eb375acbfec944"
+        }
+    ]
+} 

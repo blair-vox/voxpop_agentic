@@ -1,0 +1,11 @@
+# Default survey templates
+
+- id: civic_engagement
+  title: "Civic Engagement Survey"
+  questions:
+    - text: "How often do you discuss local politics?"
+      type: multiple_choice
+      options: ["Never", "Rarely", "Sometimes", "Often", "Always"]
+    - text: "Rate your trust in local government."
+      type: likert
+      scale: 1-5 

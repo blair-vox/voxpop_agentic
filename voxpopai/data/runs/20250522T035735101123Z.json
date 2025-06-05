@@ -1,0 +1,38 @@
+{
+  "timestamp": "2025-05-22T03:57:35.100826+00:00",
+  "question": "Waverley Council is considering a policy that would remove minimum parking requirements for new apartment developments in Bondi. This means developers could build fewer or no car spaces if they believe it suits the residents' needs.",
+  "area": null,
+  "summary": "- Strong support for removing minimum parking requirements for new developments due to alignment with environmental conservation values.\n- Emphasis on the potential for more affordable housing options benefiting young professionals in the area.\n- Desire for improvements such as ensuring adequate public transport options and implementing green spaces in new developments to mitigate potential transportation and community impacts.",
+  "responses": [
+    {
+      "id": 0,
+      "age": "25-29 years",
+      "gender": "Female",
+      "location": "Rose Bay - Vaucluse - Watsons Bay",
+      "income": "$3,000-$3,499 ($156,000-$181,999)",
+      "income_weekly": "$3,000-$3,499",
+      "income_annual": "$156,000-$181,999",
+      "housing_tenure": "Rent from private landlord or real estate agent",
+      "job_tenure": "Employee of Federal / State / Local Government",
+      "occupation": "4",
+      "education": "Advanced diploma or diploma",
+      "transport": null,
+      "marital_status": "Never married",
+      "partner_activity": " ",
+      "household_size": "2 people",
+      "family_payments": 0,
+      "child_care_benefit": 0,
+      "investment_properties": "No",
+      "transport_infrastructure": "Somewhat more than now",
+      "political_leaning": "Labor",
+      "trust": "Usually look after themselves",
+      "issues": "How I feel about the following Issues include: Taxation, Not very important; Immigration, Quite important; Education, Quite important; The environment, Quite important; Health and Medicare, Extremely important; Refugees and asylum seekers, Quite important; Global warming, Quite important; Management of the economy, Quite important; The COVID-19 pandemic, Extremely important; The cost of living, Not very important; National security, Not very important",
+      "engagement": "I engage in politics in the following way: Interest in politics, Some; Attention to newspapers, Not much; Attention to television, Not much; Attention to radio, None at all; Attention to internet, Some; Discussed politics in person, Occasionally; Discussed politics online, Rarely; Persuaded others to vote, Occasionally; Showed support for a party, Not at all; Attended political meetings, Not at all; Contributed money, Not at all",
+      "persona_id": 0,
+      "response": "NARRATIVE:\nAs a resident in the Rose Bay - Vaucluse - Watsons Bay area, I strongly support the proposal to remove minimum parking requirements for new apartment developments in Bondi. With my lack of reliance on personal transport, I see this as a step towards more sustainable urban planning that aligns with my values of environmental conservation. Additionally, this policy could lead to more affordable housing options in the area, which is crucial for young professionals like myself who are struggling to find suitable accommodation within our budget.\n\nSURVEY:\nSupport Level (1-5): 4\nImpact – Housing (1-5): 4\nImpact – Transport (1-5): 3\nImpact – Community (1-5): 3\nKey Concerns: Environmental impact, Housing affordability\nSuggested Improvements: Ensure adequate public transport options, Implement green spaces in new developments",
+      "themes": [
+        "Transport"
+      ]
+    }
+  ]
+}

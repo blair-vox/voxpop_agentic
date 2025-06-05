@@ -1,0 +1,407 @@
+{
+  "run_id": "97cf6bcbd5184f2192f3bba4bd4ed6c8",
+  "timestamp": "2025-05-26T23:56:17.491942+00:00",
+  "question": "Waverley Council is considering a policy that would remove minimum parking requirements for new apartment developments in Bondi. This means developers could build fewer or no car spaces if they believe it suits the residents' needs.",
+  "area": null,
+  "domain": "civic-policy",
+  "summary": "- Lack of reliable public transport is a common concern across different demographics.\n- Housing affordability is a recurring issue, particularly for young families and retirees.\n- Community engagement and support are valued but perceived as lacking in various areas.",
+  "responses": [
+    {
+      "id": 0,
+      "age": "45-49 years",
+      "gender": "Male",
+      "location": "Matraville - Chifley",
+      "income": "$1,500-$1,749 ($78,000-$90,999)",
+      "income_weekly": "$1,500-$1,749",
+      "income_annual": "$78,000-$90,999",
+      "housing_tenure": "Own, paying off mortgage",
+      "job_tenure": "Employee in private company or business",
+      "occupation": "Supervisory",
+      "education": "Certificate III/IV",
+      "transport": null,
+      "marital_status": "Married",
+      "partner_activity": "Other",
+      "household_size": "2 people",
+      "family_payments": "Yes",
+      "child_care_benefit": "No",
+      "investment_properties": "No",
+      "transport_infrastructure": "Somewhat more than now",
+      "political_leaning": "Greens",
+      "trust": "Sometimes look after themselves",
+      "issues": "How I feel about the following Issues include: Taxation, Extremely important; Immigration, Extremely important; Education, Extremely important; The environment, Extremely important; Health and Medicare, Extremely important; Refugees and asylum seekers, Extremely important; Global warming, Extremely important; Management of the economy, Extremely important; The COVID-19 pandemic, Extremely important; The cost of living, Extremely important; National security, Extremely important",
+      "engagement": "I engage in politics in the following way: Interest in politics, Some; Attention to newspapers, A good deal; Attention to television, Some; Attention to radio, A good deal; Attention to internet, Some; Discussed politics in person, Occasionally; Discussed politics online, Not at all; Persuaded others to vote, Not at all; Showed support for a party, Not at all; Attended political meetings, Not at all; Contributed money, Not at all",
+      "persona_id": 0,
+      "response": "NARRATIVE: I'm a 45-year-old married man living in Matraville - Chifley with my spouse. We own our home and are paying off the mortgage. I work full-time as a supervisor in a private company. The cost of living is a constant struggle in our area. Public transport is scarce and unreliable, which makes commuting challenging. The lack of community services, especially for children and young families, is also a major concern.\nSURVEY:\nSupport for the proposal (1-5): 2\nHousing (1-5): 3\nTransport (1-5): 1\nCommunity (1-5): 2\nKey Concerns: u, n, r, e, l, i, a, b, l, e,  , p, u, b, l, i, c,  , t, r, a, n, s, p, o, r, t, ,,  , l, a, c, k,  , o, f,  , c, o, m, m, u, n, i, t, y,  , s, e, r, v, i, c, e, s\nSuggested Improvements: i, m, p, r, o, v, e,  , p, u, b, l, i, c,  , t, r, a, n, s, p, o, r, t, ,,  , p, r, o, v, i, d, e,  , m, o, r, e,  , c, o, m, m, u, n, i, t, y,  , s, e, r, v, i, c, e, s\n",
+      "response_json": {
+        "narrative": "I'm a 45-year-old married man living in Matraville - Chifley with my spouse. We own our home and are paying off the mortgage. I work full-time as a supervisor in a private company. The cost of living is a constant struggle in our area. Public transport is scarce and unreliable, which makes commuting challenging. The lack of community services, especially for children and young families, is also a major concern.",
+        "survey": {
+          "support_level": 2,
+          "housing": 3,
+          "transport": 1,
+          "community": 2,
+          "key_concerns": "unreliable public transport, lack of community services",
+          "suggested_improvements": "improve public transport, provide more community services",
+          "support_for_the_proposal": 2
+        }
+      },
+      "survey_grid_labels": {},
+      "themes": [
+        "Transport"
+      ],
+      "survey_numbers": {},
+      "drivers": [
+        "financial strain",
+        "commuting challenges",
+        "lack of community services"
+      ]
+    },
+    {
+      "id": 1,
+      "age": "30-34 years",
+      "gender": "Female",
+      "location": "Dover Heights",
+      "income": "$3,000-$3,499 ($156,000-$181,999)",
+      "income_weekly": "$3,000-$3,499",
+      "income_annual": "$156,000-$181,999",
+      "housing_tenure": "Own, paying off mortgage",
+      "job_tenure": "Employee in private company or business",
+      "occupation": "Middle managerial",
+      "education": "Other",
+      "transport": null,
+      "marital_status": "Married",
+      "partner_activity": "Working full-time",
+      "household_size": "2 people",
+      "family_payments": "No",
+      "child_care_benefit": "Yes",
+      "investment_properties": "No",
+      "transport_infrastructure": "Somewhat less than now",
+      "political_leaning": "Greens",
+      "trust": "Usually look after themselves",
+      "issues": "How I feel about the following Issues include: Taxation, Extremely important; Immigration, Quite important; Education, Extremely important; The environment, Extremely important; Health and Medicare, Extremely important; Refugees and asylum seekers, Quite important; Global warming, Quite important; Management of the economy, Extremely important; The COVID-19 pandemic, Quite important; The cost of living, Extremely important; National security, Extremely important",
+      "engagement": "I engage in politics in the following way: Interest in politics, Not much; Attention to newspapers, None at all; Attention to television, None at all; Attention to radio, Not much; Attention to internet, Some; Discussed politics in person, Rarely; Discussed politics online, Rarely; Persuaded others to vote, Not at all; Showed support for a party, Not at all; Attended political meetings, Not at all; Contributed money, Not at all",
+      "persona_id": 1,
+      "response": "NARRATIVE: I am a 30-year-old married woman living in Dover Heights with my partner who works full-time. I work as a nurse in Sydney. I've always believed in the importance of community, but I feel like our local government is not doing enough to support us. I'm particularly concerned about the cost of housing and the state of public transport. I need affordable housing to provide stability for my family, and reliable public transport to get to work and my kids to school.\nSURVEY:\nSupport for the proposal (1-5): 2\nHousing (1-5): 1\nTransport (1-5): 2\nCommunity (1-5): 3\nKey Concerns: Housing affordability, Public transport reliability\nSuggested Improvements: Subsidized housing for low-income families, Investment in public transport infrastructure\n",
+      "response_json": {
+        "narrative": "I am a 30-year-old married woman living in Dover Heights with my partner who works full-time. I work as a nurse in Sydney. I've always believed in the importance of community, but I feel like our local government is not doing enough to support us. I'm particularly concerned about the cost of housing and the state of public transport. I need affordable housing to provide stability for my family, and reliable public transport to get to work and my kids to school.",
+        "survey": {
+          "support_level": 2,
+          "housing": 1,
+          "transport": 2,
+          "community": 3,
+          "key_concerns": [
+            "Housing affordability",
+            "Public transport reliability"
+          ],
+          "suggested_improvements": [
+            "Subsidized housing for low-income families",
+            "Investment in public transport infrastructure"
+          ],
+          "Support for the proposal (1-5)": 2,
+          "Housing (1-5)": 1,
+          "Transport (1-5)": 2,
+          "Community (1-5)": 3,
+          "Key Concerns": "Housing affordability, Public transport reliability",
+          "Suggested Improvements": "Subsidized housing for low-income families, Investment in public transport infrastructure"
+        }
+      },
+      "survey_grid_labels": {},
+      "themes": [
+        "Transport"
+      ],
+      "survey_numbers": {},
+      "drivers": [
+        "affordable housing",
+        "reliable public transport",
+        "community support"
+      ]
+    },
+    {
+      "id": 2,
+      "age": "40-44 years",
+      "gender": "Male",
+      "location": "Maroubra - West",
+      "income": "$3,500 or more ($182,000 or more)",
+      "income_weekly": "$3,500 or more",
+      "income_annual": "$182,000 or more",
+      "housing_tenure": "Rent from private landlord or real estate agent",
+      "job_tenure": "Self-employed",
+      "occupation": "Upper managerial",
+      "education": "Certificate III/IV",
+      "transport": null,
+      "marital_status": "Married",
+      "partner_activity": "Working full-time",
+      "household_size": "2 people",
+      "family_payments": "No",
+      "child_care_benefit": "No",
+      "investment_properties": "No",
+      "transport_infrastructure": "Much more than now",
+      "political_leaning": "Other party",
+      "trust": "Usually look after themselves",
+      "issues": "How I feel about the following Issues include: Taxation, Quite important; Immigration, Quite important; Education, Extremely important; The environment, Extremely important; Health and Medicare, Extremely important; Refugees and asylum seekers, Quite important; Global warming, Extremely important; Management of the economy, Quite important; The COVID-19 pandemic, Quite important; The cost of living, Quite important; National security, Quite important",
+      "engagement": "I engage in politics in the following way: Interest in politics, Not much; Attention to newspapers, Some; Attention to television, Some; Attention to radio, Not much; Attention to internet, Some; Discussed politics in person, Occasionally; Discussed politics online, Not at all; Persuaded others to vote, Rarely; Showed support for a party, Not at all; Attended political meetings, Not at all; Contributed money, Not at all",
+      "persona_id": 2,
+      "response": "NARRATIVE: I'm a retired schoolteacher living in the suburbs of Melbourne. My pension is enough to get by, but I worry about the young people and their ability to afford homes in this economy. I use public transport regularly and find it efficient, but I do think more could be done to make it accessible to the elderly. I love my community and am involved in the local neighbourhood watch. My main concerns are housing affordability and the lack of youth engagement in the community.\nSURVEY:\nSupport for the proposal (1-5): 3\nHousing (1-5): 2\nTransport (1-5): 4\nCommunity (1-5): 5\nKey Concerns: housing affordability, youth engagement\nSuggested Improvements: subsidised housing for first-time buyers, community youth programs\n",
+      "response_json": {
+        "narrative": "I'm a retired schoolteacher living in the suburbs of Melbourne. My pension is enough to get by, but I worry about the young people and their ability to afford homes in this economy. I use public transport regularly and find it efficient, but I do think more could be done to make it accessible to the elderly. I love my community and am involved in the local neighbourhood watch. My main concerns are housing affordability and the lack of youth engagement in the community.",
+        "survey": {
+          "support_level": 3,
+          "housing": 2,
+          "transport": 4,
+          "community": 5,
+          "key_concerns": [
+            "housing affordability",
+            "youth engagement"
+          ],
+          "suggested_improvements": [
+            "subsidised housing for first-time buyers",
+            "community youth programs"
+          ],
+          "Support for the proposal (1-5)": 3,
+          "Housing (1-5)": 2,
+          "Transport (1-5)": 4,
+          "Community (1-5)": 5,
+          "Key Concerns": "housing affordability, youth engagement",
+          "Suggested Improvements": "subsidised housing for first-time buyers, community youth programs"
+        }
+      },
+      "survey_grid_labels": {},
+      "themes": [
+        "Transport"
+      ],
+      "survey_numbers": {},
+      "drivers": [
+        "concerned about housing affordability",
+        "want more youth engagement",
+        "improve accessibility for elderly on public transport"
+      ]
+    },
+    {
+      "id": 3,
+      "age": "30-34 years",
+      "gender": "Female",
+      "location": "Bellevue Hill",
+      "income": "$1,500-$1,749 ($78,000-$90,999)",
+      "income_weekly": "$1,500-$1,749",
+      "income_annual": "$78,000-$90,999",
+      "housing_tenure": "Own, paying off mortgage",
+      "job_tenure": "Employee in private company or business",
+      "occupation": "Non-supervisory",
+      "education": "Bachelor degree or higher",
+      "transport": null,
+      "marital_status": "Married",
+      "partner_activity": "Working full-time",
+      "household_size": "2 people",
+      "family_payments": "No",
+      "child_care_benefit": "No",
+      "investment_properties": "No",
+      "transport_infrastructure": "The same as now",
+      "political_leaning": "Liberal",
+      "trust": "Sometimes can be trusted to do the right thing",
+      "issues": "How I feel about the following Issues include: Taxation, Quite important; Immigration, Quite important; Education, Quite important; The environment, Extremely important; Health and Medicare, Extremely important; Refugees and asylum seekers, Quite important; Global warming, Extremely important; Management of the economy, Quite important; The COVID-19 pandemic, Not very important; The cost of living, Extremely important; National security, Quite important",
+      "engagement": "I engage in politics in the following way: Interest in politics, Not much; Attention to newspapers, None at all; Attention to television, None at all; Attention to radio, Not much; Attention to internet, Not much; Discussed politics in person, Rarely; Discussed politics online, Rarely; Persuaded others to vote, Not at all; Showed support for a party, Not at all; Attended political meetings, Not at all; Contributed money, Not at all",
+      "persona_id": 3,
+      "response": "NARRATIVE: As a young professional working in Melbourne's CBD and living in the outer suburbs, I'm frustrated with the public transport system. The trains are frequently delayed, and there's a lack of connectivity between different modes of transport. I'm also concerned about housing affordability. I've been saving for years, but the rising house prices make it feel like I'm chasing a moving target.\nSURVEY:\nSupport for the proposal (1-5): 2\nHousing (1-5): 1\nTransport (1-5): 2\nCommunity (1-5): 4\nKey Concerns: Public Transport, Housing Affordability\nSuggested Improvements: Improve Public Transport System, Increase Affordable Housing Options\n",
+      "response_json": {
+        "narrative": "As a young professional working in Melbourne's CBD and living in the outer suburbs, I'm frustrated with the public transport system. The trains are frequently delayed, and there's a lack of connectivity between different modes of transport. I'm also concerned about housing affordability. I've been saving for years, but the rising house prices make it feel like I'm chasing a moving target.",
+        "survey": {
+          "support_level": 2,
+          "housing": 1,
+          "transport": 2,
+          "community": 4,
+          "key_concerns": [
+            "Public Transport",
+            "Housing Affordability"
+          ],
+          "suggested_improvements": [
+            "Improve Public Transport System",
+            "Increase Affordable Housing Options"
+          ]
+        }
+      },
+      "survey_grid_labels": {},
+      "themes": [
+        "Transport"
+      ],
+      "survey_numbers": {},
+      "drivers": [
+        "frustrated with public transport",
+        "lack of connectivity",
+        "housing affordability concerns"
+      ]
+    },
+    {
+      "id": 4,
+      "age": "55-59 years",
+      "gender": "Male",
+      "location": "Total",
+      "income": "$1,250-$1,499 ($65,000-$77,999)",
+      "income_weekly": "$1,250-$1,499",
+      "income_annual": "$65,000-$77,999",
+      "housing_tenure": "Other (boarding, living at home, etc.)",
+      "job_tenure": "Self-employed",
+      "occupation": "Supervisory",
+      "education": "Other",
+      "transport": null,
+      "marital_status": "Married",
+      "partner_activity": "Other",
+      "household_size": "2 people",
+      "family_payments": "No",
+      "child_care_benefit": "No",
+      "investment_properties": "No",
+      "transport_infrastructure": "Much more than now",
+      "political_leaning": "Other party",
+      "trust": "Sometimes can be trusted to do the right thing",
+      "issues": "No significant issues reported.",
+      "engagement": "I engage in politics in the following way: Interest in politics, Not much; Attention to newspapers, Some; Attention to television, Not much; Attention to radio, None at all; Attention to internet, Not much; Discussed politics in person, Rarely; Discussed politics online, Not at all; Persuaded others to vote, Not at all; Showed support for a party, Not at all; Attended political meetings, Not at all; Contributed money, Not at all",
+      "persona_id": 4,
+      "response": "NARRATIVE: As a retiree residing in Melbourne's eastern suburbs, I've seen the city grow and change drastically over the years. I appreciate the efforts to make our community more liveable, but there's still much to be done. I'm particularly concerned about the rising cost of housing, and the lack of reliable public transport. As someone who relies on the bus service, it's frustrating when they're late or don't show up at all. I'd like to see more initiatives aimed at supporting older residents like me.\nSURVEY:\nSupport for the proposal (1-5): 3\nHousing (1-5): 2\nTransport (1-5): 2\nCommunity (1-5): 4\nKey Concerns: rising housing costs, unreliable public transport\nSuggested Improvements: more affordable housing options, improved public transport reliability\n",
+      "response_json": {
+        "narrative": "As a retiree residing in Melbourne's eastern suburbs, I've seen the city grow and change drastically over the years. I appreciate the efforts to make our community more liveable, but there's still much to be done. I'm particularly concerned about the rising cost of housing, and the lack of reliable public transport. As someone who relies on the bus service, it's frustrating when they're late or don't show up at all. I'd like to see more initiatives aimed at supporting older residents like me.",
+        "survey": {
+          "support_level": 3,
+          "housing": 2,
+          "transport": 2,
+          "community": 4,
+          "key_concerns": [
+            "rising housing costs",
+            "unreliable public transport"
+          ],
+          "suggested_improvements": [
+            "more affordable housing options",
+            "improved public transport reliability"
+          ],
+          "Support for the proposal (1-5)": 3,
+          "Housing (1-5)": 2,
+          "Transport (1-5)": 2,
+          "Community (1-5)": 4,
+          "Key Concerns": "rising housing costs, unreliable public transport",
+          "Suggested Improvements": "more affordable housing options, improved public transport reliability"
+        }
+      },
+      "survey_grid_labels": {},
+      "themes": [
+        "Transport"
+      ],
+      "survey_numbers": {},
+      "drivers": [
+        "frustrated with unreliable public transport",
+        "concerned about rising housing costs",
+        "want more support for older residents"
+      ]
+    }
+  ],
+  "driver_summary": [],
+  "demographics": {
+    "age": {
+      "persona": {
+        "30-34 years": 2,
+        "45-49 years": 1,
+        "40-44 years": 1,
+        "55-59 years": 1
+      },
+      "population": {
+        "65-69 years": 15175,
+        "60-64 years": 14154,
+        "55-59 years": 13595,
+        "50-54 years": 13536,
+        "70-74 years": 13441,
+        "40-44 years": 12460,
+        "35-39 years": 11650,
+        "45-49 years": 11409,
+        "30-34 years": 10145,
+        "75-79 years": 7225,
+        "20-24 years": 6562,
+        "25-29 years": 5326,
+        "80-84 years": 2644,
+        "85-89 years": 916,
+        "15-19 years": 789
+      },
+      "chi2": 12.67556699242193
+    },
+    "gender": {
+      "persona": {
+        "Male": 3,
+        "Female": 2
+      },
+      "population": {
+        "Female": 72308,
+        "Male": 66719
+      },
+      "chi2": 0.008090418909415916
+    },
+    "marital": {
+      "persona": {
+        "2": 5
+      },
+      "population": {
+        "2": 103925,
+        "1": 24782,
+        "4": 7036,
+        "3": 3284
+      },
+      "chi2": 1.6887935349106553
+    },
+    "tenure": {
+      "persona": {
+        "2": 3,
+        "3": 1,
+        "5": 1
+      },
+      "population": {
+        "1": 55692,
+        "2": 54390,
+        "3": 20276,
+        "5": 6019,
+        "4": 2373,
+        "999": 277
+      },
+      "chi2": 5.59144708554007
+    },
+    "political": {
+      "persona": {
+        "Greens": 2,
+        "Other party": 2,
+        "Liberal": 1
+      },
+      "population": {
+        "Labor": 11618,
+        "Liberal": 10062,
+        "Greens": 4125,
+        "Other party": 1,
+        "National Party": 1008,
+        "Item skipped": 329,
+        " ": 767,
+        "Other": 42
+      },
+      "chi2": 7457.5087217899945
+    },
+    "education": {
+      "persona": {
+        "Certificate III/IV": 2,
+        "Other": 2,
+        "Bachelor degree or higher": 1
+      },
+      "population": {
+        "Certificate III/IV": 39333,
+        "Advanced diploma or diploma": 29553,
+        "Bachelor degree or higher": 22839,
+        "No formal education": 17683,
+        "Year 11 or below": 12277,
+        "Other": 10864,
+        "Year 12 or equivalent": 5584,
+        "Item skipped": 894
+      },
+      "chi2": 9.28153919459274
+    }
+  },
+  "location_freq": {
+    "Matraville - Chifley": 1,
+    "Dover Heights": 1,
+    "Maroubra - West": 1,
+    "Bellevue Hill": 1,
+    "Total": 1
+  },
+  "impact_dims": [],
+  "prompt_template": "NARRATIVE:\n<5-10 sentence first-person statement>\n\nSURVEY:\nSupport Level (1-5): <#>\n{impact_lines}Key Concerns: item1, item2\nSuggested Improvements: item1, item2",
+  "survey_grid_labels": null
+}

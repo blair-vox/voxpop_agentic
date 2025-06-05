@@ -1,0 +1,290 @@
+{
+  "run_id": "4110eecba8b34798bbb6eb668eaecefe",
+  "timestamp": "2025-05-27T01:55:58.403660+00:00",
+  "question": "Waverley Council is considering a policy that would remove minimum parking requirements for new apartment developments in Bondi. This means developers could build fewer or no car spaces if they believe it suits the residents' needs.",
+  "area": null,
+  "domain": "civic-policy",
+  "summary": "- Concerns about affordable housing are prevalent across different demographics in different regions.\n- Public transport infrastructure is a common area of improvement desired by various participants.\n- The sense of community is valued highly, but there are worries about it being impacted by changing environments such as crime rates.",
+  "responses": [
+    {
+      "id": 0,
+      "age": "25-29 years",
+      "gender": "Male",
+      "location": "Kingsford",
+      "income": "$1,500-$1,749 ($78,000-$90,999)",
+      "income_weekly": "$1,500-$1,749",
+      "income_annual": "$78,000-$90,999",
+      "housing_tenure": "Other (boarding, living at home, etc.)",
+      "job_tenure": "Employee of Federal / State / Local Government",
+      "occupation": "Non-supervisory",
+      "education": "Year 12 or equivalent",
+      "transport": null,
+      "marital_status": "Never married",
+      "partner_activity": " ",
+      "household_size": "3 people",
+      "family_payments": "No",
+      "child_care_benefit": "No",
+      "investment_properties": "No",
+      "transport_infrastructure": "Somewhat more than now",
+      "political_leaning": "Liberal",
+      "trust": "Usually look after themselves",
+      "issues": "How I feel about the following Issues include: Taxation, Quite important; Immigration, Not very important; Education, Not very important; The environment, Quite important; Health and Medicare, Quite important; Refugees and asylum seekers, Not very important; Global warming, Extremely important; Management of the economy, Extremely important; The COVID-19 pandemic, Not very important; The cost of living, Extremely important; National security, Extremely important",
+      "engagement": "I engage in politics in the following way: Interest in politics, A good deal; Attention to newspapers, None at all; Attention to television, Some; Attention to radio, Some; Attention to internet, A good deal; Discussed politics in person, Frequently; Discussed politics online, Rarely; Persuaded others to vote, Not at all; Showed support for a party, Not at all; Attended political meetings, Not at all; Contributed money, Not at all",
+      "persona_id": 0,
+      "response": "NARRATIVE: G'day, I'm a 45-year-old tradesman living in the outer suburbs of Melbourne with my wife and two teenage kids. I've been in the construction industry for over two decades now and I've seen the city grow and change. It's becoming increasingly difficult to find affordable housing. The transport system also needs a massive overhaul. We need more trains and buses to cope with the growing population. The sense of community is strong but I worry it's starting to fade with all the new development.\nSURVEY:\nSupport for the proposal (1-5): 3\nHousing (1-5): 2\nTransport (1-5): 2\nCommunity (1-5): 4\nKey Concerns: affordable housing, transport infrastructure\nSuggested Improvements: investment in public transport, more affordable housing projects\n",
+      "response_json": {
+        "narrative": "G'day, I'm a 45-year-old tradesman living in the outer suburbs of Melbourne with my wife and two teenage kids. I've been in the construction industry for over two decades now and I've seen the city grow and change. It's becoming increasingly difficult to find affordable housing. The transport system also needs a massive overhaul. We need more trains and buses to cope with the growing population. The sense of community is strong but I worry it's starting to fade with all the new development.",
+        "survey": {
+          "support_level": 3,
+          "housing": 2,
+          "transport": 2,
+          "community": 4,
+          "key_concerns": [
+            "affordable housing",
+            "transport infrastructure"
+          ],
+          "suggested_improvements": [
+            "investment in public transport",
+            "more affordable housing projects"
+          ]
+        }
+      },
+      "survey_grid_labels": {},
+      "run_id": "4110eecba8b34798bbb6eb668eaecefe",
+      "themes": [
+        "Transport"
+      ],
+      "survey_numbers": {},
+      "drivers": [
+        "affordable housing",
+        "improved public transport",
+        "preserving community"
+      ]
+    },
+    {
+      "id": 1,
+      "age": "45-49 years",
+      "gender": "Female",
+      "location": "South Coogee",
+      "income": "$2,000-$2,999 ($104,000-$155,999)",
+      "income_weekly": "$2,000-$2,999",
+      "income_annual": "$104,000-$155,999",
+      "housing_tenure": "Own, paying off mortgage",
+      "job_tenure": "Employee in private company or business",
+      "occupation": "Non-supervisory",
+      "education": "Certificate III/IV",
+      "transport": null,
+      "marital_status": "Married",
+      "partner_activity": "Working full-time",
+      "household_size": "2 people",
+      "family_payments": "No",
+      "child_care_benefit": "No",
+      "investment_properties": "No",
+      "transport_infrastructure": "The same as now",
+      "political_leaning": "Other party",
+      "trust": "Sometimes look after themselves",
+      "issues": "How I feel about the following Issues include: Taxation, Extremely important; Immigration, Quite important; Education, Extremely important; The environment, Quite important; Health and Medicare, Quite important; Refugees and asylum seekers, Quite important; Global warming, Extremely important; Management of the economy, Extremely important; The COVID-19 pandemic, Extremely important; The cost of living, Extremely important; National security, Extremely important",
+      "engagement": "I engage in politics in the following way: Interest in politics, A good deal; Attention to newspapers, Not much; Attention to television, A good deal; Attention to radio, Some; Attention to internet, A good deal; Discussed politics in person, Frequently; Discussed politics online, Rarely; Persuaded others to vote, Rarely; Showed support for a party, Not at all; Attended political meetings, Not at all; Contributed money, Not at all",
+      "persona_id": 1,
+      "response": "NARRATIVE: G'day, I'm a retired teacher living in Newcastle, New South Wales. I've been living here for the past 30 years and I've seen a lot of change. The housing situation has worsened and it's difficult for my adult children to afford homes of their own. The public transport system is okay, but could do with some improvements. People around here are friendly, but I worry about the increasing crime rates in the neighbourhood.\nSURVEY:\nSupport for the proposal (1-5): 3\nHousing (1-5): 2\nTransport (1-5): 3\nCommunity (1-5): 4\nKey Concerns: Housing affordability, Increasing crime rates\nSuggested Improvements: More affordable housing options, Increased police presence\n",
+      "response_json": {
+        "narrative": "G'day, I'm a retired teacher living in Newcastle, New South Wales. I've been living here for the past 30 years and I've seen a lot of change. The housing situation has worsened and it's difficult for my adult children to afford homes of their own. The public transport system is okay, but could do with some improvements. People around here are friendly, but I worry about the increasing crime rates in the neighbourhood.",
+        "survey": {
+          "support_level": 3,
+          "housing": 2,
+          "transport": 3,
+          "community": 4,
+          "key_concerns": [
+            "Housing affordability",
+            "Increasing crime rates"
+          ],
+          "suggested_improvements": [
+            "More affordable housing options",
+            "Increased police presence"
+          ]
+        }
+      },
+      "survey_grid_labels": {},
+      "run_id": "4110eecba8b34798bbb6eb668eaecefe",
+      "themes": [
+        "Transport"
+      ],
+      "survey_numbers": {},
+      "drivers": [
+        "housing affordability",
+        "public transport improvements",
+        "rising crime rates"
+      ]
+    },
+    {
+      "id": 2,
+      "age": "40-44 years",
+      "gender": "Male",
+      "location": "Kingsford",
+      "income": "$2,000-$2,999 ($104,000-$155,999)",
+      "income_weekly": "$2,000-$2,999",
+      "income_annual": "$104,000-$155,999",
+      "housing_tenure": "Own, paying off mortgage",
+      "job_tenure": "Self-employed",
+      "occupation": "Upper managerial",
+      "education": "Year 11 or below",
+      "transport": null,
+      "marital_status": "Married",
+      "partner_activity": "Working full-time",
+      "household_size": "2 people",
+      "family_payments": "Yes",
+      "child_care_benefit": "No",
+      "investment_properties": "No",
+      "transport_infrastructure": "Much more than now",
+      "political_leaning": "Other party",
+      "trust": "Usually look after themselves",
+      "issues": "How I feel about the following Issues include: Taxation, Extremely important; Immigration, Extremely important; Education, Extremely important; The environment, Extremely important; Health and Medicare, Extremely important; Refugees and asylum seekers, Extremely important; Global warming, Extremely important; Management of the economy, Extremely important; The COVID-19 pandemic, Quite important; The cost of living, Extremely important; National security, Extremely important",
+      "engagement": "I engage in politics in the following way: Interest in politics, A good deal; Attention to newspapers, None at all; Attention to television, None at all; Attention to radio, Some; Attention to internet, A good deal; Discussed politics in person, Occasionally; Discussed politics online, Occasionally; Persuaded others to vote, Frequently; Showed support for a party, Rarely; Attended political meetings, Not at all; Contributed money, Not at all",
+      "persona_id": 2,
+      "response": "NARRATIVE: I'm a single mother of two kids, living in Kingsford. I work part-time as a healthcare professional and juggle with the responsibilities of my family. The lack of affordable housing and inadequate public transport services pose big challenges to our daily life. Our community is tight-knit and supportive, but I believe the government could do more to improve our living conditions and facilities.\nSURVEY:\nSupport for the proposal (1-5): 2\nHousing (1-5): 2\nTransport (1-5): 2\nCommunity (1-5): 4\nKey Concerns: affordable_housing, public_transport\nSuggested Improvements: increase_funding_for_public_transport, more_affordable_housing_options\n",
+      "response_json": {
+        "narrative": "I'm a single mother of two kids, living in Kingsford. I work part-time as a healthcare professional and juggle with the responsibilities of my family. The lack of affordable housing and inadequate public transport services pose big challenges to our daily life. Our community is tight-knit and supportive, but I believe the government could do more to improve our living conditions and facilities.",
+        "survey": {
+          "support_level": 2,
+          "housing": 2,
+          "transport": 2,
+          "community": 4,
+          "key_concerns": [
+            "affordable_housing",
+            "public_transport"
+          ],
+          "suggested_improvements": [
+            "increase_funding_for_public_transport",
+            "more_affordable_housing_options"
+          ],
+          "Support for the proposal (1-5)": 2,
+          "Housing (1-5)": 2,
+          "Transport (1-5)": 2,
+          "Community (1-5)": 4,
+          "Key Concerns": "affordable_housing, public_transport",
+          "Suggested Improvements": "increase_funding_for_public_transport, more_affordable_housing_options"
+        }
+      },
+      "survey_grid_labels": {},
+      "run_id": "4110eecba8b34798bbb6eb668eaecefe",
+      "themes": [
+        "Transport"
+      ],
+      "survey_numbers": {},
+      "drivers": [
+        "struggling to make ends meet",
+        "frustrated with lack of support",
+        "hopeful for better government assistance"
+      ]
+    }
+  ],
+  "driver_summary": [],
+  "demographics": {
+    "age": {
+      "persona": {
+        "25-29 years": 1,
+        "45-49 years": 1,
+        "40-44 years": 1
+      },
+      "population": {
+        "65-69 years": 15175,
+        "60-64 years": 14154,
+        "55-59 years": 13595,
+        "50-54 years": 13536,
+        "70-74 years": 13441,
+        "40-44 years": 12460,
+        "35-39 years": 11650,
+        "45-49 years": 11409,
+        "30-34 years": 10145,
+        "75-79 years": 7225,
+        "20-24 years": 6562,
+        "25-29 years": 5326,
+        "80-84 years": 2644,
+        "85-89 years": 916,
+        "15-19 years": 789
+      },
+      "chi2": 13.480708788756269
+    },
+    "gender": {
+      "persona": {
+        "Male": 2,
+        "Female": 1
+      },
+      "population": {
+        "Female": 72308,
+        "Male": 66719
+      },
+      "chi2": 0.004854321401900604
+    },
+    "marital": {
+      "persona": {
+        "2": 2,
+        "1": 1
+      },
+      "population": {
+        "2": 103925,
+        "1": 24782,
+        "4": 7036,
+        "3": 3284
+      },
+      "chi2": 0.6536666402997624
+    },
+    "tenure": {
+      "persona": {
+        "2": 2,
+        "5": 1
+      },
+      "population": {
+        "1": 55692,
+        "2": 54390,
+        "3": 20276,
+        "5": 6019,
+        "4": 2373,
+        "999": 277
+      },
+      "chi2": 8.106502281467439
+    },
+    "political": {
+      "persona": {
+        "Liberal": 1,
+        "Other party": 1
+      },
+      "population": {
+        "Labor": 11618,
+        "Liberal": 10062,
+        "Greens": 4125,
+        "Other party": 1,
+        "National Party": 1008,
+        "Item skipped": 329,
+        " ": 767,
+        "Other": 42
+      },
+      "chi2": 6988.388941671618
+    },
+    "education": {
+      "persona": {
+        "Year 12 or equivalent": 1,
+        "Certificate III/IV": 1,
+        "Year 11 or below": 1
+      },
+      "population": {
+        "Certificate III/IV": 39333,
+        "Advanced diploma or diploma": 29553,
+        "Bachelor degree or higher": 22839,
+        "No formal education": 17683,
+        "Year 11 or below": 12277,
+        "Other": 10864,
+        "Year 12 or equivalent": 5584,
+        "Item skipped": 894
+      },
+      "chi2": 10.250744925624058
+    }
+  },
+  "location_freq": {
+    "Kingsford": 2,
+    "South Coogee": 1
+  },
+  "impact_dims": [],
+  "prompt_template": "NARRATIVE:\n<5-10 sentence first-person statement>\n\nSURVEY:\nSupport Level (1-5): <#>\n{impact_lines}Key Concerns: item1, item2\nSuggested Improvements: item1, item2",
+  "survey_grid_labels": null
+}
