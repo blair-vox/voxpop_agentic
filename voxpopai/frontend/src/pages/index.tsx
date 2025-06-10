@@ -14,7 +14,7 @@ import {
 import { Run, Persona, DriverSummaryRow } from "../types";
 import { PersonaCard } from "../components/PersonaCard";
 import QuestionCriticModal from "../components/QuestionCriticModal";
-import { useAuth } from "react-oidc-context";
+import { useAuth } from "../lib/albAuth";
 import { useApi } from "../lib/api";
 
 // Modern muted and color-blind friendly color scheme
@@ -1349,7 +1349,7 @@ export default function Home() {
   const loadPastRuns = async () => {
     setLoadingPastRuns(true);
     try {
-      const data = await request<any[]>("/runs/");
+      const data = await request<any[]>("/api/runs/");
       setPastRuns(data.slice(0, 5)); // Show only the 5 most recent
     } catch (e) {
       console.error("Failed to load past runs:", e);
@@ -1360,7 +1360,7 @@ export default function Home() {
 
   const loadPastRun = async (runId: string) => {
     try {
-      const data = await request<any>(`/runs/${runId}`);
+      const data = await request<any>(`/api/runs/${runId}`);
       
       // Load the run data into current state
       setQuestion(data.question || "");
@@ -1399,7 +1399,7 @@ export default function Home() {
 
   const runQuestionCritic = async () => {
     try {
-      const data = await request<any>("/question/critic", {
+      const data = await request<any>("/api/question/critic", {
         method: "POST",
         body: JSON.stringify({ question, context }),
       });
@@ -1437,7 +1437,8 @@ export default function Home() {
     const selectedImpactDims = domainDefinitions[selectedDomain as keyof typeof domainDefinitions] || ["Housing", "Transport", "Community"];
     
     try {
-      const res = await fetch("http://localhost:8000/personas/run", {
+      const apiBase = process.env.NEXT_PUBLIC_API_URL ?? (process.env.NODE_ENV === "production" ? "" : "http://localhost:8000");
+      const res = await fetch(`${apiBase}/api/personas/run`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

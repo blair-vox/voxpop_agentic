@@ -2,7 +2,8 @@ import { useState, useEffect } from "react";
 
 // Replace with your API helper or fetch implementation
 const apiPost = async (url: string, body: any) => {
-  const res = await fetch(`http://localhost:8000${url}`, {
+  const apiBase = process.env.NEXT_PUBLIC_API_URL ?? (process.env.NODE_ENV === "production" ? "" : "http://localhost:8000");
+  const res = await fetch(`${apiBase}${url}`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -34,7 +35,7 @@ export default function QuestionCriticModal({
   const runCritic = async (q: string) => {
     setLoading(true);
     try {
-      const data = await apiPost("/question/critic", { question: q, context });
+      const data = await apiPost("/api/question/critic", { question: q, context });
       setCrit(data);
     } catch (e) {
       console.error(e);
