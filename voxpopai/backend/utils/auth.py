@@ -124,7 +124,7 @@ def get_current_user(
         return alb_user
 
     # --- 2.  Standard Bearer token ------------------------------------------------
-    if credentials:
+    if credentials and isinstance(credentials, HTTPAuthorizationCredentials):
         token = credentials.credentials
         try:
             return _verify_token(token)
