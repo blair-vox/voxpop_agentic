@@ -1,0 +1,6 @@
+# Exclude build outputs and dependencies
+node_modules
+**/node_modules
+.next
+.git
+.DS_Store 

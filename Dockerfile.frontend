@@ -1,0 +1,33 @@
+# syntax=docker/dockerfile:1
+
+### Build stage
+FROM node:20-alpine AS builder
+WORKDIR /app
+
+# Install pnpm globally (v9 stable)
+RUN npm install -g pnpm@9 && pnpm --version
+
+# Copy dependency manifests first for caching
+COPY voxpopai/frontend/package.json voxpopai/frontend/pnpm-lock.yaml ./
+RUN pnpm install --frozen-lockfile
+
+# Copy the rest of the frontend source
+COPY voxpopai/frontend ./
+
+# Build the Next.js app (outputs .next)
+RUN pnpm build
+
+### Production runtime image
+FROM node:20-alpine AS runner
+WORKDIR /app
+
+ENV NODE_ENV=production
+
+# Only copy the build output and necessary runtime files
+COPY --from=builder /app/.next ./
+COPY --from=builder /app/public ./public
+COPY --from=builder /app/package.json ./package.json
+COPY --from=builder /app/node_modules ./node_modules
+
+EXPOSE 3000
+CMD ["pnpm", "start"] 
