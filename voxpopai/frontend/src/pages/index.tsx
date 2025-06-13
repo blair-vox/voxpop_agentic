@@ -58,6 +58,8 @@ export const LLM_OPTIONS: { label: string; value: string }[] = [
   { label: "GPT-4o Preview (OpenAI)", value: "gpt-4o-preview" },
   { label: "Llama 3 8B (Ollama)", value: "llama3" },
   { label: "Mistral Instruct (Ollama)", value: "mistral:instruct" },
+  { label: "Claude 3 Sonnet (Anthropic)", value: "claude-3-sonnet-20240229" },
+  { label: "Claude 3 Haiku (Anthropic)", value: "claude-3-haiku-20240307" },
 ];
 
 type Step = "welcome" | "question-review" | "persona-setup" | "simulation" | "results";

@@ -12,5 +12,6 @@ setup(
         "openai",
         "pandas",
         "numpy",
+        "anthropic",
     ],
 ) 

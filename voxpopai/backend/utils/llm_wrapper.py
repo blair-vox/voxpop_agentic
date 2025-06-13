@@ -4,6 +4,10 @@ from functools import lru_cache
 from openai import OpenAI
 import requests
 from voxpopai.backend.utils.run_logger import write_log
+try:
+    from anthropic import Anthropic
+except ImportError:
+    Anthropic = None  # type: ignore
 
 
 @lru_cache(1)
@@ -90,10 +94,45 @@ def _ollama_chat(messages: List[Dict[str, str]], model: str, temperature: float,
         raise RuntimeError(f"Ollama chat call failed: {exc}") from exc
 
 
+# ---------------------------------------------------------------------------
+# Anthropic (Claude) helper
+# ---------------------------------------------------------------------------
+
+def _anthropic_chat(messages: List[Dict[str, str]], model: str, temperature: float, max_tokens: Optional[int]) -> str:
+    """Call Anthropic Claude models via official SDK.
+
+    Requires ``anthropic`` package and ``ANTHROPIC_API_KEY`` env var.
+    Messages are converted from OpenAI style to Anthropic's format.
+    """
+    if Anthropic is None:
+        raise RuntimeError("anthropic package not installed – `pip install anthropic`.")
+    client = Anthropic()
+
+    # Convert messages – Anthropic expects a list of {role: "user"|"assistant", content: str}
+    # System prompt can be concatenated at top.
+    system = "\n".join(m["content"] for m in messages if m["role"] == "system")
+    non_system = [m for m in messages if m["role"] != "system"]
+
+    response = client.messages.create(
+        model=model,
+        system=system or None,
+        messages=non_system,  # type: ignore[arg-type]
+        temperature=temperature,
+        max_tokens=max_tokens or 1024,
+    )
+    # Anthropic returns .content as list of blocks; join
+    if hasattr(response, "content"):
+        if isinstance(response.content, list):
+            return "".join(block.text for block in response.content).strip()
+        return str(response.content).strip()
+    return str(response).strip()
+
+
 # Map provider IDs to concrete callables so we can easily extend in the future.
 _PROVIDER_FUNCS: Dict[str, Callable[[List[Dict[str, str]], str, float, Optional[int]], str]] = {
     "openai": _openai_chat,
     "ollama": _ollama_chat,
+    "anthropic": _anthropic_chat,
 }
 
 
@@ -107,5 +146,7 @@ def _infer_provider(model: str) -> str:
     """
     if model.startswith("gpt-") or model.startswith("text-"):
         return "openai"
+    if model.startswith("claude") or model.startswith("anthropic-"):
+        return "anthropic"
     # Simple heuristic – can be expanded later (e.g. ``mixtral-*`` → openrouter).
     return "ollama" 
