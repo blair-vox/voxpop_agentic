@@ -56,8 +56,10 @@ export const LLM_OPTIONS: { label: string; value: string }[] = [
   { label: "GPT-3.5 Turbo (OpenAI)", value: "gpt-3.5-turbo" },
   { label: "GPT-4 (OpenAI)", value: "gpt-4" },
   { label: "GPT-4o Preview (OpenAI)", value: "gpt-4o-preview" },
-  { label: "Llama 3 8B (Ollama)", value: "llama3" },
+  { label: "Llama 3 8B (Ollama)", value: "llama3:latest" },
   { label: "Mistral Instruct (Ollama)", value: "mistral:instruct" },
+  { label: "OpenHermes (Ollama)", value: "openhermes:latest" },
+  { label: "Phi-3 Mini (Ollama)", value: "phi3:mini" },
   { label: "Claude 3 Sonnet (Anthropic)", value: "claude-3-sonnet-20240229" },
   { label: "Claude 3 Haiku (Anthropic)", value: "claude-3-haiku-20240307" },
 ];
