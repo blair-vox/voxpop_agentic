@@ -48,6 +48,18 @@ const colors = {
   }
 };
 
+// ------------------------------------------------------------
+// Available LLMs for selection in the UI.  Add/remove here to
+// expose new models (the backend infers provider from name).
+// ------------------------------------------------------------
+export const LLM_OPTIONS: { label: string; value: string }[] = [
+  { label: "GPT-3.5 Turbo (OpenAI)", value: "gpt-3.5-turbo" },
+  { label: "GPT-4 (OpenAI)", value: "gpt-4" },
+  { label: "GPT-4o Preview (OpenAI)", value: "gpt-4o-preview" },
+  { label: "Llama 3 8B (Ollama)", value: "llama3" },
+  { label: "Mistral Instruct (Ollama)", value: "mistral:instruct" },
+];
+
 type Step = "welcome" | "question-review" | "persona-setup" | "simulation" | "results";
 
 // Step components defined outside to prevent re-rendering
@@ -117,7 +129,9 @@ const WelcomeStep = ({
   pastRuns,
   loadingPastRuns,
   onLoadPastRun,
-  colors 
+  colors,
+  criticLLM,
+  setCriticLLM,
 }: {
   question: string;
   setQuestion: (q: string) => void;
@@ -128,6 +142,8 @@ const WelcomeStep = ({
   loadingPastRuns: boolean;
   onLoadPastRun: (runId: string) => void;
   colors: any;
+  criticLLM: string;
+  setCriticLLM: (val: string) => void;
 }) => (
   <div style={{
     maxWidth: "800px",
@@ -213,22 +229,51 @@ const WelcomeStep = ({
       <textarea
         value={question}
         onChange={(e) => setQuestion(e.target.value)}
-        placeholder="e.g., Should we remove minimum parking requirements for new apartments in our area?"
+        placeholder="Enter your focus-group question here…"
         style={{
           width: "100%",
-          minHeight: "120px",
+          height: "120px",
           padding: "1rem",
-          border: `2px solid ${colors.border}`,
-          borderRadius: "12px",
-          fontSize: "16px",
-          fontFamily: "inherit",
+          border: `1px solid ${colors.border}`,
+          borderRadius: "8px",
+          fontSize: "1rem",
           resize: "vertical",
-          transition: "border-color 0.2s ease",
-          marginBottom: "1.5rem"
+          marginBottom: "1rem",
+          backgroundColor: "white",
         }}
-        onFocus={(e) => e.target.style.borderColor = colors.primary}
-        onBlur={(e) => e.target.style.borderColor = colors.border}
       />
+      
+      {/* LLM selector ---------------------------------------------------- */}
+      <div style={{ marginBottom: "1.5rem" }}>
+        <label style={{
+          display: "block",
+          fontSize: "0.9rem",
+          fontWeight: 600,
+          color: colors.text,
+          marginBottom: "0.5rem",
+        }}>
+          Choose Language Model
+        </label>
+        <select
+          value={criticLLM}
+          onChange={(e) => setCriticLLM(e.target.value)}
+          style={{
+            padding: "0.75rem 1rem",
+            border: `1px solid ${colors.border}`,
+            borderRadius: "8px",
+            fontSize: "1rem",
+            backgroundColor: "white",
+            color: colors.text,
+            cursor: "pointer",
+            width: "100%",
+            boxSizing: "border-box",
+          }}
+        >
+          {LLM_OPTIONS.map(opt => (
+            <option key={opt.value} value={opt.value}>{opt.label}</option>
+          ))}
+        </select>
+      </div>
       
       <h4 style={{
         fontSize: "1rem",
@@ -592,7 +637,9 @@ const PersonaSetupStep = ({
   area, 
   setArea, 
   onStartSimulation, 
-  colors 
+  colors,
+  simLLM,
+  setSimLLM,
 }: {
   numberOfPersonas: number;
   setNumberOfPersonas: (n: number) => void;
@@ -600,6 +647,8 @@ const PersonaSetupStep = ({
   setArea: (a: string) => void;
   onStartSimulation: () => void;
   colors: any;
+  simLLM: string;
+  setSimLLM: (val: string) => void;
 }) => (
   <div style={{
     maxWidth: "800px",
@@ -686,6 +735,36 @@ const PersonaSetupStep = ({
             fontSize: "16px"
           }}
         />
+      </div>
+      
+      {/* LLM selector for simulation ---------------------------------- */}
+      <div style={{ marginBottom: "2rem" }}>
+        <label style={{
+          display: "block",
+          fontSize: "1.1rem",
+          fontWeight: "600",
+          color: colors.text,
+          marginBottom: "0.5rem",
+        }}>
+          Language Model for Simulation
+        </label>
+        <select
+          value={simLLM}
+          onChange={(e) => setSimLLM(e.target.value)}
+          style={{
+            width: "100%",
+            padding: "0.75rem",
+            border: `2px solid ${colors.border}`,
+            borderRadius: "8px",
+            fontSize: "16px",
+            backgroundColor: "white",
+            color: colors.text,
+          }}
+        >
+          {LLM_OPTIONS.map(opt => (
+            <option key={opt.value} value={opt.value}>{opt.label}</option>
+          ))}
+        </select>
       </div>
       
       <button
@@ -1311,6 +1390,10 @@ export default function Home() {
   const [selectedDomain, setSelectedDomain] = useState<string>("civic-policy");
   const [isPending, startTransition] = useTransition();
 
+  // Selected models for each stage
+  const [criticLLM, setCriticLLM] = useState<string>("gpt-3.5-turbo");
+  const [simLLM, setSimLLM] = useState<string>("gpt-3.5-turbo");
+
   const auth = useAuth();
   const { request } = useApi();
 
@@ -1401,7 +1484,7 @@ export default function Home() {
     try {
       const data = await request<any>("/api/question/critic", {
         method: "POST",
-        body: JSON.stringify({ question, context }),
+        body: JSON.stringify({ question, context, model: criticLLM }),
       });
       setQuestionCritic(data);
       
@@ -1452,6 +1535,7 @@ export default function Home() {
           impact_dims: selectedImpactDims,
           prompt_template: promptTemplate,
           survey_grid_labels: surveyGridLabels,
+          model: simLLM,
         }),
       });
       
@@ -1681,6 +1765,8 @@ export default function Home() {
           loadingPastRuns={loadingPastRuns}
           onLoadPastRun={loadPastRun}
           colors={colors}
+          criticLLM={criticLLM}
+          setCriticLLM={setCriticLLM}
         />}
         {currentStep === "question-review" && <QuestionReviewStep 
           question={question} 
@@ -1710,6 +1796,8 @@ export default function Home() {
             runSimulation();
           }}
           colors={colors}
+          simLLM={simLLM}
+          setSimLLM={setSimLLM}
         />}
         {currentStep === "simulation" && <SimulationStep
           numberOfPersonas={numberOfPersonas}

@@ -40,6 +40,8 @@ class SimulationRequest(BaseModel):
     domain: Optional[str] = "civic-policy"
     impact_dims: Optional[list[str]] = None
     prompt_template: Optional[str] = None
+    model: Optional[str] = None
+    provider: Optional[str] = None
 
 
 # Requires JWT auth
