@@ -5,6 +5,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from voxpopai.backend.routers import personas, surveys, runs, question
 from voxpopai.backend.routers import logs as logs_router
 from voxpopai.backend.routers import auth as auth_router
+from voxpopai.backend.routers import llms as llms_router
 
 app = FastAPI(title="VoxPopAI API", version="0.1.0")
 
@@ -20,6 +21,7 @@ app.include_router(runs.router,     prefix=api_prefix)
 app.include_router(question.router, prefix=api_prefix)
 app.include_router(logs_router.router, prefix=api_prefix)
 app.include_router(auth_router.router, prefix=api_prefix)
+app.include_router(llms_router.router, prefix=api_prefix)
 
 app.add_middleware(
     CORSMiddleware,

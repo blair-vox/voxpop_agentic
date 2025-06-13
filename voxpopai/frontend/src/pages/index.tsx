@@ -134,6 +134,7 @@ const WelcomeStep = ({
   colors,
   criticLLM,
   setCriticLLM,
+  llmAvailability,
 }: {
   question: string;
   setQuestion: (q: string) => void;
@@ -146,6 +147,7 @@ const WelcomeStep = ({
   colors: any;
   criticLLM: string;
   setCriticLLM: (val: string) => void;
+  llmAvailability: Record<string, boolean>;
 }) => (
   <div style={{
     maxWidth: "800px",
@@ -272,7 +274,9 @@ const WelcomeStep = ({
           }}
         >
           {LLM_OPTIONS.map(opt => (
-            <option key={opt.value} value={opt.value}>{opt.label}</option>
+            <option key={opt.value} value={opt.value} disabled={!llmAvailability[opt.value]} style={{color: llmAvailability[opt.value] ? undefined : colors.muted}}>
+              {opt.label}{!llmAvailability[opt.value] ? " (unavailable)" : ""}
+            </option>
           ))}
         </select>
       </div>
@@ -415,7 +419,8 @@ const QuestionReviewStep = ({
   setSelectedDomain,
   onAccept, 
   onReject, 
-  colors 
+  colors, 
+  llmAvailability,
 }: { 
   question: string; 
   questionCritic: any;
@@ -424,6 +429,7 @@ const QuestionReviewStep = ({
   onAccept: () => void;
   onReject: () => void;
   colors: any; 
+  llmAvailability: Record<string, boolean>;
 }) => {
   
   // Domain definitions with their impact dimensions
@@ -642,6 +648,7 @@ const PersonaSetupStep = ({
   colors,
   simLLM,
   setSimLLM,
+  llmAvailability,
 }: {
   numberOfPersonas: number;
   setNumberOfPersonas: (n: number) => void;
@@ -651,6 +658,7 @@ const PersonaSetupStep = ({
   colors: any;
   simLLM: string;
   setSimLLM: (val: string) => void;
+  llmAvailability: Record<string, boolean>;
 }) => (
   <div style={{
     maxWidth: "800px",
@@ -764,7 +772,9 @@ const PersonaSetupStep = ({
           }}
         >
           {LLM_OPTIONS.map(opt => (
-            <option key={opt.value} value={opt.value}>{opt.label}</option>
+            <option key={opt.value} value={opt.value} disabled={!llmAvailability[opt.value]} style={{color: llmAvailability[opt.value] ? undefined : colors.muted}}>
+              {opt.label}{!llmAvailability[opt.value] ? " (unavailable)" : ""}
+            </option>
           ))}
         </select>
       </div>
@@ -1395,6 +1405,7 @@ export default function Home() {
   // Selected models for each stage
   const [criticLLM, setCriticLLM] = useState<string>("gpt-3.5-turbo");
   const [simLLM, setSimLLM] = useState<string>("gpt-3.5-turbo");
+  const [llmAvailability, setLlmAvailability] = useState<Record<string, boolean>>({});
 
   const auth = useAuth();
   const { request } = useApi();
@@ -1682,6 +1693,29 @@ export default function Home() {
     };
   };
 
+  // Fetch availability once on mount
+  useEffect(() => {
+    (async () => {
+      try {
+        const apiBase = process.env.NEXT_PUBLIC_API_URL ?? (process.env.NODE_ENV === "production" ? "" : "http://localhost:8000");
+        const res = await fetch(`${apiBase}/api/llms/available`);
+        if (res.ok) {
+          const data = await res.json();
+          setLlmAvailability(data);
+          // Adjust current selections if unavailable
+          if (data && !data[criticLLM]) {
+            const firstAvail = LLM_OPTIONS.find(o => data[o.value]);
+            if (firstAvail) setCriticLLM(firstAvail.value);
+          }
+          if (data && !data[simLLM]) {
+            const firstAvail = LLM_OPTIONS.find(o => data[o.value]);
+            if (firstAvail) setSimLLM(firstAvail.value);
+          }
+        }
+      } catch (_) {}
+    })();
+  }, []);
+
   return (
     <div style={{
       minHeight: "100vh",
@@ -1769,6 +1803,7 @@ export default function Home() {
           colors={colors}
           criticLLM={criticLLM}
           setCriticLLM={setCriticLLM}
+          llmAvailability={llmAvailability}
         />}
         {currentStep === "question-review" && <QuestionReviewStep 
           question={question} 
@@ -1787,6 +1822,7 @@ export default function Home() {
             goToStep("persona-setup");
           }}
           colors={colors} 
+          llmAvailability={llmAvailability}
         />}
         {currentStep === "persona-setup" && <PersonaSetupStep
           numberOfPersonas={numberOfPersonas}
@@ -1800,6 +1836,7 @@ export default function Home() {
           colors={colors}
           simLLM={simLLM}
           setSimLLM={setSimLLM}
+          llmAvailability={llmAvailability}
         />}
         {currentStep === "simulation" && <SimulationStep
           numberOfPersonas={numberOfPersonas}
